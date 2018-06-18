@@ -6,6 +6,10 @@ module.exports = {
   steps: {
     '/existing-enquiry': {
       fields: ['has-existing-enquiry'],
+      next: '/started-application'
+    },
+    '/started-application': {
+      fields: ['started-application'],
       next: '/confirm'
     },
     '/confirm': {
