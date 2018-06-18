@@ -5,6 +5,7 @@
     "start:dev": "hof-build watch",
     "test": "npm run test:lint",
     "test:lint": "eslint .",
+    "test:all": "npm run test:lint",
     "build": "hof-build",
     "postinstall": "npm run build"
   },
