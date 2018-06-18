@@ -80,7 +80,7 @@ pipeline:
       - pttg_ip_dev
       - pttg_ip_test
     commands:
-      - cd kube-pttg-rps-enquiry
+      - cd kube-pttg-rps-enquiry-form
       - ./deploy.sh
     when:
       event: deployment
@@ -96,7 +96,7 @@ pipeline:
     secrets:
       - pttg_ip_pr
     commands:
-      - cd kube-pttg-rps-enquiry
+      - cd kube-pttg-rps-enquiry-form
       - ./deploy.sh
     when:
       event: deployment
