@@ -1,7 +1,9 @@
 'use strict';
 
 module.exports = {
-  name: {
+  'has-existing-enquiry': {
+    mixin: 'radio-group',
+    options: ['yes', 'no'],
     validate: 'required'
   }
 };
