@@ -50,7 +50,7 @@ pipeline:
   clone-kube-project:
     image: plugins/git
     commands:
-      - git clone https://github.com/UKHomeOffice/kube-pttg-rps-enquiry.git
+      - git clone https://github.com/UKHomeOffice/kube-pttg-rps-enquiry-form.git
     when:
       event: [push, deployment, tag]
 
