@@ -1,0 +1,29 @@
+FROM quay.io/ukhomeofficedigital/pttg-bdd-base
+
+ENV PTTG_API_ENDPOINT localhost
+ENV USER pttg
+ENV GROUP pttg
+ENV NAME pttg-rps-enquiry
+
+ARG VERSION
+
+RUN mkdir /public
+
+WORKDIR /app
+
+RUN groupadd -r ${GROUP} && \
+    useradd -r -g ${GROUP} ${USER} -d /app && \
+    mkdir -p /app && \
+    chown -R ${USER}:${GROUP} /app
+
+COPY . /app
+RUN npm --loglevel warn install
+RUN npm --loglevel warn run postinstall
+RUN npm install chromedriver@2.38.3
+
+
+RUN chown -R ${USER}:${GROUP} /app
+
+USER pttg
+
+ENTRYPOINT /app/run-test.sh

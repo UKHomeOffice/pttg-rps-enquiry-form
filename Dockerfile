@@ -1,13 +1,29 @@
-FROM quay.io/ukhomeofficedigital/nodejs-base:v6
+FROM quay.io/ukhomeofficedigital/nodejs-base:v8.11.1
+
+ENV USER pttg
+ENV USER_ID 1000
+ENV GROUP pttg
+ENV NAME pttg-rps-enquiry
+
+ARG VERSION
 
 RUN mkdir /public
 
-COPY package.json /app/package.json
-RUN npm --loglevel warn install --production
+WORKDIR /app
+
+RUN groupadd -r ${GROUP} && \
+    useradd -u ${USER_ID} -g ${GROUP} ${USER} -d /app && \
+    mkdir -p /app && \
+    chown -R ${USER}:${GROUP} /app
+
 COPY . /app
-RUN npm --loglevel warn run postinstall --production
-RUN chown -R nodejs:nodejs /public
+RUN npm --loglevel warn install --only=prod
+RUN npm --loglevel warn run postinstall
 
-USER nodejs
+RUN chmod a+x /app/run.sh
 
-CMD ["/app/run.sh"]
+USER ${USER_ID}
+
+EXPOSE 8000
+
+ENTRYPOINT /app/run.sh
