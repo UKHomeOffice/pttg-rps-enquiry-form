@@ -1,6 +1,6 @@
 {
   "has-existing-enquiry": {
-    "legend": " ",
+    "legend": "Have you already contacted us?",
     "validation": {
       "required": "Please indicate whether you have contacted before."
     },
