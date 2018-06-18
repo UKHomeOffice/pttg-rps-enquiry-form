@@ -64,7 +64,7 @@ pipeline:
     secrets:
       - pttg_ip_dev
     commands:
-      - cd kube-pttg-rps-enquiry
+      - cd kube-pttg-rps-enquiry-form
       - ./deploy.sh
     when:
       branch: master
