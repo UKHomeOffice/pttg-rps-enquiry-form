@@ -4,8 +4,8 @@ module.exports = {
   name: 'pttg-rps-enquiry-form',
   baseUrl: '/pttg-rps-enquiry-form',
   steps: {
-    '/name': {
-      fields: ['name'],
+    '/existing-enquiry': {
+      fields: ['has-existing-enquiry'],
       next: '/confirm'
     },
     '/confirm': {

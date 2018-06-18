@@ -1,5 +1,16 @@
 {
-  "name": {
-    "label": "Name"
+  "has-existing-enquiry": {
+    "legend": " ",
+    "validation": {
+      "required": "Please indicate whether you have contacted before."
+    },
+    "options": {
+      "yes": {
+        "label": "Yes"
+      },
+      "no": {
+        "label": "No"
+      }
+    }
   }
 }
