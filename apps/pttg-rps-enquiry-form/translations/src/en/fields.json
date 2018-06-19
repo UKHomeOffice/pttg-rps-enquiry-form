@@ -13,6 +13,12 @@
       }
     }
   },
+  "contact-reference-number": {
+    "label": "Enter your contact reference number",
+    "validation": {
+      "required": "Please provide your contact reference number"
+    }
+  },
   "started-application": {
     "legend": "Have you already started an application?",
     "validation": {
