@@ -1,11 +1,14 @@
 'use strict';
 
+const ContactReferenceNumberCustomValidation = require('./behaviours/contact-reference-number-custom-validation');
+
 module.exports = {
   name: 'pttg-rps-enquiry-form',
   baseUrl: '/pttg-rps-enquiry-form',
   steps: {
     '/existing-enquiry': {
-      fields: ['has-existing-enquiry'],
+      fields: ['has-existing-enquiry', 'contact-reference-number'],
+      behaviours: [ContactReferenceNumberCustomValidation],
       next: '/confirm',
       forks: [{
         target: '/started-application',
