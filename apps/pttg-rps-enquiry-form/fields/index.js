@@ -24,5 +24,9 @@ module.exports = {
     mixin: 'radio-group',
     options: ['yes', 'no'],
     validate: 'required'
+  },
+  'decision-factsheet': {
+    
   }
+
 };

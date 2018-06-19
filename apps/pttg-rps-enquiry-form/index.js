@@ -42,6 +42,9 @@ module.exports = {
         }
       }]
     },
+    '/decision-factsheet': {
+      next: '/confirm'
+    },
     '/confirm': {
       behaviours: ['complete', require('hof-behaviour-summary-page')],
       next: '/complete'
