@@ -14,10 +14,7 @@ module.exports = {
       behaviours: [ContactReferenceNumberCustomValidation],
       forks: [{
         target: '/have-you-submitted-application',
-        condition: (req) => {
-          const hasExistingEnquiry = req.sessionModel.get('do-you-have-existing-enquiry');
-          return hasExistingEnquiry === 'no';
-        }
+        condition: (req) => noSelected('do-you-have-existing-enquiry', req)
       }]
     },
     '/have-submitted-application': {
@@ -36,10 +33,7 @@ module.exports = {
       next: '/liveapp-factsheet',
       forks: [{
         target: '/decision-factsheet',
-        condition: (req) => {
-          const hasDecision = req.sessionModel.get('liveapp-or-decision');
-          return hasDecision === 'no';
-        }
+        condition: (req) => noSelected('liveapp-or-decision', req)
       }]
     },
     '/have-started-application': {
