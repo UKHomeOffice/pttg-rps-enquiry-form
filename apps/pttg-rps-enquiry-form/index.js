@@ -13,19 +13,18 @@ module.exports = {
       fields: ['do-you-have-existing-enquiry', 'enter-contact-reference-number'],
       behaviours: [ContactReferenceNumberCustomValidation],
       forks: [{
-        target: '/have-you-submitted-application',
+        target: '/have-submitted-application',
         condition: (req) => noSelected('do-you-have-existing-enquiry', req)
       }]
     },
     '/have-submitted-application': {
       fields: ['submitted-application'],
-      next: '/liveapp-or-decision',
       forks: [{
         target: '/liveapp-or-decision',
         condition: req => yesSelected('submitted-application', req)
       }, {
-        target: '/have-you-started-application',
-        condition: req => noSelected('started-application', req)
+        target: '/have-started-application',
+        condition: req => noSelected('submitted-application', req)
       }]
     },
     '/liveapp-or-decision': {
@@ -37,15 +36,16 @@ module.exports = {
       }]
     },
     '/have-started-application': {
-      fields: ['have-you-started-an-application'],
+      fields: ['have-you-started-application'],
       forks: [{
         target: '/foo',
-        condition: req => yesSelected('have-you-started-an-application', req)
+        condition: req => yesSelected('have-you-started-application', req)
       }, {
-        target: '/bar',
-        condition: req => noSelected('have-you-started-an-application', req)
+        target: '/how-to-apply',
+        condition: req => noSelected('have-you-started-application', req)
       }]
     },
+    '/how-to-apply': {},
     '/confirm': {
       behaviours: ['complete', require('hof-behaviour-summary-page')],
       next: '/complete'

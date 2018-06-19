@@ -10,5 +10,8 @@
   },
   "have-started-application": {
     "header": "Have you started an application?"
+  },
+  "how-to-apply": {
+    "header": "Apply to stay in the UK after it leaves the EU"
   }
 }
