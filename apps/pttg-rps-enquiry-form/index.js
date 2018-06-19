@@ -2,8 +2,8 @@
 
 const ContactReferenceNumberCustomValidation = require('./behaviours/contact-reference-number-custom-validation');
 
-const yesSelected = (fieldName, req) => req.sessionModel.get(fieldName) === 'yes';
-const noSelected = (fieldName, req) => req.sessionModel.get(fieldName) === 'no';
+const yesSelected = fieldName => req => req.sessionModel.get(fieldName) === 'yes';
+const noSelected = fieldName => req => req.sessionModel.get(fieldName) === 'no';
 
 module.exports = {
   name: 'pttg-rps-enquiry-form',
@@ -14,17 +14,17 @@ module.exports = {
       behaviours: [ContactReferenceNumberCustomValidation],
       forks: [{
         target: '/have-submitted-application',
-        condition: (req) => noSelected('do-you-have-existing-enquiry', req)
+        condition: noSelected('do-you-have-existing-enquiry')
       }]
     },
     '/have-submitted-application': {
       fields: ['submitted-application'],
       forks: [{
         target: '/liveapp-or-decision',
-        condition: req => yesSelected('submitted-application', req)
+        condition: yesSelected('submitted-application')
       }, {
         target: '/have-started-application',
-        condition: req => noSelected('submitted-application', req)
+        condition: noSelected('submitted-application')
       }]
     },
     '/liveapp-or-decision': {
@@ -32,17 +32,17 @@ module.exports = {
       next: '/liveapp-factsheet',
       forks: [{
         target: '/decision-factsheet',
-        condition: (req) => noSelected('liveapp-or-decision', req)
+        condition: noSelected('liveapp-or-decision')
       }]
     },
     '/have-started-application': {
       fields: ['have-you-started-application'],
       forks: [{
         target: '/foo',
-        condition: req => yesSelected('have-you-started-application', req)
+        condition: yesSelected('have-you-started-application')
       }, {
         target: '/how-to-apply',
-        condition: req => noSelected('have-you-started-application', req)
+        condition: noSelected('have-you-started-application')
       }]
     },
     '/how-to-apply': {},
