@@ -1,11 +1,14 @@
 'use strict';
 
+const RequireContactReferenceNumberIfShown = require('./behaviours/RequireContactReferenceNumberIfShown');
+
 module.exports = {
   name: 'pttg-rps-enquiry-form',
   baseUrl: '/pttg-rps-enquiry-form',
   steps: {
     '/existing-enquiry': {
-      fields: ['has-existing-enquiry'],
+      fields: ['has-existing-enquiry', 'contact-reference-number'],
+      behaviours: [RequireContactReferenceNumberIfShown],
       next: '/confirm',
       forks: [{
         target: '/started-application',
