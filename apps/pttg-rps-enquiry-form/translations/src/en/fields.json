@@ -26,5 +26,19 @@
         "label": "No"
       }
     }
+  },
+  "liveapp-or-decision": {
+    "legend": "Have you been given a decision?",
+    "validation": {
+      "required": "Please choose an option"
+    },
+    "options": {
+      "yes": {
+        "label": "Yes"
+      },
+      "no": {
+        "label": "No"
+      }
+    }
   }
 }

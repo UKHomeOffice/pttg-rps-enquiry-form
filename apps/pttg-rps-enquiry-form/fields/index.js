@@ -10,5 +10,10 @@ module.exports = {
     mixin: 'radio-group',
     options: ['yes', 'no'],
     validate: 'required'
+  },
+  'liveapp-or-decision': {
+    mixin: 'radio-group',
+    options: ['yes', 'no'],
+    validate: 'required'
   }
 };
