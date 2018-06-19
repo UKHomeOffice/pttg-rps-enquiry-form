@@ -6,11 +6,27 @@ module.exports = {
   steps: {
     '/existing-enquiry': {
       fields: ['has-existing-enquiry'],
-      next: '/started-application'
+      next: '/confirm',
+      forks: [{
+        target: '/started-application',
+        condition: (req) => {
+          const hasExistingEnquiry = req.sessionModel.get('has-existing-enquiry');
+          return hasExistingEnquiry === 'no';
+        }
+
+      }]
     },
     '/started-application': {
       fields: ['started-application'],
-      next: '/confirm'
+      next: '/confirm',
+      forks: [{
+        target: '/preapp-or-makingapp',
+        condition: (req) => {
+          const hasStartedApplication = req.sessionModel.get('started-application');
+          return hasStartedApplication === 'no';
+        }
+
+      }]
     },
     '/confirm': {
       behaviours: ['complete', require('hof-behaviour-summary-page')],
