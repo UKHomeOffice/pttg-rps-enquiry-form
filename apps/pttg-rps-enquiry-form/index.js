@@ -1,15 +1,16 @@
 'use strict';
 
 const ContactReferenceNumberCustomValidation = require('./behaviours/contact-reference-number-custom-validation');
+const contactReferenceNumberField = 'enter-contact-reference-number';
+const existingEnquiryField = 'do-you-have-existing-enquiry';
 
 module.exports = {
   name: 'pttg-rps-enquiry-form',
   baseUrl: '/pttg-rps-enquiry-form',
   steps: {
-    '/existing-enquiry': {
-      fields: ['has-existing-enquiry', 'contact-reference-number'],
-      behaviours: [ContactReferenceNumberCustomValidation],
-      next: '/confirm',
+    '/have-existing-enquiry': {
+      fields: ['do-you-have-existing-enquiry', 'enter-contact-reference-number'],
+      behaviours: [ContactReferenceNumberCustomValidation({contactReferenceNumberField, existingEnquiryField})],
       forks: [{
         target: '/started-application',
         condition: (req) => {
