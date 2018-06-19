@@ -1,5 +1,17 @@
 @import "$$theme";
-
 .phase-banner {
   @include phase-banner(beta);
+}
+
+#markdown {
+  em {
+    font-style: normal;
+    font-size: 1.2em;
+  }
+  ul {
+    margin: 20px 0 10px 20px;
+    li {
+      list-style-type: disc;
+    }
+  }
 }
