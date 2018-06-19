@@ -46,6 +46,9 @@ module.exports = {
       }]
     },
     '/how-to-apply': {},
+    '/decision-factsheet': {
+      next: '/confirm'
+    },
     '/confirm': {
       behaviours: ['complete', require('hof-behaviour-summary-page')],
       next: '/complete'
