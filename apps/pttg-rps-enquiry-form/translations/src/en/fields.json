@@ -12,5 +12,19 @@
         "label": "No"
       }
     }
+  },
+  "started-application": {
+    "legend": "Have you already started an application?",
+    "validation": {
+      "required": "Please choose an option"
+    },
+    "options": {
+      "yes": {
+        "label": "Yes" 
+      },
+      "no": {
+        "label": "No"
+      }
+    }
   }
 }

@@ -5,5 +5,10 @@ module.exports = {
     mixin: 'radio-group',
     options: ['yes', 'no'],
     validate: 'required'
+  },
+  'started-application': {
+    mixin: 'radio-group',
+    options: ['yes', 'no'],
+    validate: 'required'
   }
 };

@@ -1,5 +1,8 @@
 {
   "existing-enquiry": {
     "header": "Have you already contacted us?"
+  },
+  "started-application": {
+    "header": "Have you already started an application?"
   }
 }
