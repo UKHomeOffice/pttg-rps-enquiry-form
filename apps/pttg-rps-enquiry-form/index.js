@@ -21,7 +21,7 @@ module.exports = {
     },
     '/started-application': {
       fields: ['started-application'],
-      next: '/confirm',
+      next: '/liveapp-or-decision',
       forks: [{
         target: '/preapp-or-makingapp',
         condition: (req) => {
@@ -29,6 +29,17 @@ module.exports = {
           return hasStartedApplication === 'no';
         }
 
+      }]
+    },
+    '/liveapp-or-decision': {
+      fields: ['liveapp-or-decision'],
+      next: '/liveapp-factsheet',
+      forks: [{
+        target: '/decision-factsheet',
+        condition: (req) => {
+          const hasDecision = req.sessionModel.get('liveapp-or-decision');
+          return hasDecision === 'no';
+        }
       }]
     },
     '/confirm': {

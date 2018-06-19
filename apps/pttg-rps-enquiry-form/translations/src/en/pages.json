@@ -4,5 +4,8 @@
   },
   "started-application": {
     "header": "Have you already started an application?"
+  },
+  "liveapp-or-decision": {
+    "header": "Have you been given a decision?"
   }
 }

@@ -19,5 +19,10 @@ module.exports = {
   },
   'contact-reference-number': {
     mixin: 'input-text'
+  },
+  'liveapp-or-decision': {
+    mixin: 'radio-group',
+    options: ['yes', 'no'],
+    validate: 'required'
   }
 };
