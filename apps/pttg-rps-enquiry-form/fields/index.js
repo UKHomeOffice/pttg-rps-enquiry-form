@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-  'has-existing-enquiry': {
+  'do-you-have-existing-enquiry': {
     mixin: 'radio-group',
     options: [{
       value: 'yes',
@@ -12,15 +12,20 @@ module.exports = {
     }],
     validate: 'required'
   },
-  'started-application': {
+  'submitted-application': {
     mixin: 'radio-group',
     options: ['yes', 'no'],
     validate: 'required'
   },
-  'contact-reference-number': {
+  'enter-contact-reference-number': {
     mixin: 'input-text'
   },
   'liveapp-or-decision': {
+    mixin: 'radio-group',
+    options: ['yes', 'no'],
+    validate: 'required'
+  },
+  'have-you-started-application': {
     mixin: 'radio-group',
     options: ['yes', 'no'],
     validate: 'required'
