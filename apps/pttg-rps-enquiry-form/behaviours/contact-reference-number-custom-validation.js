@@ -1,7 +1,7 @@
 'use strict';
 
-const contactReferenceNumberKey = 'contact-reference-number';
-const hasExistingEnquiryKey = 'has-existing-enquiry';
+const contactReferenceNumberKey = 'enter-contact-reference-number';
+const hasExistingEnquiryKey = 'do-you-have-existing-enquiry';
 
 const removeContactReferenceNumberFromRequest = req => {
     req.form.values[contactReferenceNumberKey] = '';
