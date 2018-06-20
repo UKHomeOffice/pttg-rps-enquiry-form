@@ -47,6 +47,12 @@
       }
     }
   },
+  "sufficient-advice": {
+    "legend": "Do you require more help with your enquiry?.",
+    "validation": {
+      "required": "Please choose an option"
+    }
+  },
   "have-you-started-application": {
     "legend": "Have you started an application?",
     "validation": {
