@@ -10,5 +10,8 @@
   },
   "decision-factsheet": {
     "header": "You should get a decision on your application within three weeks of applying."
+  },
+  "sufficient-advice": {
+    "header": "Do you require more help with your enquiry?"
   }
 }

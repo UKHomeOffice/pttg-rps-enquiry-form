@@ -16,7 +16,6 @@ module.exports = {
           const hasExistingEnquiry = req.sessionModel.get('has-existing-enquiry');
           return hasExistingEnquiry === 'no';
         }
-
       }]
     },
     '/started-application': {
@@ -43,7 +42,18 @@ module.exports = {
       }]
     },
     '/decision-factsheet': {
-      next: '/confirm'
+      next: '/sufficient-advice'
+    },
+    '/sufficient-advice': {
+      fields: ['sufficient-advice'],
+      next: '/contact-info',
+      forks: [{
+        target: '/thankyou',
+        condition: (req) => {
+          const hasSufficientAdvice = req.sessionModel.get('sufficient-advice');
+          return hasSufficientAdvice === 'no';
+        }
+      }]
     },
     '/confirm': {
       behaviours: ['complete', require('hof-behaviour-summary-page')],

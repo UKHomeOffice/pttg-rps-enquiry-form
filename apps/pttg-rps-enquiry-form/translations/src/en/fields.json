@@ -46,5 +46,19 @@
         "label": "No"
       }
     }
+  },
+  "sufficient-advice": {
+    "legend": "Do you require more help with your enquiry?.",
+    "validation": {
+      "required": "Please choose an option"
+    },
+    "options": {
+      "yes": {
+        "label": "Yes"
+      },
+      "no": {
+        "label": "No"
+      } 
+    }
   }
 }
