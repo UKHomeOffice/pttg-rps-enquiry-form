@@ -1,12 +1,18 @@
 {
-  "existing-enquiry": {
-    "header": "Have you already contacted us?"
+  "have-existing-enquiry": {
+    "header": "Have you previously contacted us?"
   },
-  "started-application": {
-    "header": "Have you already started an application?"
+  "have-submitted-application": {
+    "header": "Have you already submitted an application?"
   },
   "liveapp-or-decision": {
     "header": "Have you been given a decision?"
+  },
+  "have-started-application": {
+    "header": "Have you started an application?"
+  },
+  "how-to-apply": {
+    "header": "Apply to stay in the UK after it leaves the EU"
   },
   "decision-factsheet": {
     "header": "You should get a decision on your application within three weeks of applying."

@@ -4,6 +4,9 @@ const ContactReferenceNumberCustomValidation = require('./behaviours/contact-ref
 const contactReferenceNumberField = 'enter-contact-reference-number';
 const existingEnquiryField = 'do-you-have-existing-enquiry';
 
+const yesSelected = fieldName => req => req.sessionModel.get(fieldName) === 'yes';
+const noSelected = fieldName => req => req.sessionModel.get(fieldName) === 'no';
+
 module.exports = {
   name: 'pttg-rps-enquiry-form',
   baseUrl: '/pttg-rps-enquiry-form',
@@ -12,24 +15,18 @@ module.exports = {
       fields: ['do-you-have-existing-enquiry', 'enter-contact-reference-number'],
       behaviours: [ContactReferenceNumberCustomValidation({contactReferenceNumberField, existingEnquiryField})],
       forks: [{
-        target: '/started-application',
-        condition: (req) => {
-          const hasExistingEnquiry = req.sessionModel.get('has-existing-enquiry');
-          return hasExistingEnquiry === 'no';
-        }
-
+        target: '/have-submitted-application',
+        condition: noSelected('do-you-have-existing-enquiry')
       }]
     },
-    '/started-application': {
-      fields: ['started-application'],
-      next: '/liveapp-or-decision',
+    '/have-submitted-application': {
+      fields: ['submitted-application'],
       forks: [{
-        target: '/preapp-or-makingapp',
-        condition: (req) => {
-          const hasStartedApplication = req.sessionModel.get('started-application');
-          return hasStartedApplication === 'no';
-        }
-
+        target: '/liveapp-or-decision',
+        condition: yesSelected('submitted-application')
+      }, {
+        target: '/have-started-application',
+        condition: noSelected('submitted-application')
       }]
     },
     '/liveapp-or-decision': {
@@ -37,12 +34,20 @@ module.exports = {
       next: '/liveapp-factsheet',
       forks: [{
         target: '/decision-factsheet',
-        condition: (req) => {
-          const hasDecision = req.sessionModel.get('liveapp-or-decision');
-          return hasDecision === 'no';
-        }
+        condition: noSelected('liveapp-or-decision')
       }]
     },
+    '/have-started-application': {
+      fields: ['have-you-started-application'],
+      forks: [{
+        target: '/foo',
+        condition: yesSelected('have-you-started-application')
+      }, {
+        target: '/how-to-apply',
+        condition: noSelected('have-you-started-application')
+      }]
+    },
+    '/how-to-apply': {},
     '/decision-factsheet': {
       next: '/confirm'
     },
