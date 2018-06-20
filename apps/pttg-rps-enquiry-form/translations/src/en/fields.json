@@ -1,6 +1,6 @@
 {
-  "has-existing-enquiry": {
-    "legend": "Have you already contacted us?",
+  "do-you-have-existing-enquiry": {
+    "legend": "Have you previously contacted us?",
     "validation": {
       "required": "Please indicate whether you have contacted before."
     },
@@ -13,14 +13,14 @@
       }
     }
   },
-  "contact-reference-number": {
+  "enter-contact-reference-number": {
     "label": "Enter your contact reference number",
     "validation": {
       "required": "Please provide your contact reference number"
     }
   },
-  "started-application": {
-    "legend": "Have you already started an application?",
+  "submitted-application": {
+    "legend": "Have you already submitted an application?",
     "validation": {
       "required": "Please choose an option"
     },
@@ -51,6 +51,12 @@
     "legend": "Do you require more help with your enquiry?.",
     "validation": {
       "required": "Please choose an option"
+    }
+  },
+  "have-you-started-application": {
+    "legend": "Have you started an application?",
+    "validation": {
+      "required": "Please select an option"
     },
     "options": {
       "yes": {
@@ -58,7 +64,7 @@
       },
       "no": {
         "label": "No"
-      } 
+      }
     }
   }
 }

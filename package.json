@@ -17,7 +17,9 @@
   },
   "devDependencies": {
     "eslint": "^4.19.1",
-    "eslint-config-homeoffice": "^2.2.0"
+    "eslint-config-homeoffice": "^2.2.0",
+    "mocha": "^5.2.0",
+    "chai": "^4.1.2"
   },
   "name": "pttg-rps-enquiry-form",
   "version": "1.0.0",
