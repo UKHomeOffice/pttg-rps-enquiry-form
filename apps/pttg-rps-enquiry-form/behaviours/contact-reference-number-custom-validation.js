@@ -1,40 +1,53 @@
 'use strict';
 
-const contactReferenceNumberKey = 'enter-contact-reference-number';
-const hasExistingEnquiryKey = 'do-you-have-existing-enquiry';
+module.exports = config => {
+    const { existingEnquiryField, contactReferenceNumberField } = config;
 
-const removeContactReferenceNumberFromRequest = req => {
-    req.form.values[contactReferenceNumberKey] = '';
-};
+    if (!existingEnquiryField) {
+        throw new Error('Missing required config `existingEnquiryField`. This should be the key of the field.');
+    }
 
-module.exports = superclass => class extends superclass {
-    validate(req, res, callback) {
-        const radioOptionSelected = req.form.values[hasExistingEnquiryKey];
-        const hasExistingEnquiry = (radioOptionSelected === 'yes');
+    if (!contactReferenceNumberField) {
+        throw new Error('Missing required config `contactReferenceNumberField`. This should be the key of the field.');
+    }
 
-        const contactReferenceNumber = req.form.values[contactReferenceNumberKey];
-        const isMissingContactReferenceNumber = !contactReferenceNumber;
+    const removeContactReferenceNumberFromRequest = req => {
+        req.form.values[contactReferenceNumberField] = '';
+    };
 
-        if (hasExistingEnquiry && isMissingContactReferenceNumber) {
-            const validationError = {
-                [contactReferenceNumberKey]: new this.ValidationError(contactReferenceNumberKey, {
+    return superclass => class extends superclass {
+        validate(req, res, callback) {
+            const radioOptionSelected = req.form.values[existingEnquiryField];
+            const hasExistingEnquiry = (radioOptionSelected === 'yes');
+
+            const contactReferenceNumber = req.form.values[contactReferenceNumberField];
+            const isMissingContactReferenceNumber = !contactReferenceNumber;
+
+            if (hasExistingEnquiry && isMissingContactReferenceNumber) {
+                const error = this.contactReferenceNumberRequiredError();
+                return callback(error);
+            }
+
+            return super.validate(res, req, callback);
+        }
+
+        contactReferenceNumberRequiredError() {
+            return {
+                [contactReferenceNumberField]: new this.ValidationError(contactReferenceNumberField, {
                     type: 'required'
                 })
             };
-            return callback(validationError);
         }
 
-        return super.validate(res, req, callback);
-    }
+        saveValues(req, res, callback) {
+            const radioOptionSelected = req.form.values[existingEnquiryField];
+            const noExistingEnquiry = (radioOptionSelected === 'no');
 
-    saveValues(req, res, callback) {
-        const radioOptionSelected = req.form.values[hasExistingEnquiryKey];
-        const noExistingEnquiry = (radioOptionSelected === 'no');
+            if (noExistingEnquiry) {
+                removeContactReferenceNumberFromRequest(req);
+            }
 
-        if (noExistingEnquiry) {
-            removeContactReferenceNumberFromRequest(req);
+            return super.saveValues(req, res, callback);
         }
-
-        return super.saveValues(req, res, callback);
-    }
+    };
 };
