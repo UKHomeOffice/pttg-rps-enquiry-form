@@ -26,7 +26,11 @@ module.exports = {
     validate: 'required'
   },
   'decision-factsheet': {},
-  'sufficient-advice': {},
+  'sufficient-advice': {
+    mixin: 'radio-group',
+    options: ['yes', 'no'],
+    validate: 'required'
+  },
   'have-you-started-application': {
     mixin: 'radio-group',
     options: ['yes', 'no'],
