@@ -8,8 +8,8 @@
   "liveapp-or-decision": {
     "header": "Have you been given a decision?"
   },
-  "have-started-application": {
-    "header": "Have you started an application?"
+  "pre-submission-help": {
+    "header": "What is your enquiry about?"
   },
   "how-to-apply": {
     "header": "Apply to stay in the UK after it leaves the EU"

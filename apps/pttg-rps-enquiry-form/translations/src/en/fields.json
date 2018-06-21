@@ -61,17 +61,17 @@
       }
     }
   },
-  "have-you-started-application": {
-    "legend": "Have you started an application?",
+  "pre-submission-help-choices": {
+    "legend": "What is your enquiry about?",
     "validation": {
       "required": "Please select an option"
     },
     "options": {
-      "yes": {
-        "label": "Yes"
+      "how-to-apply": {
+        "label": "How to apply"
       },
-      "no": {
-        "label": "No"
+      "supporting-documents": {
+        "label": "Supporting documents"
       }
     }
   }
