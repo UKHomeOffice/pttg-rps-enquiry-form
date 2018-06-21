@@ -74,5 +74,51 @@
         "label": "Supporting documents"
       }
     }
+  },
+  "enter-fullname": {
+    "label": "Full name",
+    "validation": {
+      "required": "Please enter your full name"
+    }
+  },
+  "enter-date-of-birth": {
+    "label": "Date of birth",
+    "hint": "Example: 12-04-1976",
+    "validation": {
+      "required": "Please enter your date of birth",
+      "before": "Please enter a valid date of birth",
+      "after": "Please enter a valid date of birth"
+    },
+    "parts": {
+      "day": {
+            "label": "Day"
+      },
+      "month": {
+            "label": "Month"
+      },
+      "year": {
+            "label": "Year"
+      }
+    }
+  },
+  "enter-email": {
+    "label": "Email address",
+    "validation": {
+      "required": "Please enter your email address",
+      "email": "Please enter a valid email address"
+    }
+  },
+  "enter-phone-number": {
+    "label": "Phone number",
+    "validation": {
+      "required": "Please enter your phone number"
+    }
+  },
+  "enter-unique-reference-number": {
+    "label": "Unique Reference Number (URN)",
+    "summary": "Unique Reference Number (URN)",
+    "validation": {
+      "required": "Please enter your unique-reference-number"
+    }
   }
 }

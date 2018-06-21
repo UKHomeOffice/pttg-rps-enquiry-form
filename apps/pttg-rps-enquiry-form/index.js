@@ -1,9 +1,5 @@
 'use strict';
 
-const ContactReferenceNumberCustomValidation = require('./behaviours/contact-reference-number-custom-validation');
-const contactReferenceNumberField = 'enter-contact-reference-number';
-const existingEnquiryField = 'do-you-have-existing-enquiry';
-
 const isSelected = (choice, fieldName) => req => req.sessionModel.get(fieldName) === choice;
 const yesSelected = fieldName => isSelected('yes', fieldName);
 const noSelected = fieldName => isSelected('no', fieldName);
@@ -14,7 +10,6 @@ module.exports = {
   steps: {
     '/have-existing-enquiry': {
       fields: ['do-you-have-existing-enquiry', 'enter-contact-reference-number'],
-      behaviours: [ContactReferenceNumberCustomValidation({contactReferenceNumberField, existingEnquiryField})],
       forks: [{
         target: '/have-submitted-application',
         condition: noSelected('do-you-have-existing-enquiry')
@@ -59,16 +54,38 @@ module.exports = {
     },
     '/sufficient-advice': {
       fields: ['sufficient-advice'],
-      next: '/fullname',
       forks: [{
         target: '/thankyou',
-        condition: (req) => {
-          const hasSufficientAdvice = req.sessionModel.get('sufficient-advice');
-          return hasSufficientAdvice === 'no';
-        }
+        condition: noSelected('sufficient-advice')
+      }, {
+        target: '/fullname',
+        condition: yesSelected('sufficient-advice')
       }]
     },
     '/thankyou': {
+    },
+    '/fullname': {
+      fields: ['enter-fullname'],
+      next: '/date-of-birth'
+    },
+    '/date-of-birth': {
+      fields: ['enter-date-of-birth'],
+      next: '/contact-information'
+    },
+    '/contact-information': {
+      fields: ['enter-email', 'enter-phone-number'],
+      next: '/unique-reference-number',
+      forks: [{
+        target: '/unique-reference-number',
+        condition: yesSelected('submitted-application')
+      }, {
+        target: '/confirm',
+        condition: noSelected('submitted-application')
+      }]
+    },
+    '/unique-reference-number': {
+      fields: ['enter-unique-reference-number'],
+      next: '/confirm'
     },
     '/confirm': {
       behaviours: ['complete', require('hof-behaviour-summary-page')],
