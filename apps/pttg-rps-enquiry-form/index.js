@@ -40,14 +40,19 @@ module.exports = {
     '/have-started-application': {
       fields: ['have-you-started-application'],
       forks: [{
-        target: '/foo',
+        target: '/supporting-documents',
         condition: yesSelected('have-you-started-application')
       }, {
         target: '/how-to-apply',
         condition: noSelected('have-you-started-application')
       }]
     },
-    '/how-to-apply': {},
+    '/how-to-apply': {
+      next: '/sufficient-advice'
+    },
+    '/supporting-documents': {
+      next: '/sufficient-advice'
+    },
     '/decision-factsheet': {
       next: '/sufficient-advice'
     },
