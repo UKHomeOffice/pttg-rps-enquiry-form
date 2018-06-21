@@ -1,9 +1,5 @@
 'use strict';
 
-const ContactReferenceNumberCustomValidation = require('./behaviours/contact-reference-number-custom-validation');
-const contactReferenceNumberField = 'enter-contact-reference-number';
-const existingEnquiryField = 'do-you-have-existing-enquiry';
-
 const isSelected = (choice, fieldName) => req => req.sessionModel.get(fieldName) === choice;
 const yesSelected = fieldName => isSelected('yes', fieldName);
 const noSelected = fieldName => isSelected('no', fieldName);
@@ -14,7 +10,6 @@ module.exports = {
   steps: {
     '/have-existing-enquiry': {
       fields: ['do-you-have-existing-enquiry', 'enter-contact-reference-number'],
-      behaviours: [ContactReferenceNumberCustomValidation({contactReferenceNumberField, existingEnquiryField})],
       forks: [{
         target: '/have-submitted-application',
         condition: noSelected('do-you-have-existing-enquiry')
