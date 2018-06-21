@@ -42,5 +42,18 @@
   },
   "enquiry": {
     "header": "Enquiry"
+  },
+  "confirm": {
+    "sections": {
+      "enquiry-details": {
+        "header": "Enquiry Details"
+      },
+      "contact-details": {
+        "header": "Contact Details"
+      },
+      "enquiry-body": {
+        "header": "Enquiry"
+      }
+    }
   }
 }
