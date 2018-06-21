@@ -20,7 +20,12 @@ module.exports = {
     validate: 'required'
   },
   'enter-contact-reference-number': {
-    mixin: 'input-text'
+    mixin: 'input-text',
+    validate: 'required',
+    dependent: {
+      field: 'do-you-have-existing-enquiry',
+      value: 'yes'
+    }
   },
   'liveapp-or-decision': {
     mixin: 'radio-group',
