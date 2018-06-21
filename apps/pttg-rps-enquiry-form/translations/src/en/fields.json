@@ -116,9 +116,15 @@
   },
   "enter-unique-reference-number": {
     "label": "Unique Reference Number (URN)",
-    "summary": "Unique Reference Number (URN)",
     "validation": {
       "required": "Please enter your unique-reference-number"
+    }
+  },
+  "enter-enquiry-body": {
+    "label": "Enter Enquiry",
+    "summary": "Enquiry",
+    "validation": {
+      "required": "Please enter a enquiry"
     }
   }
 }

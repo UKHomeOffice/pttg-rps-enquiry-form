@@ -79,19 +79,23 @@ module.exports = {
         target: '/unique-reference-number',
         condition: yesSelected('submitted-application')
       }, {
-        target: '/confirm',
+        target: '/enquiry',
         condition: noSelected('submitted-application')
       }]
     },
     '/unique-reference-number': {
       fields: ['enter-unique-reference-number'],
+      next: '/enquiry'
+    },
+    '/enquiry': {
+      fields: ['enter-enquiry-body'],
       next: '/confirm'
     },
     '/confirm': {
       behaviours: ['complete', require('hof-behaviour-summary-page')],
-      next: '/complete'
+      next: '/confirmation'
     },
-    '/complete': {
+    '/confirmation': {
       template: 'confirmation'
     }
   }

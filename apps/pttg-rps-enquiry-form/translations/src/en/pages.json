@@ -39,5 +39,8 @@
   "unique-reference-number": {
     "header": "What is your Unique Reference Number?",
     "intro": "This is also called Home Office Case ID"
+  },
+  "enquiry": {
+    "header": "Enquiry"
   }
 }
