@@ -59,21 +59,43 @@ module.exports = {
     },
     '/sufficient-advice': {
       fields: ['sufficient-advice'],
-      next: '/contact-info',
       forks: [{
         target: '/thankyou',
-        condition: (req) => {
-          const hasSufficientAdvice = req.sessionModel.get('sufficient-advice');
-          return hasSufficientAdvice === 'no';
-        }
+        condition: noSelected('sufficient-advice')
+      }, {
+        target: '/fullname',
+        condition: yesSelected('sufficient-advice')
       }]
-    },
-    '/confirm': {
-      behaviours: ['complete', require('hof-behaviour-summary-page')],
-      next: '/complete'
-    },
-    '/complete': {
-      template: 'confirmation'
-    }
+  },
+  '/fullname': {
+    fields: ['enter-fullname'],
+    next: '/date-of-birth'
+  },
+  '/date-of-birth': {
+    fields: ['enter-date-of-birth'],
+    next: '/contact-information'
+  },
+  '/contact-information': {
+    fields: ['enter-email', 'enter-phone-number'],
+    next: '/unique-reference-number',
+    forks: [{
+      target: '/unique-reference-number',
+      condition: yesSelected('submitted-application')
+    }, {
+      target: '/confirm',
+      condition: noSelected('submitted-application')
+    }]
+  },
+  '/unique-reference-number': {
+    fields: ['enter-unique-reference-number'],
+    next: '/confirm'
+  },
+  '/confirm': {
+    behaviours: ['complete', require('hof-behaviour-summary-page')],
+    next: '/complete'
+  },
+  '/complete': {
+    template: 'confirmation'
   }
+}
 };
