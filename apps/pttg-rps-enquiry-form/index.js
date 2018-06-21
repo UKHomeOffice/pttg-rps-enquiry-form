@@ -53,14 +53,16 @@ module.exports = {
       next: '/sufficient-advice'
     },
     '/sufficient-advice': {
-      fields: ['sufficient-advice'],
+      fields: ['require-more-help'],
       forks: [{
         target: '/thankyou',
-        condition: noSelected('sufficient-advice')
+        condition: noSelected('require-more-help')
       }, {
         target: '/fullname',
-        condition: yesSelected('sufficient-advice')
+        condition: yesSelected('require-more-help')
       }]
+    },
+    '/thankyou': {
     },
     '/fullname': {
       fields: ['enter-fullname'],

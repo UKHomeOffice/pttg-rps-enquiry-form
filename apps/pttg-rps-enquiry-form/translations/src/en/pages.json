@@ -23,6 +23,9 @@
   "sufficient-advice": {
     "header": "Do you require more help with your enquiry?"
   },
+  "thankyou":{
+    "alert": "Thank you for using this service"
+  },
   "fullname": {
     "header": "What is your full name?"
   },

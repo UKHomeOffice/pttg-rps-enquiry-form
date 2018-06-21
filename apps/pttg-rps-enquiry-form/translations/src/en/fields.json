@@ -47,7 +47,7 @@
       }
     }
   },
-  "sufficient-advice": {
+  "require-more-help": {
     "legend": "Do you require more help with your enquiry?",
     "validation": {
       "required": "Please choose an option"
