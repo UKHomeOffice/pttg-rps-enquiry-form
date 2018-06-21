@@ -22,5 +22,8 @@
   },
   "sufficient-advice": {
     "header": "Do you require more help with your enquiry?"
+  },
+  "thankyou":{
+    "alert": "Thankyou for using this service"
   }
 }

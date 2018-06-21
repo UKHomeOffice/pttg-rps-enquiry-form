@@ -59,7 +59,7 @@ module.exports = {
     },
     '/sufficient-advice': {
       fields: ['sufficient-advice'],
-      next: '/contact-info',
+      next: '/fullname',
       forks: [{
         target: '/thankyou',
         condition: (req) => {
@@ -67,6 +67,8 @@ module.exports = {
           return hasSufficientAdvice === 'no';
         }
       }]
+    },
+    '/thankyou': {
     },
     '/confirm': {
       behaviours: ['complete', require('hof-behaviour-summary-page')],
