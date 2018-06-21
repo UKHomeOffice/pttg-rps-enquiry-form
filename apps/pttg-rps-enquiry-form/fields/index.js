@@ -31,9 +31,9 @@ module.exports = {
     options: ['yes', 'no'],
     validate: 'required'
   },
-  'have-you-started-application': {
+  'pre-submission-help-choices': {
     mixin: 'radio-group',
-    options: ['yes', 'no'],
+    options: ['how-to-apply', 'supporting-documents'],
     validate: 'required'
   }
 };

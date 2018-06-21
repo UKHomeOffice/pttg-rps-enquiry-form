@@ -4,8 +4,9 @@ const ContactReferenceNumberCustomValidation = require('./behaviours/contact-ref
 const contactReferenceNumberField = 'enter-contact-reference-number';
 const existingEnquiryField = 'do-you-have-existing-enquiry';
 
-const yesSelected = fieldName => req => req.sessionModel.get(fieldName) === 'yes';
-const noSelected = fieldName => req => req.sessionModel.get(fieldName) === 'no';
+const isSelected = (choice, fieldName) => req => req.sessionModel.get(fieldName) === choice;
+const yesSelected = fieldName => isSelected('yes', fieldName);
+const noSelected = fieldName => isSelected('no', fieldName);
 
 module.exports = {
   name: 'pttg-rps-enquiry-form',
@@ -25,7 +26,7 @@ module.exports = {
         target: '/liveapp-or-decision',
         condition: yesSelected('submitted-application')
       }, {
-        target: '/have-started-application',
+        target: '/pre-submission-help',
         condition: noSelected('submitted-application')
       }]
     },
@@ -37,17 +38,22 @@ module.exports = {
         condition: noSelected('liveapp-or-decision')
       }]
     },
-    '/have-started-application': {
-      fields: ['have-you-started-application'],
+    '/pre-submission-help': {
+      fields: ['pre-submission-help-choices'],
       forks: [{
-        target: '/foo',
-        condition: yesSelected('have-you-started-application')
+        target: '/supporting-documents',
+        condition: isSelected('supporting-documents', 'pre-submission-help-choices')
       }, {
         target: '/how-to-apply',
-        condition: noSelected('have-you-started-application')
+        condition: isSelected('how-to-apply', 'pre-submission-help-choices')
       }]
     },
-    '/how-to-apply': {},
+    '/how-to-apply': {
+      next: '/sufficient-advice'
+    },
+    '/supporting-documents': {
+      next: '/sufficient-advice'
+    },
     '/decision-factsheet': {
       next: '/sufficient-advice'
     },
