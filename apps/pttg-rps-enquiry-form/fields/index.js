@@ -44,7 +44,7 @@ module.exports = {
   },
   'enter-date-of-birth': dateComponent('enter-date-of-birth', {
     mixin: 'input-date',
-    validate: ['required', 'before', {type: 'after', arguments: '1900-01-01'}]
+    validate: ['required', 'before', { type: 'after', arguments: '1900-01-01' }]
   }),
   'enter-email': {
     mixin: 'input-text',

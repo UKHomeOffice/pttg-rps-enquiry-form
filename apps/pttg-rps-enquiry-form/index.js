@@ -14,7 +14,7 @@ module.exports = {
   steps: {
     '/have-existing-enquiry': {
       fields: ['do-you-have-existing-enquiry', 'enter-contact-reference-number'],
-      behaviours: [ContactReferenceNumberCustomValidation({contactReferenceNumberField, existingEnquiryField})],
+      behaviours: [ContactReferenceNumberCustomValidation({ contactReferenceNumberField, existingEnquiryField })],
       forks: [{
         target: '/have-submitted-application',
         condition: noSelected('do-you-have-existing-enquiry')
@@ -66,36 +66,36 @@ module.exports = {
         target: '/fullname',
         condition: yesSelected('sufficient-advice')
       }]
-  },
-  '/fullname': {
-    fields: ['enter-fullname'],
-    next: '/date-of-birth'
-  },
-  '/date-of-birth': {
-    fields: ['enter-date-of-birth'],
-    next: '/contact-information'
-  },
-  '/contact-information': {
-    fields: ['enter-email', 'enter-phone-number'],
-    next: '/unique-reference-number',
-    forks: [{
-      target: '/unique-reference-number',
-      condition: yesSelected('submitted-application')
-    }, {
-      target: '/confirm',
-      condition: noSelected('submitted-application')
-    }]
-  },
-  '/unique-reference-number': {
-    fields: ['enter-unique-reference-number'],
-    next: '/confirm'
-  },
-  '/confirm': {
-    behaviours: ['complete', require('hof-behaviour-summary-page')],
-    next: '/complete'
-  },
-  '/complete': {
-    template: 'confirmation'
+    },
+    '/fullname': {
+      fields: ['enter-fullname'],
+      next: '/date-of-birth'
+    },
+    '/date-of-birth': {
+      fields: ['enter-date-of-birth'],
+      next: '/contact-information'
+    },
+    '/contact-information': {
+      fields: ['enter-email', 'enter-phone-number'],
+      next: '/unique-reference-number',
+      forks: [{
+        target: '/unique-reference-number',
+        condition: yesSelected('submitted-application')
+      }, {
+        target: '/confirm',
+        condition: noSelected('submitted-application')
+      }]
+    },
+    '/unique-reference-number': {
+      fields: ['enter-unique-reference-number'],
+      next: '/confirm'
+    },
+    '/confirm': {
+      behaviours: ['complete', require('hof-behaviour-summary-page')],
+      next: '/complete'
+    },
+    '/complete': {
+      template: 'confirmation'
+    }
   }
-}
 };
