@@ -87,7 +87,8 @@
     "validation": {
       "required": "Please enter your date of birth",
       "before": "Please enter a valid date of birth",
-      "after": "Please enter a valid date of birth"
+      "after": "Please enter a valid date of birth",
+      "date": "Please enter a valid date of birth"
     },
     "parts": {
       "day": {
@@ -111,7 +112,8 @@
   "enter-phone-number": {
     "label": "Phone number",
     "validation": {
-      "required": "Please enter your phone number"
+      "required": "Please enter your phone number",
+      "phonenumber": "Please enter a valid phone number"
     }
   },
   "enter-unique-reference-number": {
