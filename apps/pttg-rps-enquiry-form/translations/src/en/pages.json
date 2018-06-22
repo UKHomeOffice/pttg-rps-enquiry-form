@@ -11,6 +11,9 @@
   "liveapp-or-decision": {
     "header": "Have you been given a decision?"
   },
+  "liveapp-factsheet": {
+    "header": "Live application factsheet"
+  },
   "pre-submission-help": {
     "header": "What is your enquiry about?"
   },
@@ -24,7 +27,7 @@
     "header": "You should get a decision on your application within three weeks of applying."
   },
   "sufficient-advice": {
-    "header": "Do you require more help with your enquiry?"
+    "header": "Do you need more help with your enquiry?"
   },
   "thankyou":{
     "alert": "Thank you for using this service"
