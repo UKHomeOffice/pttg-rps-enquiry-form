@@ -55,6 +55,9 @@ module.exports = {
     '/decision-factsheet': {
       next: '/sufficient-advice'
     },
+    '/liveapp-factsheet': {
+      next: '/sufficient-advice'
+    },
     '/sufficient-advice': {
       fields: ['require-more-help'],
       forks: [{
