@@ -79,19 +79,42 @@ module.exports = {
         target: '/unique-reference-number',
         condition: yesSelected('submitted-application')
       }, {
-        target: '/confirm',
+        target: '/enquiry',
         condition: noSelected('submitted-application')
       }]
     },
     '/unique-reference-number': {
       fields: ['enter-unique-reference-number'],
+      next: '/enquiry'
+    },
+    '/enquiry': {
+      fields: ['enter-enquiry-body'],
       next: '/confirm'
     },
     '/confirm': {
       behaviours: ['complete', require('hof-behaviour-summary-page')],
-      next: '/complete'
+      sections: {
+        'enquiry-details': [
+          'do-you-have-existing-enquiry',
+          'enter-contact-reference-number',
+          'submitted-application',
+          'liveapp-or-decision',
+          'pre-submission-help-choices',
+          'enter-unique-reference-number'
+        ],
+        'contact-details': [
+          'enter-fullname',
+          'enter-date-of-birth',
+          'enter-email',
+          'enter-phone-number'
+        ],
+        'enquiry-body': [
+          'enter-enquiry-body'
+        ]
+      },
+      next: '/confirmation'
     },
-    '/complete': {
+    '/confirmation': {
       template: 'confirmation'
     }
   }

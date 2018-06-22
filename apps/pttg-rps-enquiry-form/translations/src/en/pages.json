@@ -39,5 +39,21 @@
   "unique-reference-number": {
     "header": "What is your Unique Reference Number?",
     "intro": "This is also called Home Office Case ID"
+  },
+  "enquiry": {
+    "header": "Enquiry"
+  },
+  "confirm": {
+    "sections": {
+      "enquiry-details": {
+        "header": "Enquiry Details"
+      },
+      "contact-details": {
+        "header": "Contact Details"
+      },
+      "enquiry-body": {
+        "header": "Enquiry"
+      }
+    }
   }
 }
