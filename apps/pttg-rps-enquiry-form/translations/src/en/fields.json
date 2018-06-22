@@ -124,7 +124,7 @@
     "label": "Enter Enquiry",
     "summary": "Enquiry",
     "validation": {
-      "required": "Please enter a enquiry"
+      "required": "Please enter an enquiry"
     }
   }
 }
