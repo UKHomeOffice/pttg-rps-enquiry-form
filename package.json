@@ -2,7 +2,7 @@
   "license": "MIT",
   "scripts": {
     "start": "node app.js",
-    "start:dev": "hof-build watch",
+    "start:dev": "SMTP_SECURE=false hof-build watch",
     "test": "npm run test:lint",
     "test:lint": "eslint .",
     "test:all": "npm run test:lint",
