@@ -11,6 +11,9 @@ module.exports = {
   name: 'pttg-rps-enquiry-form',
   baseUrl: '/pttg-rps-enquiry-form',
   steps: {
+    '/start-now': {
+      next: '/have-existing-enquiry'
+    },
     '/have-existing-enquiry': {
       fields: ['do-you-have-existing-enquiry', 'enter-contact-reference-number'],
       forks: [{
@@ -53,6 +56,9 @@ module.exports = {
       next: '/sufficient-advice'
     },
     '/decision-factsheet': {
+      next: '/sufficient-advice'
+    },
+    '/liveapp-factsheet': {
       next: '/sufficient-advice'
     },
     '/sufficient-advice': {
