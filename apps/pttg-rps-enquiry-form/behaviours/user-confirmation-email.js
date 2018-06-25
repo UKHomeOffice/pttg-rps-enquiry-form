@@ -1,6 +1,7 @@
 'use strict';
 
 const Emailer = require('hof-behaviour-emailer');
+const config = require('../../../config');
 const path = require('path');
 
 
@@ -39,12 +40,7 @@ const parse = (model, translate) => {
 };
 
 module.exports = Emailer({
-    transport: 'smtp',
-    transportOptions: {
-        host: 'localhost',
-        port: '1025',
-        secure: false
-    },
+    ...config.email,
     template: path.resolve(__dirname, '../views/emails/user-confirmation-email.html'),
     from: 'confirmation@homeoffice.gov.uk',
     recipient: model => model['enter-email'],
