@@ -41,8 +41,7 @@ const parse = (model, translate) => {
 module.exports = Emailer({
     ...config.email,
     template: path.resolve(__dirname, '../views/emails/enquiry-support-email.html'),
-    from: 'confirmation@homeoffice.gov.uk',
-    recipient: model => model['enter-email'],
+    recipient: 'support-enquiry@homeoffice.gov.uk',
     subject: (model, translate) => translate('emails.enquiry.subject'),
     parse
 });

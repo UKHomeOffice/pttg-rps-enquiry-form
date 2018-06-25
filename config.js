@@ -13,6 +13,7 @@ module.exports = {
                 user: process.env.SMTP_USERNAME || '',
                 pass: process.env.SMTP_PASSWORD || ''
             }
-        }
+        },
+        from: 'enquiry-confirmation@homeoffice.gov.uk'
     }
 };
