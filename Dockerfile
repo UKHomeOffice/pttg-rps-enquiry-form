@@ -17,6 +17,7 @@ RUN groupadd -r ${GROUP} && \
     chown -R ${USER}:${GROUP} /app
 
 COPY . /app
+RUN npm rebuild node-sass
 RUN npm --loglevel warn install --only=prod
 RUN npm --loglevel warn run postinstall
 

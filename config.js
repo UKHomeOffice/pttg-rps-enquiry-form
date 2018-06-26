@@ -25,7 +25,7 @@ module.exports = {
         transport: 'smtp',
         transportOptions: {
             host: env.asString('SMTP_SERVER', 'localhost'),
-            port: env.asString('SMTP_PORT', '1025'),
+            port: env.asString('SMTP_PORT', '25'),
             secure: env.asBoolean('SMTP_SECURE', true),
             auth: {
                 user: env.asString('SMTP_USERNAME', ''),
