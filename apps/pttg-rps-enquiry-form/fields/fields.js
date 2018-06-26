@@ -32,7 +32,6 @@ module.exports = {
     options: ['yes', 'no'],
     validate: 'required'
   },
-  'decision-factsheet': {},
   'require-more-help': {
     mixin: 'radio-group',
     options: ['yes', 'no'],

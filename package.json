@@ -2,7 +2,7 @@
   "license": "MIT",
   "scripts": {
     "start": "node app.js",
-    "start:dev": "hof-build watch",
+    "start:dev": "SMTP_SECURE=false hof-build watch",
     "test": "npm run test:lint",
     "test:lint": "eslint .",
     "test:all": "npm run test:lint",
@@ -10,11 +10,12 @@
     "postinstall": "npm run build"
   },
   "dependencies": {
-    "hof": "^13.2.1",
+    "hof": "^13.2.2",
+    "hof-behaviour-emailer": "^2.2.0",
     "hof-behaviour-summary-page": "^3.1.0",
     "hof-build": "^1.6.0",
-    "hof-theme-govuk": "^4.1.1",
-    "hof-component-date": "^1.4.0"
+    "hof-component-date": "^1.4.0",
+    "hof-theme-govuk": "^4.1.1"
   },
   "devDependencies": {
     "eslint": "^4.19.1",

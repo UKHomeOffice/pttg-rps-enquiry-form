@@ -1,0 +1,75 @@
+{
+    "enquiry": {
+        "subject": "New Enquiry",
+        "contact-information": {
+            "header": "Contact Information"
+        },
+        "fullname": {
+            "label": "Full name"
+        },
+        "date-of-birth": {
+            "label": "Date of birth"
+        },
+        "email": {
+            "label": "Email"
+        },
+        "phone-number": {
+            "label": "Phone number"
+        },
+        "enquiry-information": {
+            "header": "Enquiry Information"
+        },
+        "existing-enquiry": {
+            "label": "Do they have an existing enquiry?"
+        },
+        "contact-reference-number": {
+            "label": "Previous enquiry Contact Reference Number"
+        },
+        "submitted-application": {
+            "label": "Have they already submitted an application?"
+        },
+        "application-unique-reference-number": {
+            "label": "Application Unique Reference Number"
+        },
+        "enquiry": {
+            "header": "Enquiry"
+        }
+    },
+    "user-confirmation": {
+        "subject": "We have received your enquiry",
+        "intro": "We have received your enquiry with the following information.",
+        "contact-information": {
+            "header": "Contact Information"
+        },
+        "fullname": {
+            "label": "Full name"
+        },
+        "date-of-birth": {
+            "label": "Date of birth"
+        },
+        "email": {
+            "label": "Email"
+        },
+        "phone-number": {
+            "label": "Phone number"
+        },
+        "enquiry-information": {
+            "header": "Enquiry Information"
+        },
+        "existing-enquiry": {
+            "label": "Do they have an existing enquiry?"
+        },
+        "contact-reference-number": {
+            "label": "Previous enquiry Contact Reference Number"
+        },
+        "submitted-application": {
+            "label": "Have they already submitted an application?"
+        },
+        "application-unique-reference-number": {
+            "label": "Application Unique Reference Number"
+        },
+        "enquiry": {
+            "header": "Enquiry"
+        }
+    }
+}

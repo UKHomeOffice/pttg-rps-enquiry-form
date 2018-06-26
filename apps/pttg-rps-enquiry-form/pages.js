@@ -1,5 +1,8 @@
 'use strict';
 
+const UserConfirmationEmail = require('./behaviours/user-confirmation-email');
+const EnquirySupportEmail = require('./behaviours/enquiry-support-email');
+
 const isSelected = (choice, fieldName) => req => req.sessionModel.get(fieldName) === choice;
 const yesSelected = fieldName => isSelected('yes', fieldName);
 const noSelected = fieldName => isSelected('no', fieldName);
@@ -98,7 +101,7 @@ module.exports = {
       next: '/confirm'
     },
     '/confirm': {
-      behaviours: ['complete', require('hof-behaviour-summary-page')],
+      behaviours: ['complete', require('hof-behaviour-summary-page'), EnquirySupportEmail, UserConfirmationEmail],
       sections: {
         'enquiry-details': [
           'do-you-have-existing-enquiry',

@@ -1,0 +1,29 @@
+<style>
+    dl dt {
+        font-weight: bold;
+    }
+</style>
+<h3>{{headers.contact-information-header}}</h3>
+<dl>
+    {{#contact-information}}
+        {{#value}}
+            <dt>{{label}}</dt>
+            <dd>{{value}}</dd>
+        {{/value}}
+    {{/contact-information}}
+</dl>
+
+<h3>{{headers.enquiry-information-header}}</h3>
+<dl>
+    {{#enquiry-information}}
+        {{#value}}
+            <dt>{{label}}</dt>
+            <dd>{{value}}</dd>
+        {{/value}}
+    {{/enquiry-information}}
+</dl>
+
+<h3>{{headers.enquiry-header}}</h3>
+{{#enquiry}}
+    {{enquiry}}
+{{/enquiry}}
