@@ -16,6 +16,7 @@ module.exports = {
     },
     '/have-existing-enquiry': {
       fields: ['do-you-have-existing-enquiry', 'enter-contact-reference-number'],
+      next: '/enquiry',
       forks: [{
         target: '/have-submitted-application',
         condition: noSelected('do-you-have-existing-enquiry')
