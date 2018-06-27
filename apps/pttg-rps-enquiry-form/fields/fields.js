@@ -42,6 +42,11 @@ module.exports = {
     options: ['how-to-apply', 'supporting-documents'],
     validate: 'required'
   },
+  'preference': {
+    mixin: 'radio-group',
+    options: ['email', 'phonenumber'],
+    validate: 'required'
+  },
   'enter-fullname': {
     mixin: 'input-text',
     validate: 'required'
@@ -56,7 +61,7 @@ module.exports = {
   },
   'enter-phone-number': {
     mixin: 'input-phone',
-    validate: ['required', 'phonenumber']
+    validate: ['phonenumber']
   },
   'enter-unique-reference-number': {
     mixin: 'input-text',

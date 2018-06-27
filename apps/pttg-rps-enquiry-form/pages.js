@@ -6,6 +6,7 @@ const EnquirySupportEmail = require('./behaviours/enquiry-support-email');
 const isSelected = (choice, fieldName) => req => req.sessionModel.get(fieldName) === choice;
 const yesSelected = fieldName => isSelected('yes', fieldName);
 const noSelected = fieldName => isSelected('no', fieldName);
+const hasSelection = fieldName => isSelected('enter-phone-number', fieldName);
 
 module.exports = {
   name: 'pttg-rps-enquiry-form',
@@ -93,13 +94,21 @@ module.exports = {
         condition: noSelected('submitted-application')
       }]
     },
+    '/contact-preference': {
+      fields: ['preference'],
+      next: '/confirm'
+    },
     '/unique-reference-number': {
       fields: ['enter-unique-reference-number'],
       next: '/enquiry'
     },
     '/enquiry': {
       fields: ['enter-enquiry-body'],
-      next: '/confirm'
+      next: '/confirm',
+      forks: [{
+        target: '/contact-preference',
+        condition: hasSelection('enter-phone-number')
+      }],
     },
     '/confirm': {
       behaviours: ['complete', require('hof-behaviour-summary-page'), EnquirySupportEmail, UserConfirmationEmail],
@@ -116,7 +125,8 @@ module.exports = {
           'enter-fullname',
           'enter-date-of-birth',
           'enter-email',
-          'enter-phone-number'
+          'enter-phone-number',
+          'preference'
         ],
         'enquiry-body': [
           'enter-enquiry-body'
