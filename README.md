@@ -14,7 +14,7 @@ The RPS enquiry form is built using the HOF (Home Office Forms) template.
 Follow these instructions to run the service on your local machine.
 
 ## Clone the repository
-git clone git@github.com:UKHomeOffice/pttg-rps-enquiry-form.git
+```git clone git@github.com:UKHomeOffice/pttg-rps-enquiry-form.git```
 
 * This now pulls down all the neccessary files from the repository to your machine
 * We now need to install the packages and dependencies the service needs to run locally on your machine. To do this enter the following command
