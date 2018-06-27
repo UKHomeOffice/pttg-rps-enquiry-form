@@ -7,6 +7,8 @@ services:
       - IGNORE_TLS=true
       - REDIS_HOST=redis
       - REDIS_PORT=6379
+      - SMTP_SERVER=mailcatcher
+      - SMTP_PORT=1025
     links:
       - redis
     ports:
@@ -15,6 +17,10 @@ services:
       - "/app/public"
   redis:
     image: redis
+  mailcatcher:
+    image: schickling/mailcatcher
+    ports:
+      - "81:1080"
 
   nginx-proxy:
     image: quay.io/ukhomeofficedigital/nginx-proxy:v1.5.1
@@ -24,8 +30,8 @@ services:
       - NAXSI_USE_DEFAULT_RULES=FALSE
       - ADD_NGINX_SERVER_CFG=add_header Cache-Control private;add_header X-Frame-Options "SAMEORIGIN" always;add_header X-Content-Type-Options "nosniff" always;add_header X-XSS-Protection "1; mode=block" always;location /public {add_header Cache-Control max-age=86400;add_header X-Frame-Options "SAMEORIGIN" always;add_header X-Content-Type-Options "nosniff" always;add_header X-XSS-Protection "1; mode=block" always;alias /app/public;}
       - ERROR_REDIRECT_CODES=599
+      - HTTPS_REDIRECT=FALSE
     ports:
-      - "443:443"
       - "80:80"
     links:
       - app
