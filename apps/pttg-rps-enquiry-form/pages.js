@@ -92,7 +92,10 @@ module.exports = {
           return true;
           }
         }
-      }]
+      }, {
+    target: '/unique-reference-number',
+    condition: yesSelected('submitted-application')
+    }]
     },
     '/contact-preference': {
       fields: ['preference'],
