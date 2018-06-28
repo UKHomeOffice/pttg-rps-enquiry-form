@@ -42,7 +42,7 @@ module.exports = {
     options: ['how-to-apply', 'supporting-documents'],
     validate: 'required'
   },
-  'preference': {
+  'contact-method-preference': {
     mixin: 'radio-group',
     options: ['email', 'phonenumber'],
     validate: 'required'
