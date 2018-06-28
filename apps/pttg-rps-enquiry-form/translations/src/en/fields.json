@@ -75,7 +75,7 @@
       }
     }
   },
-  "preference": {
+  "contact-method-preference": {
     "legend": "How would you prefer to be contacted?",
     "validation": {
       "required": "Please choose an option"
