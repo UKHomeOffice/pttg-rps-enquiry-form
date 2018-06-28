@@ -101,7 +101,7 @@ module.exports = {
       fields: ['preference'],
       next: '/enquiry',
       forks: [{
-        target: '/unique-reference-number'
+        target: '/unique-reference-number',
         condition: yesSelected('submitted-application')
       }]
     },
