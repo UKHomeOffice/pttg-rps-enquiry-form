@@ -88,7 +88,7 @@ module.exports = {
       forks: [{
         target: '/contact-preference',
         condition: (req) => {
-          if (req.sessionModel.get('enter-phone-number')) {
+          if (!!req.sessionModel.get('enter-phone-number')) {
           return true;
           }
         }
