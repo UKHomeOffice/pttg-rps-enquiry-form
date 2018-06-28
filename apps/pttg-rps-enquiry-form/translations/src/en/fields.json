@@ -84,7 +84,7 @@
       "email": {
         "label": "Email"
       },
-      "phonenumber": {
+      "phone-number": {
         "label": "Phone"
       }
     }
