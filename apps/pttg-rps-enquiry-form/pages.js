@@ -99,7 +99,11 @@ module.exports = {
     },
     '/contact-preference': {
       fields: ['preference'],
-      next: '/confirm'
+      next: '/enquiry',
+      forks: [{
+        target: '/unique-reference-number'
+        condition: yesSelected('submitted-application')
+      }]
     },
     '/unique-reference-number': {
       fields: ['enter-unique-reference-number'],
