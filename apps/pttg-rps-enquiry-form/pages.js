@@ -107,7 +107,7 @@ module.exports = {
     },
     '/enquiry': {
       fields: ['enter-enquiry-body'],
-      next: '/confirm',
+      next: '/confirm'
     },
     '/confirm': {
       behaviours: ['complete', require('hof-behaviour-summary-page'), EnquirySupportEmail, UserConfirmationEmail],
