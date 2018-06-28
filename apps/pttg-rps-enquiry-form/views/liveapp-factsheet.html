@@ -1,6 +1,8 @@
 {{<partials-page}}
     {{$page-content}}
         <div id="markdown">{{#markdown}}liveapp-factsheet{{/markdown}}</div>
-        <a href="/pttg-rps-enquiry-form/enquiry">I need more help with my enquiry</a>
+        <div class="factsheet-submit">
+            {{#input-submit}}need-more-help{{/input-submit}}
+        </div>
     {{/page-content}}
 {{/partials-page}}

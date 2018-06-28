@@ -1,6 +1,8 @@
 {{<partials-page}}
     {{$page-content}}
         <div id="markdown">{{#markdown}}decision-factsheet{{/markdown}}</div>
-        <a href="/pttg-rps-enquiry-form/enquiry">This doesn't answer my question</a>
+        <div class="factsheet-submit">
+            {{#input-submit}}need-more-help{{/input-submit}}
+        </div>
     {{/page-content}}
 {{/partials-page}}
