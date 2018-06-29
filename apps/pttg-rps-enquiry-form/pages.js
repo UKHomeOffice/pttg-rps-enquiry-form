@@ -87,10 +87,7 @@ module.exports = {
       next: '/enquiry',
       forks: [{
         target: '/contact-method-preference',
-        condition: (req) => {
-          return (!!req.sessionModel.get('enter-phone-number')) {
-          }
-        }
+        condition: (req) => (!!req.sessionModel.get('enter-phone-number'))
       }, {
     target: '/unique-reference-number',
     condition: yesSelected('submitted-application')
