@@ -86,7 +86,7 @@ module.exports = {
       fields: ['enter-email', 'enter-phone-number'],
       next: '/enquiry',
       forks: [{
-        target: '/contact-preference',
+        target: '/contact-method-preference',
         condition: (req) => {
           if (!!req.sessionModel.get('enter-phone-number')) {
           return true;
