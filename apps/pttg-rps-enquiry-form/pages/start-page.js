@@ -3,7 +3,7 @@
 const HaveExistingEnquiryPage = require('./have-existing-enquiry');
 
 module.exports = {
-    path: '/start-now',
+    path: '/start',
     properties: {
         next: HaveExistingEnquiryPage.path
     }
