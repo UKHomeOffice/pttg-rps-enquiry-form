@@ -19,3 +19,26 @@
 #enter-enquiry-body {
   width: 100%;
 }
+
+.factsheet-submit input {
+  @extend a;
+  color: #005ea5;
+  box-shadow: none;
+  background: none;
+  text-decoration: underline;
+}
+
+.factsheet-submit input:visited {
+  color: #4c2c92;
+  background: none;
+}
+
+.factsheet-submit input:hover {
+  color: #2e8aca;
+  background: none;
+}
+
+.factsheet-submit input:active {
+  color: #2e8aca;
+  background: none;
+}

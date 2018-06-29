@@ -51,28 +51,16 @@ module.exports = {
       }]
     },
     '/how-to-apply': {
-      next: '/sufficient-advice'
+      next: '/fullname'
     },
     '/supporting-documents': {
-      next: '/sufficient-advice'
+      next: '/fullname'
     },
     '/decision-factsheet': {
-      next: '/sufficient-advice'
+      next: '/fullname'
     },
     '/liveapp-factsheet': {
-      next: '/sufficient-advice'
-    },
-    '/sufficient-advice': {
-      fields: ['require-more-help'],
-      forks: [{
-        target: '/thankyou',
-        condition: noSelected('require-more-help')
-      }, {
-        target: '/fullname',
-        condition: yesSelected('require-more-help')
-      }]
-    },
-    '/thankyou': {
+      next: '/fullname'
     },
     '/fullname': {
       fields: ['enter-fullname'],

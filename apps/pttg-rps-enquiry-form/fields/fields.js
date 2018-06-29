@@ -32,11 +32,6 @@ module.exports = {
     options: ['yes', 'no'],
     validate: 'required'
   },
-  'require-more-help': {
-    mixin: 'radio-group',
-    options: ['yes', 'no'],
-    validate: 'required'
-  },
   'pre-submission-help-choices': {
     mixin: 'radio-group',
     options: ['how-to-apply', 'supporting-documents'],
