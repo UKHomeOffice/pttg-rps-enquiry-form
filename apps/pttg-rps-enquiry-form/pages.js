@@ -97,7 +97,7 @@ module.exports = {
     condition: yesSelected('submitted-application')
     }]
     },
-    '/contact-preference': {
+    '/contact-method-preference': {
       fields: ['preference'],
       next: '/enquiry',
       forks: [{
