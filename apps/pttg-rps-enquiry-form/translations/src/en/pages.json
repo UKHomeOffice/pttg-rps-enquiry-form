@@ -42,7 +42,7 @@
     "header": "Contact information",
     "intro": "We will use these contact details to confirm we've received your enquiry and to contact you if we require more information."
   },
-  "contact-preference": {
+  "contact-method-preference": {
     "header": "How would you prefer to be contacted?",
     "intro": "We may contact you by email or phone depending on your enquiry."
   },

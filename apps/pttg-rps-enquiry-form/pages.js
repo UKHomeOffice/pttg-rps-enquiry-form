@@ -89,17 +89,15 @@ module.exports = {
         target: '/contact-method-preference',
         condition: (req) => (!!req.sessionModel.get('enter-phone-number'))
       }, {
-    target: '/unique-reference-number',
-    condition: yesSelected('submitted-application')
-    }]
+        target: '/unique-reference-number',
+        condition: (req) => {
+          return yesSelected('submitted-application') && (!req.sessionModel.get('enter-phone-number'));
+        }
+      }]
     },
     '/contact-method-preference': {
-      fields: ['preference'],
+      fields: ['contact-method-preference'],
       next: '/enquiry',
-      forks: [{
-        target: '/unique-reference-number',
-        condition: yesSelected('submitted-application')
-      }]
     },
     '/unique-reference-number': {
       fields: ['enter-unique-reference-number'],

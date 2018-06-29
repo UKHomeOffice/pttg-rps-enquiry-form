@@ -128,7 +128,7 @@
     "label": "Phone number",
     "hint": "Optional",
     "validation": {
-      "phonenumber": "Please enter a valid phone number"
+      "phone-number": "Please enter a valid phone number"
     }
   },
   "enter-unique-reference-number": {
