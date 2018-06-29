@@ -3,6 +3,10 @@
 const UserConfirmationEmail = require('./behaviours/user-confirmation-email');
 const EnquirySupportEmail = require('./behaviours/enquiry-support-email');
 
+const StartNowPage = require('./pages/start-now');
+const HaveExistingEnquiryPage = require('./pages/have-existing-enquiry');
+const HaveSubmittedApplication = require('./pages/have-submitted-application');
+
 const isSelected = (choice, fieldName) => req => req.sessionModel.get(fieldName) === choice;
 const yesSelected = fieldName => isSelected('yes', fieldName);
 const noSelected = fieldName => isSelected('no', fieldName);
@@ -11,27 +15,10 @@ module.exports = {
   name: 'pttg-rps-enquiry-form',
   baseUrl: '/pttg-rps-enquiry-form',
   steps: {
-    '/start-now': {
-      next: '/have-existing-enquiry'
-    },
-    '/have-existing-enquiry': {
-      fields: ['do-you-have-existing-enquiry', 'enter-contact-reference-number'],
-      next: '/enquiry',
-      forks: [{
-        target: '/have-submitted-application',
-        condition: noSelected('do-you-have-existing-enquiry')
-      }]
-    },
-    '/have-submitted-application': {
-      fields: ['submitted-application'],
-      forks: [{
-        target: '/liveapp-or-decision',
-        condition: yesSelected('submitted-application')
-      }, {
-        target: '/pre-submission-help',
-        condition: noSelected('submitted-application')
-      }]
-    },
+    [StartNowPage.path]: StartNowPage.properties,
+    [HaveExistingEnquiryPage.path]: HaveExistingEnquiryPage.properties,
+    [HaveSubmittedApplication.path]: HaveSubmittedApplication.properties,
+
     '/liveapp-or-decision': {
       fields: ['liveapp-or-decision'],
       next: '/liveapp-factsheet',
