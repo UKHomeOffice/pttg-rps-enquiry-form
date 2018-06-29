@@ -26,7 +26,7 @@
     },
     "options": {
       "yes": {
-        "label": "Yes" 
+        "label": "Yes"
       },
       "no": {
         "label": "No"
@@ -50,7 +50,7 @@
   "pre-submission-help-choices": {
     "legend": "What is your enquiry about?",
     "validation": {
-      "required": "Please select an option"
+      "required": "Please choose an option"
     },
     "options": {
       "how-to-apply": {
@@ -58,6 +58,20 @@
       },
       "supporting-documents": {
         "label": "Supporting documents"
+      }
+    }
+  },
+  "contact-method-preference": {
+    "legend": "How would you prefer to be contacted?",
+    "validation": {
+      "required": "Please choose an option"
+    },
+    "options": {
+      "email": {
+        "label": "Email"
+      },
+      "phone-number": {
+        "label": "Phone"
       }
     }
   },
@@ -78,18 +92,19 @@
     },
     "parts": {
       "day": {
-            "label": "Day"
+        "label": "Day"
       },
       "month": {
-            "label": "Month"
+        "label": "Month"
       },
       "year": {
-            "label": "Year"
+        "label": "Year"
       }
     }
   },
   "enter-email": {
     "label": "Email address",
+    "hint": "Required",
     "validation": {
       "required": "Please enter your email address",
       "email": "Please enter a valid email address"
@@ -97,9 +112,9 @@
   },
   "enter-phone-number": {
     "label": "Phone number",
+    "hint": "Optional",
     "validation": {
-      "required": "Please enter your phone number",
-      "phonenumber": "Please enter a valid phone number"
+      "phone-number": "Please enter a valid phone number"
     }
   },
   "enter-unique-reference-number": {

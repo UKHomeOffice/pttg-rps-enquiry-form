@@ -72,14 +72,20 @@ module.exports = {
     },
     '/contact-information': {
       fields: ['enter-email', 'enter-phone-number'],
-      next: '/unique-reference-number',
+      next: '/enquiry',
       forks: [{
-        target: '/unique-reference-number',
-        condition: yesSelected('submitted-application')
+        target: '/contact-method-preference',
+        condition: (req) => (!!req.sessionModel.get('enter-phone-number'))
       }, {
-        target: '/enquiry',
-        condition: noSelected('submitted-application')
+        target: '/unique-reference-number',
+        condition: (req) => {
+          return yesSelected('submitted-application') && (!req.sessionModel.get('enter-phone-number'));
+        }
       }]
+    },
+    '/contact-method-preference': {
+      fields: ['contact-method-preference'],
+      next: '/enquiry',
     },
     '/unique-reference-number': {
       fields: ['enter-unique-reference-number'],
@@ -104,7 +110,8 @@ module.exports = {
           'enter-fullname',
           'enter-date-of-birth',
           'enter-email',
-          'enter-phone-number'
+          'enter-phone-number',
+          'contact-method-preference'
         ],
         'enquiry-body': [
           'enter-enquiry-body'

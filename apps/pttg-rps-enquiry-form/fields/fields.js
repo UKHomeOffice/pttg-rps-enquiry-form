@@ -51,7 +51,12 @@ module.exports = {
   },
   'enter-phone-number': {
     mixin: 'input-phone',
-    validate: ['required', 'phonenumber']
+    validate: ['phonenumber']
+  },
+  'contact-method-preference': {
+    mixin: 'radio-group',
+    options: ['email', 'phone-number'],
+    validate: 'required'
   },
   'enter-unique-reference-number': {
     mixin: 'input-text',
