@@ -129,7 +129,7 @@ module.exports = {
           'enter-date-of-birth',
           'enter-email',
           'enter-phone-number',
-          'preference'
+          'contact-method-preference'
         ],
         'enquiry-body': [
           'enter-enquiry-body'
