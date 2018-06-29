@@ -26,12 +26,6 @@
   "decision-factsheet": {
     "header": "You should get a decision on your application within three weeks of applying."
   },
-  "sufficient-advice": {
-    "header": "Do you need more help with your enquiry?"
-  },
-  "thankyou":{
-    "alert": "Thank you for using this service"
-  },
   "fullname": {
     "header": "What is your full name?"
   },
