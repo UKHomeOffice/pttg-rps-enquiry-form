@@ -13,31 +13,38 @@ const FullnamePage = require('./pages/fullname');
 const DateOfBirthPage = require('./pages/date-of-birth');
 const ContactInformationPage = require('./pages/contact-information');
 const ContactMethodPreferencePage = require('./pages/contact-method-preference');
+
 const UniqueReferenceNumberPage = require('./pages/unique-reference-number');
 const EnquiryPage = require('./pages/enquiry');
+
 const SummaryPage = require('./pages/summary');
 const ConfirmationPage = require('./pages/confirmation');
+
+const pagesToSteps = pages => (pages.reduce((obj, item) => {
+    obj[item.path] = item.properties;
+    return obj;
+}, {}));
 
 module.exports = {
     name: 'pttg-rps-enquiry-form',
     baseUrl: '/pttg-rps-enquiry-form',
-    steps: {
-        [StartPage.path]: StartPage.properties,
-        [HaveExistingEnquiryPage.path]: HaveExistingEnquiryPage.properties,
-        [HaveSubmittedApplicationPage.path]: HaveSubmittedApplicationPage.properties,
-        [LiveAppOrDecisionPage.path]: LiveAppOrDecisionPage.properties,
-        [PreSubmissionHelpPage.path]: PreSubmissionHelpPage.properties,
-        [HowToApplyFactsheet.path]: HowToApplyFactsheet.properties,
-        [LiveApplicationFactsheet.path]: LiveApplicationFactsheet.properties,
-        [SupportingDocumentsFactsheet.path]: SupportingDocumentsFactsheet.properties,
-        [DecisionFactsheet.path]: DecisionFactsheet.properties,
-        [FullnamePage.path]: FullnamePage.properties,
-        [DateOfBirthPage.path]: DateOfBirthPage.properties,
-        [ContactInformationPage.path]: ContactInformationPage.properties,
-        [ContactMethodPreferencePage.path]: ContactMethodPreferencePage.properties,
-        [UniqueReferenceNumberPage.path]: UniqueReferenceNumberPage.properties,
-        [EnquiryPage.path]: EnquiryPage.properties,
-        [SummaryPage.path]: SummaryPage.properties,
-        [ConfirmationPage.path]: ConfirmationPage.properties
-    }
+    steps: pagesToSteps([
+        StartPage,
+        HaveExistingEnquiryPage,
+        HaveSubmittedApplicationPage,
+        LiveAppOrDecisionPage,
+        PreSubmissionHelpPage,
+        HowToApplyFactsheet,
+        LiveApplicationFactsheet,
+        SupportingDocumentsFactsheet,
+        DecisionFactsheet,
+        FullnamePage,
+        DateOfBirthPage,
+        ContactInformationPage,
+        ContactMethodPreferencePage,
+        UniqueReferenceNumberPage,
+        EnquiryPage,
+        SummaryPage,
+        ConfirmationPage
+    ])
 };

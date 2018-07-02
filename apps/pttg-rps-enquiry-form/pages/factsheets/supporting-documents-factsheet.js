@@ -1,6 +1,8 @@
+const FullnamePage = require('../fullname');
+
 module.exports = {
     path: '/supporting-documents-factsheet',
     properties: {
-        next: '/fullname'
+        next: FullnamePage.path
     }
 };

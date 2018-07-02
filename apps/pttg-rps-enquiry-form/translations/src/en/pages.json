@@ -1,5 +1,5 @@
 {
-  "start-now": {
+  "start": {
     "header": "Contact us"
   },
   "have-existing-enquiry": {
@@ -47,7 +47,7 @@
   "enquiry": {
     "header": "Enquiry"
   },
-  "confirm": {
+  "summary": {
     "sections": {
       "enquiry-details": {
         "header": "Enquiry Details"
