@@ -12,8 +12,11 @@ const LiveApplicationFactsheet = require('./pages/factsheets/live-application-fa
 const SupportingDocumentsFactsheet = require('./pages/factsheets/supporting-documents-factsheet');
 const DecisionFactsheet = require('./pages/factsheets/decision-factsheet');
 
-const isSelected = (choice, fieldName) => req => req.sessionModel.get(fieldName) === choice;
-const yesSelected = fieldName => isSelected('yes', fieldName);
+const FullnamePage = require('./pages/fullname');
+const DateOfBirthPage = require('./pages/date-of-birth');
+const ContactInformationPage = require('./pages/contact-information');
+const ContactMethodPreferencePage = require('./pages/contact-method-preference');
+const UniqueReferenceNumberPage = require('./pages/unique-reference-number');
 
 module.exports = {
     name: 'pttg-rps-enquiry-form',
@@ -28,35 +31,12 @@ module.exports = {
         [LiveApplicationFactsheet.path]: LiveApplicationFactsheet.properties,
         [SupportingDocumentsFactsheet.path]: SupportingDocumentsFactsheet.properties,
         [DecisionFactsheet.path]: DecisionFactsheet.properties,
-        '/fullname': {
-            fields: ['enter-fullname'],
-            next: '/date-of-birth'
-        },
-        '/date-of-birth': {
-            fields: ['enter-date-of-birth'],
-            next: '/contact-information'
-        },
-        '/contact-information': {
-            fields: ['enter-email', 'enter-phone-number'],
-            next: '/enquiry',
-            forks: [{
-                target: '/contact-method-preference',
-                condition: (req) => (!!req.sessionModel.get('enter-phone-number'))
-            }, {
-                target: '/unique-reference-number',
-                condition: (req) => {
-                    return yesSelected('submitted-application') && (!req.sessionModel.get('enter-phone-number'));
-                }
-            }]
-        },
-        '/contact-method-preference': {
-            fields: ['contact-method-preference'],
-            next: '/enquiry'
-        },
-        '/unique-reference-number': {
-            fields: ['enter-unique-reference-number'],
-            next: '/enquiry'
-        },
+        [FullnamePage.path]: FullnamePage.properties,
+        [DateOfBirthPage.path]: DateOfBirthPage.properties,
+        [ContactInformationPage.path]: ContactInformationPage.properties,
+        [ContactMethodPreferencePage.path]: ContactMethodPreferencePage.properties,
+        [UniqueReferenceNumberPage.path]: UniqueReferenceNumberPage.properties,
+
         '/enquiry': {
             fields: ['enter-enquiry-body'],
             next: '/confirm'
