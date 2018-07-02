@@ -47,7 +47,7 @@
   "enquiry": {
     "header": "Enquiry"
   },
-  "summary": {
+  "confirm": {
     "sections": {
       "enquiry-details": {
         "header": "Enquiry Details"
