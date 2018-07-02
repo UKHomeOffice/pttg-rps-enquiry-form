@@ -1,6 +1,3 @@
-const UserConfirmationEmail = require('./behaviours/user-confirmation-email');
-const EnquirySupportEmail = require('./behaviours/enquiry-support-email');
-
 const StartPage = require('./pages/start-page');
 const HaveExistingEnquiryPage = require('./pages/have-existing-enquiry');
 const HaveSubmittedApplicationPage = require('./pages/have-submitted-application');
@@ -17,6 +14,9 @@ const DateOfBirthPage = require('./pages/date-of-birth');
 const ContactInformationPage = require('./pages/contact-information');
 const ContactMethodPreferencePage = require('./pages/contact-method-preference');
 const UniqueReferenceNumberPage = require('./pages/unique-reference-number');
+const EnquiryPage = require('./pages/enquiry');
+const SummaryPage = require('./pages/summary');
+const ConfirmationPage = require('./pages/confirmation');
 
 module.exports = {
     name: 'pttg-rps-enquiry-form',
@@ -36,37 +36,8 @@ module.exports = {
         [ContactInformationPage.path]: ContactInformationPage.properties,
         [ContactMethodPreferencePage.path]: ContactMethodPreferencePage.properties,
         [UniqueReferenceNumberPage.path]: UniqueReferenceNumberPage.properties,
-
-        '/enquiry': {
-            fields: ['enter-enquiry-body'],
-            next: '/confirm'
-        },
-        '/confirm': {
-            behaviours: ['complete', require('hof-behaviour-summary-page'), EnquirySupportEmail, UserConfirmationEmail],
-            sections: {
-                'enquiry-details': [
-                    'do-you-have-existing-enquiry',
-                    'enter-contact-reference-number',
-                    'submitted-application',
-                    'liveapp-or-decision',
-                    'pre-submission-help-choices',
-                    'enter-unique-reference-number'
-                ],
-                'contact-details': [
-                    'enter-fullname',
-                    'enter-date-of-birth',
-                    'enter-email',
-                    'enter-phone-number',
-                    'contact-method-preference'
-                ],
-                'enquiry-body': [
-                    'enter-enquiry-body'
-                ]
-            },
-            next: '/confirmation'
-        },
-        '/confirmation': {
-            template: 'confirmation'
-        }
+        [EnquiryPage.path]: EnquiryPage.properties,
+        [SummaryPage.path]: SummaryPage.properties,
+        [ConfirmationPage.path]: ConfirmationPage.properties
     }
 };
