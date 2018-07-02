@@ -1,5 +1,3 @@
-'use strict';
-
 const { yesSelected, noSelected } = require('./utils');
 const LiveAppOrDecisionPage = require('./liveapp-or-decision');
 const PreSubmissionHelpPage = require('./pre-submission-help');

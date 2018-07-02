@@ -1,5 +1,3 @@
-'use strict';
-
 const { noSelected } = require('./utils');
 const HaveSubmittedApplication = require('./have-submitted-application');
 

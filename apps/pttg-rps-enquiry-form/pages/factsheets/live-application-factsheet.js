@@ -1,5 +1,3 @@
-'use strict';
-
 module.exports = {
     path: '/live-application-factsheet',
     properties: {

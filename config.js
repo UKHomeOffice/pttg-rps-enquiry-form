@@ -1,7 +1,5 @@
 /* eslint no-process-env: 0 */
 
-'use strict';
-
 const env = {
     asString: (varName, defaultValue) => {
         return process.env[varName] || defaultValue;
@@ -13,9 +11,9 @@ const env = {
         }
 
         switch (value.toUpperCase()) {
-            case 'TRUE': return true;
-            case 'FALSE': return false;
-            default: return defaultValue;
+        case 'TRUE': return true;
+        case 'FALSE': return false;
+        default: return defaultValue;
         }
     }
 };

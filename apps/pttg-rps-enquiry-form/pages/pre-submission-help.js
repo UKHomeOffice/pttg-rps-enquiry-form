@@ -1,5 +1,3 @@
-'use strict';
-
 const SupportingDocumentsFactsheet = require('./factsheets/supporting-documents-factsheet');
 const HowToApplyFactsheet = require('./factsheets/how-to-apply-factsheet');
 

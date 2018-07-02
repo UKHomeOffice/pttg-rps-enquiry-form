@@ -1,5 +1,3 @@
-'use strict';
-
 const UserConfirmationEmail = require('./behaviours/user-confirmation-email');
 const EnquirySupportEmail = require('./behaviours/enquiry-support-email');
 
@@ -53,7 +51,7 @@ module.exports = {
         },
         '/contact-method-preference': {
             fields: ['contact-method-preference'],
-            next: '/enquiry',
+            next: '/enquiry'
         },
         '/unique-reference-number': {
             fields: ['enter-unique-reference-number'],

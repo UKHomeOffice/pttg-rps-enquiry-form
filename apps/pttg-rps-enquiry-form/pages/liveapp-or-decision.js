@@ -1,5 +1,3 @@
-'use strict';
-
 const DecisionFactsheet = require('./factsheets/decision-factsheet');
 const LiveApplicationFactsheet = require('./factsheets/live-application-factsheet');
 
