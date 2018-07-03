@@ -7,9 +7,6 @@
         "fullname": {
             "label": "Full name"
         },
-        "date-of-birth": {
-            "label": "Date of birth"
-        },
         "email": {
             "label": "Email"
         },
@@ -43,9 +40,6 @@
         },
         "fullname": {
             "label": "Full name"
-        },
-        "date-of-birth": {
-            "label": "Date of birth"
         },
         "email": {
             "label": "Email"

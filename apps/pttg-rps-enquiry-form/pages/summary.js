@@ -19,7 +19,6 @@ module.exports = {
             ],
             'contact-details': [
                 'enter-fullname',
-                'enter-date-of-birth',
                 'enter-email',
                 'enter-phone-number',
                 'contact-method-preference'

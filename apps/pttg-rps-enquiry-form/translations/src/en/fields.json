@@ -81,27 +81,6 @@
       "required": "Please enter your full name"
     }
   },
-  "enter-date-of-birth": {
-    "label": "Date of birth",
-    "hint": "Example: 12-04-1976",
-    "validation": {
-      "required": "Please enter your date of birth",
-      "before": "Please enter a valid date of birth",
-      "after": "Please enter a valid date of birth",
-      "date": "Please enter a valid date of birth"
-    },
-    "parts": {
-      "day": {
-        "label": "Day"
-      },
-      "month": {
-        "label": "Month"
-      },
-      "year": {
-        "label": "Year"
-      }
-    }
-  },
   "enter-email": {
     "label": "Email address",
     "hint": "Required",

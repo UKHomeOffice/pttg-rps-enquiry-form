@@ -1,9 +1,9 @@
-const DateOfBirthPage = require('./date-of-birth');
+const ContactInformationPage = require('./contact-information');
 
 module.exports = {
     path: '/fullname',
     properties: {
         fields: ['enter-fullname'],
-        next: DateOfBirthPage.path
+        next: ContactInformationPage.path
     }
 };

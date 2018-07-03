@@ -29,9 +29,6 @@
   "fullname": {
     "header": "What is your full name?"
   },
-  "date-of-birth": {
-    "header": "What is your date of birth?"
-  },
   "contact-information": {
     "header": "Contact information",
     "intro": "We will use these contact details to confirm we've received your enquiry and to contact you if we require more information."
