@@ -67,7 +67,7 @@
     "label": "Phone number",
     "hint": "Optional",
     "validation": {
-      "phone-number": "Please enter a valid phone number"
+      "phonenumber": "Please enter a valid phone number"
     }
   },
   "enter-unique-reference-number": {
