@@ -27,8 +27,6 @@ const parse = (model, translate) => {
             { label: getLabel('phone-number'), value: model['enter-phone-number'] }
         ],
         'enquiry-information': [
-            { label: getLabel('existing-enquiry'), value: model['do-you-have-existing-enquiry'] },
-            { label: getLabel('contact-reference-number'), value: model['enter-contact-reference-number'] },
             { label: getLabel('submitted-application'), value: model['submitted-application'] },
             { label: getLabel('unique-reference-number'), value: model['enter-unique-reference-number'] }
         ],

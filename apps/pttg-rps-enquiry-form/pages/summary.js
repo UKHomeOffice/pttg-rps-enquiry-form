@@ -10,8 +10,6 @@ module.exports = {
         next: ConfirmationPage.path,
         sections: {
             'enquiry-details': [
-                'do-you-have-existing-enquiry',
-                'enter-contact-reference-number',
                 'submitted-application',
                 'liveapp-or-decision',
                 'pre-submission-help-choices',

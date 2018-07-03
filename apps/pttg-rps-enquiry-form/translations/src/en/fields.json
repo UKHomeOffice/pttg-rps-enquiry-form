@@ -1,24 +1,4 @@
 {
-  "do-you-have-existing-enquiry": {
-    "legend": "Have you previously contacted us?",
-    "validation": {
-      "required": "Please indicate whether you have contacted before."
-    },
-    "options": {
-      "yes": {
-        "label": "Yes"
-      },
-      "no": {
-        "label": "No"
-      }
-    }
-  },
-  "enter-contact-reference-number": {
-    "label": "Enter your contact reference number",
-    "validation": {
-      "required": "Please provide your contact reference number"
-    }
-  },
   "submitted-application": {
     "legend": "Have you already submitted an application?",
     "validation": {

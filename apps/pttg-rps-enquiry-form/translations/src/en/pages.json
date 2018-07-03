@@ -2,9 +2,6 @@
   "start": {
     "header": "Contact us"
   },
-  "have-existing-enquiry": {
-    "header": "Have you previously contacted us?"
-  },
   "have-submitted-application": {
     "header": "Have you already submitted an application?"
   },

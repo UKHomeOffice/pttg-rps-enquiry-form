@@ -16,12 +16,6 @@
         "enquiry-information": {
             "header": "Enquiry Information"
         },
-        "existing-enquiry": {
-            "label": "Do they have an existing enquiry?"
-        },
-        "contact-reference-number": {
-            "label": "Previous enquiry Contact Reference Number"
-        },
         "submitted-application": {
             "label": "Have they already submitted an application?"
         },
@@ -49,12 +43,6 @@
         },
         "enquiry-information": {
             "header": "Enquiry Information"
-        },
-        "existing-enquiry": {
-            "label": "Do they have an existing enquiry?"
-        },
-        "contact-reference-number": {
-            "label": "Previous enquiry Contact Reference Number"
         },
         "submitted-application": {
             "label": "Have they already submitted an application?"
