@@ -1,126 +1,50 @@
-'use strict';
+const StartPage = require('./pages/start-page');
+const HaveExistingEnquiryPage = require('./pages/have-existing-enquiry');
+const HaveSubmittedApplicationPage = require('./pages/have-submitted-application');
+const LiveAppOrDecisionPage = require('./pages/liveapp-or-decision');
+const PreSubmissionHelpPage = require('./pages/pre-submission-help');
 
-const UserConfirmationEmail = require('./behaviours/user-confirmation-email');
-const EnquirySupportEmail = require('./behaviours/enquiry-support-email');
+const HowToApplyFactsheet = require('./pages/factsheets/how-to-apply-factsheet');
+const LiveApplicationFactsheet = require('./pages/factsheets/live-application-factsheet');
+const SupportingDocumentsFactsheet = require('./pages/factsheets/supporting-documents-factsheet');
+const DecisionFactsheet = require('./pages/factsheets/decision-factsheet');
 
-const isSelected = (choice, fieldName) => req => req.sessionModel.get(fieldName) === choice;
-const yesSelected = fieldName => isSelected('yes', fieldName);
-const noSelected = fieldName => isSelected('no', fieldName);
+const FullnamePage = require('./pages/fullname');
+const DateOfBirthPage = require('./pages/date-of-birth');
+const ContactInformationPage = require('./pages/contact-information');
+const ContactMethodPreferencePage = require('./pages/contact-method-preference');
+
+const UniqueReferenceNumberPage = require('./pages/unique-reference-number');
+const EnquiryPage = require('./pages/enquiry');
+
+const SummaryPage = require('./pages/summary');
+const ConfirmationPage = require('./pages/confirmation');
+
+const pagesToSteps = pages => (pages.reduce((obj, item) => {
+    obj[item.path] = item.properties;
+    return obj;
+}, {}));
 
 module.exports = {
-  name: 'pttg-rps-enquiry-form',
-  baseUrl: '/pttg-rps-enquiry-form',
-  steps: {
-    '/start-now': {
-      next: '/have-existing-enquiry'
-    },
-    '/have-existing-enquiry': {
-      fields: ['do-you-have-existing-enquiry', 'enter-contact-reference-number'],
-      next: '/enquiry',
-      forks: [{
-        target: '/have-submitted-application',
-        condition: noSelected('do-you-have-existing-enquiry')
-      }]
-    },
-    '/have-submitted-application': {
-      fields: ['submitted-application'],
-      forks: [{
-        target: '/liveapp-or-decision',
-        condition: yesSelected('submitted-application')
-      }, {
-        target: '/pre-submission-help',
-        condition: noSelected('submitted-application')
-      }]
-    },
-    '/liveapp-or-decision': {
-      fields: ['liveapp-or-decision'],
-      next: '/liveapp-factsheet',
-      forks: [{
-        target: '/decision-factsheet',
-        condition: noSelected('liveapp-or-decision')
-      }]
-    },
-    '/pre-submission-help': {
-      fields: ['pre-submission-help-choices'],
-      forks: [{
-        target: '/supporting-documents',
-        condition: isSelected('supporting-documents', 'pre-submission-help-choices')
-      }, {
-        target: '/how-to-apply',
-        condition: isSelected('how-to-apply', 'pre-submission-help-choices')
-      }]
-    },
-    '/how-to-apply': {
-      next: '/fullname'
-    },
-    '/supporting-documents': {
-      next: '/fullname'
-    },
-    '/decision-factsheet': {
-      next: '/fullname'
-    },
-    '/liveapp-factsheet': {
-      next: '/fullname'
-    },
-    '/fullname': {
-      fields: ['enter-fullname'],
-      next: '/date-of-birth'
-    },
-    '/date-of-birth': {
-      fields: ['enter-date-of-birth'],
-      next: '/contact-information'
-    },
-    '/contact-information': {
-      fields: ['enter-email', 'enter-phone-number'],
-      next: '/enquiry',
-      forks: [{
-        target: '/contact-method-preference',
-        condition: (req) => (!!req.sessionModel.get('enter-phone-number'))
-      }, {
-        target: '/unique-reference-number',
-        condition: (req) => {
-          return yesSelected('submitted-application') && (!req.sessionModel.get('enter-phone-number'));
-        }
-      }]
-    },
-    '/contact-method-preference': {
-      fields: ['contact-method-preference'],
-      next: '/enquiry',
-    },
-    '/unique-reference-number': {
-      fields: ['enter-unique-reference-number'],
-      next: '/enquiry'
-    },
-    '/enquiry': {
-      fields: ['enter-enquiry-body'],
-      next: '/confirm'
-    },
-    '/confirm': {
-      behaviours: ['complete', require('hof-behaviour-summary-page'), EnquirySupportEmail, UserConfirmationEmail],
-      sections: {
-        'enquiry-details': [
-          'do-you-have-existing-enquiry',
-          'enter-contact-reference-number',
-          'submitted-application',
-          'liveapp-or-decision',
-          'pre-submission-help-choices',
-          'enter-unique-reference-number'
-        ],
-        'contact-details': [
-          'enter-fullname',
-          'enter-date-of-birth',
-          'enter-email',
-          'enter-phone-number',
-          'contact-method-preference'
-        ],
-        'enquiry-body': [
-          'enter-enquiry-body'
-        ]
-      },
-      next: '/confirmation'
-    },
-    '/confirmation': {
-      template: 'confirmation'
-    }
-  }
+    name: 'pttg-rps-enquiry-form',
+    baseUrl: '/pttg-rps-enquiry-form',
+    steps: pagesToSteps([
+        StartPage,
+        HaveExistingEnquiryPage,
+        HaveSubmittedApplicationPage,
+        LiveAppOrDecisionPage,
+        PreSubmissionHelpPage,
+        HowToApplyFactsheet,
+        LiveApplicationFactsheet,
+        SupportingDocumentsFactsheet,
+        DecisionFactsheet,
+        FullnamePage,
+        DateOfBirthPage,
+        ContactInformationPage,
+        ContactMethodPreferencePage,
+        UniqueReferenceNumberPage,
+        EnquiryPage,
+        SummaryPage,
+        ConfirmationPage
+    ])
 };

@@ -1,5 +1,3 @@
-'use strict';
-
 const Emailer = require('hof-behaviour-emailer');
 const config = require('../../../config');
 const path = require('path');
