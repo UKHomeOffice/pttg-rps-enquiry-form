@@ -55,12 +55,6 @@
       }
     }
   },
-  "enter-fullname": {
-    "label": "Full name",
-    "validation": {
-      "required": "Please enter your full name"
-    }
-  },
   "enter-email": {
     "label": "Email address",
     "hint": "Required",
@@ -73,7 +67,7 @@
     "label": "Phone number",
     "hint": "Optional",
     "validation": {
-      "phone-number": "Please enter a valid phone number"
+      "phonenumber": "Please enter a valid phone number"
     }
   },
   "enter-unique-reference-number": {

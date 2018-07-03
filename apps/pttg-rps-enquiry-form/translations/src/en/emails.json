@@ -4,9 +4,6 @@
         "contact-information": {
             "header": "Contact Information"
         },
-        "fullname": {
-            "label": "Full name"
-        },
         "email": {
             "label": "Email"
         },
@@ -31,9 +28,6 @@
         "intro": "We have received your enquiry with the following information.",
         "contact-information": {
             "header": "Contact Information"
-        },
-        "fullname": {
-            "label": "Full name"
         },
         "email": {
             "label": "Email"

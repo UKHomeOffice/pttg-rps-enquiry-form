@@ -14,10 +14,6 @@ module.exports = {
         options: ['how-to-apply', 'supporting-documents'],
         validate: 'required'
     },
-    'enter-fullname': {
-        mixin: 'input-text',
-        validate: 'required'
-    },
     'enter-email': {
         mixin: 'input-text',
         validate: ['required', 'email']

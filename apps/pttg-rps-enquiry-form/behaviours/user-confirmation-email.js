@@ -22,7 +22,6 @@ const parse = (model, translate) => {
         },
         'intro': translate('emails.user-confirmation.intro'),
         'contact-information': [
-            { label: getLabel('fullname'), value: model['enter-fullname'] },
             { label: getLabel('email'), value: model['enter-email'] },
             { label: getLabel('phone-number'), value: model['enter-phone-number'] }
         ],
