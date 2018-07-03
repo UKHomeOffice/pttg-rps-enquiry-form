@@ -1,8 +1,8 @@
-const HaveExistingEnquiryPage = require('./have-existing-enquiry');
+const HaveSubmittedApplicationPage = require('./have-submitted-application');
 
 module.exports = {
     path: '/start',
     properties: {
-        next: HaveExistingEnquiryPage.path
+        next: HaveSubmittedApplicationPage.path
     }
 };

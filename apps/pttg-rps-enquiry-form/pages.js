@@ -1,5 +1,4 @@
 const StartPage = require('./pages/start-page');
-const HaveExistingEnquiryPage = require('./pages/have-existing-enquiry');
 const HaveSubmittedApplicationPage = require('./pages/have-submitted-application');
 const LiveAppOrDecisionPage = require('./pages/liveapp-or-decision');
 const PreSubmissionHelpPage = require('./pages/pre-submission-help');
@@ -29,7 +28,6 @@ module.exports = {
     baseUrl: '/pttg-rps-enquiry-form',
     steps: pagesToSteps([
         StartPage,
-        HaveExistingEnquiryPage,
         HaveSubmittedApplicationPage,
         LiveAppOrDecisionPage,
         PreSubmissionHelpPage,
