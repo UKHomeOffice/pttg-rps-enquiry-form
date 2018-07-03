@@ -18,7 +18,6 @@ module.exports = {
                 'enter-unique-reference-number'
             ],
             'contact-details': [
-                'enter-fullname',
                 'enter-email',
                 'enter-phone-number',
                 'contact-method-preference'

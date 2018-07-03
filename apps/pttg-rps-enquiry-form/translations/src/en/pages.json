@@ -26,9 +26,6 @@
   "decision-factsheet": {
     "header": "You should get a decision on your application within three weeks of applying."
   },
-  "fullname": {
-    "header": "What is your full name?"
-  },
   "contact-information": {
     "header": "Contact information",
     "intro": "We will use these contact details to confirm we've received your enquiry and to contact you if we require more information."
