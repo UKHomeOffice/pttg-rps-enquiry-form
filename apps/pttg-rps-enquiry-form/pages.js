@@ -8,7 +8,6 @@ const LiveApplicationFactsheet = require('./pages/factsheets/live-application-fa
 const SupportingDocumentsFactsheet = require('./pages/factsheets/supporting-documents-factsheet');
 const DecisionFactsheet = require('./pages/factsheets/decision-factsheet');
 
-const FullnamePage = require('./pages/fullname');
 const ContactInformationPage = require('./pages/contact-information');
 const ContactMethodPreferencePage = require('./pages/contact-method-preference');
 
@@ -35,7 +34,6 @@ module.exports = {
         LiveApplicationFactsheet,
         SupportingDocumentsFactsheet,
         DecisionFactsheet,
-        FullnamePage,
         ContactInformationPage,
         ContactMethodPreferencePage,
         UniqueReferenceNumberPage,

@@ -55,12 +55,6 @@
       }
     }
   },
-  "enter-fullname": {
-    "label": "Full name",
-    "validation": {
-      "required": "Please enter your full name"
-    }
-  },
   "enter-email": {
     "label": "Email address",
     "hint": "Required",
