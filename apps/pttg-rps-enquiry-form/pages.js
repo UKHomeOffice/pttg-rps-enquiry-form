@@ -11,7 +11,6 @@ const DecisionFactsheet = require('./pages/factsheets/decision-factsheet');
 const ContactInformationPage = require('./pages/contact-information');
 const ContactMethodPreferencePage = require('./pages/contact-method-preference');
 
-const UniqueReferenceNumberPage = require('./pages/unique-reference-number');
 const EnquiryPage = require('./pages/enquiry');
 
 const SummaryPage = require('./pages/summary');
@@ -36,7 +35,6 @@ module.exports = {
         DecisionFactsheet,
         ContactInformationPage,
         ContactMethodPreferencePage,
-        UniqueReferenceNumberPage,
         EnquiryPage,
         SummaryPage,
         ConfirmationPage
