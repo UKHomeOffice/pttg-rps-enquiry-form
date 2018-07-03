@@ -1,5 +1,3 @@
-const dateComponent = require('hof-component-date');
-
 module.exports = {
     'do-you-have-existing-enquiry': {
         mixin: 'radio-group',
@@ -39,10 +37,6 @@ module.exports = {
         mixin: 'input-text',
         validate: 'required'
     },
-    'enter-date-of-birth': dateComponent('enter-date-of-birth', {
-        mixin: 'input-date',
-        validate: ['required', 'before', { type: 'after', arguments: '1900-01-01' }]
-    }),
     'enter-email': {
         mixin: 'input-text',
         validate: ['required', 'email']

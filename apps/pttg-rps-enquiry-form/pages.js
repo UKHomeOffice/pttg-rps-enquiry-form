@@ -10,7 +10,6 @@ const SupportingDocumentsFactsheet = require('./pages/factsheets/supporting-docu
 const DecisionFactsheet = require('./pages/factsheets/decision-factsheet');
 
 const FullnamePage = require('./pages/fullname');
-const DateOfBirthPage = require('./pages/date-of-birth');
 const ContactInformationPage = require('./pages/contact-information');
 const ContactMethodPreferencePage = require('./pages/contact-method-preference');
 
@@ -39,7 +38,6 @@ module.exports = {
         SupportingDocumentsFactsheet,
         DecisionFactsheet,
         FullnamePage,
-        DateOfBirthPage,
         ContactInformationPage,
         ContactMethodPreferencePage,
         UniqueReferenceNumberPage,
