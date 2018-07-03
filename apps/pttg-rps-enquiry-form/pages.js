@@ -12,7 +12,6 @@ const FullnamePage = require('./pages/fullname');
 const ContactInformationPage = require('./pages/contact-information');
 const ContactMethodPreferencePage = require('./pages/contact-method-preference');
 
-const UniqueReferenceNumberPage = require('./pages/unique-reference-number');
 const EnquiryPage = require('./pages/enquiry');
 
 const SummaryPage = require('./pages/summary');
@@ -38,7 +37,6 @@ module.exports = {
         FullnamePage,
         ContactInformationPage,
         ContactMethodPreferencePage,
-        UniqueReferenceNumberPage,
         EnquiryPage,
         SummaryPage,
         ConfirmationPage

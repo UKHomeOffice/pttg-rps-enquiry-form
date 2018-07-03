@@ -1,0 +1,9 @@
+{{<partials-page}}
+    {{$page-content}}
+        {{#textarea}}enter-enquiry-body{{/textarea}}
+        {{#has-submitted-application}}
+            {{#input-text}}enter-unique-reference-number{{/input-text}}
+        {{/has-submitted-application}}
+        {{#input-submit}}continue{{/input-submit}}
+    {{/page-content}}
+{{/partials-page}}

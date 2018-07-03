@@ -77,10 +77,8 @@
     }
   },
   "enter-unique-reference-number": {
-    "label": "Unique Reference Number (URN)",
-    "validation": {
-      "required": "Please enter your unique-reference-number"
-    }
+    "label": "Unique Reference Number",
+    "hint": "Optional"
   },
   "enter-enquiry-body": {
     "label": "Enter Enquiry",
