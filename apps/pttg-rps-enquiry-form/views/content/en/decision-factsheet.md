@@ -1,13 +1,9 @@
-*Your application may take longer if:*
+## After you apply
+If your application is successful, you’ll be able to get proof of your status through an online service. You will not get a physical document unless you’re from outside the EU and do not already have a biometric residence card.
 
-- we need more information from you
-- we need to make more detailed checks on part of your application, for example if you have a criminal record
+You will not lose your settled status unless you leave the UK for a period of more than 5 years.
 
-We'll tell you if we need more information from you.
+If your application is unsuccessful, you can reapply if you do so by 30 June 2021. You can also appeal the decision if you apply from 30 March 2019.
 
-**How will I hear back?**
-
-You will receive our decision by post or by email. You won't get an official document that confirms your status. We'll tell you how you can prove your status to employers, landlords and when you travel.
-
-This advice is based on the information you have provided. It only covers common situations. It may not apply to your specific case, particularly if your situation is complex or unusual.
+[More about applying for settled status](https://www.gov.uk/settled-status-eu-citizens-families/applying-for-settled-status)
 

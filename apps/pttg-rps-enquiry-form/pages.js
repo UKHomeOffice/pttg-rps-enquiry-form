@@ -5,7 +5,7 @@ const PreSubmissionHelpPage = require('./pages/pre-submission-help');
 
 const HowToApplyFactsheet = require('./pages/factsheets/how-to-apply-factsheet');
 const LiveApplicationFactsheet = require('./pages/factsheets/live-application-factsheet');
-const SupportingDocumentsFactsheet = require('./pages/factsheets/supporting-documents-factsheet');
+const EligibilityFactsheet = require('./pages/factsheets/eligibility-factsheet');
 const DecisionFactsheet = require('./pages/factsheets/decision-factsheet');
 
 const ContactInformationPage = require('./pages/contact-information');
@@ -31,7 +31,7 @@ module.exports = {
         PreSubmissionHelpPage,
         HowToApplyFactsheet,
         LiveApplicationFactsheet,
-        SupportingDocumentsFactsheet,
+        EligibilityFactsheet,
         DecisionFactsheet,
         ContactInformationPage,
         ContactMethodPreferencePage,

@@ -7,9 +7,9 @@ module.exports = {
     path: '/liveapp-or-decision',
     properties: {
         fields: ['liveapp-or-decision'],
-        next: LiveApplicationFactsheet.path,
+        next: DecisionFactsheet.path,
         forks: [{
-            target: DecisionFactsheet.path,
+            target: LiveApplicationFactsheet.path,
             condition: noSelected('liveapp-or-decision')
         }]
     }

@@ -11,7 +11,7 @@ module.exports = {
     },
     'pre-submission-help-choices': {
         mixin: 'radio-group',
-        options: ['how-to-apply', 'supporting-documents'],
+        options: ['how-to-apply', 'eligibility-factsheet'],
         validate: 'required'
     },
     'enter-email': {
