@@ -4,13 +4,13 @@ const LiveApplicationFactsheet = require('./factsheets/live-application-factshee
 const { noSelected } = require('./utils');
 
 module.exports = {
-    path: '/liveapp-or-decision',
+    path: '/decision-made',
     properties: {
-        fields: ['liveapp-or-decision'],
+        fields: ['decision-made'],
         next: DecisionFactsheet.path,
         forks: [{
             target: LiveApplicationFactsheet.path,
-            condition: noSelected('liveapp-or-decision')
+            condition: noSelected('decision-made')
         }]
     }
 };

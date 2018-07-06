@@ -1,5 +1,5 @@
 const { yesSelected, noSelected } = require('./utils');
-const LiveAppOrDecisionPage = require('./liveapp-or-decision');
+const LiveAppOrDecisionPage = require('./decision-made');
 const PreSubmissionHelpPage = require('./pre-submission-help');
 
 module.exports = {

@@ -1,6 +1,6 @@
 const StartPage = require('./pages/start-page');
 const HaveSubmittedApplicationPage = require('./pages/have-submitted-application');
-const LiveAppOrDecisionPage = require('./pages/liveapp-or-decision');
+const LiveAppOrDecisionPage = require('./pages/decision-made');
 const PreSubmissionHelpPage = require('./pages/pre-submission-help');
 
 const HowToApplyFactsheet = require('./pages/factsheets/how-to-apply-factsheet');

@@ -13,7 +13,7 @@
       }
     }
   },
-  "liveapp-or-decision": {
+  "decision-made": {
     "legend": "Have you been given a decision?",
     "validation": {
       "required": "Please choose an option"

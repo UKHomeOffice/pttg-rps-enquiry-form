@@ -11,7 +11,7 @@ module.exports = {
         sections: {
             'enquiry-details': [
                 'submitted-application',
-                'liveapp-or-decision',
+                'decision-made',
                 'pre-submission-help-choices',
                 'enter-unique-reference-number'
             ],

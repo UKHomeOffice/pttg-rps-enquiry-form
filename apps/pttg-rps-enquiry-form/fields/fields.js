@@ -4,7 +4,7 @@ module.exports = {
         options: ['yes', 'no'],
         validate: 'required'
     },
-    'liveapp-or-decision': {
+    'decision-made': {
         mixin: 'radio-group',
         options: ['yes', 'no'],
         validate: 'required'
