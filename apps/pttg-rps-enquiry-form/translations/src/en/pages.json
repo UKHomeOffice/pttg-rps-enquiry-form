@@ -5,7 +5,7 @@
   "have-submitted-application": {
     "header": "Have you already submitted an application?"
   },
-  "liveapp-or-decision": {
+  "decision-made": {
     "header": "Have you been given a decision?"
   },
   "liveapp-factsheet": {
@@ -16,12 +16,6 @@
   },
   "how-to-apply": {
     "header": "Apply to stay in the UK after it leaves the EU"
-  },
-  "supporting-documents": {
-    "header": "Supporting Documents"
-  },
-  "decision-factsheet": {
-    "header": "You should get a decision on your application within three weeks of applying."
   },
   "contact-information": {
     "header": "Contact information",

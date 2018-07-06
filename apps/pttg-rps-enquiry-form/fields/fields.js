@@ -4,14 +4,14 @@ module.exports = {
         options: ['yes', 'no'],
         validate: 'required'
     },
-    'liveapp-or-decision': {
+    'decision-made': {
         mixin: 'radio-group',
         options: ['yes', 'no'],
         validate: 'required'
     },
     'pre-submission-help-choices': {
         mixin: 'radio-group',
-        options: ['how-to-apply', 'supporting-documents'],
+        options: ['how-to-apply', 'eligibility-factsheet'],
         validate: 'required'
     },
     'enter-email': {

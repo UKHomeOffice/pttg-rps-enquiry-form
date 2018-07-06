@@ -13,7 +13,7 @@
       }
     }
   },
-  "liveapp-or-decision": {
+  "decision-made": {
     "legend": "Have you been given a decision?",
     "validation": {
       "required": "Please choose an option"
@@ -36,8 +36,8 @@
       "how-to-apply": {
         "label": "How to apply"
       },
-      "supporting-documents": {
-        "label": "Supporting documents"
+      "eligibility-factsheet": {
+        "label": "Eligibility"
       }
     }
   },

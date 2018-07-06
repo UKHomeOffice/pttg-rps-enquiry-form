@@ -1,7 +1,7 @@
 const ContactInformationPage = require('../contact-information');
 
 module.exports = {
-    path: '/supporting-documents-factsheet',
+    path: '/eligibility-factsheet',
     properties: {
         next: ContactInformationPage.path
     }
