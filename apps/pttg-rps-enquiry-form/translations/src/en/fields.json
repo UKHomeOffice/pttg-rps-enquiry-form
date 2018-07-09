@@ -72,7 +72,10 @@
   },
   "enter-unique-reference-number": {
     "label": "Unique Reference Number",
-    "hint": "Optional"
+    "hint": "Optional",
+    "validation": {
+      "maxlength": "Unique Reference Numbers cannot exceed 25 characters"
+    }
   },
   "enter-enquiry-body": {
     "label": "Enter Enquiry",

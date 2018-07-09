@@ -28,7 +28,12 @@ module.exports = {
         validate: 'required'
     },
     'enter-unique-reference-number': {
-        mixin: 'input-text'
+        mixin: 'input-text',
+        validate: [{
+            type: 'maxlength',
+            arguments: '25'
+
+        }]
     },
     'enter-enquiry-body': {
         mixin: 'textarea',
