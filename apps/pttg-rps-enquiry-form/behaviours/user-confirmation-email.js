@@ -1,42 +1,58 @@
-const Emailer = require('hof-behaviour-emailer');
-const config = require('../../../config');
-const path = require('path');
+const NotifyClient = require('notifications-node-client').NotifyClient;
+const notifyClient = new NotifyClient('');
 
+const getValue = (value, field, translate) => {
 
-const parse = (model, translate) => {
-    const getLabel = key => {
-        const labelKey = `emails.user-confirmation.${key}.label`;
-        return translate(labelKey);
-    };
+    const key = `fields.${field}.options.${value}.label`;
+    let result = translate(key);
 
-    const getHeader = key => {
-        const headerKey = `emails.user-confirmation.${key}.header`;
-        return translate(headerKey);
-    };
+    if (result === key) {
 
-    return {
-        'headers': {
-            'contact-information-header': getHeader('contact-information'),
-            'enquiry-information-header': getHeader('enquiry-information'),
-            'enquiry-header': getHeader('enquiry')
-        },
-        'intro': translate('emails.user-confirmation.intro'),
-        'contact-information': [
-            { label: getLabel('email'), value: model['enter-email'] },
-            { label: getLabel('phone-number'), value: model['enter-phone-number'] }
-        ],
-        'enquiry-information': [
-            { label: getLabel('submitted-application'), value: model['submitted-application'] },
-            { label: getLabel('unique-reference-number'), value: model['enter-unique-reference-number'] }
-        ],
-        'enquiry': model['enter-enquiry-body']
-    };
+        result = value;
+
+    }
+
+    return result;
+
 };
 
-module.exports = Emailer({
-    ...config.email,
-    template: path.resolve(__dirname, '../views/emails/user-confirmation-email.html'),
-    recipient: model => model['enter-email'],
-    subject: (model, translate) => translate('emails.user-confirmation.subject'),
-    parse
-});
+module.exports = superclass => class Rename extends superclass {
+
+
+    successHandler(req, res, callback) {
+        const translate = req.translate;
+        const contactPreference = getValue(req.sessionModel.get('contact-method-preference'), 'contact-method-preference', translate);
+        const submittedApplication = getValue(req.sessionModel.get('submitted-application'), 'submitted-application', translate);
+        notifyClient
+            .sendEmail('', req.sessionModel.get('enter-email'), {
+                personalisation: {
+                    'email_address': req.sessionModel.get('enter-email'),
+                    'phone_number': req.sessionModel.get('enter-phone-number'),
+                    'contact_preference': contactPreference,
+                    'have_submitted_application': submittedApplication,
+                    'unique_reference_number': req.sessionModel.get('enter-unique-reference-number'),
+                    'enquiry': req.sessionModel.get('enter-enquiry-body')
+
+                }
+
+            })
+            .then(response => {
+
+                const statusCode = response.statusCode;
+                if (statusCode === 201) {
+                    console.log(response);
+                } else {
+                    console.log(`Email failed to send with status code ${statusCode}`);
+                }
+
+            })
+            .catch(err => {
+                
+                console.log(err);
+                const body = err.body;
+                const statusCode = body['status_code'];
+                console.error(`${body} failed with status code: ${statusCode}`);
+
+            })
+    }
+};
