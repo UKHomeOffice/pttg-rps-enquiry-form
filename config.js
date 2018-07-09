@@ -19,6 +19,12 @@ const env = {
 };
 
 module.exports = {
+    env: process.env.NODE_ENV || 'development',
+    loglevel: process.env.LOG_LEVEL || 'info',
+    notify: {
+        apiKey: process.env.NOTIFY_API_KEY || '',
+        templateId: process.env.NOTIFY_TEMPLATE_ID || ''
+    },
     email: {
         transport: 'smtp',
         transportOptions: {
