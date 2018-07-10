@@ -37,7 +37,12 @@ module.exports = {
     },
     'enter-enquiry-body': {
         mixin: 'textarea',
-        validate: 'required',
+        validate: [
+            'required', {
+                type: 'maxlength',
+                arguments: '500'
+            }
+        ],
         attributes: [{
             attribute: 'rows',
             value: 8
