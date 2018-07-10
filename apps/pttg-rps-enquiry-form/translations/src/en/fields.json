@@ -60,7 +60,8 @@
     "hint": "Required",
     "validation": {
       "required": "Please enter your email address",
-      "email": "Please enter a valid email address"
+      "email": "Please enter a valid email address",
+      "maxlength": "Email cannot exceed 254 characters"
     }
   },
   "enter-phone-number": {
