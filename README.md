@@ -32,7 +32,7 @@ Follow these instructions to run the service on your local machine.
 * Open up a web browser and enter the following URL in the address bar
 **http://localhost:8080/pttg-rps-enquiry-form**
 
-##Using Docker
+## Using Docker
 The application contains a docker-compose file and can be alternatively run through Docker using the following command:
 
 ```docker run --publish 6379:6379 -d redis```
