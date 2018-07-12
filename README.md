@@ -35,4 +35,4 @@ Follow these instructions to run the service on your local machine.
 ## Using Docker
 The application contains a docker-compose file and can be alternatively run through Docker using the following command:
 
-```docker run --publish 6379:6379 -d redis```
+```docker-compose up```
