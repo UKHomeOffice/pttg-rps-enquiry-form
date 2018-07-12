@@ -13,6 +13,9 @@ This is the RPS Enquiry Form. This allows current and potential users of the res
 The RPS enquiry form is built using the HOF (Home Office Forms) template.
 Follow these instructions to run the service on your local machine.
 
+* The application requires a data store. Install Redis.
+**https://redis.io/download**
+
 ## Clone the repository
 ```git clone git@github.com:UKHomeOffice/pttg-rps-enquiry-form.git```
 
