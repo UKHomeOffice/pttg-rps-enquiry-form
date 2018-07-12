@@ -60,7 +60,8 @@
     "hint": "Required",
     "validation": {
       "required": "Please enter your email address",
-      "email": "Please enter a valid email address"
+      "email": "Please enter a valid email address",
+      "maxlength": "Email cannot exceed 254 characters"
     }
   },
   "enter-phone-number": {
@@ -72,7 +73,10 @@
   },
   "enter-unique-reference-number": {
     "label": "Unique Reference Number",
-    "hint": "Optional"
+    "hint": "Optional",
+    "validation": {
+      "maxlength": "Unique Reference Numbers cannot exceed 25 characters"
+    }
   },
   "enter-enquiry-body": {
     "label": "Enter Enquiry",

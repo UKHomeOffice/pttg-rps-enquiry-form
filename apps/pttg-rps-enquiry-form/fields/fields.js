@@ -16,7 +16,10 @@ module.exports = {
     },
     'enter-email': {
         mixin: 'input-text',
-        validate: ['required', 'email']
+        validate: ['required', 'email', {
+            type: 'maxlength',
+            arguments: '254'
+        }]
     },
     'enter-phone-number': {
         mixin: 'input-phone',
@@ -28,7 +31,12 @@ module.exports = {
         validate: 'required'
     },
     'enter-unique-reference-number': {
-        mixin: 'input-text'
+        mixin: 'input-text',
+        validate: [{
+            type: 'maxlength',
+            arguments: '25'
+
+        }]
     },
     'enter-enquiry-body': {
         mixin: 'textarea',
