@@ -1,10 +1,13 @@
 const config = require('../../../config');
 
-const EnquirySupportEmail = require('../behaviours/enquiry-support-email');
+const EnquirySupportEmail = require('../behaviours/enquiry-support-email')({
+    apiKey: config.notify.apiKey,
+    templateId: config.notify.templates.enquirySupport
+});
 
 const UserConfirmationEmail = require('../behaviours/user-confirmation-email')({
     apiKey: config.notify.apiKey,
-    templateId: config.notify.templateId
+    templateId: config.notify.templates.userConfirmation
 });
 
 const ConfirmationPage = require('./confirmation');
