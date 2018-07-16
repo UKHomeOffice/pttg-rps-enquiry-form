@@ -13,6 +13,9 @@ This is the RPS Enquiry Form. This allows current and potential users of the res
 The RPS enquiry form is built using the HOF (Home Office Forms) template.
 Follow these instructions to run the service on your local machine.
 
+* The application requires a data store. Install Redis. (Not required if using Docker).
+**https://redis.io/download**
+
 ## Clone the repository
 ```git clone git@github.com:UKHomeOffice/pttg-rps-enquiry-form.git```
 
@@ -28,3 +31,8 @@ Follow these instructions to run the service on your local machine.
 * You should receive a console output highlighting a successful build
 * Open up a web browser and enter the following URL in the address bar
 **http://localhost:8080/pttg-rps-enquiry-form**
+
+## Using Docker
+The application contains a docker-compose file and can be alternatively run through Docker using the following command:
+
+```docker-compose up```

@@ -81,8 +81,10 @@
   "enter-enquiry-body": {
     "label": "Enter Enquiry",
     "summary": "Enquiry",
+    "hint": "max 500 characters",
     "validation": {
-      "required": "Please enter an enquiry"
+      "required": "Please enter an enquiry",
+      "maxlength": "Enquiry cannot exceed 500 characters"
     }
   }
 }
