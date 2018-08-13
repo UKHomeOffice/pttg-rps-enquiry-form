@@ -2,6 +2,7 @@ const StartPage = require('./pages/start-page');
 const HaveSubmittedApplicationPage = require('./pages/have-submitted-application');
 const LiveAppOrDecisionPage = require('./pages/decision-made');
 const PreSubmissionHelpPage = require('./pages/pre-submission-help');
+const WhatIsYourEnquiry = require('./pages/what-is-your-enquiry');
 
 const HowToApplyFactsheet = require('./pages/factsheets/how-to-apply-factsheet');
 const LiveApplicationFactsheet = require('./pages/factsheets/live-application-factsheet');
@@ -26,6 +27,7 @@ module.exports = {
     baseUrl: '/pttg-rps-enquiry-form',
     steps: pagesToSteps([
         StartPage,
+        WhatIsYourEnquiry,
         HaveSubmittedApplicationPage,
         LiveAppOrDecisionPage,
         PreSubmissionHelpPage,

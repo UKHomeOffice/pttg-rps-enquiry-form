@@ -13,6 +13,29 @@
       }
     }
   },
+  "your-enquiry-option" : {
+    "legend": "What is your enquiry about?",
+    "validation": {
+      "required": "Please choose an option"
+    },
+    "options": {
+      "eligibility": {
+        "label": "Who is eligible for settled status"
+      },
+      "how-to-apply": {
+        "label": "How to apply"
+      },
+      "change-or-withdraw": {
+        "label": "Changing or withdrawing my application"
+      },
+      "application-result": {
+        "label": "The result of my application"
+      },
+      "enquiry-form": {
+        "label": "Something else"
+      }
+    } 
+  },
   "decision-made": {
     "legend": "Have you been given a decision?",
     "validation": {

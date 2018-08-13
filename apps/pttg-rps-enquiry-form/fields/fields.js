@@ -4,6 +4,11 @@ module.exports = {
         options: ['yes', 'no'],
         validate: 'required'
     },
+    'your-enquiry-option': {
+        mixin: 'radio-group',
+        options: ['eligibility', 'how-to-apply', 'change-or-withdraw', 'application-result', 'enquiry-form'],
+        validate: 'required'
+    },
     'decision-made': {
         mixin: 'radio-group',
         options: ['yes', 'no'],
