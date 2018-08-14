@@ -1,5 +1,5 @@
-## After you apply
-If your application is successful, you’ll be able to get proof of your status through an online service. You will not get a physical document unless you’re from outside the EU and do not already have a biometric residence card.
+## After you get a decision
+If your application is successful, you’ll be able to view and prove your status through an online service. You will not get a physical document unless you’re from outside the EU and do not already have a biometric residence card.
 
 You will not lose your settled status unless you leave the UK for a period of more than 5 years.
 

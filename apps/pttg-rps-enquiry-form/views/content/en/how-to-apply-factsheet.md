@@ -5,6 +5,4 @@ The deadline for applying will be 30 June 2021. You may be able to apply after t
 
 The application form will be online. You’ll be able to get support over the phone or in person if you need help doing things online.
 
-Full details of the scheme are still subject to approval by Parliament.
 
-[More about applying for settled status](https://www.gov.uk/settled-status-eu-citizens-families/applying-for-settled-status)

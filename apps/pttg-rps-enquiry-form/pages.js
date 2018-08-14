@@ -1,15 +1,10 @@
 const StartPage = require('./pages/start-page');
-const HaveSubmittedApplicationPage = require('./pages/have-submitted-application');
-const LiveAppOrDecisionPage = require('./pages/decision-made');
-const PreSubmissionHelpPage = require('./pages/pre-submission-help');
+const WhatIsYourEnquiry = require('./pages/what-is-your-enquiry');
 
 const HowToApplyFactsheet = require('./pages/factsheets/how-to-apply-factsheet');
 const LiveApplicationFactsheet = require('./pages/factsheets/live-application-factsheet');
 const EligibilityFactsheet = require('./pages/factsheets/eligibility-factsheet');
 const DecisionFactsheet = require('./pages/factsheets/decision-factsheet');
-
-const ContactInformationPage = require('./pages/contact-information');
-const ContactMethodPreferencePage = require('./pages/contact-method-preference');
 
 const EnquiryPage = require('./pages/enquiry');
 
@@ -26,15 +21,11 @@ module.exports = {
     baseUrl: '/pttg-rps-enquiry-form',
     steps: pagesToSteps([
         StartPage,
-        HaveSubmittedApplicationPage,
-        LiveAppOrDecisionPage,
-        PreSubmissionHelpPage,
+        WhatIsYourEnquiry,
         HowToApplyFactsheet,
         LiveApplicationFactsheet,
         EligibilityFactsheet,
         DecisionFactsheet,
-        ContactInformationPage,
-        ContactMethodPreferencePage,
         EnquiryPage,
         SummaryPage,
         ConfirmationPage

@@ -1,4 +1,4 @@
-## Eligibility
+## Who‘s eligible for settled status
 To be eligible for settled status, you’ll need to:
 
 -  be an EU citizen, or a family member of an EU citizen
@@ -9,6 +9,3 @@ If you’ve lived in the UK for less than 5 years, you’ll generally be eligibl
 
 If you’re a non-EU citizen, you will need to show your relationship to an EU citizen living here.
 
-Full details of the scheme are still subject to approval by Parliament.
-
-[More about who is eligible for settled status](https://www.gov.uk/settled-status-eu-citizens-families/eligibility)

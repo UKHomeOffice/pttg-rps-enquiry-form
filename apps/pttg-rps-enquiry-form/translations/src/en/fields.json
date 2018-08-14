@@ -1,63 +1,41 @@
 {
-  "submitted-application": {
-    "legend": "Have you already submitted an application?",
-    "validation": {
-      "required": "Please choose an option"
-    },
-    "options": {
-      "yes": {
-        "label": "Yes"
-      },
-      "no": {
-        "label": "No"
-      }
-    }
-  },
-  "decision-made": {
-    "legend": "Have you been given a decision?",
-    "validation": {
-      "required": "Please choose an option"
-    },
-    "options": {
-      "yes": {
-        "label": "Yes"
-      },
-      "no": {
-        "label": "No"
-      }
-    }
-  },
-  "pre-submission-help-choices": {
+  "your-enquiry-option" : {
     "legend": "What is your enquiry about?",
     "validation": {
       "required": "Please choose an option"
     },
     "options": {
+      "eligibility": {
+        "label": "Who is eligible for settled status"
+      },
       "how-to-apply": {
         "label": "How to apply"
       },
-      "eligibility-factsheet": {
-        "label": "Eligibility"
-      }
-    }
-  },
-  "contact-method-preference": {
-    "legend": "How would you prefer to be contacted?",
-    "validation": {
-      "required": "Please choose an option"
-    },
-    "options": {
-      "email": {
-        "label": "Email"
+      "change-or-withdraw": {
+        "label": "Changing or withdrawing my application"
       },
-      "phone-number": {
-        "label": "Phone"
+      "application-result": {
+        "label": "The result of my application"
+      },
+      "enquiry-form": {
+        "label": "Something else"
+      }
+    } 
+  },
+  "enter-contact-information": {
+    "legend": "Your contact details",
+    "options": {
+      "enter-email-address": {
+        "label": "Email address"
+      },
+      "enter-phone-number": {
+        "label": "Telephone number (optional)"
       }
     }
   },
-  "enter-email": {
+  "enter-email-address": {
     "label": "Email address",
-    "hint": "Required",
+    "hint": "We'll only use this to contact you about your enquiry.",
     "validation": {
       "required": "Please enter your email address",
       "email": "Please enter a valid email address",
@@ -66,14 +44,14 @@
   },
   "enter-phone-number": {
     "label": "Phone number",
-    "hint": "Optional",
+    "hint": "We may want to contact you by telephone if we need more information to answer your question.",
     "validation": {
       "phonenumber": "Please enter a valid phone number"
     }
   },
   "enter-unique-reference-number": {
-    "label": "Unique Reference Number",
-    "hint": "Optional",
+    "label": "Your application number, if you have one",
+    "hint": "For example 3434-0000-0000-0001. This will be on any emails you received about your application.",
     "validation": {
       "maxlength": "Unique Reference Numbers cannot exceed 25 characters"
     }
