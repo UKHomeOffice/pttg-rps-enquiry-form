@@ -1,8 +1,8 @@
-const ContactInformationPage = require('../contact-information');
+const EnquiryPage = require('../enquiry');
 
 module.exports = {
     path: '/how-to-apply-factsheet',
     properties: {
-        next: ContactInformationPage.path
+        next: EnquiryPage.path
     }
 };

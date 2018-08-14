@@ -9,6 +9,3 @@ If you’ve lived in the UK for less than 5 years, you’ll generally be eligibl
 
 If you’re a non-EU citizen, you will need to show your relationship to an EU citizen living here.
 
-_Full details of the scheme are still subject to approval by Parliament._
-
-[More about who is eligible for settled status](https://www.gov.uk/settled-status-eu-citizens-families/eligibility)

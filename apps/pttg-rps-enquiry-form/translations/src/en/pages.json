@@ -2,9 +2,6 @@
   "start": {
     "header": "Ask a question about applying for settled status"
   },
-  "have-submitted-application": {
-    "header": "Have you already submitted an application?"
-  },
   "decision-made": {
     "header": "Have you been given a decision?"
   },
@@ -17,31 +14,31 @@
   "how-to-apply": {
     "header": "Apply to stay in the UK after it leaves the EU"
   },
-  "contact-information": {
-    "header": "Contact information",
-    "intro": "We will use these contact details to confirm we've received your enquiry and to contact you if we require more information."
-  },
-  "contact-method-preference": {
-    "header": "How would you prefer to be contacted?",
-    "intro": "We may contact you by email or phone depending on your enquiry."
-  },
   "unique-reference-number": {
     "header": "What is your Unique Reference Number?",
     "intro": "This is also called Home Office Case ID"
   },
   "enquiry": {
-    "header": "Enquiry"
+    "header": "Your enquiry"
   },
   "confirm": {
     "sections": {
       "enquiry-details": {
         "header": "Enquiry Details"
       },
-      "contact-details": {
+      "enter-contact-information": {
         "header": "Contact Details"
       },
       "enquiry-body": {
         "header": "Enquiry"
+      }
+    },
+    "fields": {
+      "enter-unique-reference-number": {
+        "label": "Your application number"
+      },
+      "enter-phone-number": {
+        "label": "Telephone number"
       }
     }
   }

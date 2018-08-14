@@ -1,9 +1,11 @@
 {{<partials-page}}
     {{$page-content}}
-        {{#textarea}}enter-enquiry-body{{/textarea}}
-        {{#has-submitted-application}}
-            {{#input-text}}enter-unique-reference-number{{/input-text}}
-        {{/has-submitted-application}}
-        {{#input-submit}}continue{{/input-submit}}
+       {{#textarea}}enter-enquiry-body{{/textarea}}
+       <div >
+           {{#input-text}}enter-unique-reference-number{{/input-text}}
+        </div> 
+       
+       {{#radio-group}}enter-contact-information{{/radio-group}}
+       {{#input-submit}}continue{{/input-submit}}
     {{/page-content}}
 {{/partials-page}}

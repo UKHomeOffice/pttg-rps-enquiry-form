@@ -26,6 +26,7 @@
   box-shadow: none;
   background: none;
   text-decoration: underline;
+  margin-top: 1.5rem;
 }
 
 .factsheet-submit input:visited {
@@ -45,4 +46,13 @@
 
 .table-details tbody td:nth-child(2) {
   word-break: break-word;
+}
+
+#enter-unique-reference-number-group label {
+  font-weight: 700;
+}
+
+#enter-contact-information-group legend {
+  font-weight: 700;
+  margin-bottom: 1.3rem;
 }
