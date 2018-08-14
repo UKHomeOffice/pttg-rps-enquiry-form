@@ -52,6 +52,10 @@
   @include bold-19();
 }
 
+#enter-unique-reference-number-group label {
+  @include bold-19();
+}
+
 #enter-contact-information-group legend {
   @include bold-19();
   margin-bottom: 1.3rem;
