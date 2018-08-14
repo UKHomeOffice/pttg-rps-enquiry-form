@@ -49,10 +49,10 @@
 }
 
 #enter-unique-reference-number-group label {
-  font-weight: 700;
+  @include bold-19();
 }
 
 #enter-contact-information-group legend {
-  font-weight: 700;
+  @include bold-19();
   margin-bottom: 1.3rem;
 }
