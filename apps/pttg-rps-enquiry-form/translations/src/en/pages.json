@@ -1,44 +1,44 @@
 {
   "start": {
-    "header": "Ask a question about applying for settled status"
+    "header": ‘Ask a question about applying for settled status’
   },
   "decision-made": {
-    "header": "Have you been given a decision?"
+    "header": ‘Have you been given a decision?’
   },
   "liveapp-factsheet": {
-    "header": "Live application factsheet"
+    "header": ‘Live application factsheet’
   },
   "pre-submission-help": {
-    "header": "What is your enquiry about?"
+    "header": ‘What is your enquiry about?’
   },
   "how-to-apply": {
-    "header": "Apply to stay in the UK after it leaves the EU"
+    "header": ‘Apply to stay in the UK after it leaves the EU’
   },
   "unique-reference-number": {
-    "header": "What is your Unique Reference Number?",
-    "intro": "This is also called Home Office Case ID"
+    "header": ‘What is your Unique Reference Number?’,
+    "intro": ‘This is also called Home Office Case ID’
   },
   "enquiry": {
-    "header": "Your enquiry"
+    "header": ‘Your enquiry’
   },
   "confirm": {
     "sections": {
       "enquiry-details": {
-        "header": "Enquiry Details"
+        "header": ‘Enquiry Details’
       },
       "enter-contact-information": {
-        "header": "Contact Details"
+        "header": ‘Contact Details’
       },
       "enquiry-body": {
-        "header": "Enquiry"
+        "header": ‘Enquiry’
       }
     },
     "fields": {
       "enter-unique-reference-number": {
-        "label": "Your application number"
+        "label": ‘Your application number’
       },
       "enter-phone-number": {
-        "label": "Telephone number"
+        "label": ‘Telephone number’
       }
     }
   }
