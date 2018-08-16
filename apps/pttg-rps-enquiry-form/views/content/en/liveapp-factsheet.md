@@ -1,5 +1,3 @@
-## What you can do while your application is being considered
-
 If it looks like you have made a mistake in your application, we will contact you before making a decision so you can correct any errors.
 
 We'll also tell you if you need to provide more evidence before we can make a decision.
