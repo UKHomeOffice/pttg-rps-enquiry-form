@@ -2,21 +2,20 @@
   "start": {
     "header": "Ask a question about applying for settled status"
   },
-  "decision-made": {
-    "header": "Have you been given a decision?"
-  },
-  "liveapp-factsheet": {
-    "header": "Live application factsheet"
-  },
-  "pre-submission-help": {
+  "what-is-your-enquiry": {
     "header": "What is your enquiry about?"
   },
-  "how-to-apply": {
-    "header": "Apply to stay in the UK after it leaves the EU"
+  "how-to-apply-factsheet": {
+    "header": "How to apply"
   },
-  "unique-reference-number": {
-    "header": "What is your Unique Reference Number?",
-    "intro": "This is also called Home Office Case ID"
+  "live-application-factsheet": {
+    "header": "What you can do while your application is being considered"
+  },
+  "eligibility-factsheet": {
+    "header": "Who’s eligible for settled status"
+  },
+  "decision-factsheet": {
+    "header": "After you get a decision"
   },
   "enquiry": {
     "header": "Your enquiry"
