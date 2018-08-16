@@ -1,4 +1,3 @@
-## Who’s eligible for settled status
 To be eligible for settled status, you’ll need to:
 
 -  be an EU citizen, or a family member of an EU citizen
