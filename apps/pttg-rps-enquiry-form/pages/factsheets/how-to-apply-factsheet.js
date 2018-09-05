@@ -1,8 +1,8 @@
-const EnquiryPage = require('../question');
+const QuestionPage = require('../question');
 
 module.exports = {
     path: '/how-to-apply-factsheet',
     properties: {
-        next: EnquiryPage.path
+        next: QuestionPage.path
     }
 };

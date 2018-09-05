@@ -5,37 +5,37 @@ const path = require('path');
 
 const parse = (model, translate) => {
     const getLabel = key => {
-        const labelKey = `emails.enquiry.${key}.label`;
+        const labelKey = `emails.question.${key}.label`;
         return translate(labelKey);
     };
 
     const getHeader = key => {
-        const headerKey = `emails.enquiry.${key}.header`;
+        const headerKey = `emails.question.${key}.header`;
         return translate(headerKey);
     };
 
     return {
         'headers': {
             'contact-information-header': getHeader('contact-information'),
-            'enquiry-information-header': getHeader('enquiry-information'),
-            'enquiry-header': getHeader('enquiry')
+            'question-information-header': getHeader('question-information'),
+            'question-header': getHeader('question')
         },
         'contact-information': [
             { label: getLabel('email'), value: model['enter-email'] },
             { label: getLabel('phone-number'), value: model['enter-phone-number'] }
         ],
-        'enquiry-information': [
+        'question-information': [
             { label: getLabel('submitted-application'), value: model['submitted-application'] },
             { label: getLabel('unique-reference-number'), value: model['enter-unique-reference-number'] }
         ],
-        'enquiry': model['enter-enquiry-body']
+        'question': model['enter-question-body']
     };
 };
 
 module.exports = Emailer({
     ...config.email,
-    template: path.resolve(__dirname, '../views/emails/enquiry-support-email.html'),
-    recipient: 'support-enquiry@homeoffice.gov.uk',
-    subject: (model, translate) => translate('emails.enquiry.subject'),
+    template: path.resolve(__dirname, '../views/emails/question-support-email.html'),
+    recipient: 'support-question@homeoffice.gov.uk',
+    subject: (model, translate) => translate('emails.question.subject'),
     parse
 });

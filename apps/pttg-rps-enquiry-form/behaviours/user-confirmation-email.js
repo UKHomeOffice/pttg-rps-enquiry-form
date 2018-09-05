@@ -17,19 +17,19 @@ const parse = (model, translate) => {
     return {
         'headers': {
             'contact-information-header': getHeader('contact-information'),
-            'enquiry-information-header': getHeader('enquiry-information'),
-            'enquiry-header': getHeader('enquiry')
+            'question-information-header': getHeader('question-information'),
+            'question-header': getHeader('question')
         },
         'intro': translate('emails.user-confirmation.intro'),
         'contact-information': [
             { label: getLabel('email'), value: model['enter-email'] },
             { label: getLabel('phone-number'), value: model['enter-phone-number'] }
         ],
-        'enquiry-information': [
+        'question-information': [
             { label: getLabel('submitted-application'), value: model['submitted-application'] },
             { label: getLabel('unique-reference-number'), value: model['enter-unique-reference-number'] }
         ],
-        'enquiry': model['enter-enquiry-body']
+        'question': model['enter-question-body']
     };
 };
 
