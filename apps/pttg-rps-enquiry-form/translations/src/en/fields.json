@@ -1,6 +1,6 @@
 {
-  "your-enquiry-option" : {
-    "legend": "What is your enquiry about?",
+  "your-question-option" : {
+    "legend": "What is your question about?",
     "validation": {
       "required": "Please choose an option"
     },
@@ -17,7 +17,7 @@
       "application-result": {
         "label": "The result of my application"
       },
-      "enquiry-form": {
+      "question-form": {
         "label": "Something else"
       }
     } 
@@ -35,7 +35,7 @@
   },
   "enter-email-address": {
     "label": "Email address",
-    "hint": "We'll only use this to contact you about your enquiry.",
+    "hint": "We'll only use this to contact you about your question.",
     "validation": {
       "required": "Please enter your email address",
       "email": "Please enter a valid email address",
@@ -56,13 +56,13 @@
       "maxlength": "Unique Reference Numbers cannot exceed 25 characters"
     }
   },
-  "enter-enquiry-body": {
-    "label": "Enter Enquiry",
-    "summary": "Enquiry",
+  "enter-question-body": {
+    "label": "Enter question",
+    "summary": "Question",
     "hint": "max 500 characters",
     "validation": {
-      "required": "Please enter an enquiry",
-      "maxlength": "Enquiry cannot exceed 500 characters"
+      "required": "Please enter a question",
+      "maxlength": "question cannot exceed 500 characters"
     }
   }
 }

@@ -3,7 +3,7 @@
     "header": "Ask a question about applying for settled status"
   },
   "what-is-your-enquiry": {
-    "header": "What is your enquiry about?"
+    "header": "What is your question about?"
   },
   "how-to-apply-factsheet": {
     "header": "How to apply"
@@ -17,19 +17,19 @@
   "decision-factsheet": {
     "header": "After you get a decision"
   },
-  "enquiry": {
-    "header": "Your enquiry"
+  "question": {
+    "header": "Your question"
   },
   "confirm": {
     "sections": {
       "enquiry-details": {
-        "header": "Enquiry Details"
+        "header": "Question Details"
       },
       "enter-contact-information": {
         "header": "Contact Details"
       },
-      "enquiry-body": {
-        "header": "Enquiry"
+      "question-body": {
+        "header": "Question"
       }
     },
     "fields": {

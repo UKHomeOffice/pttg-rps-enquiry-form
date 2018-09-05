@@ -3,31 +3,31 @@ const SupportingDocumentsFactsheet = require('./factsheets/eligibility-factsheet
 const HowToApplyFactsheet = require('./factsheets/how-to-apply-factsheet');
 const DecisionFactsheet = require('./factsheets/decision-factsheet');
 const LiveApplicationFactsheet = require('./factsheets/live-application-factsheet');
-const EnquiryForm = require('./enquiry');
+const QuestionForm = require('./question');
 
 module.exports = {
-    path: '/what-is-your-enquiry',
+    path: '/what-is-your-question',
     properties: {
-        fields: ['your-enquiry-option'],
+        fields: ['your-question-option'],
         forks: [{
             target: SupportingDocumentsFactsheet.path,
-            condition: isSelected('eligibility', 'your-enquiry-option')
+            condition: isSelected('eligibility', 'your-question-option')
         },
         {
             target: HowToApplyFactsheet.path,
-            condition: isSelected('how-to-apply', 'your-enquiry-option')
+            condition: isSelected('how-to-apply', 'your-question-option')
         },
         {
             target: LiveApplicationFactsheet.path,
-            condition: isSelected('change-or-withdraw', 'your-enquiry-option')
+            condition: isSelected('change-or-withdraw', 'your-question-option')
         },
         {
             target: DecisionFactsheet.path,
-            condition: isSelected('application-result', 'your-enquiry-option')
+            condition: isSelected('application-result', 'your-question-option')
         },
         {
-            target: EnquiryForm.path,
-            condition: isSelected('enquiry-form', 'your-enquiry-option')
+            target: QuestionForm.path,
+            condition: isSelected('question-form', 'your-question-option')
         }]
     }
 };

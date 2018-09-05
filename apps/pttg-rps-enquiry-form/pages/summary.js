@@ -9,15 +9,15 @@ module.exports = {
         behaviours: ['complete', require('hof-behaviour-summary-page'), EnquirySupportEmail, UserConfirmationEmail],
         next: ConfirmationPage.path,
         sections: {
-            'enquiry-details': [
+            'question-details': [
                 'enter-unique-reference-number'
             ],
             'enter-contact-information': [
                 'enter-email-address',
                 'enter-phone-number'
             ],
-            'enquiry-body': [
-                'enter-enquiry-body'
+            'question-body': [
+                'enter-question-body'
             ]
         }
     }

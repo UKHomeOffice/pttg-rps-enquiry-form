@@ -1,4 +1,4 @@
-const EnquiryPage = require('../enquiry');
+const EnquiryPage = require('../question');
 
 module.exports = {
     path: '/decision-factsheet',

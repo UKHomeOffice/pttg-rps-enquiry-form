@@ -1,8 +1,8 @@
-const WhatIsYourEnquiryPage = require('./what-is-your-enquiry');
+const WhatIsYourQuestionPage = require('./what-is-your-question');
 
 module.exports = {
     path: '/start',
     properties: {
-        next: WhatIsYourEnquiryPage.path
+        next: WhatIsYourQuestionPage.path
     }
 };

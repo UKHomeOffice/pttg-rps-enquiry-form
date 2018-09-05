@@ -16,7 +16,7 @@
   }
 }
 
-#enter-enquiry-body {
+#enter-question-body {
   width: 100%;
 }
 
@@ -52,7 +52,7 @@
   @include bold-19();
 }
 
-#enter-enquiry-body-group label {
+#enter-question-body-group label {
   @include bold-19();
 }
 
@@ -61,6 +61,6 @@
   margin-bottom: 1.3rem;
 }
 
-#your-enquiry-option-group fieldset legend {
+#your-question-option-group fieldset legend {
   display: none;
 }
