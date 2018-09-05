@@ -26,9 +26,9 @@ module.exports = config => {
             const submittedApplication = getValue(req.sessionModel.get('submitted-application'), 'submitted-application', translate);
 
             try {
-                const response = await notifyClient.sendEmail(templateId, recipient || req.sessionModel.get('enter-email'), {
+                const response = await notifyClient.sendEmail(templateId, recipient || req.sessionModel.get('enter-email-address'), {
                     personalisation: {
-                        'email_address': req.sessionModel.get('enter-question') || 'N/A',
+                        'email_address': req.sessionModel.get('enter-email-address') || 'N/A',
                         'phone_number': req.sessionModel.get('enter-phone-number') || 'N/A',
                         'contact_preference': contactPreference || 'N/A',
                         'have_submitted_application': submittedApplication || 'N/A',
@@ -52,11 +52,3 @@ module.exports = config => {
         }
     };
 };
-
-module.exports = Emailer({
-    ...config.email,
-    template: path.resolve(__dirname, '../views/emails/question-support-email.html'),
-    recipient: 'support-question@homeoffice.gov.uk',
-    subject: (model, translate) => translate('emails.question.subject'),
-    parse
-});

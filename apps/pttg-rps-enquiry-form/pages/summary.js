@@ -1,6 +1,6 @@
 const config = require('../../../config');
 
-const EnquirySupportEmail = require('../behaviours/enquiry-support-email')({
+const QuestionSupportEmail = require('../behaviours/question-support-email')({
     apiKey: config.notify.apiKey,
     templateId: config.notify.templates.enquirySupport
 });
@@ -15,7 +15,7 @@ const ConfirmationPage = require('./confirmation');
 module.exports = {
     path: '/confirm',
     properties: {
-        behaviours: ['complete', require('hof-behaviour-summary-page'), questionSupportEmail, UserConfirmationEmail],
+        behaviours: ['complete', require('hof-behaviour-summary-page'), QuestionSupportEmail, UserConfirmationEmail],
         next: ConfirmationPage.path,
         sections: {
             'question-details': [
