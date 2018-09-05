@@ -1,7 +1,7 @@
 module.exports = {
-    'your-enquiry-option': {
+    'your-question-option': {
         mixin: 'radio-group',
-        options: ['eligibility', 'how-to-apply', 'change-or-withdraw', 'application-result', 'enquiry-form'],
+        options: ['eligibility', 'how-to-apply', 'change-or-withdraw', 'application-result', 'question-form'],
         validate: 'required'
     },
     'enter-contact-information': {
@@ -36,7 +36,7 @@ module.exports = {
 
         }]
     },
-    'enter-enquiry-body': {
+    'enter-question-body': {
         mixin: 'textarea',
         validate: [
             'required', {
