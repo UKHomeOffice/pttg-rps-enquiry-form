@@ -16,8 +16,7 @@
     "hof-build": "^1.6.0",
     "hof-theme-govuk": "^4.1.1",
     "notifications-node-client": "^4.1.0",
-    "winston": "^3.0.0",
-    "dotenv": "^6.0.0"
+    "winston": "^3.0.0"
   },
   "devDependencies": {
     "eslint": "^5.1.0",

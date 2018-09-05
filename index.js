@@ -1,5 +1,3 @@
-require('dotenv').config();
-
 const hof = require('hof');
 
 const settings = require('./hof.settings');
