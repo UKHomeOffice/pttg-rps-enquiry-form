@@ -1,42 +1,36 @@
-const Emailer = require('hof-behaviour-emailer');
-const config = require('../../../config');
-const path = require('path');
+const NotifyClient = require('notifications-node-client').NotifyClient;
+const log = require('../../../logger');
 
+module.exports = config => {
+    const { apiKey, templateId } = config;
 
-const parse = (model, translate) => {
-    const getLabel = key => {
-        const labelKey = `emails.user-confirmation.${key}.label`;
-        return translate(labelKey);
-    };
+    if (!apiKey) {
+        throw new Error('Missing Notify API Key');
+    }
 
-    const getHeader = key => {
-        const headerKey = `emails.user-confirmation.${key}.header`;
-        return translate(headerKey);
-    };
+    if (!templateId) {
+        throw new Error('Missing Notify Template ID');
+    }
 
-    return {
-        'headers': {
-            'contact-information-header': getHeader('contact-information'),
-            'question-information-header': getHeader('question-information'),
-            'question-header': getHeader('question')
-        },
-        'intro': translate('emails.user-confirmation.intro'),
-        'contact-information': [
-            { label: getLabel('email'), value: model['enter-email'] },
-            { label: getLabel('phone-number'), value: model['enter-phone-number'] }
-        ],
-        'question-information': [
-            { label: getLabel('submitted-application'), value: model['submitted-application'] },
-            { label: getLabel('unique-reference-number'), value: model['enter-unique-reference-number'] }
-        ],
-        'question': model['enter-question-body']
+    const notifyClient = new NotifyClient(apiKey);
+
+    return superclass => class extends superclass {
+        async successHandler(req, res, callback) {
+
+            try {
+                const response = await notifyClient.sendEmail(templateId, req.sessionModel.get('enter-email-address'));
+                log.info('User Confirmation Email sent successfully');
+                log.debug(response);
+            } catch (err) {
+                const { statusCode, error } = err;
+                const { errors } = error;
+
+                const messages = errors.map(error => error.message).join();
+
+                log.error(`User Confirmation Email failed to send. Got status code '${statusCode}' with messages '${messages}'`);
+            }
+
+            super.successHandler(req, res, callback);
+        }
     };
 };
-
-module.exports = Emailer({
-    ...config.email,
-    template: path.resolve(__dirname, '../views/emails/user-confirmation-email.html'),
-    recipient: model => model['enter-email'],
-    subject: (model, translate) => translate('emails.user-confirmation.subject'),
-    parse
-});

@@ -2,7 +2,7 @@
   "license": "MIT",
   "scripts": {
     "start": "node app.js",
-    "start:dev": "SMTP_PORT=1025 SMTP_SECURE=false hof-build watch",
+    "start:dev": "hof-build watch --conf ./hof-build-conf.js",
     "test": "npm run test:lint",
     "test:lint": "eslint .",
     "test:all": "npm run test:lint",
@@ -14,14 +14,14 @@
     "hof-behaviour-emailer": "^2.2.0",
     "hof-behaviour-summary-page": "^3.1.0",
     "hof-build": "^1.6.0",
-    "hof-template-partials": "^4.0.1",
-    "hof-theme-govuk": "^4.1.1"
+    "hof-theme-govuk": "^4.1.1",
+    "notifications-node-client": "^4.1.0",
+    "winston": "^3.0.0",
+    "hof-template-partials": "^4.0.1"
   },
   "devDependencies": {
-    "eslint": "^4.19.1",
-    "eslint-config-homeoffice": "^2.2.0",
-    "mocha": "^5.2.0",
-    "chai": "^4.1.2"
+    "eslint": "^5.1.0",
+    "eslint-config-homeoffice": "^2.2.0"
   },
   "name": "pttg-rps-enquiry-form",
   "version": "1.0.0",
