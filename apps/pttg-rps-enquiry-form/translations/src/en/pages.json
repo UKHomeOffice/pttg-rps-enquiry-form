@@ -2,7 +2,7 @@
   "start": {
     "header": "Ask a question about applying for settled status"
   },
-  "what-is-your-enquiry": {
+  "what-is-your-question": {
     "header": "What is your question about?"
   },
   "how-to-apply-factsheet": {
@@ -22,7 +22,7 @@
   },
   "confirm": {
     "sections": {
-      "enquiry-details": {
+      "question-details": {
         "header": "Question Details"
       },
       "enter-contact-information": {

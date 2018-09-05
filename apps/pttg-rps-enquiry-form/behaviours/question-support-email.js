@@ -28,12 +28,12 @@ module.exports = config => {
             try {
                 const response = await notifyClient.sendEmail(templateId, recipient || req.sessionModel.get('enter-email'), {
                     personalisation: {
-                        'email_address': req.sessionModel.get('enter-email') || 'N/A',
+                        'email_address': req.sessionModel.get('enter-question') || 'N/A',
                         'phone_number': req.sessionModel.get('enter-phone-number') || 'N/A',
                         'contact_preference': contactPreference || 'N/A',
                         'have_submitted_application': submittedApplication || 'N/A',
                         'unique_reference_number': req.sessionModel.get('enter-unique-reference-number') || 'N/A',
-                        'enquiry': req.sessionModel.get('enter-enquiry-body') || 'N/A'
+                        'question': req.sessionModel.get('enter-question-body') || 'N/A'
                     }
                 });
 
@@ -52,3 +52,11 @@ module.exports = config => {
         }
     };
 };
+
+module.exports = Emailer({
+    ...config.email,
+    template: path.resolve(__dirname, '../views/emails/question-support-email.html'),
+    recipient: 'support-question@homeoffice.gov.uk',
+    subject: (model, translate) => translate('emails.question.subject'),
+    parse
+});

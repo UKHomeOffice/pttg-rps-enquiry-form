@@ -1,8 +1,8 @@
-const EnquiryPage = require('../question');
+const questionPage = require('../question');
 
 module.exports = {
     path: '/eligibility-factsheet',
     properties: {
-        next: EnquiryPage.path
+        next: questionPage.path
     }
 };

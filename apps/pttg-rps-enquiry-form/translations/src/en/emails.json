@@ -1,6 +1,6 @@
 {
-    "enquiry": {
-        "subject": "New Enquiry",
+    "question": {
+        "subject": "New question",
         "contact-information": {
             "header": "Contact Information"
         },
@@ -10,19 +10,19 @@
         "phone-number": {
             "label": "Phone number"
         },
-        "enquiry-information": {
-            "header": "Enquiry Information"
+        "question-information": {
+            "header": "Question Information"
         },
         "application-unique-reference-number": {
             "label": "Application Unique Reference Number"
         },
-        "enquiry": {
-            "header": "Enquiry"
+        "question": {
+            "header": "Question"
         }
     },
     "user-confirmation": {
-        "subject": "We have received your enquiry",
-        "intro": "We have received your enquiry with the following information.",
+        "subject": "We have received your question",
+        "intro": "We have received your question with the following information.",
         "contact-information": {
             "header": "Contact Information"
         },
@@ -32,14 +32,14 @@
         "phone-number": {
             "label": "Phone number"
         },
-        "enquiry-information": {
-            "header": "Enquiry Information"
+        "question-information": {
+            "header": "Question Information"
         },
         "application-unique-reference-number": {
             "label": "Application Unique Reference Number"
         },
-        "enquiry": {
-            "header": "Enquiry"
+        "question": {
+            "header": "Question"
         }
     }
 }
