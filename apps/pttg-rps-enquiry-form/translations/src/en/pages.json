@@ -1,47 +1,43 @@
 {
   "start": {
-    "header": "Contact us"
+    "header": "Ask a question about applying for settled status"
   },
-  "have-submitted-application": {
-    "header": "Have you already submitted an application?"
+  "what-is-your-enquiry": {
+    "header": "What is your question about?"
   },
-  "decision-made": {
-    "header": "Have you been given a decision?"
+  "how-to-apply-factsheet": {
+    "header": "How to apply"
   },
-  "liveapp-factsheet": {
-    "header": "Live application factsheet"
+  "live-application-factsheet": {
+    "header": "What you can do while your application is being considered"
   },
-  "pre-submission-help": {
-    "header": "What is your enquiry about?"
+  "eligibility-factsheet": {
+    "header": "Who’s eligible for settled status"
   },
-  "how-to-apply": {
-    "header": "Apply to stay in the UK after it leaves the EU"
+  "decision-factsheet": {
+    "header": "After you get a decision"
   },
-  "contact-information": {
-    "header": "Contact information",
-    "intro": "We will use these contact details to confirm we've received your enquiry and to contact you if we require more information."
-  },
-  "contact-method-preference": {
-    "header": "How would you prefer to be contacted?",
-    "intro": "We may contact you by email or phone depending on your enquiry."
-  },
-  "unique-reference-number": {
-    "header": "What is your Unique Reference Number?",
-    "intro": "This is also called Home Office Case ID"
-  },
-  "enquiry": {
-    "header": "Enquiry"
+  "question": {
+    "header": "Your question"
   },
   "confirm": {
     "sections": {
       "enquiry-details": {
-        "header": "Enquiry Details"
+        "header": "Question Details"
       },
-      "contact-details": {
+      "enter-contact-information": {
         "header": "Contact Details"
       },
-      "enquiry-body": {
-        "header": "Enquiry"
+      "question-body": {
+        "header": "Question"
+      }
+    },
+    "fields": {
+      "enter-unique-reference-number": {
+        "label": "Your application number"
+      },
+      "enter-phone-number": {
+        "label": "Telephone number"
       }
     }
   }

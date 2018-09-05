@@ -1,20 +1,23 @@
 module.exports = {
-    'submitted-application': {
+    'your-question-option': {
         mixin: 'radio-group',
-        options: ['yes', 'no'],
+        options: ['eligibility', 'how-to-apply', 'change-or-withdraw', 'application-result', 'question-form'],
         validate: 'required'
     },
-    'decision-made': {
+    'enter-contact-information': {
         mixin: 'radio-group',
-        options: ['yes', 'no'],
+        options: [{
+            value: 'enter-email-address',
+            toggle: 'enter-email-address-content',
+            child: 'partials/enter-email-address'
+        }, {
+            value: 'enter-phone-number',
+            toggle: 'enter-phone-content',
+            child: 'partials/enter-phone-number'
+        }],
         validate: 'required'
     },
-    'pre-submission-help-choices': {
-        mixin: 'radio-group',
-        options: ['how-to-apply', 'eligibility-factsheet'],
-        validate: 'required'
-    },
-    'enter-email': {
+    'enter-email-address': {
         mixin: 'input-text',
         validate: ['required', 'email', {
             type: 'maxlength',
@@ -25,11 +28,6 @@ module.exports = {
         mixin: 'input-phone',
         validate: ['phonenumber']
     },
-    'contact-method-preference': {
-        mixin: 'radio-group',
-        options: ['email', 'phone-number'],
-        validate: 'required'
-    },
     'enter-unique-reference-number': {
         mixin: 'input-text',
         validate: [{
@@ -38,7 +36,7 @@ module.exports = {
 
         }]
     },
-    'enter-enquiry-body': {
+    'enter-question-body': {
         mixin: 'textarea',
         validate: [
             'required', {

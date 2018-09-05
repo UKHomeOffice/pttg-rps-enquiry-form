@@ -1,3 +1,4 @@
-Use this form to contact us if you have any questions about applying to stay in the UK after it leaves the EU.
+Use this form to ask a question about applying to stay in the UK after it leaves the EU. You'll get a reply by email or telephone.
 
-You will not be charged for contacting us using this form.
+### Before you start
+You may find the answer to your question in the guide [Settled status for EU citizens and their families](https://www.gov.uk/settled-status-eu-citizens-families). 

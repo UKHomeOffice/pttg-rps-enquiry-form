@@ -13,9 +13,6 @@
         "enquiry-information": {
             "header": "Enquiry Information"
         },
-        "submitted-application": {
-            "label": "Have they already submitted an application?"
-        },
         "application-unique-reference-number": {
             "label": "Application Unique Reference Number"
         },
@@ -37,9 +34,6 @@
         },
         "enquiry-information": {
             "header": "Enquiry Information"
-        },
-        "submitted-application": {
-            "label": "Have they already submitted an application?"
         },
         "application-unique-reference-number": {
             "label": "Application Unique Reference Number"

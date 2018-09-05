@@ -1,8 +1,8 @@
-const HaveSubmittedApplicationPage = require('./have-submitted-application');
+const WhatIsYourQuestionPage = require('./what-is-your-question');
 
 module.exports = {
     path: '/start',
     properties: {
-        next: HaveSubmittedApplicationPage.path
+        next: WhatIsYourQuestionPage.path
     }
 };
