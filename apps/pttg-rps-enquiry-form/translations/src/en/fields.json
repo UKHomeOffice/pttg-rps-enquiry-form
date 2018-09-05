@@ -49,6 +49,12 @@
       "phonenumber": "Please enter a valid phone number"
     }
   },
+  "enter-nationality": {
+    "label": "Nationality (optional)",
+    "validation": {
+      "required": "Enter a nationality"
+    }
+  },
   "enter-unique-reference-number": {
     "label": "Your application number, if you have one",
     "hint": "For example 3434-0000-0000-0001. This will be on any emails you received about your application.",

@@ -23,7 +23,8 @@ module.exports = {
             ],
             'enter-contact-information': [
                 'enter-email-address',
-                'enter-phone-number'
+                'enter-phone-number',
+                'enter-nationality'
             ],
             'question-body': [
                 'enter-question-body'

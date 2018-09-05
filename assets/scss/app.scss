@@ -64,3 +64,8 @@
 #your-question-option-group fieldset legend {
   display: none;
 }
+
+#enter-nationality-group label {
+  @include bold-19();
+}
+
