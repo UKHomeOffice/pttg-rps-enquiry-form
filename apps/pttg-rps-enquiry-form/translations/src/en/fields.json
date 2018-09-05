@@ -12,7 +12,7 @@
         "label": "How to apply"
       },
       "change-or-withdraw": {
-        "label": "Changing or withdrawing my application"
+        "label": "The application I have made"
       },
       "application-result": {
         "label": "The result of my application"
@@ -57,12 +57,12 @@
     }
   },
   "enter-question-body": {
-    "label": "Enter question",
+    "label": "Enter details of your question",
     "summary": "Question",
-    "hint": "max 500 characters",
+    "hint": "max 2000 characters",
     "validation": {
       "required": "Please enter a question",
-      "maxlength": "question cannot exceed 500 characters"
+      "maxlength": "question cannot exceed 2000 characters"
     }
   }
 }

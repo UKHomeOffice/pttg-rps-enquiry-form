@@ -1,8 +1,9 @@
-If your application is successful, you’ll be able to view and prove your status through an online service. You will not get a physical document unless you’re from outside the EU and do not already have a biometric residence card.
+If you qualify for settled or pre-settled status, we will tell you how you can prove your status through an online service.
 
-You will not lose your settled status unless you leave the UK for a period of more than 5 years.
+You will not get a physical document unless you’re from outside the EU and do not already have a biometric residence card.
 
-If your application is unsuccessful, you can reapply if you do so by 30 June 2021. You can also appeal the decision if you apply from 30 March 2019.
+If you don’t qualify, you will be able to appeal the decision if you apply after 29 March 2019.
 
-[More about applying for settled status](https://www.gov.uk/settled-status-eu-citizens-families/applying-for-settled-status)
+You can also reapply as many times as you want to before 30 June 2021. You’ll have to pay the fee each time you apply.
 
+[More about settled and pre-settled status](https://www.gov.uk/settled-status-eu-citizens-families/what-settled-and-presettled-status-means)

@@ -41,7 +41,7 @@ module.exports = {
         validate: [
             'required', {
                 type: 'maxlength',
-                arguments: '500'
+                arguments: '2000'
             }
         ],
         attributes: [{
