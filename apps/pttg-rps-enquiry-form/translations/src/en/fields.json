@@ -70,5 +70,9 @@
       "required": "Please enter a question",
       "maxlength": "question cannot exceed 2000 characters"
     }
+  },
+  "enter-date-of-birth": {
+    "legend": "Date of Birth (optional)",
+    "hint": "For example, 25 01 1957"
   }
 }
