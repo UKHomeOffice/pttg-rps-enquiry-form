@@ -24,7 +24,8 @@ module.exports = {
             'enter-contact-information': [
                 'enter-email-address',
                 'enter-phone-number',
-                'enter-nationality'
+                'enter-nationality',
+                'enter-supporting-organisation'
             ],
             'question-body': [
                 'enter-question-body'

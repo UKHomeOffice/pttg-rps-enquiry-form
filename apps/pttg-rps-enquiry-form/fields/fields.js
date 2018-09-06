@@ -1,7 +1,7 @@
 module.exports = {
     'your-question-option': {
         mixin: 'radio-group',
-        options: ['eligibility', 'how-to-apply', 'change-or-withdraw', 'application-result', 'question-form'],
+        options: ['eligibility', 'how-to-apply', 'change-or-withdraw', 'application-result', 'supporting-organisation', 'question-form'],
         validate: 'required'
     },
     'enter-contact-information': {
@@ -39,6 +39,15 @@ module.exports = {
             arguments: '25'
 
         }]
+    },
+    'enter-supporting-organisation': {
+        mixin: 'input-text',
+        validate: [
+            'required', {
+                type: 'maxlength',
+                arguments: '254'
+            }
+        ]
     },
     'enter-question-body': {
         mixin: 'textarea',

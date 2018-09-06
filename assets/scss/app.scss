@@ -48,17 +48,11 @@
   word-break: break-word;
 }
 
-#enter-unique-reference-number-group label {
+#enter-unique-reference-number-group label,
+#enter-question-body-group label,
+#enter-question-body-group label,
+#enter-supporting-organisation-group label{
   @include bold-19();
-}
-
-#enter-question-body-group label {
-  @include bold-19();
-}
-
-#enter-contact-information-group legend {
-  @include bold-19();
-  margin-bottom: 1.3rem;
 }
 
 #your-question-option-group fieldset legend {
