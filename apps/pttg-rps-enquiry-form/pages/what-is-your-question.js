@@ -3,6 +3,7 @@ const SupportingDocumentsFactsheet = require('./factsheets/eligibility-factsheet
 const HowToApplyFactsheet = require('./factsheets/how-to-apply-factsheet');
 const DecisionFactsheet = require('./factsheets/decision-factsheet');
 const LiveApplicationFactsheet = require('./factsheets/live-application-factsheet');
+const OrganisationQuestionForm = require('./org-question');
 const QuestionForm = require('./question');
 
 module.exports = {
@@ -24,6 +25,10 @@ module.exports = {
         {
             target: DecisionFactsheet.path,
             condition: isSelected('application-result', 'your-question-option')
+        },
+        {
+            target: OrganisationQuestionForm.path,
+            condition: isSelected('supporting-organisation', 'your-question-option')
         },
         {
             target: QuestionForm.path,

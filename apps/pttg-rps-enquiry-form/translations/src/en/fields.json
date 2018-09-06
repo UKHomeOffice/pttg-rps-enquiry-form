@@ -17,6 +17,9 @@
       "application-result": {
         "label": "The result of my application"
       },
+      "supporting-organisation": {
+        "label": "I am from a supporting organisation"
+      },
       "question-form": {
         "label": "Something else"
       }
@@ -60,6 +63,13 @@
     "hint": "For example 3434-0000-0000-0001. This will be on any emails you received about your application.",
     "validation": {
       "maxlength": "Unique Reference Numbers cannot exceed 25 characters"
+    }
+  },
+  "enter-supporting-organisation": {
+    "label": "Organisation",
+    "validation": {
+      "maxlength": "Organisation cannot exceed 255 characters",
+      "required": "Please enter your organisation"
     }
   },
   "enter-question-body": {
