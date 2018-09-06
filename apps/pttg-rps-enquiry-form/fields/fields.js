@@ -24,6 +24,10 @@ module.exports = {
             arguments: '254'
         }]
     },
+    'enter-nationality': {
+        mixin: 'select',
+        options: [{label:' ', value: '(not stated)'}].concat(require('hof-util-countries')())
+    },
     'enter-phone-number': {
         mixin: 'input-phone',
         validate: ['phonenumber']

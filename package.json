@@ -14,10 +14,11 @@
     "hof-behaviour-emailer": "^2.2.0",
     "hof-behaviour-summary-page": "^3.1.0",
     "hof-build": "^1.6.0",
+    "hof-template-partials": "^4.0.1",
     "hof-theme-govuk": "^4.1.1",
+    "hof-util-countries": "^1.0.0",
     "notifications-node-client": "^4.1.0",
-    "winston": "^3.0.0",
-    "hof-template-partials": "^4.0.1"
+    "winston": "^3.0.0"
   },
   "devDependencies": {
     "eslint": "^5.1.0",
