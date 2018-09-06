@@ -78,8 +78,8 @@
   "enter-name": {
     "label": "Full name",
     "validation": {
-      "required": "Please enter your full name",
-      "maxlength": "Unique Reference Numbers cannot exceed 25 characters"
+      "required": "Enter your full name",
+      "maxlength": "Full name must be fewer than 256 characters"
     }
   }
 }
