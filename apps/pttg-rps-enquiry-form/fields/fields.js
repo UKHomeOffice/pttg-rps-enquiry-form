@@ -52,7 +52,7 @@ module.exports = {
     'enter-date-of-birth': dateComponent('enter-date-of-birth', {
         validate: [
             {type: 'before'},
-            {type: 'after', arguments: '1903-03-02' }
+            {type: 'after', arguments: '1903-01-01'}
         ]
     })
 

@@ -73,7 +73,12 @@
   },
   "enter-date-of-birth": {
     "legend": "Date of Birth (optional)",
-    "hint": "For example, 25 01 1957"
+    "hint": "For example, 25 01 1957",
+    "validation": {
+      "invalid": "Enter a real date of birth",
+      "before": "Date of birth must be in the past",
+      "after": "Date of birth must be after 1902"
+      }
   },
   "enter-name": {
     "label": "Full name",
