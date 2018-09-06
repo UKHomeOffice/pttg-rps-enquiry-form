@@ -74,5 +74,12 @@
   "enter-date-of-birth": {
     "legend": "Date of Birth (optional)",
     "hint": "For example, 25 01 1957"
+  },
+  "enter-name": {
+    "label": "Full name",
+    "validation": {
+      "required": "Please enter your full name",
+      "maxlength": "Unique Reference Numbers cannot exceed 25 characters"
+    }
   }
 }

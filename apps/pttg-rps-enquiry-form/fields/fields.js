@@ -42,6 +42,13 @@ module.exports = {
             value: 8
         }]
     },
+    'enter-name': {
+        mixin: 'input-text',
+        validate: ['required', {
+            type: 'maxlength',
+            arguments: '255'
+        }]
+    },
     'enter-date-of-birth': dateComponent('enter-date-of-birth', {
         validate: [
             {type: 'before'},
