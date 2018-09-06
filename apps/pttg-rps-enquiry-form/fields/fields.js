@@ -4,19 +4,6 @@ module.exports = {
         options: ['eligibility', 'how-to-apply', 'change-or-withdraw', 'application-result', 'question-form'],
         validate: 'required'
     },
-    'enter-contact-information': {
-        mixin: 'radio-group',
-        options: [{
-            value: 'enter-email-address',
-            toggle: 'enter-email-address-content',
-            child: 'partials/enter-email-address'
-        }, {
-            value: 'enter-phone-number',
-            toggle: 'enter-phone-content',
-            child: 'partials/enter-phone-number'
-        }],
-        validate: 'required'
-    },
     'enter-email-address': {
         mixin: 'input-text',
         validate: ['required', 'email', {
