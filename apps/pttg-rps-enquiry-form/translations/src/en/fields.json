@@ -6,19 +6,19 @@
     },
     "options": {
       "eligibility": {
-        "label": "Who is eligible for settled status"
+        "label": "Finding out more information about the EU Settlement Scheme"
       },
       "how-to-apply": {
-        "label": "How to apply"
+        "label": "Seeking further help in making an application"
       },
       "change-or-withdraw": {
-        "label": "The application I have made"
+        "label": "Telling us something about an application already in progress"
       },
       "application-result": {
-        "label": "The result of my application"
+        "label": "Discussing a decision we have made on an application"
       },
-      "question-form": {
-        "label": "Something else"
+      "supporting-organisation": {
+        "label": "I am from a supporting organisation"
       }
     } 
   },

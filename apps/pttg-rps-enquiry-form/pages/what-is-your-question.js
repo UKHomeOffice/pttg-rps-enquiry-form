@@ -27,7 +27,7 @@ module.exports = {
         },
         {
             target: QuestionForm.path,
-            condition: isSelected('question-form', 'your-question-option')
+            condition: isSelected('supporting-organisation', 'your-question-option')
         }]
     }
 };

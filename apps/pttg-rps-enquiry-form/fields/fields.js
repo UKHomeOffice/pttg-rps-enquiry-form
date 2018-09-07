@@ -1,7 +1,7 @@
 module.exports = {
     'your-question-option': {
         mixin: 'radio-group',
-        options: ['eligibility', 'how-to-apply', 'change-or-withdraw', 'application-result', 'question-form'],
+        options: ['eligibility', 'how-to-apply', 'change-or-withdraw', 'application-result', 'supporting-organisation'],
         validate: 'required'
     },
     'enter-email-address': {
