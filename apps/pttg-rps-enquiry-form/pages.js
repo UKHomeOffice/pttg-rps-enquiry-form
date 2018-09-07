@@ -6,7 +6,7 @@ const LiveApplicationFactsheet = require('./pages/factsheets/live-application-fa
 const EligibilityFactsheet = require('./pages/factsheets/eligibility-factsheet');
 const DecisionFactsheet = require('./pages/factsheets/decision-factsheet');
 
-const questionPage = require('./pages/question');
+const QuestionPage = require('./pages/question');
 
 const SummaryPage = require('./pages/summary');
 const ConfirmationPage = require('./pages/confirmation');
@@ -26,7 +26,7 @@ module.exports = {
         LiveApplicationFactsheet,
         EligibilityFactsheet,
         DecisionFactsheet,
-        questionPage,
+        QuestionPage,
         SummaryPage,
         ConfirmationPage
     ])
