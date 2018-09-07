@@ -22,17 +22,6 @@
       }
     } 
   },
-  "enter-contact-information": {
-    "legend": "Your contact details",
-    "options": {
-      "enter-email-address": {
-        "label": "Email address"
-      },
-      "enter-phone-number": {
-        "label": "Telephone number (optional)"
-      }
-    }
-  },
   "enter-email-address": {
     "label": "Email address",
     "hint": "We'll only use this to contact you about your question.",
@@ -43,7 +32,7 @@
     }
   },
   "enter-phone-number": {
-    "label": "Phone number",
+    "label": "Telephone number (optional)",
     "hint": "We may want to contact you by telephone if we need more information to answer your question.",
     "validation": {
       "phonenumber": "Please enter a valid phone number"
