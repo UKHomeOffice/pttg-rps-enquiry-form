@@ -22,8 +22,8 @@
   },
   "confirm": {
     "sections": {
-      "question-details": {
-        "header": "Question Details"
+      "customer-details": {
+        "header": "Customer Details"
       },
       "enter-contact-information": {
         "header": "Contact Details"
@@ -37,10 +37,16 @@
         "label": "Your application number"
       },
       "enter-phone-number": {
-        "label": "Telephone Number"
+        "label": "Telephone number"
       },
       "enter-nationality": {
         "label": "Nationality"
+      },
+      "enter-date-of-birth": {
+        "label": "Date of birth"
+      },
+      "enter-name": {
+        "label": "Name"
       }
     }
   }
