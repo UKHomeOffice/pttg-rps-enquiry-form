@@ -40,5 +40,8 @@
         "label": "Telephone number"
       }
     }
+  },
+  "confirmation": {
+    "panel": "Your email has been sent"
   }
 }
