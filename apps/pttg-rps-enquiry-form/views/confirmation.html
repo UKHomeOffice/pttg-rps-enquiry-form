@@ -1,0 +1,12 @@
+{{<partials-page}}
+    {{$page-content}}
+        <div class="alert-complete" role="alert">
+          <div class="alert-message">
+              <h1>{{#t}}pages.confirmation.panel{{/t}}</h1>
+          </div>
+        </div>
+        <div>
+            {{#markdown}}confirmation{{/markdown}}
+        </div>
+    {{/page-content}}
+{{/partials-page}}

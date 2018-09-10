@@ -49,5 +49,8 @@
         "label": "Name"
       }
     }
+  },
+  "confirmation": {
+    "panel": "Your email has been sent"
   }
 }
