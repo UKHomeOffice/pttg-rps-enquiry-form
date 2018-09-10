@@ -7,9 +7,6 @@ services:
       - IGNORE_TLS=true
       - REDIS_HOST=redis
       - REDIS_PORT=6379
-      - SMTP_SERVER=mailcatcher
-      - SMTP_PORT=1025
-      - SMTP_SECURE=false
     links:
       - redis
     ports:

@@ -27,18 +27,5 @@ module.exports = {
             userConfirmation: process.env.NOTIFY_TEMPLATE_USER_CONFIRMATION || '',
             enquirySupport: process.env.NOTIFY_TEMPLATE_ENQUIRY_SUPPORT || ''
         }
-    },
-    email: {
-        transport: 'smtp',
-        transportOptions: {
-            host: env.asString('SMTP_SERVER', 'localhost'),
-            port: env.asString('SMTP_PORT', '25'),
-            secure: env.asBoolean('SMTP_SECURE', true),
-            auth: {
-                user: env.asString('SMTP_USERNAME', ''),
-                pass: env.asString('SMTP_PASSWORD', '')
-            }
-        },
-        from: 'enquiry-confirmation@homeoffice.gov.uk'
     }
 };
