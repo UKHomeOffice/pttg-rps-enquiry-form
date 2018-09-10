@@ -1,3 +1,5 @@
+const dateComponent = require('hof-component-date');
+
 module.exports = {
     'your-question-option': {
         mixin: 'radio-group',
@@ -39,5 +41,19 @@ module.exports = {
             attribute: 'rows',
             value: 8
         }]
-    }
+    },
+    'enter-name': {
+        mixin: 'input-text',
+        validate: ['required', {
+            type: 'maxlength',
+            arguments: '255'
+        }]
+    },
+    'enter-date-of-birth': dateComponent('enter-date-of-birth', {
+        validate: [
+            {type: 'before'},
+            {type: 'after', arguments: '1903-01-01'}
+        ]
+    })
+
 };

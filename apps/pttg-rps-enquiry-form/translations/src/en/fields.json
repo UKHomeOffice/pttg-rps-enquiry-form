@@ -59,5 +59,21 @@
       "required": "Please enter a question",
       "maxlength": "question cannot exceed 2000 characters"
     }
+  },
+  "enter-date-of-birth": {
+    "legend": "Date of Birth (optional)",
+    "hint": "For example, 25 01 1957",
+    "validation": {
+      "invalid": "Enter a real date of birth",
+      "before": "Date of birth must be in the past",
+      "after": "Date of birth must be after 1902"
+      }
+  },
+  "enter-name": {
+    "label": "Full name",
+    "validation": {
+      "required": "Enter your full name",
+      "maxlength": "Full name must be fewer than 256 characters"
+    }
   }
 }
