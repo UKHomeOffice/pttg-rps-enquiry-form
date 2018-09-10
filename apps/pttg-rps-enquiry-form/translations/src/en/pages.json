@@ -37,7 +37,10 @@
         "label": "Your application number"
       },
       "enter-phone-number": {
-        "label": "Telephone number"
+        "label": "Telephone Number"
+      },
+      "enter-nationality": {
+        "label": "Nationality"
       }
     }
   }
