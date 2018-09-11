@@ -4,9 +4,9 @@ module.exports = {
     path: '/question',
     properties: {
         fields: [
-            'enter-name',
             'enter-question-body',
             'enter-unique-reference-number',
+            'enter-name',
             'enter-email-address',
             'enter-phone-number',
             'enter-nationality',
