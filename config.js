@@ -1,5 +1,3 @@
-/* eslint no-process-env: 0 */
-
 module.exports = {
     env: process.env.NODE_ENV || 'development',
     loglevel: process.env.LOG_LEVEL || 'info',
