@@ -64,7 +64,7 @@
     "legend": "Date of Birth (optional)",
     "hint": "For example, 25 03 1957",
     "validation": {
-      "invalid": "Enter a real date of birth",
+      "date": "Enter a real date of birth",
       "before": "Date of birth must be in the past",
       "after": "Date of birth must be after 1902"
       }
