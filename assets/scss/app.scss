@@ -57,3 +57,19 @@
   display: none;
 }
 
+fieldset legend,
+.form-group .form-label {
+  @extend .heading-medium;
+
+  .form-hint {
+    margin-top: em(10, 16);
+    margin-bottom: em(5, 16);
+   }
+}
+
+/* More specific selectors override more general ones */
+.form-date .form-group .form-label {
+  margin: inherit;
+  padding: inherit;
+  @extend .form-label;
+}
