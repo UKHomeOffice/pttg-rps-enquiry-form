@@ -1,7 +1,7 @@
 const questionPage = require('../question');
 
 module.exports = {
-    path: '/eligibility-factsheet',
+    path: '/about-the-scheme',
     properties: {
         next: questionPage.path
     }

@@ -3,7 +3,7 @@ const WhatIsYourQuestion = require('./pages/what-is-your-question');
 
 const HowToApplyFactsheet = require('./pages/factsheets/how-to-apply-factsheet');
 const LiveApplicationFactsheet = require('./pages/factsheets/live-application-factsheet');
-const EligibilityFactsheet = require('./pages/factsheets/eligibility-factsheet');
+const AboutSchemeFactsheet = require('./pages/factsheets/about-the-scheme');
 const DecisionFactsheet = require('./pages/factsheets/decision-factsheet');
 
 const questionPage = require('./pages/question');
@@ -24,7 +24,7 @@ module.exports = {
         WhatIsYourQuestion,
         HowToApplyFactsheet,
         LiveApplicationFactsheet,
-        EligibilityFactsheet,
+        AboutSchemeFactsheet,
         DecisionFactsheet,
         questionPage,
         SummaryPage,
