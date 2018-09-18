@@ -4,7 +4,6 @@ module.exports = {
     path: '/question',
     properties: {
         fields: [
-            'is-proxy',
             'enter-question-body',
             'enter-unique-reference-number',
             'enter-name',

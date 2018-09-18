@@ -78,8 +78,5 @@
       "required": "Enter your full name",
       "maxlength": "Full name must be fewer than 256 characters"
     }
-  },
-  "is-proxy": {
-    "label": "I am asking a question on behalf of somebody else"
   }
 }

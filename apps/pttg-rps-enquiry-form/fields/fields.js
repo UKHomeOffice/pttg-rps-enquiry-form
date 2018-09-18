@@ -55,9 +55,5 @@ module.exports = {
             {type: 'after', arguments: '1903-01-01'},
             {type: 'date'}
         ]
-    }),
-    'is-proxy': {
-        className: 'label',
-        mixin: 'checkbox'
-    }
+    })
 };
