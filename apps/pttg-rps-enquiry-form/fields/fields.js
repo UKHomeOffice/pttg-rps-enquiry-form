@@ -3,7 +3,7 @@ const dateComponent = require('hof-component-date');
 module.exports = {
     'your-question-option': {
         mixin: 'radio-group',
-        options: ['eligibility', 'how-to-apply', 'change-or-withdraw', 'application-result', 'question-form'],
+        options: ['eligibility', 'application-fees', 'how-to-apply', 'change-or-withdraw', 'application-result', 'supporting-organisation'],
         validate: 'required'
     },
     'enter-email-address': {

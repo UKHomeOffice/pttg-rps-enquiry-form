@@ -2,21 +2,6 @@
   "start": {
     "header": "Ask a question about applying for settled status"
   },
-  "what-is-your-question": {
-    "header": "What is your question about?"
-  },
-  "how-to-apply-factsheet": {
-    "header": "How to apply"
-  },
-  "live-application-factsheet": {
-    "header": "While your application is considered"
-  },
-  "eligibility-factsheet": {
-    "header": "Who’s eligible for settled status"
-  },
-  "decision-factsheet": {
-    "header": "After you get a decision"
-  },
   "question": {
     "header": "Your question"
   },

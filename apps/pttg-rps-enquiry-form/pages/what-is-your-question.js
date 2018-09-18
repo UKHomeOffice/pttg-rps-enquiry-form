@@ -1,5 +1,5 @@
 const { isSelected } = require('./utils');
-const SupportingDocumentsFactsheet = require('./factsheets/eligibility-factsheet');
+const AboutSchemeFactsheet = require('./factsheets/about-the-scheme');
 const HowToApplyFactsheet = require('./factsheets/how-to-apply-factsheet');
 const DecisionFactsheet = require('./factsheets/decision-factsheet');
 const LiveApplicationFactsheet = require('./factsheets/live-application-factsheet');
@@ -10,8 +10,12 @@ module.exports = {
     properties: {
         fields: ['your-question-option'],
         forks: [{
-            target: SupportingDocumentsFactsheet.path,
+            target: AboutSchemeFactsheet.path,
             condition: isSelected('eligibility', 'your-question-option')
+        },
+        {
+            target: AboutSchemeFactsheet.path,
+            condition: isSelected('application-fees', 'your-question-option')
         },
         {
             target: HowToApplyFactsheet.path,
@@ -27,7 +31,7 @@ module.exports = {
         },
         {
             target: QuestionForm.path,
-            condition: isSelected('question-form', 'your-question-option')
+            condition: isSelected('supporting-organisation', 'your-question-option')
         }]
     }
 };
