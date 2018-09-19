@@ -26,14 +26,14 @@ module.exports = config => {
             const submittedApplication = getValue(req.sessionModel.get('submitted-application'), 'submitted-application', translate);
 
             try {
-                const response = await notifyClient.sendEmail(templateId, recipient || req.sessionModel.get('enter-email-address'), {
+                const response = await notifyClient.sendEmail(templateId, recipient || req.sessionModel.get('email-address'), {
                     personalisation: {
-                        'email_address': req.sessionModel.get('enter-email-address') || 'N/A',
-                        'phone_number': req.sessionModel.get('enter-phone-number') || 'N/A',
+                        'email_address': req.sessionModel.get('email-address') || 'N/A',
+                        'phone_number': req.sessionModel.get('phone-number') || 'N/A',
                         'contact_preference': contactPreference || 'N/A',
                         'have_submitted_application': submittedApplication || 'N/A',
-                        'unique_reference_number': req.sessionModel.get('enter-unique-reference-number') || 'N/A',
-                        'question': req.sessionModel.get('enter-question-body') || 'N/A'
+                        'unique_reference_number': req.sessionModel.get('unique-reference-number') || 'N/A',
+                        'question': req.sessionModel.get('question-body') || 'N/A'
                     }
                 });
 

@@ -25,7 +25,7 @@
       }
     } 
   },
-  "enter-email-address": {
+  "email-address": {
     "label": "Email address",
     "hint": "We'll only use this to contact you about your question.",
     "validation": {
@@ -34,27 +34,27 @@
       "maxlength": "Email cannot exceed 254 characters"
     }
   },
-  "enter-phone-number": {
+  "phone-number": {
     "label": "Telephone number (optional)",
     "hint": "We may want to contact you by telephone if we need more information to answer your question.",
     "validation": {
       "phonenumber": "Enter a valid phone number"
     }
   },
-  "enter-nationality": {
+  "nationality": {
     "label": "Nationality (optional)",
     "validation": {
       "required": "Enter a nationality"
     }
   },
-  "enter-unique-reference-number": {
+  "unique-reference-number": {
     "label": "Your application number, if you have one",
     "hint": "For example 3434-0000-0000-0001. This will be on any emails you received about your application.",
     "validation": {
       "maxlength": "Unique Reference Numbers cannot exceed 25 characters"
     }
   },
-  "enter-question-body": {
+  "question-body": {
     "label": "Enter details of your question",
     "summary": "Question",
     "hint": "max 2000 characters",
@@ -63,7 +63,7 @@
       "maxlength": "question cannot exceed 2000 characters"
     }
   },
-  "enter-date-of-birth": {
+  "date-of-birth": {
     "legend": "Date of Birth (optional)",
     "hint": "For example, 25 03 1957",
     "validation": {
@@ -72,7 +72,7 @@
       "after": "Date of birth must be after 1902"
       }
   },
-  "enter-name": {
+  "name": {
     "label": "Full name",
     "validation": {
       "required": "Enter your full name",

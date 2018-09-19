@@ -10,7 +10,7 @@
       "customer-details": {
         "header": "Customer Details"
       },
-      "enter-contact-information": {
+      "contact-information": {
         "header": "Contact Details"
       },
       "question-body": {
@@ -18,19 +18,19 @@
       }
     },
     "fields": {
-      "enter-unique-reference-number": {
+      "unique-reference-number": {
         "label": "Your application number"
       },
-      "enter-phone-number": {
+      "phone-number": {
         "label": "Telephone number"
       },
-      "enter-nationality": {
+      "nationality": {
         "label": "Nationality"
       },
-      "enter-date-of-birth": {
+      "date-of-birth": {
         "label": "Date of birth"
       },
-      "enter-name": {
+      "name": {
         "label": "Name"
       }
     }

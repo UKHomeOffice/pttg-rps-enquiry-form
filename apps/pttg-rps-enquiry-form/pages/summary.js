@@ -19,17 +19,17 @@ module.exports = {
         next: ConfirmationPage.path,
         sections: {
             'customer-details': [
-                'enter-name',
-                'enter-unique-reference-number',
-                'enter-nationality',
-                'enter-date-of-birth'
+                'name',
+                'unique-reference-number',
+                'nationality',
+                'date-of-birth'
             ],
-            'enter-contact-information': [
-                'enter-email-address',
-                'enter-phone-number'
+            'contact-information': [
+                'email-address',
+                'phone-number'
             ],
             'question-body': [
-                'enter-question-body'
+                'question-body'
             ]
         }
     }
