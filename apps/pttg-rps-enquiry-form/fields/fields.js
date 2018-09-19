@@ -49,6 +49,13 @@ module.exports = {
             arguments: '255'
         }]
     },
+    'applicant-full-name': {
+        mixin: 'input-text',
+        validate: ['required', {
+            type: 'maxlength',
+            arguments: '255'
+        }]
+    },
     'existing-application': {
         mixin: 'radio-group',
         className: ['inline'],

@@ -61,7 +61,7 @@
     "hint": "Up to 2000 characters",
     "validation": {
       "required": "Enter a question",
-      "maxlength": "question cannot exceed 2000 characters"
+      "maxlength": "Question cannot exceed 2000 characters"
     }
   },
   "date-of-birth": {
@@ -72,6 +72,13 @@
       "before": "Date of birth must not be in the future",
       "after": "Date of birth must be after 1902"
       }
+  },
+  "applicant-full-name": {
+    "label": "Applicant’s full name",
+    "validation": {
+      "required": "Enter applicant’s full name",
+      "maxlength": "Name must be fewer than 256 characters"
+    }
   },
   "name": {
     "label": "Name",
