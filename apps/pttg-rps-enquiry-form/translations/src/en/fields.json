@@ -30,7 +30,7 @@
     "hint": "We'll only use this to contact you about your question.",
     "validation": {
       "required": "Enter your email address",
-      "email": "Enter a valid email address",
+      "email": "Enter an email address in the right format, like name@example.com",
       "maxlength": "Email cannot exceed 254 characters"
     }
   },
