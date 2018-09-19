@@ -7,6 +7,7 @@ const AboutSchemeFactsheet = require('./pages/factsheets/about-the-scheme');
 const DecisionFactsheet = require('./pages/factsheets/decision-factsheet');
 
 const questionPage = require('./pages/question');
+const applicationDetails = require('./pages/application-details');
 
 const SummaryPage = require('./pages/summary');
 const ConfirmationPage = require('./pages/confirmation');
@@ -27,6 +28,7 @@ module.exports = {
         AboutSchemeFactsheet,
         DecisionFactsheet,
         questionPage,
+        applicationDetails,
         SummaryPage,
         ConfirmationPage
     ])
