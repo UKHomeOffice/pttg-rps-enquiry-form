@@ -29,7 +29,7 @@
     "label": "Email address",
     "hint": "We'll only use this to contact you about your question.",
     "validation": {
-      "required": "Eenter your email address",
+      "required": "Enter your email address",
       "email": "Enter a valid email address",
       "maxlength": "Email cannot exceed 254 characters"
     }
@@ -55,10 +55,15 @@
       "maxlength": "Unique Reference Numbers cannot exceed 25 characters"
     }
   },
+<<<<<<< Updated upstream
   "question-body": {
     "label": "Enter details of your question",
+=======
+  "enter-question-body": {
+    "label": "Your question",
+>>>>>>> Stashed changes
     "summary": "Question",
-    "hint": "max 2000 characters",
+    "hint": "Up to 2000 characters",
     "validation": {
       "required": "Enter a question",
       "maxlength": "question cannot exceed 2000 characters"
@@ -73,11 +78,16 @@
       "after": "Date of birth must be after 1902"
       }
   },
+<<<<<<< Updated upstream
   "name": {
     "label": "Full name",
+=======
+  "enter-name": {
+    "label": "Name",
+>>>>>>> Stashed changes
     "validation": {
-      "required": "Enter your full name",
-      "maxlength": "Full name must be fewer than 256 characters"
+      "required": "Enter your name",
+      "maxlength": "Name must be fewer than 256 characters"
     }
   }
 }
