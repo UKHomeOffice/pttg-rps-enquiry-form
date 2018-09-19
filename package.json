@@ -3,9 +3,10 @@
   "scripts": {
     "start": "node app.js",
     "start:dev": "hof-build watch --conf ./hof-build-conf.js",
-    "test": "npm run test:lint",
+    "test": "npm run test:lint && npm run test:acceptance",
+    "test:acceptance": "so-acceptance --steps",
+    "test:acceptance:local": "funkie --driver chromedriver npm run test:acceptance",
     "test:lint": "eslint .",
-    "test:all": "npm run test:lint",
     "build": "hof-build",
     "postinstall": "npm run build"
   },
@@ -26,7 +27,10 @@
   },
   "devDependencies": {
     "eslint": "^5.1.0",
-    "eslint-config-homeoffice": "^2.2.0"
+    "eslint-config-homeoffice": "^2.2.0",
+    "funkie": "0.0.6",
+    "funkie-chromedriver": "^0.1.0",
+    "so-acceptance": "^5.0.0"
   },
   "name": "pttg-rps-enquiry-form",
   "version": "1.0.0",

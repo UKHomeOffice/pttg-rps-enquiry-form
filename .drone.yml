@@ -1,27 +1,40 @@
 pipeline:
 
   build-docker-image:
-    image: docker:17.09.1
+    group: build
+    image: docker:18.03.1-ce
     environment:
       - DOCKER_HOST=tcp://172.17.0.1:2375
     commands:
       - docker build -t pttg-rps-enquiry .
     when:
-      branch: master
       event: push
 
-  test:
-    image: docker:17.09.1
+  build-test:
+    group: build
+    image: docker:18.03.1-ce
     environment:
       - DOCKER_HOST=tcp://172.17.0.1:2375
     commands:
-      - docker build -f Dockerfile_test -t pttg-rps-enquiry-test .
-      - docker run pttg-rps-enquiry-test
+      - docker build -f Dockerfile_test -t test .
+    when:
+      event: push
+
+  test:
+    group: test
+    image: docker:18.03.1-ce
+    environment:
+      - DOCKER_HOST=tcp://172.17.0.1:2375
+    commands:
+      - docker rm -vf "app" || true
+      - docker run -d -e NODE_ENV=development --name=app pttg-rps-enquiry
+      - docker run --rm -e WEBDRIVER_HOST=172.18.0.2 -e ENDPOINT=http://app:8080 test
+      - docker rm -vf "app"
     when:
       event: push
 
   install-docker-image:
-    image: docker:17.09.1
+    image: docker:18.03.1-ce
     environment:
       - DOCKER_HOST=tcp://172.17.0.1:2375
     secrets:
@@ -35,7 +48,7 @@ pipeline:
       event: push
 
   tag-docker-image-with-git-tag:
-    image: docker:17.09.1
+    image: docker:18.03.1-ce
     environment:
       - DOCKER_HOST=tcp://172.17.0.1:2375
     secrets:
@@ -101,3 +114,9 @@ pipeline:
     when:
       event: deployment
       environment: pr
+
+services:
+  selenium:
+    image: selenium/standalone-chrome
+  redis:
+    image: redis
