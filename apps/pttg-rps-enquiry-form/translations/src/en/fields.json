@@ -2,7 +2,7 @@
   "your-question-option" : {
     "legend": "What is your question about?",
     "validation": {
-      "required": "Please choose an option"
+      "required": "Choose an option"
     },
     "options": {
       "eligibility": {
@@ -29,8 +29,8 @@
     "label": "Email address",
     "hint": "We'll only use this to contact you about your question.",
     "validation": {
-      "required": "Please enter your email address",
-      "email": "Please enter a valid email address",
+      "required": "Eenter your email address",
+      "email": "Enter a valid email address",
       "maxlength": "Email cannot exceed 254 characters"
     }
   },
@@ -38,7 +38,7 @@
     "label": "Telephone number (optional)",
     "hint": "We may want to contact you by telephone if we need more information to answer your question.",
     "validation": {
-      "phonenumber": "Please enter a valid phone number"
+      "phonenumber": "Enter a valid phone number"
     }
   },
   "enter-nationality": {
@@ -59,7 +59,7 @@
     "summary": "Question",
     "hint": "max 2000 characters",
     "validation": {
-      "required": "Please enter a question",
+      "required": "Enter a question",
       "maxlength": "question cannot exceed 2000 characters"
     }
   },
