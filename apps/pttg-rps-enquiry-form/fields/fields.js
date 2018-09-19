@@ -49,6 +49,12 @@ module.exports = {
             arguments: '255'
         }]
     },
+    'existing-application': {
+        mixin: 'radio-group',
+        className: ['inline'],
+        options: ['yes', 'no'],
+        validate: 'required'
+    },
     'date-of-birth': dateComponent('date-of-birth', {
         validate: [
             {type: 'before'},
