@@ -35,6 +35,9 @@
       }
     }
   },
+  "application-details": {
+    "header": "Application details"
+  },
   "confirmation": {
     "panel": "Your question has been sent"
   }
