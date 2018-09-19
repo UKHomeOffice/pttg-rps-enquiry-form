@@ -44,7 +44,8 @@
   "nationality": {
     "label": "Nationality (optional)",
     "validation": {
-      "required": "Enter a nationality"
+      "required": "Enter a nationality",
+      "equal": "Select a nationality from the list"
     }
   },
   "unique-reference-number": {
