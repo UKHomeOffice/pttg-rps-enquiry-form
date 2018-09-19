@@ -18,7 +18,7 @@ module.exports = config => {
         async successHandler(req, res, callback) {
 
             try {
-                const response = await notifyClient.sendEmail(templateId, req.sessionModel.get('enter-email-address'));
+                const response = await notifyClient.sendEmail(templateId, req.sessionModel.get('email-address'));
                 log.info('User Confirmation Email sent successfully');
                 log.debug(response);
             } catch (err) {

@@ -6,22 +6,22 @@ module.exports = {
         options: ['eligibility', 'application-fees', 'how-to-apply', 'change-or-withdraw', 'application-result', 'supporting-organisation'],
         validate: 'required'
     },
-    'enter-email-address': {
+    'email-address': {
         mixin: 'input-text',
         validate: ['required', 'email', {
             type: 'maxlength',
             arguments: '254'
         }]
     },
-    'enter-nationality': {
+    'nationality': {
         mixin: 'select',
         options: [{label: ' ', value: ''}].concat(require('hof-util-countries')())
     },
-    'enter-phone-number': {
+    'phone-number': {
         mixin: 'input-phone',
         validate: ['phonenumber']
     },
-    'enter-unique-reference-number': {
+    'unique-reference-number': {
         mixin: 'input-text',
         validate: [{
             type: 'maxlength',
@@ -29,7 +29,7 @@ module.exports = {
 
         }]
     },
-    'enter-question-body': {
+    'question-body': {
         mixin: 'textarea',
         validate: [
             'required', {
@@ -42,14 +42,14 @@ module.exports = {
             value: 8
         }]
     },
-    'enter-name': {
+    'name': {
         mixin: 'input-text',
         validate: ['required', {
             type: 'maxlength',
             arguments: '255'
         }]
     },
-    'enter-date-of-birth': dateComponent('enter-date-of-birth', {
+    'date-of-birth': dateComponent('date-of-birth', {
         validate: [
             {type: 'before'},
             {type: 'after', arguments: '1903-01-01'},

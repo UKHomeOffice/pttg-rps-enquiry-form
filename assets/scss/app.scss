@@ -16,7 +16,7 @@
   }
 }
 
-#enter-question-body {
+#question-body {
   width: 100%;
 }
 
@@ -48,7 +48,7 @@
   word-break: break-word;
 }
 
-#enter-contact-information-group legend {
+#contact-information-group legend {
   @include bold-19();
   margin-bottom: 1.3rem;
 }
