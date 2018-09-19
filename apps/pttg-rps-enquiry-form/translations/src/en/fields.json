@@ -69,7 +69,7 @@
     "hint": "For example, 25 03 1957",
     "validation": {
       "date": "Enter a real date of birth",
-      "before": "Date of birth must not be in the future",
+      "before": "Date of birth must be in the past",
       "after": "Date of birth must be after 1902"
       }
   },
