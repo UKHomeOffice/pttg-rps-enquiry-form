@@ -49,6 +49,9 @@ module.exports = {
             arguments: '255'
         }]
     },
+    'organisation-name': {
+        mixin: 'input-text'
+    },
     'applicant-full-name': {
         mixin: 'input-text',
         validate: ['required', {
