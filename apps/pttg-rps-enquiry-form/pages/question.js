@@ -8,6 +8,7 @@ module.exports = {
             'question-body',
             'name',
             'email-address',
+            'phone-number',
             'existing-application'
         ],
         forks: [{
