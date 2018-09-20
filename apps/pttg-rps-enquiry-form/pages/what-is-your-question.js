@@ -14,10 +14,6 @@ module.exports = {
             condition: isSelected('eligibility', 'your-question-option')
         },
         {
-            target: AboutSchemeFactsheet.path,
-            condition: isSelected('application-fees', 'your-question-option')
-        },
-        {
             target: HowToApplyFactsheet.path,
             condition: isSelected('how-to-apply', 'your-question-option')
         },
