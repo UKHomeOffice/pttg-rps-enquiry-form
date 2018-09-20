@@ -19,7 +19,8 @@ module.exports = {
         next: ConfirmationPage.path,
         sections: {
             'customer-details': [
-                'name'
+                'name',
+                'organisation-name'
             ],
             'application-details': [
                 'applicant-full-name',
