@@ -87,6 +87,12 @@
       "maxlength": "Name must be fewer than 256 characters"
     }
   },
+  "organisation-name": {
+    "label": "Organisation name (optional)",
+    "validation": {
+      "maxlength": "Name must be fewer than 256 characters"
+    }
+  },
   "existing-application": {
     "legend": "Are you asking about an existing application?",
     "options": {

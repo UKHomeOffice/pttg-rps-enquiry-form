@@ -3,7 +3,7 @@ const AboutSchemeFactsheet = require('./factsheets/about-the-scheme');
 const HowToApplyFactsheet = require('./factsheets/how-to-apply-factsheet');
 const DecisionFactsheet = require('./factsheets/decision-factsheet');
 const LiveApplicationFactsheet = require('./factsheets/live-application-factsheet');
-const QuestionForm = require('./question');
+const SupportingOrgFactsheet = require('./factsheets/supporting-org-factsheet');
 
 module.exports = {
     path: '/what-is-your-question',
@@ -30,7 +30,7 @@ module.exports = {
             condition: isSelected('application-result', 'your-question-option')
         },
         {
-            target: QuestionForm.path,
+            target: SupportingOrgFactsheet.path,
             condition: isSelected('supporting-organisation', 'your-question-option')
         }]
     }
