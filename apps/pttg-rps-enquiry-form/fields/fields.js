@@ -50,7 +50,11 @@ module.exports = {
         }]
     },
     'organisation-name': {
-        mixin: 'input-text'
+        mixin: 'input-text',
+        validate: ['required', {
+            type: 'maxlength',
+            arguments: '255'
+        }]
     },
     'applicant-full-name': {
         mixin: 'input-text',
