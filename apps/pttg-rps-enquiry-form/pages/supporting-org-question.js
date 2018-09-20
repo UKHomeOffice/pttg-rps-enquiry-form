@@ -8,6 +8,7 @@ module.exports = {
             'question-body',
             'name',
             'email-address',
+            'phone-number',
             'organisation-name',
             'existing-application'
         ],
