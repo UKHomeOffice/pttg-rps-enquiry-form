@@ -6,6 +6,7 @@ module.exports = {
         templates: {
             userConfirmation: process.env.NOTIFY_TEMPLATE_USER_CONFIRMATION || '',
             enquirySupport: process.env.NOTIFY_TEMPLATE_ENQUIRY_SUPPORT || ''
-        }
+        },
+        recipient: process.env.NOTIFY_RECIPIENT || ''
     }
 };
