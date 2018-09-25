@@ -34,3 +34,5 @@ It’ll be free to apply if:
 * you’re a child in local authority care
 
 [More about settled status](https://www.gov.uk/settled-status-eu-citizens-families)
+
+If this doesn't answer your question, use the enquiry form to send us an email. We'll reply within 5 working days.

@@ -7,3 +7,5 @@ If your circumstances change while your application is being considered – for 
 You can withdraw your application at any time, but your fee will not be refunded.
 
 [More about applying for settled status](https://www.gov.uk/settled-status-eu-citizens-families/applying-for-settled-status)
+
+If this doesn't answer your question, use the enquiry form to send us an email. We'll reply within 5 working days.

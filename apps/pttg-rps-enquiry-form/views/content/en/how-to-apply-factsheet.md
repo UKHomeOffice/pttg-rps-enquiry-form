@@ -10,3 +10,5 @@ Full details of the scheme are still subject to approval by Parliament.
 </div>
 
 [More about applying for settled status](https://www.gov.uk/settled-status-eu-citizens-families/applying-for-settled-status)
+
+If this doesn't answer your question, use the enquiry form to send us an email. We'll reply within 5 working days.
