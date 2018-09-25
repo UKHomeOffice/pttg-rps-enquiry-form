@@ -25,7 +25,7 @@ module.exports = {
             ],
             'application-details': [
                 'applicant-full-name',
-                'unique-reference-number',
+                'application-number',
                 'nationality',
                 'date-of-birth'
             ],

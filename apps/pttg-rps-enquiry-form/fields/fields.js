@@ -21,7 +21,7 @@ module.exports = {
         mixin: 'input-phone',
         validate: ['phonenumber']
     },
-    'unique-reference-number': {
+    'application-number': {
         mixin: 'input-text',
         validate: [{
             type: 'maxlength',

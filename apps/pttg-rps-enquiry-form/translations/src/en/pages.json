@@ -23,7 +23,7 @@
       }
     },
     "fields": {
-      "unique-reference-number": {
+      "application-number": {
         "label": "Your application number"
       },
       "phone-number": {

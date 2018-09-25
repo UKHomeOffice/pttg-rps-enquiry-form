@@ -13,8 +13,8 @@
         "question-information": {
             "header": "Question Information"
         },
-        "application-unique-reference-number": {
-            "label": "Application Unique Reference Number"
+        "application-number": {
+            "label": "Application Number"
         },
         "question": {
             "header": "Question"
@@ -35,8 +35,8 @@
         "question-information": {
             "header": "Question Information"
         },
-        "application-unique-reference-number": {
-            "label": "Application Unique Reference Number"
+        "application-number": {
+            "label": "Application Number"
         },
         "question": {
             "header": "Question"

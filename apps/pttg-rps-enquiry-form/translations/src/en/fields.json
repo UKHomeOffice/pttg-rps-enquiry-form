@@ -38,15 +38,15 @@
     }
   },
   "nationality": {
-    "label": "Nationality (optional)",
+    "label": "Country of nationality",
     "validation": {
       "required": "Enter a nationality",
       "equal": "Select a nationality from the list"
     }
   },
-  "unique-reference-number": {
-    "label": "Your application number, if you have one",
-    "hint": "For example 3434-0000-0000-0001. This will be on any emails you received about your application.",
+  "application-number": {
+    "label": "Application number",
+    "hint": "This will be on any emails you received about your application.",
     "validation": {
       "maxlength": "Unique Reference Numbers cannot exceed 25 characters"
     }
@@ -61,7 +61,7 @@
     }
   },
   "date-of-birth": {
-    "legend": "Date of Birth (optional)",
+    "legend": "Date of Birth",
     "hint": "For example, 25 03 1957",
     "validation": {
       "date": "Enter a real date of birth",
