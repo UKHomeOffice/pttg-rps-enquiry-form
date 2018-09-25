@@ -61,7 +61,7 @@
     }
   },
   "date-of-birth": {
-    "legend": "Date of Birth",
+    "legend": "Date of birth",
     "hint": "For example, 25 03 1957",
     "validation": {
       "date": "Enter a real date of birth",
