@@ -24,7 +24,7 @@
   },
   "email-address": {
     "label": "Email address",
-    "hint": "We'll only use this to contact you about your question.",
+    "hint": "We’ll only use this to contact you about your question.",
     "validation": {
       "required": "Enter your email address",
       "email": "Enter an email address in the right format, like name@example.com",
