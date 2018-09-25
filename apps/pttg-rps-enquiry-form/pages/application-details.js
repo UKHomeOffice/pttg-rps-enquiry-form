@@ -5,7 +5,7 @@ module.exports = {
     properties: {
         fields: [
             'applicant-full-name',
-            'unique-reference-number',
+            'application-number',
             'nationality',
             'date-of-birth'
         ],

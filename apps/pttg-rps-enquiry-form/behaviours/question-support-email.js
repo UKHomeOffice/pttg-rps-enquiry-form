@@ -32,7 +32,7 @@ module.exports = config => {
                         'phone_number': req.sessionModel.get('phone-number') || 'N/A',
                         'contact_preference': contactPreference || 'N/A',
                         'have_submitted_application': submittedApplication || 'N/A',
-                        'unique_reference_number': req.sessionModel.get('unique-reference-number') || 'N/A',
+                        'application-number': req.sessionModel.get('application-number') || 'N/A',
                         'question': req.sessionModel.get('question-body') || 'N/A'
                     }
                 });
