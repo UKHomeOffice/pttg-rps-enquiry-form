@@ -10,28 +10,14 @@ pipeline:
     when:
       event: push
 
-# build-test:
-#   group: build
-#   image: docker:18.03.1-ce
-#   environment:
-#     - DOCKER_HOST=tcp://172.17.0.1:2375
-#   commands:
-#     - docker build -f Dockerfile_test -t test .
-#   when:
-#     event: push
-
-# test:
-#   group: test
-#   image: docker:18.03.1-ce
-#   environment:
-#     - DOCKER_HOST=tcp://172.17.0.1:2375
-#   commands:
-#     - docker rm -vf "app" || true
-#     - docker run -d -e NODE_ENV=development --name=app pttg-rps-enquiry
-#     - docker run --rm -e WEBDRIVER_HOST=172.18.0.2 -e ENDPOINT=http://app:8080 test
-#     - docker rm -vf "app"
-#   when:
-#     event: push
+  lint:
+    group: build
+    image: quay.io/ukhomeofficedigital/nodejs-base:v8.11.1
+    commands:
+      - npm install eslint
+      - npm run test:lint
+    when:
+      event: push
 
   install-docker-image:
     image: docker:18.03.1-ce

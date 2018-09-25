@@ -6,7 +6,9 @@
     "test": "npm run test:lint && npm run test:acceptance",
     "test:acceptance": "so-acceptance --steps",
     "test:acceptance:local": "funkie --driver chromedriver npm run test:acceptance",
-    "test:lint": "eslint .",
+    "test:lint": "npm run test:lint:eslint && npm run test:lint:quotes",
+    "test:lint:eslint": "eslint .",
+    "test:lint:quotes": "! grep -r \"'\" apps/*/{views/content,translations/src}",
     "build": "hof-build",
     "postinstall": "npm run build"
   },

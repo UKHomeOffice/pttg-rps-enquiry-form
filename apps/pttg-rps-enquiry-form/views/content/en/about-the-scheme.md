@@ -35,4 +35,4 @@ It’ll be free to apply if:
 
 [More about settled status](https://www.gov.uk/settled-status-eu-citizens-families)
 
-If this doesn't answer your question, use the enquiry form to send us an email. We'll reply within 5 working days.
+If this doesn’t answer your question, use the enquiry form to send us an email. We’ll reply within 5 working days.

@@ -8,4 +8,4 @@ If your application is unsuccessful, you can reapply if you do so by 30 June 202
 
 [More about who is eligible for settled status](https://www.gov.uk/settled-status-eu-citizens-families/eligibility)
 
-If this doesn't answer your question, use the enquiry form to send us an email. We'll reply within 5 working days.
+If this doesn’t answer your question, use the enquiry form to send us an email. We’ll reply within 5 working days.

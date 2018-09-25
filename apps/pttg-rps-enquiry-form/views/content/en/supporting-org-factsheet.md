@@ -4,4 +4,4 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dui arcu, 
 
 Integer sed viverra risus. Proin mollis accumsan nulla, vitae blandit nibh venenatis in. Cras in ultrices massa. Quisque metus ligula, gravida vitae aliquam sit amet, interdum non neque. Donec porta dapibus lorem, in rhoncus dolor porta non. Integer elementum turpis ipsum, id malesuada velit dignissim a. Suspendisse potenti. Donec in ante quis neque sollicitudin viverra. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.
 
-If this doesn't answer your question, use the enquiry form to send us an email. We'll reply within 5 working days.
+If this doesn’t answer your question, use the enquiry form to send us an email. We’ll reply within 5 working days.
