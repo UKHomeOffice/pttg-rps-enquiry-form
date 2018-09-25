@@ -24,7 +24,6 @@
   },
   "email-address": {
     "label": "Email address",
-    "hint": "We’ll only use this to contact you about your question.",
     "validation": {
       "required": "Enter your email address",
       "email": "Enter an email address in the right format, like name@example.com",
@@ -93,7 +92,8 @@
     }
   },
   "existing-application": {
-    "legend": "Are you asking about an existing application?",
+    "legend": "Is your question about an existing application?",
+    "hint": "If it is, we’ll ask for some details of the application.",
     "options": {
       "yes": {
         "label": "Yes"

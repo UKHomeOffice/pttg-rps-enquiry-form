@@ -3,7 +3,12 @@
     "header": "Ask a question about applying for settled status"
   },
   "question": {
-    "header": "Your question"
+    "header": "Your details",
+    "intro": "We’ll use this information to reply to your question."
+  },
+  "supporting-org-question": {
+    "header": "Your details",
+    "intro": "We’ll use this information to reply to your question."
   },
   "confirm": {
     "sections": {
