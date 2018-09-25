@@ -7,6 +7,6 @@ COPY codecept.conf.js codecept.conf.js
 COPY config.js config.js
 COPY apps apps/
 
-RUN npm --loglevel warn install
+RUN npm --loglevel warn install eslint
 
 CMD npm run test:lint
