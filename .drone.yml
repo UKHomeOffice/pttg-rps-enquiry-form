@@ -78,6 +78,7 @@ pipeline:
     secrets:
       - pttg_rps_dev
       - pttg_rps_test
+      - basic_auth
     commands:
       - cd kube-pttg-rps-enquiry-form
       - ./deploy.sh
