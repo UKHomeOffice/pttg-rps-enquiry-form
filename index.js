@@ -1,6 +1,6 @@
 const hof = require('hof');
 
-const settings = require('./hof.settings');
+const settings = require('./config');
 
 settings.routes = settings.routes.map(route => require(route));
 settings.root = __dirname;
