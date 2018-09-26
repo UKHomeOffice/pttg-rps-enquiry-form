@@ -6,6 +6,6 @@ You will not lose your settled status unless you leave the UK for a period of mo
 
 If your application is unsuccessful, you can reapply if you do so by 30 June 2021. You can also appeal the decision if you apply from 30 March 2019.
 
-[More about who is eligible for settled status](https://www.gov.uk/settled-status-eu-citizens-families/eligibility)
+[More about what settled and pre-settled status means](https://www.gov.uk/settled-status-eu-citizens-families/what-settled-and-presettled-status-means)
 
 If this doesn’t answer your question, use the enquiry form to send us an email. We’ll reply within 5 working days.
