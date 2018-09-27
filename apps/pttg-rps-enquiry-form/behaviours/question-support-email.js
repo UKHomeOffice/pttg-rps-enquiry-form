@@ -6,16 +6,16 @@ const getValue = (value, field, translate) => {
     return translate(key);
 };
 
+const warnUser = (env, msg) => {
+    if (env === 'production') throw new Error(msg);
+    log.warn(msg);
+};
+
 module.exports = config => {
-    const { apiKey, templateId, recipient } = config;
+    const { apiKey, templateId, recipient, env } = config;
 
-    if (!apiKey) {
-        throw new Error('Missing Notify API Key');
-    }
-
-    if (!templateId) {
-        throw new Error('Missing Notify Template ID');
-    }
+    if (!apiKey) warnUser(env, 'Missing Notify API Key');
+    if (!templateId) warnUser(env, 'Missing Notify Template ID');
 
     const notifyClient = new NotifyClient(apiKey);
 
