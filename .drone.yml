@@ -19,6 +19,30 @@ pipeline:
     when:
       event: push
 
+  build-test:
+    group: build
+    image: docker:18.03.1-ce
+    environment:
+      - DOCKER_HOST=tcp://172.17.0.1:2375
+    commands:
+      - docker build -f Dockerfile_test -t test-$${DRONE_COMMIT_SHA} .
+    when:
+      event: push
+
+  test:
+    group: test
+    image: docker:18.03.1-ce
+    environment:
+      - DOCKER_HOST=tcp://172.17.0.1:2375
+    commands:
+      - docker run -d --name=redis-$${DRONE_COMMIT_SHA} redis
+      - docker run -d -e NODE_ENV=ci --name=app-$${DRONE_COMMIT_SHA} --net=container:redis-$${DRONE_COMMIT_SHA} pttg-rps-enquiry
+      - docker run -d --net=container:app-$${DRONE_COMMIT_SHA} --name=selenium-$${DRONE_COMMIT_SHA} selenium/standalone-chrome
+      - docker run --rm --net=container:app-$${DRONE_COMMIT_SHA} test-$${DRONE_COMMIT_SHA}
+      - docker rm -vf "app-$${DRONE_COMMIT_SHA}" "redis-$${DRONE_COMMIT_SHA}"
+    when:
+      event: push
+
   install-docker-image:
     image: docker:18.03.1-ce
     environment:
@@ -102,9 +126,3 @@ pipeline:
     when:
       event: deployment
       environment: pr
-
-# services:
-# selenium:
-#   image: selenium/standalone-chrome
-# redis:
-#   image: redis

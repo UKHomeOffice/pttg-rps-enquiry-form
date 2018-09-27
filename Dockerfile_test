@@ -6,7 +6,8 @@ COPY package.json package.json
 COPY codecept.conf.js codecept.conf.js
 COPY config.js config.js
 COPY apps apps/
+COPY logger.js logger.js
 
-RUN npm --loglevel warn install eslint
+RUN npm --loglevel warn install # eslint
 
-CMD npm run test:lint
+CMD npm run test:acceptance
