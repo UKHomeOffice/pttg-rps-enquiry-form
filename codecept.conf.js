@@ -22,6 +22,7 @@ module.exports = require('so-acceptance').extend({
     include: {
         startPage: pagesPath('start.js'),
         whatIsYourQuestionPage: pagesPath('what-is-your-question.js'),
-        questionPage: pagesPath('question.js')
+        questionPage: pagesPath('question.js'),
+        supportingOrgQuestionPage: pagesPath('supporting-org-question.js')
     }
 });
