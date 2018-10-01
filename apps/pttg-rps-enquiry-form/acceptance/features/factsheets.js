@@ -8,7 +8,7 @@ const factsheets = [
     {option: 'What the EU Settlement Scheme is and who should apply',
         text: 'Settled status and the EU Settlement Scheme'},
     {option: 'How to apply', text: 'How to apply'},
-    {option: 'An application that’s already in progress', text: 'While your application is in progress'},
+    {option: 'An application submitted and in progress', text: 'While your application is in progress'},
     {option: 'The result of my application', text: 'After you get a decision'},
     {option: 'I’m from an employer, community group or other supporting organisation',
         text: 'Employers, community groups and supporting organisations'}
