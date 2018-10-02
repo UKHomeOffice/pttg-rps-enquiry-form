@@ -92,8 +92,7 @@
     }
   },
   "existing-application": {
-    "legend": "Is your question about an existing application?",
-    "hint": "If it is, we’ll ask for some details of the application.",
+    "legend": "Is your question about an application that’s already been submitted?",
     "options": {
       "yes": {
         "label": "Yes"
