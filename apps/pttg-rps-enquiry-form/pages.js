@@ -8,6 +8,7 @@ const DecisionFactsheet = require('./pages/factsheets/decision-factsheet');
 const SupportingOrgFactsheet = require('./pages/factsheets/supporting-org-factsheet');
 
 const QuestionPage = require('./pages/question');
+const ExistingApplicationQuestionPage = require('./pages/existing-application-question');
 const SupportingOrgQuestionPage = require('./pages/supporting-org-question');
 const ApplicationDetails = require('./pages/application-details');
 
@@ -31,6 +32,7 @@ module.exports = {
         DecisionFactsheet,
         SupportingOrgFactsheet,
         QuestionPage,
+        ExistingApplicationQuestionPage,
         SupportingOrgQuestionPage,
         ApplicationDetails,
         SummaryPage,
