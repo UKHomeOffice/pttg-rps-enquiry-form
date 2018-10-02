@@ -1,8 +1,8 @@
-const SupportingOrgQuestionPage = require('../supporting-org-question');
+const hasExistingApplication = require('../has-existing-application-fork');
 
 module.exports = {
     path: '/supporting-org-factsheet',
     properties: {
-        next: SupportingOrgQuestionPage.path
+        next: hasExistingApplication.path
     }
 };

@@ -8,7 +8,7 @@ Before((I, startPage) => {
 
 
 Scenario('An enquiry can be completed end-to-end', (I) => {
-    I.completeToStep('/pttg-rps-enquiry-form/confirmation', {
+    I.completeToStep('/pttg-rps-enquiry-form/confirm', {
         'question-body': 'All human beings are born free and equal in dignity and rights.',
         'application-number': '3434-0000-0000-0001',
         'name': 'Joe Bloggs',

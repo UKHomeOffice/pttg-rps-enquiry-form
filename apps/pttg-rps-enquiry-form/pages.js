@@ -7,8 +7,11 @@ const AboutSchemeFactsheet = require('./pages/factsheets/about-the-scheme');
 const DecisionFactsheet = require('./pages/factsheets/decision-factsheet');
 const SupportingOrgFactsheet = require('./pages/factsheets/supporting-org-factsheet');
 
+const HasExistingApplication = require('./pages/has-existing-application-fork');
+
 const QuestionPage = require('./pages/question');
 const ExistingApplicationQuestionPage = require('./pages/existing-application-question');
+
 const SupportingOrgQuestionPage = require('./pages/supporting-org-question');
 const ApplicationDetails = require('./pages/application-details');
 
@@ -31,6 +34,7 @@ module.exports = {
         AboutSchemeFactsheet,
         DecisionFactsheet,
         SupportingOrgFactsheet,
+        HasExistingApplication,
         QuestionPage,
         ExistingApplicationQuestionPage,
         SupportingOrgQuestionPage,
