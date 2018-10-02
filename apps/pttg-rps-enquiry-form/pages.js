@@ -6,7 +6,9 @@ const HasExistingApplication = require('./pages/has-existing-application-fork');
 const QuestionPage = require('./pages/question');
 const ExistingApplicationQuestionPage = require('./pages/existing-application-question');
 
+const SupportingOrgPreamble = require('./pages/supporting-org-question-preamble');
 const SupportingOrgQuestionPage = require('./pages/supporting-org-question');
+
 const ApplicationDetails = require('./pages/application-details');
 
 const SummaryPage = require('./pages/summary');
@@ -26,6 +28,7 @@ module.exports = {
         HasExistingApplication,
         QuestionPage,
         ExistingApplicationQuestionPage,
+        SupportingOrgPreamble,
         SupportingOrgQuestionPage,
         ApplicationDetails,
         SummaryPage,

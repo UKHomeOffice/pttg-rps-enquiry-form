@@ -1,8 +1,7 @@
 const SummaryPage = require('./summary');
-const utils = require('./utils');
 
 module.exports = {
-    path: '/supporting-org-question',
+    path: '/supporting-org-question-about-application',
     properties: {
         fields: [
             'question-body',
@@ -10,10 +9,6 @@ module.exports = {
             'applicant-full-name',
             'application-number'
         ],
-        forks: [{
-            target: '/application-details',
-            condition: utils.isSelected('yes', 'existing-application')
-        }],
         next: SummaryPage.path
     }
 };

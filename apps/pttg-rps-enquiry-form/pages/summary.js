@@ -20,7 +20,7 @@ module.exports = {
         next: ConfirmationPage.path,
         sections: {
             'customer-details': [
-                'name',
+                'your-name',
                 'organisation-name'
             ],
             'application-details': [
@@ -30,7 +30,8 @@ module.exports = {
                 'date-of-birth'
             ],
             'contact-information': [
-                'email-address',
+                'your-email-address',
+                'applicant-email-address',
                 'phone-number'
             ],
             'question-body': [

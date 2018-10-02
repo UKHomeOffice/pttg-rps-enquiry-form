@@ -5,8 +5,8 @@ module.exports = {
     properties: {
         fields: [
             'question-body',
-            'name',
-            'email-address',
+            'your-name',
+            'your-email-address',
             'phone-number'
         ],
         next: SummaryPage.path
