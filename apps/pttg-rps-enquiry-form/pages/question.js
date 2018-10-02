@@ -1,5 +1,4 @@
 const SummaryPage = require('./summary');
-const utils = require('./utils');
 
 module.exports = {
     path: '/question',
@@ -8,13 +7,8 @@ module.exports = {
             'question-body',
             'name',
             'email-address',
-            'phone-number',
-            'existing-application'
+            'phone-number'
         ],
-        forks: [{
-            target: '/application-details',
-            condition: utils.isSelected('yes', 'existing-application')
-        }],
         next: SummaryPage.path
     }
 };
