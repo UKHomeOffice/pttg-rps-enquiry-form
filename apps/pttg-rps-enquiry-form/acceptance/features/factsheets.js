@@ -23,11 +23,11 @@ factsheets.forEach((factsheet) => {
         I.seeInCurrentUrl(whatIsYourQuestionPage.url);
     });
 
-    Scenario(`I click through the ${factsheet.option} factsheet`, (I, questionPage) => {
+    Scenario(`I click through the ${factsheet.option} factsheet`, (I, hasExistingApplicationPage) => {
         I.checkOption(factsheet.option);
         I.submitForm();
         I.click('Go to enquiry form');
-        I.seeInCurrentUrl(questionPage.url);
+        I.seeInCurrentUrl(hasExistingApplicationPage.url);
     });
 
     Scenario(`I get the ${factsheet.option} factsheet`, (I) => {
@@ -36,19 +36,11 @@ factsheets.forEach((factsheet) => {
         I.see(factsheet.text);
     });
 
-    Scenario(`I get the question page from ${factsheet.option}`, (I, questionPage) => {
+    Scenario(`I get the question page from ${factsheet.option}`, (I, hasExistingApplicationPage) => {
         I.checkOption(factsheet.option);
         I.submitForm();
         I.see(factsheet.text);
         I.submitForm();
-        I.seeInCurrentUrl(questionPage.url);
+        I.seeInCurrentUrl(hasExistingApplicationPage.url);
     });
-});
-
-Scenario(`I get the question page from ${factsheets[4].option}`, (I, supportingOrgQuestionPage) => {
-    I.checkOption(factsheets[4].option);
-    I.submitForm();
-    I.see(factsheets[4].text);
-    I.submitForm();
-    I.seeInCurrentUrl(supportingOrgQuestionPage.url);
 });
