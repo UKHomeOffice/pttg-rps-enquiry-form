@@ -1,8 +1,8 @@
-const QuestionPage = require('../question');
+const hasExistingApplication = require('../has-existing-application-fork');
 
 module.exports = {
     path: '/live-application-factsheet',
     properties: {
-        next: QuestionPage.path
+        next: hasExistingApplication.path
     }
 };
