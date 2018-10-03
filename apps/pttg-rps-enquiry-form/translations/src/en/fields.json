@@ -1,5 +1,5 @@
 {
-  "your-question-option" : {
+  "your-question-option": {
     "legend": "What is your question about?",
     "validation": {
       "required": "Choose an option"
@@ -12,7 +12,7 @@
         "label": "How to apply"
       },
       "change-or-withdraw": {
-        "label": "An application that’s already in progress"
+        "label": "An application submitted and in progress"
       },
       "application-result": {
         "label": "The result of my application"
@@ -20,7 +20,7 @@
       "supporting-organisation": {
         "label": "I’m from an employer, community group or other supporting organisation"
       }
-    } 
+    }
   },
   "email-address": {
     "label": "Email address",
@@ -48,7 +48,8 @@
     "label": "Application number",
     "hint": "This will be on any emails you received about your application.",
     "validation": {
-      "maxlength": "Unique Reference Numbers cannot exceed 25 characters"
+      "maxlength": "Unique Reference Numbers cannot exceed 25 characters",
+      "required": "Enter the reference number associated with your application"
     }
   },
   "question-body": {
@@ -67,7 +68,7 @@
       "date": "Enter a real date of birth",
       "before": "Date of birth must be in the past",
       "after": "Date of birth must be after 1902"
-      }
+    }
   },
   "applicant-full-name": {
     "label": "Applicant’s full name",
@@ -92,8 +93,7 @@
     }
   },
   "existing-application": {
-    "legend": "Is your question about an existing application?",
-    "hint": "If it is, we’ll ask for some details of the application.",
+    "legend": "Is your question about an application that’s already been submitted?",
     "options": {
       "yes": {
         "label": "Yes"
@@ -104,6 +104,13 @@
     },
     "validation": {
       "required": "Select yes if you are asking about an existing application"
+    }
+  },
+  "applicant-email-address": {
+    "label": "Applicant’s email address",
+    "validation": {
+      "required": "Enter the email address used in the application you are asking about",
+      "email": "Enter your email in the right format, like name@example.com"
     }
   }
 }
