@@ -84,9 +84,5 @@ module.exports = {
             {type: 'after', arguments: '1903-01-01'},
             {type: 'date'}
         ]
-    }),
-    'applicant-email-address': {
-        mixin: 'input-text',
-        validate: ['required', 'email']
-    }
+    })
 };
