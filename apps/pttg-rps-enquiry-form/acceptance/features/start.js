@@ -13,6 +13,6 @@ Scenario('When I click start I am taken to the What Is Your Question page', (
     I,
     whatIsYourQuestionPage
 ) => {
-    I.submitForm();
+    I.click('Start');
     I.seeInCurrentUrl(whatIsYourQuestionPage.url);
 });

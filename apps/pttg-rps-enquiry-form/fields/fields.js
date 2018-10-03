@@ -23,11 +23,13 @@ module.exports = {
     },
     'application-number': {
         mixin: 'input-text',
-        validate: [{
-            type: 'maxlength',
-            arguments: '25'
-
-        }]
+        validate: [
+            'required',
+            {
+                type: 'maxlength',
+                arguments: '25'
+            }
+        ]
     },
     'question-body': {
         mixin: 'textarea',
@@ -75,5 +77,9 @@ module.exports = {
             {type: 'after', arguments: '1903-01-01'},
             {type: 'date'}
         ]
-    })
+    }),
+    'applicant-email-address': {
+        mixin: 'input-text',
+        validate: ['required', 'email']
+    }
 };
