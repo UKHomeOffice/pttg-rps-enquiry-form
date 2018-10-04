@@ -4,7 +4,7 @@ const ExistingApplicationOrganisationPage = require('./supporting-org-applicatio
 const SupportingOrganisationQuestionPage = require('./supporting-org-question');
 
 const FORK_FIELD = 'existing-application';
-// const isSelected = (choice, fieldName) => req => req.sessionModel.get(fieldName) === choice;
+
 module.exports = {
     path: '/about-existing-application',
     properties: {
@@ -32,4 +32,3 @@ module.exports = {
         next: ExistingApplicationQuestionPage.path
     }
 };
-// isSelected('supporting-organisation', 'your-question-option') &&
