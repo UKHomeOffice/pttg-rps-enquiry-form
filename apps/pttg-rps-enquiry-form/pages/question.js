@@ -1,5 +1,4 @@
 const SummaryPage = require('./summary');
-const utils = require('./utils');
 
 module.exports = {
     path: '/question',
