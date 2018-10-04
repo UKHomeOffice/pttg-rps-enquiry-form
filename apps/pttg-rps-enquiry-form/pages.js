@@ -1,12 +1,6 @@
 const StartPage = require('./pages/start-page');
 const WhatIsYourQuestion = require('./pages/what-is-your-question');
 
-const HowToApplyFactsheet = require('./pages/factsheets/how-to-apply-factsheet');
-const LiveApplicationFactsheet = require('./pages/factsheets/live-application-factsheet');
-const AboutSchemeFactsheet = require('./pages/factsheets/about-the-scheme');
-const DecisionFactsheet = require('./pages/factsheets/decision-factsheet');
-const SupportingOrgFactsheet = require('./pages/factsheets/supporting-org-factsheet');
-
 const HasExistingApplication = require('./pages/has-existing-application-fork');
 
 const QuestionPage = require('./pages/question');
@@ -29,11 +23,6 @@ module.exports = {
     steps: pagesToSteps([
         StartPage,
         WhatIsYourQuestion,
-        HowToApplyFactsheet,
-        LiveApplicationFactsheet,
-        AboutSchemeFactsheet,
-        DecisionFactsheet,
-        SupportingOrgFactsheet,
         HasExistingApplication,
         QuestionPage,
         ExistingApplicationQuestionPage,
