@@ -10,7 +10,9 @@
     "test:lint:eslint": "eslint .",
     "test:lint:quotes": "! grep -r \"'\" apps/*/{views/content,translations/src}",
     "build": "hof-build",
-    "postinstall": "npm run build"
+    "postinstall": "npm run build",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "dependencies": {
     "hof": "^13.2.2",
@@ -25,7 +27,8 @@
     "jquery": "^3.3.1",
     "notifications-node-client": "^4.1.0",
     "typeahead-aria": "^1.0.4",
-    "winston": "^3.0.0"
+    "winston": "^3.0.0",
+    "snyk": "^1.100.0"
   },
   "devDependencies": {
     "eslint": "^5.1.0",
@@ -47,5 +50,6 @@
     "url": "https://github.com/UKHomeOffice/pttg-rps-enquiry-form/issues"
   },
   "homepage": "https://github.com/UKHomeOffice/pttg-rps-enquiry-form#readme",
-  "description": ""
+  "description": "",
+  "snyk": true
 }
