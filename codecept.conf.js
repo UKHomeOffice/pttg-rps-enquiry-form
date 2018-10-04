@@ -25,6 +25,8 @@ module.exports = require('so-acceptance').extend({
         questionPage: pagesPath('question.js'),
         supportingOrgQuestionPage: pagesPath('supporting-org-question.js'),
         hasExistingApplicationPage: pagesPath('has-existing-application.js'),
-        existingApplicationQuestionPage: pagesPath('application-question.js')
+        existingApplicationQuestionPage: pagesPath('application-question.js'),
+        supportingOrgApplicationQuestionPreamblePage: pagesPath('supporting-org-application-question-a.js'),
+        supportingOrgApplicationQuestionPage: pagesPath('supporting-org-application-question-b.js')
     }
 });

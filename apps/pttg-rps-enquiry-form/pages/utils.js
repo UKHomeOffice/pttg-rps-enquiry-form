@@ -3,4 +3,3 @@ const isSelected = (choice, fieldName) => req => req.sessionModel.get(fieldName)
 module.exports = {
     isSelected
 };
-

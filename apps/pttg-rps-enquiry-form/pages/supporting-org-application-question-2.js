@@ -1,13 +1,13 @@
 const SummaryPage = require('./summary');
 
 module.exports = {
-    path: '/question',
+    path: '/supporting-org-question-about-application',
     properties: {
         fields: [
             'question-body',
-            'your-name',
-            'your-email-address',
-            'phone-number'
+            'applicant-email-address',
+            'applicant-full-name',
+            'application-number'
         ],
         next: SummaryPage.path
     }

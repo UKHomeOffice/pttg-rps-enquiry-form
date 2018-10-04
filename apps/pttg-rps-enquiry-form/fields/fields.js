@@ -6,7 +6,14 @@ module.exports = {
         options: ['eligibility', 'how-to-apply', 'change-or-withdraw', 'application-result', 'supporting-organisation'],
         validate: 'required'
     },
-    'email-address': {
+    'your-email-address': {
+        mixin: 'input-text',
+        validate: ['required', 'email', {
+            type: 'maxlength',
+            arguments: '254'
+        }]
+    },
+    'applicant-email-address': {
         mixin: 'input-text',
         validate: ['required', 'email', {
             type: 'maxlength',
@@ -44,7 +51,7 @@ module.exports = {
             value: 8
         }]
     },
-    'name': {
+    'your-name': {
         mixin: 'input-text',
         validate: ['required', {
             type: 'maxlength',
@@ -77,9 +84,5 @@ module.exports = {
             {type: 'after', arguments: '1903-01-01'},
             {type: 'date'}
         ]
-    }),
-    'applicant-email-address': {
-        mixin: 'input-text',
-        validate: ['required', 'email']
-    }
+    })
 };

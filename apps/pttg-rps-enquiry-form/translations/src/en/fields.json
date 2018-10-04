@@ -22,10 +22,18 @@
       }
     }
   },
-  "email-address": {
-    "label": "Email address",
+  "your-email-address": {
+    "label": "Your email address",
     "validation": {
       "required": "Enter your email address",
+      "email": "Enter an email address in the right format, like name@example.com",
+      "maxlength": "Email cannot exceed 254 characters"
+    }
+  },
+  "applicant-email-address": {
+    "label": "Applicant’s email address",
+    "validation": {
+      "required": "Enter the email address used in the application you are asking about",
       "email": "Enter an email address in the right format, like name@example.com",
       "maxlength": "Email cannot exceed 254 characters"
     }
@@ -77,8 +85,8 @@
       "maxlength": "Name must be fewer than 256 characters"
     }
   },
-  "name": {
-    "label": "Name",
+  "your-name": {
+    "label": "Your name",
     "validation": {
       "required": "Enter your name",
       "maxlength": "Name must be fewer than 256 characters"

@@ -6,8 +6,11 @@
     "header": "Your details",
     "intro": "We’ll use this information to reply to your question."
   },
+  "about-your-organisation": {
+    "header": "Your details"
+  },
   "supporting-org-question": {
-    "header": "Your details",
+    "header": "Your question",
     "intro": "We’ll use this information to reply to your question."
   },
   "confirm": {
@@ -35,7 +38,7 @@
       "date-of-birth": {
         "label": "Date of birth"
       },
-      "name": {
+      "your-name": {
         "label": "Name"
       }
     }
