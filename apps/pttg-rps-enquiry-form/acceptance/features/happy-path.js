@@ -11,7 +11,7 @@ Scenario('An enquiry can be completed end-to-end', (I) => {
     I.completeToStep('/pttg-rps-enquiry-form/confirm', {
         'question-body': 'All human beings are born free and equal in dignity and rights.',
         'your-name': 'Joe Bloggs',
-        'email-address': 'test@example.com',
+        'your-email-address': 'test@example.com',
         'phone-number': '+441144960123',
         'existing-application': 'no'
     });

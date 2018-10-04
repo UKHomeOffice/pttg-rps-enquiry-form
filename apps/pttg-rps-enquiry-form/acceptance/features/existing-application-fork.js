@@ -5,6 +5,7 @@ Before((I) => {
 });
 
 const NON_ORGANISATION_OPTION = 'What the EU Settlement Scheme is and who should apply';
+const ORGANISATION_OPTION = 'I’m from an employer, community group or other supporting organisation';
 
 
 Scenario('I get to the non-application non-organisation question page', (I, questionPage) => {
@@ -21,4 +22,20 @@ Scenario('I get to the existing application non-organisation question page', (I,
     I.checkOption('Yes');
     I.submitForm();
     I.seeInCurrentUrl(existingApplicationQuestionPage.url);
+});
+
+Scenario('I get to the generic organisation question page if I have no application', (I, supportingOrgQuestionPage) => {
+    I.checkOption(ORGANISATION_OPTION);
+    I.submitForm();
+    I.checkOption('No');
+    I.submitForm();
+    I.seeInCurrentUrl(supportingOrgQuestionPage.url);
+});
+
+Scenario('I get to the organisation question pages if I have an application', (I, supportingOrgApplicationQuestionPreamblePage) => {
+    I.checkOption(ORGANISATION_OPTION);
+    I.submitForm();
+    I.checkOption('Yes');
+    I.submitForm();
+    I.seeInCurrentUrl(supportingOrgApplicationQuestionPreamblePage.url);
 });
