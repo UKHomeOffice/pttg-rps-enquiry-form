@@ -32,10 +32,11 @@ Scenario('I get to the generic organisation question page if I have no applicati
     I.seeInCurrentUrl(supportingOrgQuestionPage.url);
 });
 
-Scenario('I get to the organisation question pages if I have an application', (I, supportingOrgApplicationQuestionPreamblePage) => {
-    I.checkOption(ORGANISATION_OPTION);
-    I.submitForm();
-    I.checkOption('Yes');
-    I.submitForm();
-    I.seeInCurrentUrl(supportingOrgApplicationQuestionPreamblePage.url);
-});
+Scenario('I get to the organisation question pages if I have an application',
+    (I, supportingOrgApplicationQuestionPreamblePage) => {
+        I.checkOption(ORGANISATION_OPTION);
+        I.submitForm();
+        I.checkOption('Yes');
+        I.submitForm();
+        I.seeInCurrentUrl(supportingOrgApplicationQuestionPreamblePage.url);
+    });

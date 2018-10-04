@@ -1,5 +1,3 @@
-const { isSelected } = require('./utils');
-
 const QuestionPage = require('./question');
 const ExistingApplicationQuestionPage = require('./existing-application-question');
 const ExistingApplicationOrganisationPage = require('./supporting-org-application-question-1');

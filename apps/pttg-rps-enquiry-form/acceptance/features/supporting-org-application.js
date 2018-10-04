@@ -9,9 +9,11 @@ Before((I) => {
     I.submitForm();
 });
 
-Scenario('I go to the first supporting organisation application page', (I, supportingOrgApplicationQuestionPreamblePage) => {
-    I.seeInCurrentUrl(supportingOrgApplicationQuestionPreamblePage.url);
-});
+Scenario('I go to the first supporting organisation application page',
+    (I, supportingOrgApplicationQuestionPreamblePage) => {
+        I.seeInCurrentUrl(supportingOrgApplicationQuestionPreamblePage.url);
+    });
+
 Scenario('I go to the second supporting organisation application page', (I, supportingOrgApplicationQuestionPage) => {
     I.fillField('Your name', 'Joe Bloggs');
     I.fillField('Organisation name', 'Contoso');
