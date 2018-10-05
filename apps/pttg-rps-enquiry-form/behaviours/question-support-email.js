@@ -28,19 +28,18 @@ const getPersonalisationFromModel = (req) => {
 };
 
 const getTemplateId = (req, templates) => {
-    const steps = req.sessionModel.get('steps');
-    if (steps.includes('/supporting-org-question-about-application')) {
-        return templates.organisation.application;
+    const stepsEncountered = req.sessionModel.get('steps');
+    const templateForStep = {
+        '/supporting-org-question-about-application': templates.organisation.application,
+        '/supporting-org-question': templates.organisation.general,
+        '/question-about-existing-application': templates.individual.application,
+        '/question': templates.individual.general
+    };
+
+    for (const step in templateForStep) {
+        if (stepsEncountered.includes(step)) return templateForStep[step];
     }
-    if (steps.includes('/supporting-org-question')) {
-        return templates.organisation.general;
-    }
-    if (steps.includes('/question-about-existing-application')) {
-        return templates.individual.application;
-    }
-    if (steps.includes('/question')) {
-        return templates.individual.general;
-    }
+    return undefined;
 };
 
 module.exports = (config) => {
