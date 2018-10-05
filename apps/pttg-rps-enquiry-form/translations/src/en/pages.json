@@ -3,23 +3,21 @@
     "header": "Ask a question about applying for settled status"
   },
   "question": {
-    "header": "Your details",
-    "intro": "We’ll use this information to reply to your question."
+    "header": "Your question"
   },
   "about-your-organisation": {
     "header": "Your details"
   },
   "supporting-org-question": {
-    "header": "Your question",
-    "intro": "We’ll use this information to reply to your question."
+    "header": "Your question"
   },
   "confirm": {
     "sections": {
       "customer-details": {
-        "header": "Customer Details"
+        "header": "Your details"
       },
       "contact-information": {
-        "header": "Contact Details"
+        "header": "Contact details"
       },
       "question-body": {
         "header": "Question"
@@ -39,7 +37,7 @@
         "label": "Date of birth"
       },
       "your-name": {
-        "label": "Name"
+        "label": "Your name"
       }
     }
   },
