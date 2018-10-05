@@ -2,8 +2,8 @@ const config = require('../../../config');
 
 const QuestionSupportEmail = require('../behaviours/question-support-email')({
     apiKey: config.notify.apiKey,
-    templateId: config.notify.templates.enquirySupport,
-    recipient: config.notify.recipient
+    recipient: config.notify.recipient,
+    templates: config.notify.templates
 });
 
 const ConfirmationPage = require('./confirmation');

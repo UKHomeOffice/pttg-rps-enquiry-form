@@ -27,17 +27,35 @@ const getPersonalisationFromModel = (req) => {
     return {personalisation: p};
 };
 
-module.exports = config => {
-    const { apiKey, templateId, recipient, env } = config;
+const getTemplateId = (req, templates) => {
+    const steps = req.sessionModel.get('steps');
+    if (steps.includes('/supporting-org-question-about-application')) {
+        return templates.organisation.application;
+    }
+    if (steps.includes('/supporting-org-question')) {
+        return templates.organisation.general;
+    }
+    if (steps.includes('/question-about-existing-application')) {
+        return templates.individual.application;
+    }
+    if (steps.includes('/question')) {
+        return templates.individual.general;
+    }
+};
+
+module.exports = (config) => {
+
+
+    const { apiKey, recipient, env, templates } = config;
 
     if (!apiKey) warnUser(env, 'Missing Notify API Key');
-    if (!templateId) warnUser(env, 'Missing Notify Template ID');
 
     const notifyClient = new NotifyClient(apiKey);
 
     return superclass => class extends superclass {
         async successHandler(req, res, callback) {
             try {
+                const templateId = getTemplateId(req, templates);
                 const response = await notifyClient.sendEmail(
                     templateId,
                     recipient || req.sessionModel.get('email-address'),
@@ -47,12 +65,13 @@ module.exports = config => {
                 log.info('Support Enquiry Email sent successfully');
                 log.debug(response);
             } catch (err) {
+                if (!err.statusCode) throw err;
                 const { statusCode, error } = err;
                 const { errors } = error;
 
                 const messages = errors.map(error => error.message).join();
 
-                if (process.env.NODE_ENV !== 'development') {
+                if (process.env.NODE_ENV === 'development') {
                     res.json({
                         error: messages,
                         availKeys: Object.keys(req.sessionModel.attributes)
