@@ -1,14 +1,30 @@
 const NotifyClient = require('notifications-node-client').NotifyClient;
 const log = require('../../../logger');
 
-const getValue = (value, field, translate) => {
+const getValue = (req, field) => {
+    const value = req.sessionModel.get(field);
     const key = `fields.${field}.options.${value}.label`;
-    return translate(key);
+    return req.translate(key);
 };
 
 const warnUser = (env, msg) => {
     if (env === 'production') throw new Error(msg);
     log.warn(msg);
+};
+
+const getPersonalisationFromModel = (req) => {
+    const p = req.sessionModel.attributes;
+    // remove potentially scary entries in the session model:
+    delete p['steps'];
+    delete p['csrf-secret'];
+
+    // translate option groups
+    if (p['your-question-option']) {
+        p['your-question-option-translate'] = getValue(req, 'your-question-option');
+    }
+
+    log.info('Possible keys: ' + Object.keys(p).join(', '));
+    return {personalisation: p};
 };
 
 module.exports = config => {
@@ -21,21 +37,12 @@ module.exports = config => {
 
     return superclass => class extends superclass {
         async successHandler(req, res, callback) {
-            const translate = req.translate;
-            const contactPreference = getValue(req.sessionModel.get('contact-method-preference'), 'contact-method-preference', translate);
-            const submittedApplication = getValue(req.sessionModel.get('submitted-application'), 'submitted-application', translate);
-
             try {
-                const response = await notifyClient.sendEmail(templateId, recipient || req.sessionModel.get('email-address'), {
-                    personalisation: {
-                        'email_address': req.sessionModel.get('email-address') || 'N/A',
-                        'phone_number': req.sessionModel.get('phone-number') || 'N/A',
-                        'contact_preference': contactPreference || 'N/A',
-                        'have_submitted_application': submittedApplication || 'N/A',
-                        'application_number': req.sessionModel.get('application-number') || 'N/A',
-                        'question': req.sessionModel.get('question-body') || 'N/A'
-                    }
-                });
+                const response = await notifyClient.sendEmail(
+                    templateId,
+                    recipient || req.sessionModel.get('email-address'),
+                    getPersonalisationFromModel(req)
+                );
 
                 log.info('Support Enquiry Email sent successfully');
                 log.debug(response);
@@ -44,6 +51,13 @@ module.exports = config => {
                 const { errors } = error;
 
                 const messages = errors.map(error => error.message).join();
+
+                if (process.env.NODE_ENV !== 'development') {
+                    res.json({
+                        error: messages,
+                        availKeys: Object.keys(req.sessionModel.attributes)
+                    });
+                }
 
                 log.error(`Support Enquiry Email failed to send. Got status code '${statusCode}' with messages '${messages}'`);
             }
