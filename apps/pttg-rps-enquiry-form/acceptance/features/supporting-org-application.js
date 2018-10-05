@@ -1,3 +1,5 @@
+const lipsum = require('fast-lorem-ipsum');
+
 Feature('Organisation question about application');
 Before((I) => {
     I.clearCookie();
@@ -33,3 +35,40 @@ Scenario('I must not be able to enter an invalid phone number', (I) => {
     I.seeErrors(['#phone-number']);
 });
 
+
+Feature('Organisation question about application (page two)');
+Before((I, supportingOrgApplicationQuestionPage) => {
+    I.clearCookie();
+    I.amOnPage('/pttg-rps-enquiry-form/start');
+    I.click('Start');
+    I.checkOption('I’m from an employer, community group or other supporting organisation');
+    I.submitForm();
+    I.checkOption('Yes');
+    I.submitForm();
+    I.fillField('Your name', 'Joe Bloggs');
+    I.fillField('Organisation name', 'Contoso');
+    I.click('Continue');
+    I.seeInCurrentUrl(supportingOrgApplicationQuestionPage.url);
+});
+
+Scenario('I must be prevented from leaving mandatory questions blank', (I) => {
+    I.click('Continue');
+    I.seeErrors(['#question-body', '#applicant-email-address', '#applicant-full-name', '#application-number']);
+});
+
+Scenario('I must able to enter data into all fields', (I, supportingOrgApplicationQuestionPage) => {
+    I.fillField('Your question', lipsum('2000c'));
+    I.fillField('Applicant’s email address', 'applicant@example.com');
+    I.fillField('Applicant’s full name', 'Joe Bloggs');
+    I.fillField('Application number', '1234-0000-0000-0000-0001');
+
+    I.click('Continue');
+    I.dontSeeInCurrentUrl(supportingOrgApplicationQuestionPage.url);
+});
+
+
+Scenario('I must not be able to enter too much text (client-side)', (I) => {
+    const text = lipsum('3000c');
+    I.fillField('Your question', lipsum('3000c'));
+    I.seeInField('Your question', text.substr(0, 2000));
+});

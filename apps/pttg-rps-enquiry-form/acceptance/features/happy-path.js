@@ -20,6 +20,7 @@ Scenario('An enquiry can be completed end-to-end', (I) => {
 Scenario('An enquiry about an application can be completed end-to-end', (I) => {
     I.completeToStep('/pttg-rps-enquiry-form/confirm', {
         'question-body': 'All human beings are born free and equal in dignity and rights.',
+        'existing-application': 'yes',
         'application-number': '3434-0000-0000-0001',
         'applicant-email-address': 'test2@example.com',
         'applicant-full-name': 'Janine Butcher',
