@@ -36,7 +36,7 @@
     "fast-lorem-ipsum": "^1.2.0",
     "funkie": "0.0.6",
     "funkie-chromedriver": "^0.1.0",
-    "so-acceptance": "^5.0.0"
+    "so-acceptance": "^6.0.0"
   },
   "name": "pttg-rps-enquiry-form",
   "version": "1.0.0",
