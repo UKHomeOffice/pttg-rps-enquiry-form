@@ -4,9 +4,10 @@ module.exports = {
     path: '/about-your-organisation',
     properties: {
         fields: [
+            'organisation-name',
             'your-name',
-            'phone-number',
-            'organisation-name'
+            'phone-number'
+
         ],
         next: NextOrganisationPage.path
     }
