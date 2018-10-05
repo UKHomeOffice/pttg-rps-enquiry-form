@@ -68,7 +68,7 @@ Scenario('I must able to enter data into all fields', (I, supportingOrgApplicati
 
 
 Scenario('I must not be able to enter too much text (client-side)', (I) => {
-    const text = lipsum('3000c')
+    const text = lipsum('3000c');
     I.fillField('Your question', lipsum('3000c'));
     I.seeInField('Your question', text.substr(0, 2000));
 });
