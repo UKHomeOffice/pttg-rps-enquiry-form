@@ -42,45 +42,56 @@ const getTemplateId = (req, templates) => {
     return undefined;
 };
 
-module.exports = (config) => {
 
+module.exports = (config) => {
 
     const { apiKey, recipient, env, templates } = config;
 
-    if (!apiKey) warnUser(env, 'Missing Notify API Key');
+    const DEFAULT_TTL = 3;
 
     const notifyClient = new NotifyClient(apiKey);
 
-    return superclass => class extends superclass {
-        async successHandler(req, res, callback) {
-            try {
-                const templateId = getTemplateId(req, templates);
-                const response = await notifyClient.sendEmail(
-                    templateId,
-                    recipient || req.sessionModel.get('email-address'),
-                    getPersonalisationFromModel(req)
-                );
+    if (!apiKey) warnUser(env, 'Missing Notify API Key');
 
-                log.info('Support Enquiry Email sent successfully');
-                log.debug(response);
-            } catch (err) {
-                if (!err.statusCode) throw err;
-                const { statusCode, error } = err;
-                const { errors } = error;
-
-                const messages = errors.map(error => error.message).join();
-
-                if (process.env.NODE_ENV === 'development') {
-                    res.json({
-                        error: messages,
-                        availKeys: Object.keys(req.sessionModel.attributes)
-                    });
-                }
-
-                log.error(`Support Enquiry Email failed to send. Got status code '${statusCode}' with messages '${messages}'`);
+    const sendMessage = (templateId, recipient, personalisation, ttl, cb) => {
+        notifyClient.sendEmail(
+            templateId,
+            recipient,
+            personalisation
+        ).then(response => {
+            log.info('Support Enquiry Email sent successfully');
+            log.debug(response);
+            return cb(null, response);
+        }).catch(err => {
+            if (ttl-- > 0) {
+                log.warn(`Retrying send -- ttl now ${ttl}`);
+                return sendMessage(templateId, recipient, personalisation, ttl, cb);
             }
+            log.error('Failure sending');
+            return cb(err, null);
+        });
+    };
 
-            super.successHandler(req, res, callback);
+
+    return superclass => class extends superclass {
+        upstreamSuccessHandler (...args) {
+            super.successHandler(...args);
         }
+        successHandler (req, res, next) {
+            const that = this;
+            sendMessage(
+                getTemplateId(req, templates),
+                recipient,
+                getPersonalisationFromModel(req),
+                DEFAULT_TTL,
+                (err) => {
+                    if (err) {
+                        log.error(`Support Enquiry Email failed to send: ${err.name} - ${err.message}`);
+                        return next(new Error('NOTIFY_ERROR'), req, res);
+                    }
+                    return that.upstreamSuccessHandler(req, res, next);
+                });
+        }
+
     };
 };
