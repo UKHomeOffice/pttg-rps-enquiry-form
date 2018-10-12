@@ -105,6 +105,8 @@ pipeline:
       - pttg_rps_dev
       - pttg_rps_test
       - basic_auth
+      - notify_recipient_dev
+      - notify_recipient_test
     commands:
       - cd kube-pttg-rps-enquiry-form
       - ./deploy.sh
@@ -121,6 +123,7 @@ pipeline:
       - WHITELIST=62.25.109.196/32,52.48.127.150/32,52.48.127.151/32,52.48.127.152/32,52.48.127.153/32,52.209.62.128/25,52.56.62.128/25
     secrets:
       - pttg_rps_pr
+      - notify_recipient_prod
     commands:
       - cd kube-pttg-rps-enquiry-form
       - ./deploy.sh
