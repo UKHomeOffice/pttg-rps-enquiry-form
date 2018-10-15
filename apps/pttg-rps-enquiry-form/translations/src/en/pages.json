@@ -28,20 +28,8 @@
       }
     },
     "fields": {
-      "application-number": {
-        "label": "Your application number"
-      },
       "phone-number": {
         "label": "Telephone number"
-      },
-      "nationality": {
-        "label": "Nationality"
-      },
-      "date-of-birth": {
-        "label": "Date of birth"
-      },
-      "your-name": {
-        "label": "Your name"
       }
     }
   },
