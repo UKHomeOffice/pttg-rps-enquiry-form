@@ -76,7 +76,10 @@ module.exports = {
         mixin: 'radio-group',
         className: ['inline'],
         options: ['yes', 'no'],
-        validate: 'required'
+        validate: 'required',
+        legend: {
+            className: 'visually-hidden' // margin also changed in app.scss
+        }
     },
     'date-of-birth': dateComponent('date-of-birth', {
         validate: [
