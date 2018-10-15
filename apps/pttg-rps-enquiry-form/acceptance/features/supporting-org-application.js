@@ -1,9 +1,9 @@
 const lipsum = require('fast-lorem-ipsum');
 
 Feature('Organisation question about application');
-Before((I) => {
+Before((I, startPage) => {
     I.clearCookie();
-    I.amOnPage('/pttg-rps-enquiry-form/start');
+    I.amOnPage(startPage.url);
     I.click('Start');
     I.checkOption('I’m from an employer, community group or other supporting organisation');
     I.submitForm();

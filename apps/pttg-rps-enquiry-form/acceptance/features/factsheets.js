@@ -1,6 +1,6 @@
 Feature('Factsheet selection');
-Before((I) => {
-    I.amOnPage('/pttg-rps-enquiry-form/start');
+Before((I, startPage) => {
+    I.amOnPage(startPage.url);
     I.click('Start');
 });
 
