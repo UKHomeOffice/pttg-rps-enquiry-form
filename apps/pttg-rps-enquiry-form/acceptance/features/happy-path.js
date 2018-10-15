@@ -4,11 +4,11 @@ Feature('Happy path');
 
 Before((I) => {
     I.clearCookie();
-    I.visitPage('/', steps);
+    I.visitPage('start', steps);
 });
 
 
-Scenario('An enquiry can be completed end-to-end', (I) => {
+xScenario('An enquiry can be completed end-to-end', (I) => {
     I.completeToStep('/confirm', {
         'question-body': 'All human beings are born free and equal in dignity and rights.',
         'your-name': 'Joe Bloggs',
@@ -18,7 +18,7 @@ Scenario('An enquiry can be completed end-to-end', (I) => {
     });
 });
 
-Scenario('An enquiry about an application can be completed end-to-end', (I) => {
+xScenario('An enquiry about an application can be completed end-to-end', (I) => {
     I.completeToStep('/confirm', {
         'question-body': 'All human beings are born free and equal in dignity and rights.',
         'existing-application': 'yes',
