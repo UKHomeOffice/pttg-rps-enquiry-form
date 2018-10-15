@@ -4,13 +4,16 @@
     "caption": "EU Settlement Scheme pilot"
   },
   "question": {
-    "header": "Your question"
+    "header": "Your question and contact details"
   },
   "about-your-organisation": {
     "header": "Your details"
   },
-  "supporting-org-question": {
-    "header": "Your question"
+  "supporting-org-question-about-application": {
+    "header": "Your question and applicant’s details"
+  },
+  "question-about-existing-application": {
+    "header": "Your question and contact details"
   },
   "confirm": {
     "sections": {
