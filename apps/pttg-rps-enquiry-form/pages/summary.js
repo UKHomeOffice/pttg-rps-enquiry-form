@@ -20,9 +20,7 @@ module.exports = {
             ],
             'application-details': [
                 'applicant-full-name',
-                'application-number',
-                'nationality',
-                'date-of-birth'
+                'application-number'
             ],
             'contact-information': [
                 'your-email-address',

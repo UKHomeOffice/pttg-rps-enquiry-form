@@ -32,7 +32,7 @@
   },
   "applicant-email-address": {
     "label": "Applicant’s email address",
-    "hint": "Make sure this is the same email address used for the application.",
+    "hint": "This is where we’ll send our reply. Make sure this is the same email address used for the application.",
     "validation": {
       "required": "Enter the email address used in the application you are asking about",
       "email": "Enter an email address in the right format, like name@example.com",
