@@ -21,7 +21,6 @@ const pagesToSteps = pages => (pages.reduce((obj, item) => {
 
 module.exports = {
     name: 'pttg-rps-enquiry-form',
-    baseUrl: '/pttg-rps-enquiry-form',
     steps: pagesToSteps([
         StartPage,
         WhatIsYourQuestion,
