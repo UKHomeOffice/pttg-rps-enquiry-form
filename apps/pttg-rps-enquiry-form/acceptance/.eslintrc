@@ -8,6 +8,7 @@ env:
 globals:
   Feature: true
   Scenario: true
+  xScenario: true
   actor: true
   Before: true
   Helper: true
