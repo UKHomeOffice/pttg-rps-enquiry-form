@@ -1,6 +1,7 @@
 {
   "start": {
-    "header": "Ask a question about applying for settled status"
+    "heading": "Ask a question about applying for settled status",
+    "caption": "EU Settlement Scheme pilot"
   },
   "question": {
     "header": "Your question"
