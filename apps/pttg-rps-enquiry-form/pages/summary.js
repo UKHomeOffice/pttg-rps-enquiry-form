@@ -1,6 +1,6 @@
 const config = require('../../../config');
 
-const QuestionSupportEmail = require('../behaviours/question-support-email')({
+const QuestionSupportEmail = require('../behaviours/notify')({
     apiKey: config.notify.apiKey,
     recipient: config.notify.recipient,
     templates: config.notify.templates
