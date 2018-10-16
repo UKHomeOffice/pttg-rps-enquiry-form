@@ -9,6 +9,9 @@
   "about-your-organisation": {
     "header": "Your details"
   },
+  "supporting-org-question": {
+    "header": "Your question and contact details"
+  },
   "supporting-org-question-about-application": {
     "header": "Your question and applicant’s details"
   },
