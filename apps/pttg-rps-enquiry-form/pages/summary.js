@@ -14,21 +14,21 @@ module.exports = {
         behaviours: ['complete', require('hof-behaviour-summary-page'), QuestionSupportEmail],
         next: ConfirmationPage.path,
         sections: {
-            'customer-details': [
+            'your-question': [
+                'question-body'
+            ],
+            'your-details': [
                 'your-name',
                 'organisation-name'
             ],
             'application-details': [
                 'applicant-full-name',
-                'application-number'
+                'application-number',
             ],
             'contact-information': [
                 'your-email-address',
                 'applicant-email-address',
                 'phone-number'
-            ],
-            'question-body': [
-                'question-body'
             ]
         }
     }
