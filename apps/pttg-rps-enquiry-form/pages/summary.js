@@ -23,7 +23,7 @@ module.exports = {
             ],
             'application-details': [
                 'applicant-full-name',
-                'application-number',
+                'application-number'
             ],
             'contact-information': [
                 'your-email-address',
