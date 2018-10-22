@@ -2,4 +2,4 @@
 
 We’ll reply within 5 working days.
 
-<a href="https://www.gov.uk/done/eu-settled-status-enquiries" class="button">Provide feedback</a>
+[What did you think of this service?](https://www.gov.uk/done/eu-settled-status-enquiries)
