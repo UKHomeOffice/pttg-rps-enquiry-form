@@ -20,19 +20,19 @@
   },
   "confirm": {
     "sections": {
-      "customer-details": {
+      "your-question": {
+        "header": "Your question"
+      },
+      "your-details": {
         "header": "Your details"
       },
       "contact-information": {
-        "header": "Contact details"
-      },
-      "question-body": {
-        "header": "Question"
+        "header": "Contact information"
       }
     },
     "fields": {
       "phone-number": {
-        "label": "Telephone number"
+        "label": "Contact telephone number"
       }
     }
   },
