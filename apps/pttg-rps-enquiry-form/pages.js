@@ -1,4 +1,5 @@
 const StartPage = require('./pages/start-page');
+const PrivacyNotice = require('./pages/privacy-notice');
 const WhatIsYourQuestion = require('./pages/what-is-your-question');
 
 const HasExistingApplication = require('./pages/has-existing-application-fork');
@@ -23,6 +24,7 @@ module.exports = {
     name: 'pttg-rps-enquiry-form',
     steps: pagesToSteps([
         StartPage,
+        PrivacyNotice,
         WhatIsYourQuestion,
         HasExistingApplication,
         QuestionPage,
