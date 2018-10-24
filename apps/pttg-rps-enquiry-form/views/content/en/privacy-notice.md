@@ -8,8 +8,8 @@ The legal basis for processing your information is that it is needed to perform 
 ## What information we collect from you
 We collect several pieces of personal information from you. These are:
 
-  * your contact details, including email address and phone number
-  * if necessary, details of a specific application, including the applicant’s name and email address 
+* your contact details, including email address and phone number
+* if necessary, details of a specific application, including the applicant’s name and email address 
 
 ## How we use your information
 ### Your contact details
