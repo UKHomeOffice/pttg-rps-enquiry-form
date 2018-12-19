@@ -15,7 +15,7 @@
     "prepare": "npm run snyk-protect"
   },
   "dependencies": {
-    "hof": "^13.3.1",
+    "hof": "^13.3.3",
     "hof-behaviour-emailer": "^2.2.0",
     "hof-behaviour-summary-page": "^3.1.0",
     "hof-build": "^1.6.0",
