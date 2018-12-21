@@ -78,6 +78,9 @@ module.exports = (config) => {
             super.successHandler(...args);
         }
         successHandler (req, res, next) {
+            // TODO Remove this and do not put live!  This is to test errors in a deployed app
+            log.error('ERROR ERROR ERROR ! ! !')
+            return next(new Error('this should be an error?'), req, res);
             const that = this;
             sendMessage(
                 getTemplateId(req, templates),
