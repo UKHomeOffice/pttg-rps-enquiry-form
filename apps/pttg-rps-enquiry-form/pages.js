@@ -15,6 +15,9 @@ const SupportingOrgApplicationPage2 = require('./pages/supporting-org-applicatio
 const SummaryPage = require('./pages/summary');
 const ConfirmationPage = require('./pages/confirmation');
 
+const NotifyMessages = require('./pages/notify-messages');
+
+
 const pagesToSteps = pages => (pages.reduce((obj, item) => {
     obj[item.path] = item.properties;
     return obj;
@@ -25,6 +28,7 @@ module.exports = {
     steps: pagesToSteps([
         StartPage,
         PrivacyNotice,
+        NotifyMessages,
         WhatIsYourQuestion,
         HasExistingApplication,
         QuestionPage,
@@ -33,6 +37,6 @@ module.exports = {
         SupportingOrgApplicationPage1,
         SupportingOrgApplicationPage2,
         SummaryPage,
-        ConfirmationPage
+        ConfirmationPage,
     ])
 };

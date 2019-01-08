@@ -1,6 +1,7 @@
 module.exports = {
     path: '/notify-messages',
     properties: {
-        behaviours: [require('./behaviours/notify-callback')]
+        behaviours: require('../behaviours/notify-callback'),
+        backLink: false
     }
 };
