@@ -27,5 +27,6 @@ module.exports = {
         port: process.env.REDIS_SERVICE_PORT || process.env.REDIS_PORT || 6379,
         password: process.env.REDIS_PASSWORD || null
     },
-    gaTagId: process.env.GOOGLE_ANALYTICS_UA || 'UA-84737854-3'
+    gaTagId: process.env.GOOGLE_ANALYTICS_UA || 'UA-84737854-3',
+    bearerToken: process.env.BEARER_TOKEN || 'Bearer 987654321'
 };
