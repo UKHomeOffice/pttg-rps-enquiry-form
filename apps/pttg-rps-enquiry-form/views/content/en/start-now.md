@@ -1,13 +1,11 @@
-If you’ve been invited to take part in the pilot of the EU Settlement Scheme,
-use this form to ask a question about the process or about an individual application.
-We’ll reply with 5 working days.
+Use this form to ask a question about applying for settled status under the EU Settlement Scheme. We’ll reply within 5 working days.
 
-You can find out more about the pilot scheme at
-[EU Settlement Scheme pilot: applicant eligibility](https://www.gov.uk/guidance/eu-settlement-scheme-pilot-applicant-eligibility).
+You can find out more about who is eligible to apply in the public test phase of the scheme at 
+[EU Settlement Scheme public test phase: applicant eligibility](https://www.gov.uk/guidance/eu-settlement-scheme-public-test-phase-applicant-eligibility).
 
 ## Before you start
 
-You may find the answer to your question here:
+You may find the answer to your question here
 [Settled and pre-settled status for EU citizens and their families](https://www.gov.uk/settled-status-eu-citizens-families).
 
 ## What you’ll need
