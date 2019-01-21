@@ -1,0 +1,21 @@
+const settings = require('../../../config');
+const MY_SLACK_WEBHOOK_URL = settings.slackWebhookURL;
+const slack = require('slack-notify')(MY_SLACK_WEBHOOK_URL);
+
+var notifyMessages = function (req, res) {
+
+    if (req.method == 'POST') {
+        if (req.headers.authorization == settings.bearerToken) {
+            if (req.body.status !== 'delivered') {
+                slack.alert('Status: ' + req.body.status + ' Id: ' + req.body.id);
+                res.status(200).end();
+            }
+        } else {
+            res.status(405).end();
+        }
+    } else {
+        res.status(405).end();
+    }
+};
+
+module.exports = notifyMessages;
