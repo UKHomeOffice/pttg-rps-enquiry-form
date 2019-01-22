@@ -28,6 +28,6 @@ module.exports = {
         password: process.env.REDIS_PASSWORD || null
     },
     gaTagId: process.env.GOOGLE_ANALYTICS_UA || 'UA-84737854-3',
-    bearerToken: process.env.NOTIFY_BEARER_TOKEN,
+    bearerToken: process.env.NOTIFY_BEARER_TOKEN || 'Bearer 987654321',
     slackWebhookURL: process.env.SLACK_WEBHOOK_URL
 };
