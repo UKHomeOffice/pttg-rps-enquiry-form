@@ -1,0 +1,39 @@
+const expect = require('chai').expect;
+const request = require('superagent');
+const token = '987654320';
+
+it('Should return 200 for a POST with authorised bearer token',
+    function(done) {
+        request
+            .get('http://localhost:8080/notify-messages')
+            .set('Authorization', 'Bearer ' + token)
+            .end((err, res) => {
+                expect(res).to.exist;
+                expect(res.status).to.equal(405);
+                done();
+            });
+    });
+
+it('Should return 405 for a GET with authorised bearer token',
+    function(done) {
+        request
+            .post('http://localhost:8080/notify-messages')
+            .set('Authorization', 'Bearer ' + token)
+            .end((err, res) => {
+                expect(res).to.exist;
+                expect(res.status).to.equal(405);
+                done();
+            });
+    });
+
+it('Should return 405 for unauthorised bearer token',
+    function(done) {
+        request
+            .post('http://localhost:8080/notify-messages')
+            .set('Authorization', 'Bearer ' + '123456789')
+            .end((err, res) => {
+                expect(res).to.exist;
+                expect(res.status).to.equal(405);
+                done();
+            });
+    });
