@@ -29,5 +29,5 @@ module.exports = {
     },
     gaTagId: process.env.GOOGLE_ANALYTICS_UA || 'UA-84737854-3',
     bearerToken: process.env.NOTIFY_BEARER_TOKEN || 'Bearer 987654321',
-    slackWebhookURL: process.env.SLACK_WEBHOOK_URL
+    slackWebhookURL: process.env.SLACK_WEBHOOK_URL || 'https://hooks.slack.com/services/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'
 };
