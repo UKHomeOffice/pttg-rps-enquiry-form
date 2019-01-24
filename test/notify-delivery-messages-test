@@ -6,6 +6,24 @@ const mockRequire = require('mock-require');
 let notifyMessages;
 let mockSlackNotify;
 
+const mockRequest = {
+    method: 'POST',
+    headers: {
+        authorization: settings.bearerToken
+    },
+    body: {
+        status: 'temporary-failure'
+    }
+};
+
+const mockStatus = simpleMock.mock({}, 'status').returnWith({
+    end: function () {}
+});
+
+const mockResponse = {
+    status: mockStatus
+};
+
 describe('Slack delivery messages', function(){
 
     beforeEach(function () {
@@ -17,32 +35,19 @@ describe('Slack delivery messages', function(){
         });
         notifyMessages = mockRequire.reRequire('../apps/pttg-rps-enquiry-form/behaviours/notify-delivery-messages');
     });
-    it('Should return 200 for a POST with authorised bearer token', function(){
-        const mockRequest = {
-            method: 'POST',
-            headers: {
-                authorization: settings.bearerToken
-            },
-            body: {
-                status: 'temporary-failure'
-            }
-        };
-        const mockStatus = simpleMock.mock({}, 'status').returnWith({
-            end: function () {}
-        });
-        const mockResponse = {
-            status: mockStatus
-        };
-
+    it('should return 200 for a POST with authorised bearer token', function(){
         notifyMessages(mockRequest, mockResponse);
-
         assert.isTrue(mockStatus.called);
         assert.equal(mockStatus.lastCall.arg, 200);
-    });
-
-    it('Should send slack alert for a POST with authorised bearer token', function () {
-        const mockRequest = {
-            method: 'POST',
+    }),
+    it('should send slack alert for a POST with authorised bearer token', function () {
+        notifyMessages(mockRequest, mockResponse);
+        assert.equal(mockSlackNotify.callCount, 1);
+        assert.equal(mockSlackNotify.lastCall.arg.text, 'Failed delivery notification');
+    }),
+    it('should not send slack alert and return 405 for a GET with authorised bearer token', function () {
+        const mockGETWithAuthorisedBearerRequest = {
+            method: 'GET',
             headers: {
                 authorization: settings.bearerToken
             },
@@ -50,66 +55,37 @@ describe('Slack delivery messages', function(){
                 status: 'temporary-failure'
             }
         };
-        const mockStatus = simpleMock.mock({}, 'status').returnWith({
-            end: function () {
+        notifyMessages(mockGETWithAuthorisedBearerRequest, mockResponse);
+        assert.equal(mockSlackNotify.callCount, 0);
+        assert.equal(mockStatus.lastCall.arg, 405);
+    }),
+    it('should not send slack alert and return 405 for POST with unauthorised bearer token', function () {
+        const mockPOSTWithUnauthorisedBearerRequest = {
+            method: 'POST',
+            headers: {
+                authorization: 'unauthorisedBearerToken'
+            },
+            body: {
+                status: 'temporary-failure'
             }
-        });
-        const mockResponse = {
-            status: mockStatus
         };
+        notifyMessages(mockPOSTWithUnauthorisedBearerRequest, mockResponse);
+        assert.equal(mockSlackNotify.callCount, 0);
+        assert.equal(mockStatus.lastCall.arg, 405);
 
-        notifyMessages(mockRequest, mockResponse);
-
-        assert.equal(mockSlackNotify.callCount, 1);
-        assert.equal(mockSlackNotify.lastCall.arg.text, 'Failed delivery notification');
+    }),
+    it('should not send slack alert and return 405 for GET with unauthorised bearer token', function () {
+        const mockGETWithUnauthorisedBearerRequest = {
+            method: 'GET',
+            headers: {
+                authorization: 'unauthorisedBearerToken'
+            },
+            body: {
+                status: 'temporary-failure'
+            }
+        };
+        notifyMessages(mockGETWithUnauthorisedBearerRequest, mockResponse);
+        assert.equal(mockSlackNotify.callCount, 0);
+        assert.equal(mockStatus.lastCall.arg, 405);
     });
-
-
 });
-// it('Should return 200 for a POST with authorised bearer token',
-//     function(done) {
-//         request
-//             .post('http://localhost:8080/notify-messages')
-//             .set('Authorization', settings.bearerToken)
-//             .end((err, res) => {
-//                 expect(res).to.exist;
-//                 expect(res.status).to.equal(200);
-//                 done();
-//             });
-//     });
-//
-// it('Should return 405 for a GET with authorised bearer token',
-//     function(done) {
-//         request
-//             .get('http://localhost:8080/notify-messages')
-//             .set('Authorization', settings.bearerToken)
-//             .end((err, res) => {
-//                 expect(res).to.exist;
-//                 expect(res.status).to.equal(405);
-//                 done();
-//             });
-//     });
-//
-// it('Should return 405 for POST with unauthorised bearer token',
-//     function(done) {
-//         request
-//             .post('http://localhost:8080/notify-messages')
-//             .set('Authorization', 'Bearer ' + '123456789')
-//             .end((err, res) => {
-//                 expect(res).to.exist;
-//                 expect(res.status).to.equal(405);
-//                 done();
-//             });
-//     });
-//
-// it('Should return 405 for GET with unauthorised bearer token',
-//     function(done) {
-//         request
-//             .get('http://localhost:8080/notify-messages')
-//             .set('Authorization', 'Bearer ' + '123456789')
-//             .end((err, res) => {
-//                 expect(res).to.exist;
-//                 expect(res.status).to.equal(405);
-//                 done();
-//             });
-//     });
