@@ -3,7 +3,8 @@
   "scripts": {
     "start": "node app.js",
     "start:dev": "hof-build watch --conf ./hof-build-conf.js",
-    "test": "npm run test:lint && npm run test:acceptance",
+    "test": "npm run test:mocha && npm run test:lint && npm run test:acceptance",
+    "test:mocha": "mocha test/notify-delivery-messages-test",
     "test:acceptance": "so-acceptance --steps",
     "test:acceptance:local": "funkie --driver chromedriver npm run test:acceptance",
     "test:lint": "npm run test:lint:eslint && npm run test:lint:quotes",
@@ -39,6 +40,7 @@
     "funkie": "0.0.6",
     "funkie-chromedriver": "^0.1.0",
     "jswiremock": "^0.3.5",
+    "mocha": "^5.2.0",
     "mock-require": "^3.0.3",
     "simple-mock": "^0.8.0",
     "so-acceptance": "^6.0.0",
