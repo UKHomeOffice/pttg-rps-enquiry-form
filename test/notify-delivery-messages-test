@@ -1,51 +1,86 @@
-const expect = require('chai').expect;
-const request = require('superagent');
+var mock = require('mock-require');
 const settings = require('../config');
+const simpleMock = require('simple-mock');
+const assert = require('chai').assert;
 
-it('Should return 200 for a POST with authorised bearer token',
-    function(done) {
-        request
-            .post('http://localhost:8080/notify-messages')
-            .set('Authorization', settings.bearerToken)
-            .end((err, res) => {
-                expect(res).to.exist;
-                expect(res.status).to.equal(200);
-                done();
-            });
-    });
+mock('slack-notify', function (webHookUrl) {
+    return {
+        alert: function () {
+            console.log('slack alert');
+        }
+    };
+});
 
-it('Should return 405 for a GET with authorised bearer token',
-    function(done) {
-        request
-            .get('http://localhost:8080/notify-messages')
-            .set('Authorization', settings.bearerToken)
-            .end((err, res) => {
-                expect(res).to.exist;
-                expect(res.status).to.equal(405);
-                done();
-            });
-    });
+var notifyMessages = require('../apps/pttg-rps-enquiry-form/behaviours/notify-delivery-messages');
 
-it('Should return 405 for POST with unauthorised bearer token',
-    function(done) {
-        request
-            .post('http://localhost:8080/notify-messages')
-            .set('Authorization', 'Bearer ' + '123456789')
-            .end((err, res) => {
-                expect(res).to.exist;
-                expect(res.status).to.equal(405);
-                done();
-            });
-    });
+describe('Slack delivery messages', function(){
+    it('Should return 200 for a POST with authorised bearer token', function(){
+        const mockRequest = {
+            method: 'POST',
+            headers: {
+                authorization: settings.bearerToken
+            },
+            body: {
+                status: 'undelivered'
+            }
+        };
+        const mockStatus = simpleMock.mock({}, 'status').returnWith({
+            end: function () {}
+        });
+        const mockResponse = {
+            status: mockStatus
+        };
 
-it('Should return 405 for GET with unauthorised bearer token',
-    function(done) {
-        request
-            .get('http://localhost:8080/notify-messages')
-            .set('Authorization', 'Bearer ' + '123456789')
-            .end((err, res) => {
-                expect(res).to.exist;
-                expect(res.status).to.equal(405);
-                done();
-            });
+        notifyMessages(mockRequest, mockResponse);
+
+        assert.isTrue(mockStatus.called);
+        assert.equal(mockStatus.lastCall.arg, 200);
     });
+})
+// it('Should return 200 for a POST with authorised bearer token',
+//     function(done) {
+//         request
+//             .post('http://localhost:8080/notify-messages')
+//             .set('Authorization', settings.bearerToken)
+//             .end((err, res) => {
+//                 expect(res).to.exist;
+//                 expect(res.status).to.equal(200);
+//                 done();
+//             });
+//     });
+//
+// it('Should return 405 for a GET with authorised bearer token',
+//     function(done) {
+//         request
+//             .get('http://localhost:8080/notify-messages')
+//             .set('Authorization', settings.bearerToken)
+//             .end((err, res) => {
+//                 expect(res).to.exist;
+//                 expect(res.status).to.equal(405);
+//                 done();
+//             });
+//     });
+//
+// it('Should return 405 for POST with unauthorised bearer token',
+//     function(done) {
+//         request
+//             .post('http://localhost:8080/notify-messages')
+//             .set('Authorization', 'Bearer ' + '123456789')
+//             .end((err, res) => {
+//                 expect(res).to.exist;
+//                 expect(res.status).to.equal(405);
+//                 done();
+//             });
+//     });
+//
+// it('Should return 405 for GET with unauthorised bearer token',
+//     function(done) {
+//         request
+//             .get('http://localhost:8080/notify-messages')
+//             .set('Authorization', 'Bearer ' + '123456789')
+//             .end((err, res) => {
+//                 expect(res).to.exist;
+//                 expect(res.status).to.equal(405);
+//                 done();
+//             });
+//     });

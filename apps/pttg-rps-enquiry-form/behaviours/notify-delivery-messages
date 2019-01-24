@@ -7,21 +7,19 @@ var notifyMessages = function (req, res) {
     if (req.method == 'POST') {
         if (req.headers.authorization == settings.bearerToken) {
             if (req.body.status !== 'delivered') {
-                if(!req.headers.customTestHeader) {
-                    slack.alert({
-                        text: 'Failed delivery notification',
-                        fields: {
-                            'status': req.body.status,
-                            'Id': req.body.Id,
-                            'reference': req.body.reference,
-                            'to': req.body.to,
-                            'created at': req.body['created at'],
-                            'completed at': req.body['completed at'],
-                            'sent at': req.body['sent at'],
-                            'notification type': req.body['notification type']
-                        }
-                    });
-                }
+                slack.alert({
+                    text: 'Failed delivery notification',
+                    fields: {
+                        'status': req.body.status,
+                        'Id': req.body.Id,
+                        'reference': req.body.reference,
+                        'to': req.body.to,
+                        'created at': req.body['created at'],
+                        'completed at': req.body['completed at'],
+                        'sent at': req.body['sent at'],
+                        'notification type': req.body['notification type']
+                    }
+                });
                 res.status(200).end();
             }
         } else {
