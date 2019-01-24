@@ -39,13 +39,10 @@
     "fast-lorem-ipsum": "^1.2.0",
     "funkie": "0.0.6",
     "funkie-chromedriver": "^0.1.0",
-    "jswiremock": "^0.3.5",
     "mocha": "^5.2.0",
     "mock-require": "^3.0.3",
     "simple-mock": "^0.8.0",
     "so-acceptance": "^6.0.0",
-    "superagent": "^4.1.0",
-    "supertest": "^3.4.2"
   },
   "name": "pttg-rps-enquiry-form",
   "version": "1.0.0",
