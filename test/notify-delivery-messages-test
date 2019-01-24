@@ -1,18 +1,22 @@
 const settings = require('../config');
 const simpleMock = require('simple-mock');
 const assert = require('chai').assert;
-var mockRequire = require('mock-require');
+const mockRequire = require('mock-require');
 
-const mockSlackNotify = simpleMock.mock({}, 'slack-notify');
-mockRequire('slack-notify', function (webHookUrl) {
-    return {
-        alert: mockSlackNotify
-    };
-});
-
-var notifyMessages = require('../apps/pttg-rps-enquiry-form/behaviours/notify-delivery-messages');
+let notifyMessages;
+let mockSlackNotify;
 
 describe('Slack delivery messages', function(){
+
+    beforeEach(function () {
+        mockSlackNotify = simpleMock.mock({}, 'slack-notify');
+        mockRequire('slack-notify', function (webHookUrl) {
+            return {
+                alert: mockSlackNotify
+            };
+        });
+        notifyMessages = mockRequire.reRequire('../apps/pttg-rps-enquiry-form/behaviours/notify-delivery-messages');
+    });
     it('Should return 200 for a POST with authorised bearer token', function(){
         const mockRequest = {
             method: 'POST',
