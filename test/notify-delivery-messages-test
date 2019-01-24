@@ -1,13 +1,12 @@
-var mock = require('mock-require');
 const settings = require('../config');
 const simpleMock = require('simple-mock');
 const assert = require('chai').assert;
+var mockRequire = require('mock-require');
 
-mock('slack-notify', function (webHookUrl) {
+const mockSlackNotify = simpleMock.mock({}, 'slack-notify');
+mockRequire('slack-notify', function (webHookUrl) {
     return {
-        alert: function () {
-            console.log('slack alert');
-        }
+        alert: mockSlackNotify
     };
 });
 
@@ -21,7 +20,7 @@ describe('Slack delivery messages', function(){
                 authorization: settings.bearerToken
             },
             body: {
-                status: 'undelivered'
+                status: 'temporary-failure'
             }
         };
         const mockStatus = simpleMock.mock({}, 'status').returnWith({
@@ -36,7 +35,33 @@ describe('Slack delivery messages', function(){
         assert.isTrue(mockStatus.called);
         assert.equal(mockStatus.lastCall.arg, 200);
     });
-})
+
+    it('Should send slack alert for a POST with authorised bearer token', function () {
+        const mockRequest = {
+            method: 'POST',
+            headers: {
+                authorization: settings.bearerToken
+            },
+            body: {
+                status: 'temporary-failure'
+            }
+        };
+        const mockStatus = simpleMock.mock({}, 'status').returnWith({
+            end: function () {
+            }
+        });
+        const mockResponse = {
+            status: mockStatus
+        };
+
+        notifyMessages(mockRequest, mockResponse);
+
+        assert.equal(mockSlackNotify.callCount, 1);
+        assert.equal(mockSlackNotify.lastCall.arg.text, 'Failed delivery notification');
+    });
+
+
+});
 // it('Should return 200 for a POST with authorised bearer token',
 //     function(done) {
 //         request
