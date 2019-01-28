@@ -1,33 +1,90 @@
 const settings = require('../../../config');
-const MY_SLACK_WEBHOOK_URL = settings.slackWebhookURL;
-const slack = require('slack-notify')(MY_SLACK_WEBHOOK_URL);
+// const MY_SLACK_WEBHOOK_URL = settings.slackWebhookURL;
+//const slack = require('slack-notify')(MY_SLACK_WEBHOOK_URL);
+const webhookUri = 'https://hooks.slack.com/services/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';
+var Slack = require('slack-node');
+
+var slack = new Slack();
+slack.setWebhook(webhookUri);
 
 var notifyMessages = function (req, res) {
 
-    if (req.method == 'POST') {
-        if (req.headers.authorization == settings.bearerToken) {
-            if (req.body.status !== 'delivered') {
-                slack.alert({
-                    text: 'Failed delivery notification',
-                    fields: {
-                        'status': req.body.status,
-                        'Id': req.body.Id,
-                        'reference': req.body.reference,
-                        'to': req.body.to,
-                        'created at': req.body['created at'],
-                        'completed at': req.body['completed at'],
-                        'sent at': req.body['sent at'],
-                        'notification type': req.body['notification type']
-                    }
-                });
-                res.status(200).end();
+    if (req.method !== 'POST') {
+        res.status(405).end();
+        return;
+    }
+    if (statusNotDelivered() && isAuthorised()) {
+        slack.webhook({
+            channel: '#rps-enquiry-form-test',
+            username: 'Notify Failure ',
+            text: 'Failed delivery receipt notification from Notify.',
+            'attachments': [
+                {
+                    'fallback': 'Failed delivery receipt notification from Notify',
+                    'color': '#D00000',
+                    'fields': [
+                        {
+                            'title': 'Status',
+                            'value': req.body.status,
+                            'short': false
+                        },
+                        {
+                            'title': 'Id',
+                            'value': req.body.Id,
+                            'short': false
+                        },
+                        {
+                            'title': 'Reference',
+                            'value': req.body.reference,
+                            'short': false
+                        },
+                        {
+                            'title': 'To',
+                            'value': req.body.to,
+                            'short': false
+                        },
+                        {
+                            'title': 'Created at',
+                            'value': req.body['created at'],
+                            'short': false
+                        },
+                        {
+                            'title': 'Completed at',
+                            'value': req.body['completed at'],
+                            'short': false
+                        },
+                        {
+                            'title': 'Sent at',
+                            'value': req.body['sent at'],
+                            'short': false
+                        },
+                        {
+                            'title': 'Notification type',
+                            'value': req.body['notification type'],
+                            'short': false
+                        }
+                    ]
+                }
+            ]
+        }, function (err, response) {
+            console.log(response)
+            if (err) {
+                console.log(err);
             }
-        } else {
-            res.status(405).end();
-        }
+        });
+        res.status(200).end();
     } else {
         res.status(405).end();
+    }
+
+    function statusNotDelivered() {
+        return req.body.status !== 'delivered';
+    }
+
+    function isAuthorised() {
+        return req.headers.authorization == settings.bearerToken;
     }
 };
 
 module.exports = notifyMessages;
+q
