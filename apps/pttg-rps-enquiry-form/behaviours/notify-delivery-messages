@@ -12,7 +12,13 @@ const notifyMessages = function (req, res) {
         res.status(405).end();
         return;
     }
-    if (!delivered(req) && isAuthorised(req)) {
+
+    if (!isAuthorised(req)) {
+        res.status(405).end();
+        return;
+    }
+
+    if (!delivered(req)) {
         slack.webhook({
             channel: '#eue_rps_alerts',
             username: 'Notify Failure',
