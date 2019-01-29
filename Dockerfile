@@ -7,13 +7,14 @@ ENV NAME pttg-rps-enquiry
 
 ARG VERSION
 
-RUN mkdir /public
+RUN groupadd -r ${GROUP} && \
+    useradd -u ${USER_ID} -g ${GROUP} ${USER} -d /public && \
+    mkdir -p /public && \
+    chown -R ${USER}:${GROUP} /public
 
 WORKDIR /app
 
-RUN groupadd -r ${GROUP} && \
-    useradd -u ${USER_ID} -g ${GROUP} ${USER} -d /app && \
-    mkdir -p /app && \
+RUN mkdir -p /app && \
     chown -R ${USER}:${GROUP} /app
 
 COPY . /app
