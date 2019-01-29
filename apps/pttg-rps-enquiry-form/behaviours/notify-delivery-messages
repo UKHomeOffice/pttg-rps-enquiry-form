@@ -1,19 +1,18 @@
 const settings = require('../../../config');
-// const MY_SLACK_WEBHOOK_URL = settings.slackWebhookURL;
-//const slack = require('slack-notify')(MY_SLACK_WEBHOOK_URL);
-const webhookUri = 'https://hooks.slack.com/services/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';
-var Slack = require('slack-node');
+const webhookUri = settings.slackWebhookURL;
+const Slack = require('slack-node');
+const log = require('../../../logger');
 
-var slack = new Slack();
+const slack = new Slack();
 slack.setWebhook(webhookUri);
 
-var notifyMessages = function (req, res) {
+const notifyMessages = function (req, res) {
 
     if (req.method !== 'POST') {
         res.status(405).end();
         return;
     }
-    if (statusNotDelivered() && isAuthorised()) {
+    if (!delivered(req) && isAuthorised(req)) {
         slack.webhook({
             channel: '#rps-enquiry-form-test',
             username: 'Notify Failure ',
@@ -66,10 +65,10 @@ var notifyMessages = function (req, res) {
                     ]
                 }
             ]
-        }, function (err, response) {
-            console.log(response)
+        }, function (err) {
+            log.info('Notification sent to slack channel for Notify failed delivery receipt');
             if (err) {
-                console.log(err);
+                log.error(err);
             }
         });
         res.status(200).end();
@@ -77,14 +76,14 @@ var notifyMessages = function (req, res) {
         res.status(405).end();
     }
 
-    function statusNotDelivered() {
-        return req.body.status !== 'delivered';
-    }
-
-    function isAuthorised() {
-        return req.headers.authorization == settings.bearerToken;
-    }
 };
 
+function delivered(req) {
+    return req.body.status == 'delivered';
+}
+
+function isAuthorised(req) {
+    return req.headers.authorization == settings.bearerToken;
+}
+
 module.exports = notifyMessages;
-q
