@@ -1,0 +1,97 @@
+const settings = require('../config');
+const simpleMock = require('simple-mock');
+const assert = require('chai').assert;
+const mockRequire = require('mock-require');
+
+let notifyMessages;
+let mockSlackWebhook;
+
+const mockRequest = {
+    method: 'POST',
+    headers: {
+        authorization: settings.bearerToken
+    },
+    body: {
+        status: 'temporary-failure'
+    }
+};
+
+const mockStatus = simpleMock.mock({}, 'status').returnWith({
+    end: function () {}
+});
+
+const mockResponse = {
+    status: mockStatus
+};
+
+describe('Slack delivery messages', function(){
+
+    beforeEach(function () {
+        mockSlackWebhook = simpleMock.mock({}, 'slack-notify');
+        mockRequire('slack-node', class Slack{
+            constructor() {
+                this.setWebhook = function() {};
+                this.webhook = mockSlackWebhook;
+            }
+        });
+        notifyMessages = mockRequire.reRequire('../apps/pttg-rps-enquiry-form/behaviours/notify-delivery-messages');
+    });
+
+    it('should return 200 for a POST with authorised bearer token', function(){
+        notifyMessages(mockRequest, mockResponse);
+        assert.isTrue(mockStatus.called);
+        assert.equal(mockStatus.lastCall.arg, 200);
+    }),
+
+    it('should send slack alert for a POST with authorised bearer token', function () {
+        notifyMessages(mockRequest, mockResponse);
+        assert.equal(mockSlackWebhook.callCount, 1);
+        assert.equal(mockSlackWebhook.lastCall.arg.text, 'Failed delivery receipt notification from Notify.');
+    }),
+
+    it('should not send slack alert and return 405 for a GET with authorised bearer token', function () {
+        const mockGETWithAuthorisedBearerRequest = {
+            method: 'GET',
+            headers: {
+                authorization: settings.bearerToken
+            },
+            body: {
+                status: 'temporary-failure'
+            }
+        };
+        notifyMessages(mockGETWithAuthorisedBearerRequest, mockResponse);
+        assert.equal(mockSlackWebhook.callCount, 0);
+        assert.equal(mockStatus.lastCall.arg, 405);
+    });
+
+    it('should not send slack alert and return 405 for POST with unauthorised bearer token', function () {
+        const mockPOSTWithUnauthorisedBearerRequest = {
+            method: 'POST',
+            headers: {
+                authorization: 'unauthorisedBearerToken'
+            },
+            body: {
+                status: 'temporary-failure'
+            }
+        };
+        notifyMessages(mockPOSTWithUnauthorisedBearerRequest, mockResponse);
+        assert.equal(mockSlackWebhook.callCount, 0);
+        assert.equal(mockStatus.lastCall.arg, 405);
+
+    });
+
+    it('should not send slack alert and return 405 for GET with unauthorised bearer token', function () {
+        const mockGETWithUnauthorisedBearerRequest = {
+            method: 'GET',
+            headers: {
+                authorization: 'unauthorisedBearerToken'
+            },
+            body: {
+                status: 'temporary-failure'
+            }
+        };
+        notifyMessages(mockGETWithUnauthorisedBearerRequest, mockResponse);
+        assert.equal(mockSlackWebhook.callCount, 0);
+        assert.equal(mockStatus.lastCall.arg, 405);
+    });
+});

@@ -1,0 +1,89 @@
+const settings = require('../../../config');
+const webhookUri = settings.slackWebhookURL;
+const Slack = require('slack-node');
+const log = require('../../../logger');
+
+const slack = new Slack();
+slack.setWebhook(webhookUri);
+
+const notifyMessages = function (req, res) {
+
+    if (req.method !== 'POST' ||
+        !isAuthorised(req) ||
+        delivered(req)
+    ) {
+        res.status(405).end();
+        return;
+    }
+
+    slack.webhook({
+        channel: '#eue_rps_alerts',
+        username: 'Notify Failure',
+        text: 'Failed delivery receipt notification from Notify.',
+        'attachments': [
+            {
+                'fallback': 'Failed delivery receipt notification from Notify',
+                'color': '#D00000',
+                'fields': [
+                    {
+                        'title': 'Status',
+                        'value': req.body.status,
+                        'short': false
+                    },
+                    {
+                        'title': 'Id',
+                        'value': req.body.Id,
+                        'short': false
+                    },
+                    {
+                        'title': 'Reference',
+                        'value': req.body.reference,
+                        'short': false
+                    },
+                    {
+                        'title': 'To',
+                        'value': req.body.to,
+                        'short': false
+                    },
+                    {
+                        'title': 'Created at',
+                        'value': req.body['created at'],
+                        'short': false
+                    },
+                    {
+                        'title': 'Completed at',
+                        'value': req.body['completed at'],
+                        'short': false
+                    },
+                    {
+                        'title': 'Sent at',
+                        'value': req.body['sent at'],
+                        'short': false
+                    },
+                    {
+                        'title': 'Notification type',
+                        'value': req.body['notification type'],
+                        'short': false
+                    }
+                ]
+            }
+        ]
+    }, function (err) {
+        log.info('Notification sent to slack channel for Notify failed delivery receipt');
+        if (err) {
+            log.error(err);
+        }
+    });
+    res.status(200).end();
+
+};
+
+function delivered(req) {
+    return req.body.status == 'delivered';
+}
+
+function isAuthorised(req) {
+    return req.headers.authorization == settings.bearerToken;
+}
+
+module.exports = notifyMessages;

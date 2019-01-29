@@ -1,18 +1,45 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
 version: v1.12.0
-ignore: {}
+# ignores vulnerabilities until expiry date; change duration by modifying expiry date
+ignore:
+  'npm:braces:20180219':
+    - hof-build > chokidar > anymatch > micromatch > braces:
+        reason: None given
+        expires: '2019-02-28T10:30:43.152Z'
+  'npm:extend:20180424':
+    - hof > hof-form-wizard > hof-model > request > extend:
+        reason: None given
+        expires: '2019-02-28T10:33:23.220Z'
+    - hof-build > npm-sass > node-sass > node-gyp > request > extend:
+        reason: None given
+        expires: '2019-02-28T10:33:23.221Z'
+  'npm:mem:20180117':
+    - hof > hof-middleware-markdown > showdown > yargs > os-locale > mem:
+        reason: None given
+        expires: '2019-02-28T10:33:23.221Z'
 # patches apply the minimum changes required to fix a vulnerability
 patch:
   'npm:debug:20170905':
     - hof > helmet > connect > debug:
         patched: '2018-10-03T12:25:18.053Z'
+      hof > helmet > connect > finalhandler > debug:
+        patched: '2019-01-29T10:31:42.551Z'
     - hof > helmet > connect > finalhandler > debug:
         patched: '2018-10-03T12:25:18.053Z'
+      hof > helmet > connect > debug:
+        patched: '2019-01-29T10:31:42.551Z'
   'npm:lodash:20180130':
     - hof > i18n-future > lodash:
-        patched: '2018-10-03T12:25:18.053Z'
+        patched: '2019-01-29T10:31:42.551Z'
   'npm:ms:20170412':
     - hof > helmet > connect > debug > ms:
         patched: '2018-10-03T12:25:18.053Z'
+      hof > helmet > connect > finalhandler > debug > ms:
+        patched: '2019-01-29T10:31:42.551Z'
     - hof > helmet > connect > finalhandler > debug > ms:
         patched: '2018-10-03T12:25:18.053Z'
+      hof > helmet > connect > debug > ms:
+        patched: '2019-01-29T10:31:42.551Z'
+  'npm:extend:20180424':
+    - slack-notify > request > extend:
+        patched: '2019-01-29T10:29:21.800Z'
