@@ -14,8 +14,8 @@ const notifyMessages = function (req, res) {
     }
     if (!delivered(req) && isAuthorised(req)) {
         slack.webhook({
-            channel: '#rps-enquiry-form-test',
-            username: 'Notify Failure ',
+            channel: '#eue_rps_alerts',
+            username: 'Notify Failure',
             text: 'Failed delivery receipt notification from Notify.',
             'attachments': [
                 {
