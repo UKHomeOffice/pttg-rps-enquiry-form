@@ -1,5 +1,6 @@
 const settings = require('../../../config');
 const webhookUri = settings.slackWebhookURL;
+const slackChannelName = settings.slackChannelName;
 const Slack = require('slack-node');
 const log = require('../../../logger');
 
@@ -17,7 +18,7 @@ const notifyMessages = function (req, res) {
     }
 
     slack.webhook({
-        channel: '#eue_rps_alerts',
+        channel: '#' + slackChannelName,
         username: 'Notify Failure',
         text: 'Failed delivery receipt notification from Notify.',
         'attachments': [
