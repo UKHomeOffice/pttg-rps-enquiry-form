@@ -92,7 +92,7 @@ pipeline:
       - cd kube-pttg-rps-enquiry-form
       - ./deploy.sh
     when:
-      branch: master
+      branch: [master]
       event: [push, tag]
 
   deployment:
