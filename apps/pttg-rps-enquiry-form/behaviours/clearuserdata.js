@@ -1,13 +1,18 @@
 'use strict';
 
+let nonCachingInputs = [
+  'question-body',
+  'applicant-email-address',
+  'applicant-full-name',
+  'application-number',
+  'phone-number'
+];
 module.exports = (superclass) => class extends superclass {
 
   getValues(req, res, next) {
-    req.sessionModel.unset('question-body');
-    req.sessionModel.unset('applicant-email-address');
-    req.sessionModel.unset('applicant-full-name');
-    req.sessionModel.unset('application-number');
-    req.sessionModel.unset('phone-number');
+    for(let inputs of nonCachingInputs) {
+      req.sessionModel.unset(inputs);
+    }
     super.getValues(req, res, next);
   }
 };
