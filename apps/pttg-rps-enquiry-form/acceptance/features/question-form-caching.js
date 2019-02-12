@@ -1,6 +1,6 @@
 let assert = require('assert')
 
-Feature('Question About Existing Application Form');
+Feature('Does not cache personal data in form');
 Before((I, startPage) => {
     I.clearCookie();
     I.amOnPage(startPage.url);
@@ -12,7 +12,7 @@ Before((I, startPage) => {
     I.submitForm();
 });
 
-Scenario('Form data not cached when back browser button pressed',
+Scenario('Exisiting application question page does not retain personal data when back button pressed',
 function *(I, existingApplicationQuestionPage) {
     I.amOnPage(existingApplicationQuestionPage.url);
     fillInTheForm(I);
