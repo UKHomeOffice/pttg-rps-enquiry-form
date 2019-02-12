@@ -55,6 +55,27 @@ function *(I, supportingOrgQuestionPage) {
   }
 });
 
+Scenario('About the organisation page does not retain personal data when back button pressed',
+function *(I, supportingOrgApplicationQuestionPreamblePage) {
+  I.amOnPage(supportingOrgApplicationQuestionPreamblePage.url);
+  fillInOrganisationDetails(I);
+  navigateAwayFromPage(I);
+
+  pressBrowserBackButton(I);
+  I.amOnPage(supportingOrgApplicationQuestionPreamblePage.url);
+
+  for(let formField of ['organisation-name', 'your-name', 'phone-number']) {
+    assert.equal(yield I.grabValueFrom(`#${formField}`), '');
+  }
+});
+
+function fillInOrganisationDetails(I) {
+  I.fillField('Organisation name', 'Test Company');
+  I.fillField('Your name', 'Test User');
+  I.fillField('Telephone number', '111222333');
+  I.submitForm();
+}
+
 function fillInTheNewApplicationForm(I) {
   I.fillField('Your question', 'Test question');
   I.fillField('Your email address', 'test@test.com');
