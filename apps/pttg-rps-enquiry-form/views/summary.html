@@ -1,0 +1,9 @@
+{{<partials-page}}
+  {{$page-content}}
+    {{#rows}}
+      {{> partials-summary-table}}
+    {{/rows}}
+    {{#input-submit}}confirm{{/input-submit}}
+    {{#input-submit}}cancel{{/input-submit}}
+  {{/page-content}}
+{{/partials-page}}

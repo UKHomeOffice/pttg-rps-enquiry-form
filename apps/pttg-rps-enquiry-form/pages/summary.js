@@ -11,6 +11,7 @@ const ConfirmationPage = require('./confirmation');
 module.exports = {
     path: '/confirm',
     properties: {
+        template: 'summary',
         behaviours: ['complete', require('hof-behaviour-summary-page'), QuestionSupportEmail],
         next: ConfirmationPage.path,
         sections: {
