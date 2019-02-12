@@ -9,6 +9,9 @@ slack.setWebhook(webhookUri);
 
 const notifyMessages = function (req, res) {
 
+    log.info('********req.method**********');
+    log.info(req.method);
+
     if (req.method !== 'POST' ||
         !isAuthorised(req) ||
         delivered(req)
@@ -83,6 +86,11 @@ function delivered(req) {
 }
 
 function isAuthorised(req) {
+
+    log.info('********req.headers.authorization**********');
+    log.info(req.headers.authorization);
+    log.info('********settings.bearerToken**********');
+    log.info(settings.bearerToken);
     return req.headers.authorization == settings.bearerToken;
 }
 
