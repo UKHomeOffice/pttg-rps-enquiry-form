@@ -10,6 +10,7 @@ let nonCachingInputs = [
   'application-number',
   'phone-number'
 ];
+
 module.exports = (superclass) => class extends superclass {
 
   getValues(req, res, next) {

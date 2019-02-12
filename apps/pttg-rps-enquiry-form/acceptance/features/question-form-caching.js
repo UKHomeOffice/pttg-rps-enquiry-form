@@ -2,38 +2,38 @@ let assert = require('assert')
 
 Feature('Does not cache personal data in form');
 Before((I, startPage) => {
-    I.clearCookie();
-    I.amOnPage(startPage.url);
-    I.click('Start');
+  I.clearCookie();
+  I.amOnPage(startPage.url);
+  I.click('Start');
 });
 
 Scenario('New application question page does not retain personal data when back button pressed',
 function *(I, questionPage) {
-    navigateThroughForm(I, 'What the EU Settlement Scheme is and who should apply', 'No');
-    fillInTheNewApplicationForm(I);
-    I.submitForm();
+  navigateThroughForm(I, 'What the EU Settlement Scheme is and who should apply', 'No');
+  fillInTheNewApplicationForm(I);
+  I.submitForm();
 
-    pressBrowserBackButton(I);
-    I.seeInCurrentUrl(questionPage.url);
+  pressBrowserBackButton(I);
+  I.seeInCurrentUrl(questionPage.url);
 
-    for (let formField of ['question-body', 'your-email-address', 'your-name', 'phone-number']) {
-      assert.equal(yield I.grabValueFrom(`#${formField}`), '');
-    }
+  for (let formField of ['question-body', 'your-email-address', 'your-name', 'phone-number']) {
+    assert.equal(yield I.grabValueFrom(`#${formField}`), '');
+  }
 });
 
 Scenario('Exisiting application question page does not retain personal data when back button pressed',
 function *(I, existingApplicationQuestionPage) {
-    navigateThroughForm(I, 'What the EU Settlement Scheme is and who should apply', 'Yes');
-    fillInTheExistingApplicationForm(I);
-    I.fillField('Telephone number', '111222333');
-    I.submitForm();
+  navigateThroughForm(I, 'What the EU Settlement Scheme is and who should apply', 'Yes');
+  fillInTheExistingApplicationForm(I);
+  I.fillField('Telephone number', '111222333');
+  I.submitForm();
 
-    pressBrowserBackButton(I);
-    I.seeInCurrentUrl(existingApplicationQuestionPage.url);
+  pressBrowserBackButton(I);
+  I.seeInCurrentUrl(existingApplicationQuestionPage.url);
 
-    for (let formField of ['question-body', 'applicant-email-address', 'applicant-full-name', 'application-number', 'phone-number']) {
-      assert.equal(yield I.grabValueFrom(`#${formField}`), '');
-    }
+  for (let formField of ['question-body', 'applicant-email-address', 'applicant-full-name', 'application-number', 'phone-number']) {
+    assert.equal(yield I.grabValueFrom(`#${formField}`), '');
+  }
 });
 
 Scenario('Organisation new application question page does not retain personal data when back button pressed',
