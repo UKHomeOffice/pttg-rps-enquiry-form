@@ -5,16 +5,14 @@ Before((I, startPage) => {
     I.clearCookie();
     I.amOnPage(startPage.url);
     I.click('Start');
-    I.submitForm();
-    I.checkOption('What the EU Settlement Scheme is and who should apply');
-    I.submitForm();
-    I.checkOption('Yes');
-    I.submitForm();
 });
 
 Scenario('New application question page does not retain personal data when back button pressed',
 function *(I, questionPage) {
-    I.amOnPage(questionPage.url);
+    I.checkOption('What the EU Settlement Scheme is and who should apply');
+    I.submitForm();
+    I.checkOption('No');
+    I.submitForm();
     fillInTheNewApplicationForm(I);
     navigateAwayFromPage(I);
 
@@ -28,8 +26,13 @@ function *(I, questionPage) {
 
 Scenario('Exisiting application question page does not retain personal data when back button pressed',
 function *(I, existingApplicationQuestionPage) {
-    I.amOnPage(existingApplicationQuestionPage.url);
+    I.checkOption('What the EU Settlement Scheme is and who should apply');
+    I.submitForm();
+    I.checkOption('Yes');
+    I.submitForm();
     fillInTheExistingApplicationForm(I);
+    I.fillField('Telephone number', '111222333');
+    I.submitForm();
     navigateAwayFromPage(I);
 
     pressBrowserBackButton(I);
@@ -42,7 +45,11 @@ function *(I, existingApplicationQuestionPage) {
 
 Scenario('Organisation new application question page does not retain personal data when back button pressed',
 function *(I, supportingOrgQuestionPage) {
-  I.amOnPage(supportingOrgQuestionPage.url);
+  I.checkOption('I’m from an employer, community group or other supporting organisation');
+  I.submitForm();
+  I.checkOption('No');
+  I.submitForm();
+
   I.fillField('Organisation name', 'Test Company');
   fillInTheNewApplicationForm(I);
   navigateAwayFromPage(I);
@@ -57,7 +64,10 @@ function *(I, supportingOrgQuestionPage) {
 
 Scenario('About the organisation page does not retain personal data when back button pressed',
 function *(I, supportingOrgApplicationQuestionPreamblePage) {
-  I.amOnPage(supportingOrgApplicationQuestionPreamblePage.url);
+  I.checkOption('I’m from an employer, community group or other supporting organisation');
+  I.submitForm();
+  I.checkOption('Yes');
+  I.submitForm();
   fillInOrganisationDetails(I);
   navigateAwayFromPage(I);
 
@@ -65,6 +75,24 @@ function *(I, supportingOrgApplicationQuestionPreamblePage) {
   I.amOnPage(supportingOrgApplicationQuestionPreamblePage.url);
 
   for(let formField of ['organisation-name', 'your-name', 'phone-number']) {
+    assert.equal(yield I.grabValueFrom(`#${formField}`), '');
+  }
+});
+
+Scenario('Suppporting organisation question page does not retain personal data when back button pressed',
+function *(I, supportingOrgApplicationQuestionPage) {
+  I.checkOption('I’m from an employer, community group or other supporting organisation');
+  I.submitForm();
+  I.checkOption('Yes');
+  I.submitForm();
+  fillInOrganisationDetails(I);
+  fillInTheExistingApplicationForm(I);
+  I.submitForm();
+  pressBrowserBackButton(I);
+
+  I.amOnPage(supportingOrgApplicationQuestionPage.url);
+
+  for(let formField of ['question-body', 'applicant-email-address', 'applicant-full-name', 'application-number']) {
     assert.equal(yield I.grabValueFrom(`#${formField}`), '');
   }
 });
@@ -89,8 +117,6 @@ function fillInTheExistingApplicationForm(I) {
   I.fillField('Applicant’s email address', 'test@test.com');
   I.fillField('Applicant’s full name', 'Test User');
   I.fillField('Application number', '2418904');
-  I.fillField('Telephone number', '111222333');
-  I.submitForm();
 }
 
 function navigateAwayFromPage(I) {
