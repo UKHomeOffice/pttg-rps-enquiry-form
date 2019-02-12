@@ -12,10 +12,24 @@ Before((I, startPage) => {
     I.submitForm();
 });
 
+Scenario('New application question page does not retain personal data when back button pressed',
+function *(I, questionPage) {
+    I.amOnPage(questionPage.url);
+    fillInTheNewApplicationForm(I);
+    navigateAwayFromPage(I);
+
+    pressBrowserBackButton(I);
+    I.amOnPage(questionPage.url);
+
+    for(let formField of ['question-body', 'your-email-address', 'your-name', 'phone-number']) {
+      assert.equal(yield I.grabValueFrom(`#${formField}`), '');
+    }
+});
+
 Scenario('Exisiting application question page does not retain personal data when back button pressed',
 function *(I, existingApplicationQuestionPage) {
     I.amOnPage(existingApplicationQuestionPage.url);
-    fillInTheForm(I);
+    fillInTheExistingApplicationForm(I);
     navigateAwayFromPage(I);
 
     pressBrowserBackButton(I);
@@ -26,7 +40,15 @@ function *(I, existingApplicationQuestionPage) {
     }
 });
 
-function fillInTheForm(I) {
+function fillInTheNewApplicationForm(I) {
+  I.fillField('Your question', 'Test question');
+  I.fillField('Your email address', 'test@test.com');
+  I.fillField('Your name', 'Test User');
+  I.fillField('Telephone number', '111222333');
+  I.submitForm();
+}
+
+function fillInTheExistingApplicationForm(I) {
   I.fillField('Your question', 'Test question');
   I.fillField('Applicant’s email address', 'test@test.com');
   I.fillField('Applicant’s full name', 'Test User');

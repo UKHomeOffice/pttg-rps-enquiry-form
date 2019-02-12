@@ -2,7 +2,9 @@
 
 let nonCachingInputs = [
   'question-body',
+  'your-email-address',
   'applicant-email-address',
+  'your-name',
   'applicant-full-name',
   'application-number',
   'phone-number'
