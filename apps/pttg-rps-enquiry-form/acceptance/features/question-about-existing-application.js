@@ -19,6 +19,7 @@ function *(I, existingApplicationQuestionPage) {
     I.fillField('Applicant’s email address', 'test@test.com');
     I.fillField('Applicant’s full name', 'Test User');
     I.fillField('Application number', '2418904');
+    I.fillField('Telephone number', '111222333');
     I.submitForm();
 
     I.click('Back');
@@ -31,5 +32,14 @@ function *(I, existingApplicationQuestionPage) {
     I.seeInCurrentUrl(existingApplicationQuestionPage.url);
 
     let questionText = yield I.grabValueFrom('#question-body');
+    let emailAddress = yield I.grabValueFrom('#applicant-email-address');
+    let applicantFullName = yield I.grabValueFrom('#applicant-full-name');
+    let applicationNumber = yield I.grabValueFrom('#application-number');
+    let phoneNumber = yield I.grabValueFrom('#phone-number');
+
     assert.equal(questionText, '');
+    assert.equal(emailAddress, '');
+    assert.equal(applicantFullName, '');
+    assert.equal(applicationNumber, '');
+    assert.equal(phoneNumber, '');
 });
