@@ -40,6 +40,21 @@ function *(I, existingApplicationQuestionPage) {
     }
 });
 
+Scenario('Organisation new application question page does not retain personal data when back button pressed',
+function *(I, supportingOrgQuestionPage) {
+  I.amOnPage(supportingOrgQuestionPage.url);
+  I.fillField('Organisation name', 'Test Company');
+  fillInTheNewApplicationForm(I);
+  navigateAwayFromPage(I);
+
+  pressBrowserBackButton(I);
+  I.amOnPage(supportingOrgQuestionPage.url);
+
+  for(let formField of ['question-body', 'organisation-name', 'your-email-address', 'your-name', 'phone-number']) {
+    assert.equal(yield I.grabValueFrom(`#${formField}`), '');
+  }
+});
+
 function fillInTheNewApplicationForm(I) {
   I.fillField('Your question', 'Test question');
   I.fillField('Your email address', 'test@test.com');
