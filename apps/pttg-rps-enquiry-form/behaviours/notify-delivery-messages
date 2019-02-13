@@ -102,7 +102,7 @@ function isAuthorised(req) {
         level: 'info',
         message: `settings.bearerToken = ${settings.bearerToken}`
     });
-    return req.headers.authorization == settings.bearerToken;
+    return req.headers.authorization == `Bearer ${settings.bearerToken}`;
 
 
 }
