@@ -12,7 +12,7 @@ const notifyMessages = function (req, res) {
     log.log({
         level: 'info',
         message: `Req.method = ${req.method}`
-    })
+    });
 
     if (req.method !== 'POST' ||
         !isAuthorised(req) ||
@@ -88,17 +88,18 @@ function delivered(req) {
 }
 
 function isAuthorised(req) {
-    return req.headers.authorization == settings.bearerToken;
-
     log.log({
         level: 'info',
         message: `headers.authorization = ${req.headers.authorization}`
-    })
+    });
 
     log.log({
         level: 'info',
         message: `settings.bearerToken = ${settings.bearerToken}`
-    })
+    });
+    return req.headers.authorization == settings.bearerToken;
+
+
 }
 
 module.exports = notifyMessages;
