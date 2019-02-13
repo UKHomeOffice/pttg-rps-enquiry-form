@@ -9,6 +9,7 @@ slack.setWebhook(webhookUri);
 
 const notifyMessages = function (req, res) {
 
+    console.log(`******* Req.method = ${req.method} *********`); // eslint-disable-line no-console
     log.log({
         level: 'info',
         message: `Req.method = ${req.method}`
