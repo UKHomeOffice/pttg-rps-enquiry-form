@@ -1,5 +1,15 @@
 const config = require('./config');
 const winston = require('winston');
+const { format } = require('winston')
+const { combine, timestamp, printf } = format;
+
+const myFormat = printf(info => {
+    if (info.timestamp) {
+        info['@timestamp'] = info.timestamp
+        delete info.timestamp;
+    }
+    return info;
+})
 
 const loggerFactory = config => {
     const isProduction = config.env === 'production';
@@ -24,7 +34,11 @@ const loggerFactory = config => {
         }));
     } else {
         logger.add(new winston.transports.Console({
-            format: winston.format.simple()
+            format: combine(
+                timestamp(),
+                myFormat,
+                format.json()
+            )
         }));
     }
 

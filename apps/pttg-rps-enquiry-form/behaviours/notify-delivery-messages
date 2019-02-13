@@ -9,6 +9,11 @@ slack.setWebhook(webhookUri);
 
 const notifyMessages = function (req, res) {
 
+    log.log({
+        level: 'info',
+        message: `Req.method = ${req.method}`
+    })
+
     if (req.method !== 'POST' ||
         !isAuthorised(req) ||
         delivered(req)
@@ -84,6 +89,16 @@ function delivered(req) {
 
 function isAuthorised(req) {
     return req.headers.authorization == settings.bearerToken;
+
+    log.log({
+        level: 'info',
+        message: `headers.authorization = ${req.headers.authorization}`
+    })
+
+    log.log({
+        level: 'info',
+        message: `settings.bearerToken = ${settings.bearerToken}`
+    })
 }
 
 module.exports = notifyMessages;
