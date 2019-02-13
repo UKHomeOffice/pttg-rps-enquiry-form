@@ -92,7 +92,10 @@ function delivered(req) {
 function isAuthorised(req) {
     console.log(`headers.authorization = ${req.headers.authorization}`); // eslint-disable-line no-console
     console.log(`settings.bearerToken = ${settings.bearerToken}`); // eslint-disable-line no-console
+    console.log(req.headers.authorization == `Bearer ${settings.bearerToken}`); // eslint-disable-line no-console
     console.log(req.headers.authorization === `Bearer ${settings.bearerToken}`); // eslint-disable-line no-console
+    console.log(typeof req.headers.authorization);// eslint-disable-line no-console
+    console.log(typeof settings.bearerToken);// eslint-disable-line no-console
 
     log.log({
         level: 'info',
@@ -104,8 +107,6 @@ function isAuthorised(req) {
         message: `settings.bearerToken = ${settings.bearerToken}`
     });
     return req.headers.authorization === `Bearer ${settings.bearerToken}`;
-
-
 }
 
 module.exports = notifyMessages;
