@@ -85,10 +85,14 @@ const notifyMessages = function (req, res) {
 };
 
 function delivered(req) {
+    console.log(`req.body.status = ${req.body.status}`); // eslint-disable-line no-console
     return req.body.status == 'delivered';
 }
 
 function isAuthorised(req) {
+    console.log(`headers.authorization = ${req.headers.authorization}`); // eslint-disable-line no-console
+    console.log(`settings.bearerToken = ${settings.bearerToken}`); // eslint-disable-line no-console
+
     log.log({
         level: 'info',
         message: `headers.authorization = ${req.headers.authorization}`
