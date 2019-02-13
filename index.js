@@ -12,7 +12,7 @@ const app = hof(settings);
 logger.log({
     level: 'info',
     message: '***** In the index *******'
-})
+});
 
 //Endpoint for Notify delivery receipts
 app.use('/notify-messages', notifyMessages);
