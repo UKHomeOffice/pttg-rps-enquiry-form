@@ -11,7 +11,7 @@ const app = hof(settings);
 
 logger.log({
     level: 'info',
-    message: '***** In the index *******'
+    message: '***** Index.js *******'
 });
 
 //Endpoint for Notify delivery receipts
