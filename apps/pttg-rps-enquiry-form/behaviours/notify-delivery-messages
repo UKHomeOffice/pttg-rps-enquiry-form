@@ -90,10 +90,10 @@ function delivered(req) {
 }
 
 function isAuthorised(req) {
-    console.log(`headers.authorization = ${req.headers.authorization}l`); // eslint-disable-line no-console
-    console.log(`settings.bearerToken = ${settings.bearerToken}l`); // eslint-disable-line no-console
-    console.log(req.headers.authorization == `Bearer ${settings.bearerToken}`); // eslint-disable-line no-console
-    console.log(req.headers.authorization === `Bearer ${settings.bearerToken}`); // eslint-disable-line no-console
+    console.log(`headers.authorization = ${req.headers.authorization}`); // eslint-disable-line no-console
+    console.log(`settings.bearerToken = ${settings.bearerToken}`.trim()); // eslint-disable-line no-console
+    console.log(req.headers.authorization == `Bearer ${settings.bearerToken}`.trim()); // eslint-disable-line no-console
+    console.log(req.headers.authorization === `Bearer ${settings.bearerToken}`.trim()); // eslint-disable-line no-console
     console.log(typeof req.headers.authorization);// eslint-disable-line no-console
     console.log(typeof settings.bearerToken);// eslint-disable-line no-console
 
@@ -104,7 +104,7 @@ function isAuthorised(req) {
 
     log.log({
         level: 'info',
-        message: `settings.bearerToken = ${settings.bearerToken}`
+        message: `settings.bearerToken = ${settings.bearerToken}`.trim()
     });
     return req.headers.authorization === `Bearer ${settings.bearerToken}`;
 }
