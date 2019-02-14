@@ -1,5 +1,3 @@
-const startPage = require('./start-page');
-
 module.exports = {
     path: '/leave',
     properties: {
