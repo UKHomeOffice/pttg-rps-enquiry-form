@@ -55,7 +55,7 @@ pipeline:
       - docker tag pttg-rps-enquiry quay.io/ukhomeofficedigital/pttg-rps-enquiry:build-$${DRONE_BUILD_NUMBER}
       - docker push quay.io/ukhomeofficedigital/pttg-rps-enquiry:build-$${DRONE_BUILD_NUMBER}
     when:
-      branch: [master, EE-12116/create-alerts-for-notify-failures]
+      branch: master
       event: push
 
   tag-docker-image-with-git-tag:
@@ -75,8 +75,6 @@ pipeline:
     image: plugins/git
     commands:
       - git clone https://github.com/UKHomeOffice/kube-pttg-rps-enquiry-form.git
-      - cd kube-pttg-rps-enquiry-form
-      - git checkout EE-12116/create-alerts-for-notify-failures
     when:
       event: [push, deployment, tag]
 
@@ -95,7 +93,7 @@ pipeline:
       - cd kube-pttg-rps-enquiry-form
       - ./deploy.sh
     when:
-      branch: [master, EE-12116/create-alerts-for-notify-failures]
+      branch: master
       event: [push, tag]
 
   deployment:
