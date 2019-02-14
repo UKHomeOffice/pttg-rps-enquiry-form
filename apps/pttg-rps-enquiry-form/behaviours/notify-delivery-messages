@@ -23,6 +23,9 @@ const notifyMessages = function (req, res) {
         return;
     }
 
+    console.log(`******* slackChannelName = ${slackChannelName} *********`); // eslint-disable-line no-console
+    console.log(`******* webhook = ${webhookUri} *********`); // eslint-disable-line no-console
+
     slack.webhook({
         channel: '#' + slackChannelName,
         username: 'Notify Failure',
@@ -86,26 +89,11 @@ const notifyMessages = function (req, res) {
 
 function delivered(req) {
     console.log(`req.body.status = ${req.body.status}`); // eslint-disable-line no-console
-    return req.body.status == 'delivered';
+    console.log(`${req.body.status} === 'delivered'`); // eslint-disable-line no-console
+    return req.body.status === 'delivered';
 }
 
 function isAuthorised(req) {
-    console.log(`headers.authorization = ${req.headers.authorization}`); // eslint-disable-line no-console
-    console.log(`settings.bearerToken = ${settings.bearerToken}`); // eslint-disable-line no-console
-    console.log(req.headers.authorization == `Bearer ${settings.bearerToken}`); // eslint-disable-line no-console
-    console.log(req.headers.authorization === `Bearer ${settings.bearerToken}`); // eslint-disable-line no-console
-    console.log(typeof req.headers.authorization);// eslint-disable-line no-console
-    console.log(typeof settings.bearerToken);// eslint-disable-line no-console
-
-    log.log({
-        level: 'info',
-        message: `headers.authorization = ${req.headers.authorization}`
-    });
-
-    log.log({
-        level: 'info',
-        message: `settings.bearerToken = ${settings.bearerToken}`
-    });
     return req.headers.authorization === `Bearer ${settings.bearerToken}`;
 }
 
