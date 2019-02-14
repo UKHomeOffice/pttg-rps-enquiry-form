@@ -8,13 +8,6 @@ const slack = new Slack();
 slack.setWebhook(webhookUri);
 
 const notifyMessages = function (req, res) {
-
-    console.log(`******* Req.method = ${req.method} *********`); // eslint-disable-line no-console
-    log.log({
-        level: 'info',
-        message: `Req.method = ${req.method}`
-    });
-
     if (req.method !== 'POST' ||
         !isAuthorised(req) ||
         delivered(req)
@@ -22,10 +15,6 @@ const notifyMessages = function (req, res) {
         res.status(405).end();
         return;
     }
-
-    console.log(`******* slackChannelName = ${slackChannelName} *********`); // eslint-disable-line no-console
-    console.log(`******* webhook = ${webhookUri} *********`); // eslint-disable-line no-console
-
     slack.webhook({
         channel: '#' + slackChannelName,
         username: 'Notify Failure',
@@ -88,8 +77,6 @@ const notifyMessages = function (req, res) {
 };
 
 function delivered(req) {
-    console.log(`req.body.status = ${req.body.status}`); // eslint-disable-line no-console
-    console.log(`${req.body.status} === 'delivered'`); // eslint-disable-line no-console
     return req.body.status === 'delivered';
 }
 
