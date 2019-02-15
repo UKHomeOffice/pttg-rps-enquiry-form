@@ -12,12 +12,9 @@ const app = hof(settings);
 app.use('/notify-messages', notifyMessages);
 
 app.use((req, res, next) => {
-    // eslint-disable-next-line quotes
-    res.setHeader("Cache-Control", "private, no-cache, no-store, must-revalidate");
-    // eslint-disable-next-line quotes
-    res.setHeader("Pragma", "no-cache");
-    // eslint-disable-next-line quotes
-    res.setHeader("Expires", "-1");
+    res.setHeader('Cache-Control', 'private, no-cache, no-store, must-revalidate');
+    res.setHeader('Pragma', 'no-cache');
+    res.setHeader('Expires', '-1');
     return next();
 });
 
