@@ -15,7 +15,7 @@ const SupportingOrgApplicationPage2 = require('./pages/supporting-org-applicatio
 const SummaryPage = require('./pages/summary');
 const ConfirmationPage = require('./pages/confirmation');
 
-const Leave = require('./pages/leave')
+const Leave = require('./pages/leave');
 
 const pagesToSteps = pages => (pages.reduce((obj, item) => {
     obj[item.path] = item.properties;
