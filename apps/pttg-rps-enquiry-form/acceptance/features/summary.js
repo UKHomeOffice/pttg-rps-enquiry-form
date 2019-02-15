@@ -16,7 +16,6 @@ Before((I, startPage) => {
 });
 
 function clickLeaveButton(I, leavePage) {
-  I.see('Cancel and leave this service', 'button');
   I.click('Cancel and leave this service');
   I.seeInCurrentUrl(leavePage.url);
   I.see('You have now left the service.');
@@ -45,7 +44,7 @@ Scenario('I can leave the summary page without submitting the form',
 });
 
 Scenario('When I leave the summary page without submitting the form my session is cleared',
-  function *(I, leavePage, startPage) {
+  function (I, leavePage, startPage) {
     clickLeaveButton(I, leavePage);
     pressBrowserBackButton(I);
     I.seeInCurrentUrl(startPage.url)
