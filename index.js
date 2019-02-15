@@ -11,4 +11,14 @@ const app = hof(settings);
 //Endpoint for Notify delivery receipts
 app.use('/notify-messages', notifyMessages);
 
+app.use((req, res, next) => {
+  // eslint-disable-next-line quotes
+  res.setHeader("Cache-Control", "private, no-cache, no-store, must-revalidate");
+  // eslint-disable-next-line quotes
+  res.setHeader("Pragma", "no-cache");
+  // eslint-disable-next-line quotes
+  res.setHeader("Expires", "-1");
+  return next();
+});
+
 module.exports = app;
