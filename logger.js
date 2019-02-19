@@ -3,10 +3,9 @@ const winston = require('winston');
 const { format } = require('winston');
 const { combine, timestamp, printf } = format;
 
-const myFormat = printf(info => {
+const customLogFormat = printf(info => {
     if (info.timestamp) {
         info['@timestamp'] = info.timestamp;
-        delete info.timestamp;
     }
     return info;
 });
@@ -36,7 +35,7 @@ const loggerFactory = config => {
         logger.add(new winston.transports.Console({
             format: combine(
                 timestamp(),
-                myFormat,
+                customLogFormat,
                 format.json()
             )
         }));
