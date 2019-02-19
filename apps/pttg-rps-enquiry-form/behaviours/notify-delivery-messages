@@ -8,7 +8,6 @@ const slack = new Slack();
 slack.setWebhook(webhookUri);
 
 const notifyMessages = function (req, res) {
-
     if (req.method !== 'POST' ||
         !isAuthorised(req) ||
         delivered(req)
@@ -16,7 +15,6 @@ const notifyMessages = function (req, res) {
         res.status(405).end();
         return;
     }
-
     slack.webhook({
         channel: '#' + slackChannelName,
         username: 'Notify Failure',
@@ -79,11 +77,11 @@ const notifyMessages = function (req, res) {
 };
 
 function delivered(req) {
-    return req.body.status == 'delivered';
+    return req.body.status === 'delivered';
 }
 
 function isAuthorised(req) {
-    return req.headers.authorization == settings.bearerToken;
+    return req.headers.authorization === `Bearer ${settings.bearerToken}`;
 }
 
 module.exports = notifyMessages;

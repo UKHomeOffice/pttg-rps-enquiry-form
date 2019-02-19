@@ -1,5 +1,5 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.12.0
+version: v1.13.3
 # ignores vulnerabilities until expiry date; change duration by modifying expiry date
 ignore:
   'npm:braces:20180219':
@@ -17,28 +17,48 @@ ignore:
     - hof > hof-middleware-markdown > showdown > yargs > os-locale > mem:
         reason: None given
         expires: '2019-02-28T10:33:23.221Z'
+  SNYK-JS-LODASH-73638:
+    - hof > i18n-future > lodash:
+        reason: None given
+        expires: '2019-03-21T09:18:24.892Z'
+  SNYK-JS-LODASH-73639:
+    - hof > i18n-future > lodash:
+        reason: None given
+        expires: '2019-03-21T09:18:24.892Z'
 # patches apply the minimum changes required to fix a vulnerability
 patch:
   'npm:debug:20170905':
     - hof > helmet > connect > debug:
         patched: '2018-10-03T12:25:18.053Z'
       hof > helmet > connect > finalhandler > debug:
-        patched: '2019-01-29T10:31:42.551Z'
+        patched: '2019-02-19T09:17:04.586Z'
     - hof > helmet > connect > finalhandler > debug:
         patched: '2018-10-03T12:25:18.053Z'
-      hof > helmet > connect > debug:
+      connect > debug:
+        patched: '2019-02-19T09:17:04.586Z'
+    - hof > helmet > connect > finalhandler > debug:
         patched: '2019-01-29T10:31:42.551Z'
+      connect > finalhandler > debug:
+        patched: '2019-02-19T09:17:04.586Z'
+    - hof > helmet > connect > debug:
+        patched: '2019-01-29T10:31:42.551Z'
+      helmet > connect > debug:
+        patched: '2019-02-19T09:17:04.586Z'
+    - helmet > connect > finalhandler > debug:
+        patched: '2019-02-19T09:17:04.586Z'
+    - hof > helmet > connect > debug:
+        patched: '2019-02-19T09:17:04.586Z'
   'npm:lodash:20180130':
     - hof > i18n-future > lodash:
-        patched: '2019-01-29T10:31:42.551Z'
+        patched: '2019-02-19T09:17:04.586Z'
   'npm:ms:20170412':
     - hof > helmet > connect > debug > ms:
         patched: '2018-10-03T12:25:18.053Z'
-      hof > helmet > connect > finalhandler > debug > ms:
-        patched: '2019-01-29T10:31:42.551Z'
     - hof > helmet > connect > finalhandler > debug > ms:
         patched: '2018-10-03T12:25:18.053Z'
-      hof > helmet > connect > debug > ms:
+    - hof > helmet > connect > finalhandler > debug > ms:
+        patched: '2019-01-29T10:31:42.551Z'
+    - hof > helmet > connect > debug > ms:
         patched: '2019-01-29T10:31:42.551Z'
   'npm:extend:20180424':
     - slack-notify > request > extend:
