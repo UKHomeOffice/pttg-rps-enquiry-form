@@ -1,5 +1,3 @@
-const assert = require('assert');
-
 function navigateThroughForm(I, whatQuestionIsAbout, isExistingApplication) {
     I.checkOption(whatQuestionIsAbout);
     I.submitForm();
@@ -30,7 +28,7 @@ Before((I, startPage) => {
 });
 
 Scenario('Once the form is submitted, pressing back button stops user getting back to form data',
-    function *(I, questionPage) {
+    function(I) {
         navigateThroughForm(I, 'What the EU Settlement Scheme is and who should apply', 'No');
         fillInTheNewApplicationForm(I);
         I.submitForm();

@@ -1,6 +1,6 @@
 const assert = require('assert');
 
-Feature('Change buttons on the confirm page should allow user to change the values')
+Feature('Change buttons on the confirm page should allow user to change the values');
 
 Before((I, startPage) => {
     I.clearCookie();
@@ -22,7 +22,7 @@ const ORGANISATION_1 = 'some company ltd.';
 const ORGANISATION_2 = 'another org';
 
 Scenario('A user can update fields on the question page by clicking the Change button',
-    function* (I) {
+    function *(I) {
         I.checkOption('How to apply');
         I.submitForm();
         I.checkOption('No');
@@ -40,7 +40,7 @@ Scenario('A user can update fields on the question page by clicking the Change b
         I.see(TELEPHONE_1);
 
         I.click('#question-body-change');
-        I.seeInCurrentUrl("edit");
+        I.seeInCurrentUrl('edit');
 
         assert.equal(yield I.grabValueFrom('#question-body'), QUESTION_1);
         assert.equal(yield I.grabValueFrom('#your-name'), NAME_1);
@@ -48,7 +48,7 @@ Scenario('A user can update fields on the question page by clicking the Change b
         assert.equal(yield I.grabValueFrom('#phone-number'), TELEPHONE_1);
 
         I.fillField('Your question', QUESTION_2);
-        I.fillField('Your email address',EMAIL_2);
+        I.fillField('Your email address', EMAIL_2);
         I.fillField('Your name', NAME_2);
         I.fillField('Telephone number', TELEPHONE_2);
         I.submitForm();
@@ -61,7 +61,7 @@ Scenario('A user can update fields on the question page by clicking the Change b
 );
 
 Scenario('A user can update fields on the question-about-existing-application page by clicking the Change button',
-    function* (I) {
+    function *(I) {
         I.checkOption('How to apply');
         I.submitForm();
         I.checkOption('Yes');
@@ -81,7 +81,7 @@ Scenario('A user can update fields on the question-about-existing-application pa
         I.see(APPLICATION_NUMBER_1);
 
         I.click('#applicant-full-name-change');
-        I.seeInCurrentUrl("edit");
+        I.seeInCurrentUrl('edit');
 
         assert.equal(yield I.grabValueFrom('#question-body'), QUESTION_1);
         assert.equal(yield I.grabValueFrom('#applicant-full-name'), NAME_1);
@@ -90,7 +90,7 @@ Scenario('A user can update fields on the question-about-existing-application pa
         assert.equal(yield I.grabValueFrom('#application-number'), APPLICATION_NUMBER_1);
 
         I.fillField('Your question', QUESTION_2);
-        I.fillField('Applicant’s email address',EMAIL_2);
+        I.fillField('Applicant’s email address', EMAIL_2);
         I.fillField('Applicant’s full name', NAME_2);
         I.fillField('Telephone number', TELEPHONE_2);
         I.fillField('Application number', APPLICATION_NUMBER_2);
@@ -105,7 +105,7 @@ Scenario('A user can update fields on the question-about-existing-application pa
 );
 
 Scenario('A user can update fields on the supporting-org-question page by clicking the Change button',
-    function* (I) {
+    function *(I) {
         I.checkOption('I’m from an employer, community group or other supporting organisation');
         I.submitForm();
         I.checkOption('No');
@@ -125,7 +125,7 @@ Scenario('A user can update fields on the supporting-org-question page by clicki
         I.see(ORGANISATION_1);
 
         I.click('#organisation-name-change');
-        I.seeInCurrentUrl("edit");
+        I.seeInCurrentUrl('edit');
 
         assert.equal(yield I.grabValueFrom('#question-body'), QUESTION_1);
         assert.equal(yield I.grabValueFrom('#your-name'), NAME_1);
