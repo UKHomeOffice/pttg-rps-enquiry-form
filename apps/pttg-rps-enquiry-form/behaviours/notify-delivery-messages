@@ -31,7 +31,7 @@ const notifyMessages = function (req, res) {
                     },
                     {
                         'title': 'Id',
-                        'value': req.body.Id,
+                        'value': req.body.id,
                         'short': false
                     },
                     {
@@ -46,22 +46,22 @@ const notifyMessages = function (req, res) {
                     },
                     {
                         'title': 'Created at',
-                        'value': req.body['created at'],
+                        'value': req.body['created_at'],
                         'short': false
                     },
                     {
                         'title': 'Completed at',
-                        'value': req.body['completed at'],
+                        'value': req.body['completed_at'],
                         'short': false
                     },
                     {
                         'title': 'Sent at',
-                        'value': req.body['sent at'],
+                        'value': req.body['sent_at'],
                         'short': false
                     },
                     {
                         'title': 'Notification type',
-                        'value': req.body['notification type'],
+                        'value': req.body['notification_type'],
                         'short': false
                     }
                 ]
