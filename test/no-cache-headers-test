@@ -1,0 +1,11 @@
+const request = require('supertest');
+
+describe('Setup', () => {
+    it('Has no-caching headers set for all routes', function(done) {
+        request('http://localhost:8080')
+            .get('/start')
+            .expect('Cache-Control', 'private, no-cache, no-store, must-revalidate')
+            .expect('Pragma', 'no-cache')
+            .expect('Expires', '-1', done);
+    });
+});

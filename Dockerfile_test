@@ -10,4 +10,4 @@ COPY logger.js logger.js
 
 RUN npm --loglevel warn install # eslint
 
-CMD npm run test:acceptance
+CMD npm run test
