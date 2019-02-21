@@ -1,11 +1,15 @@
 const request = require('supertest');
-
+const pages = require('../apps/pttg-rps-enquiry-form/pages');
+console.log(pages)
+console.log(pages.steps)
 describe('Setup', () => {
-    it('Has no-caching headers set for all routes', function(done) {
-        request('http://localhost:8080')
-            .get('/start')
-            .expect('Cache-Control', 'private, no-cache, no-store, must-revalidate')
-            .expect('Pragma', 'no-cache')
-            .expect('Expires', '-1', done);
-    });
+    for (const route in pages.steps) {
+        it(`Has no-caching headers set for ${route} page`, function(done) {
+            request('http://localhost:8080')
+                .get(route)
+                .expect('Cache-Control', 'private, no-cache, no-store, must-revalidate')
+                .expect('Pragma', 'no-cache')
+                .expect('Expires', '-1', done);
+        });
+    }
 });

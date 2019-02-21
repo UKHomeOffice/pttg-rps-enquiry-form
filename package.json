@@ -3,7 +3,7 @@
   "scripts": {
     "start": "node app.js",
     "start:dev": "hof-build watch --conf ./hof-build-conf.js",
-    "test:mocha": "mocha test",
+    "test:mocha": "mocha test/*",
     "test": "npm run test:mocha && npm run test:lint && npm run test:acceptance",
     "test:acceptance": "so-acceptance --steps",
     "test:acceptance:local": "funkie --driver chromedriver npm run test:acceptance",
