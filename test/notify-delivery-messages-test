@@ -9,7 +9,7 @@ let mockSlackWebhook;
 const mockRequest = {
     method: 'POST',
     headers: {
-        authorization: settings.bearerToken
+        authorization: 'Bearer ' + settings.bearerToken
     },
     body: {
         status: 'temporary-failure'
