@@ -10,11 +10,6 @@ pipeline:
     when:
       event: push
 
-  scan:
-    image: quay.io/ukhomeofficedigital/anchore-submission:latest
-    image_name: pttg-rps-enquiry
-    tolerate: medium
-
   lint:
     group: build
     image: quay.io/ukhomeofficedigital/nodejs-base:v8.11.1
