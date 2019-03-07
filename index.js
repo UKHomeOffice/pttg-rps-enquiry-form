@@ -11,4 +11,11 @@ const app = hof(settings);
 //Endpoint for Notify delivery receipts
 app.use('/notify-messages', notifyMessages);
 
+app.use((req, res, next) => {
+    res.setHeader('Cache-Control', 'private, no-cache, no-store, must-revalidate');
+    res.setHeader('Pragma', 'no-cache');
+    res.setHeader('Expires', '-1');
+    return next();
+});
+
 module.exports = app;

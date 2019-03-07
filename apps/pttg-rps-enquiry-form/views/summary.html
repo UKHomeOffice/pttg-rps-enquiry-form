@@ -1,0 +1,9 @@
+{{<partials-page}}
+  {{$page-content}}
+    {{#rows}}
+      {{> partials-summary-table}}
+    {{/rows}}
+    {{#input-submit}}confirm{{/input-submit}}
+    <a class="button" id="cancelAndClearSession" href="/leave">Cancel and leave this service</a>
+  {{/page-content}}
+{{/partials-page}}
