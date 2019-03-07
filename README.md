@@ -36,3 +36,6 @@ Follow these instructions to run the service on your local machine.
 The application contains a docker-compose file and can be alternatively run through Docker using the following command:
 
 ```docker-compose up```
+
+## Whitelist
+The application is behind a whitelist in both the test and dev environments. Detailed in the drone.yml
