@@ -75,6 +75,8 @@ pipeline:
     image: plugins/git
     commands:
       - git clone https://github.com/UKHomeOffice/kube-pttg-rps-enquiry-form.git
+      - cd kube-pttg-rps-enquiry-form
+      - git checkout ${KUBE_BRANCH:=master}
     when:
       event: [push, deployment, tag]
 
