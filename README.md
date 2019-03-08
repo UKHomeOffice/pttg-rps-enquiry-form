@@ -38,4 +38,4 @@ The application contains a docker-compose file and can be alternatively run thro
 ```docker-compose up```
 
 ## Whitelist
-The application is behind a whitelist in both the test and dev environments. Detailed in the drone.yml
+The application is behind a whitelist in both the test and dev environments. Detailed in the drone.yml 
