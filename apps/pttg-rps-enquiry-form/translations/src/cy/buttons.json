@@ -1,5 +1,10 @@
 {
     "start": "Dechrau",
     "go-to-enquiry": "Mynd i’r ffurflen ymholiad",
-    "confirm": "Anfon cwestiwn"
+    "confirm": "Anfon cwestiwn",
+    "continue": "Parhau",
+    "start-again": "Welsh: Start again",
+    "change": "Welsh: Change",
+    "cancel-and-leave": "Welsh: Cancel and leave this service",
+    "back": "Yn ôl"
 }
