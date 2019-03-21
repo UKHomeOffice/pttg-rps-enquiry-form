@@ -12,12 +12,18 @@
       <div class="phase-banner">
         <p>
           <strong class="phase-tag">{{#t}}journey.phase{{/t}}</strong>
-          <span>This is a new service – your <a href="https://www.gov.uk/done/eu-settled-status-enquiries">feedback</a> will help us to improve it.</span>
+          <span>{{#t}}layout.this-is-a-new-service{{/t}}<a href="https://www.gov.uk/done/eu-settled-status-enquiries">{{#t}}layout.feedback{{/t}}</a>{{#t}}layout.will-help-us-to-improve-it{{/t}}</span>
         </p>
       </div>
       <span id="step">
         {{> partials-back}} <span>{{$step}}{{/step}}</span>
       </span>
+      <div class="u-fr">
+        <ul class="c-language-nav">
+          <li class="c-language-nav__item"><a lang="en" hreflang="en" class="language-nav-link" href='/start?lang=en'>English</a></li>
+          <li class="c-language-nav__item"><a lang="cy" hreflang="cy" class="language-nav-link" href='/start?lang=cy'>Cymraeg</a></li>
+        </ul>
+      </div>
       <div class="grid-row" id="content">
         {{> partials-maincontent-left}}
       </div>
@@ -33,8 +39,8 @@
   {{/cookieMessage}}
   {{$footerSupportLinks}}
     <ul>
-      <li><a href="/cookies">{{#t}}base.cookies{{/t}}</a></li>
-      <li><a href="/privacy-notice">Privacy notice</a></li>
+      <li><a href="/cookies">{{#t}}layout.cookies{{/t}}</a></li>
+      <li><a href="/privacy-policy">{{#t}}layout.privacy-policy{{/t}}</a></li>
     </ul>
   {{/footerSupportLinks}}
 {{/govuk-template}}
