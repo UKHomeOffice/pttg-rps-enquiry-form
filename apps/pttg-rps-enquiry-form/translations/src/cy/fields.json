@@ -94,7 +94,7 @@
     }
   },
   "organisation-name": {
-    "label": "Organisation name",
+    "label": "Enw’r sefydliad",
     "hint": "Os ydych yn gofyn ar ran cyflogwr neu sefydliad arall, rhowch yr enw yma",
     "validation": {
       "required": "Rhowch enw eich sefydliad",
@@ -112,7 +112,7 @@
       }
     },
     "validation": {
-      "required": "Select yes if you are asking about an existing application"
+      "required": "Dewiswch ydy os ydych yn gofyn am gais presennol"
     }
   }
 }
