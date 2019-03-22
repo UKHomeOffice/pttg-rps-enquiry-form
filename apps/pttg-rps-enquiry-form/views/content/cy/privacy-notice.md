@@ -23,8 +23,7 @@ Pan fyddwch yn rhoi manylion cais, byddwn yn defnyddio’r wybodaeth i:
 Drwy ddefnyddio’r gwasanaeth, rydych yn cytuno y gallwn ddefnyddio’r wybodaeth yn y ffordd hyn.
 
 ## Darganfod mwy
-For more on how we will use your personal information and who we may share it with, see our [privacy information notice](https://www.gov.uk/government/publications/personal-information-use-in-borders-immigration-and-citizenship) for the borders, immigration and citizenship system. This explains your key rights under data protection legislation including the General Data Protection Regulation.
-
+Am fwy o wybodaeth am sut y byddwn yn defnyddio eich gwybodaeth bersonol a gyda phwy y byddwn efallai yn ei rannu, gweler ein [hysbysiad gwybodaeth bersonol](https://www.gov.uk/government/publications/personal-information-use-in-borders-immigration-and-citizenship) for the borders, immigration and citizenship system. This explains your key rights under data protection legislation including the General Data Protection Regulation.
 Mae’n cwmpasu:
 
 * am faint o amser y byddwn yn cadw eich gwybodaeth
