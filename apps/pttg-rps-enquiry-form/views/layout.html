@@ -18,12 +18,14 @@
       <span id="step">
         {{> partials-back}} <span>{{$step}}{{/step}}</span>
       </span>
+      {{#startPage}}
       <div class="u-fr">
         <ul class="c-language-nav">
           <li class="c-language-nav__item"><a lang="en" hreflang="en" class="language-nav-link" href='/start?lang=en'>English</a></li>
           <li class="c-language-nav__item"><a lang="cy" hreflang="cy" class="language-nav-link" href='/start?lang=cy'>Cymraeg</a></li>
         </ul>
       </div>
+      {{/startPage}}
       <div class="grid-row" id="content">
         {{> partials-maincontent-left}}
       </div>
