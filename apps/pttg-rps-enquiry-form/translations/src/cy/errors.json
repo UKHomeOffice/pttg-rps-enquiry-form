@@ -1,18 +1,18 @@
 {
   "default": {
-    "title": "Welsh: Sorry, something went wrong",
-    "message": "Welsh: A server exception occurred. Please try again."
+    "title": "Mae’n ddrwg gennym, mae rhywbeth wedi mynd o’i le",
+    "message": "Digwyddodd eithriad serfiwr. Rhowch gynnig arall."
   },
   "session": {
-    "title": "Welsh: Sorry, you'll have to start again",
-    "message": "Welsh: You haven't entered any details for 30 minutes, so we have cleared your information to keep it secure."
+    "title": "Mae’n ddrwg gennym, mae rhywbeth wedi mynd o’i le",
+    "message": "Nid ydych wedi rhoi unrhyw fanylion am 30 munud, felly rydym wedi clirio eich gwybodaeth i’w gadw’n ddiogel."
   },
   "404": {
-    "title": "Welsh: Page not found",
-    "description": "Welsh: This page does not exist"
+    "title": "Ni ddaethpwyd o hyd i dudalen",
+    "description": "Nid yw’r dudalen hon yn bodoli"
   },
   "cookies-required": {
-    "title": "Welsh: Cookies are required to use this service",
-    "message": "Welsh: Cookies are required in order to use this service.<br /><br /> Please <a href=\"http://www.aboutcookies.org/how-to-control-cookies/\" rel=\"external\">enable cookies</a> and try again. Find out <a href=\"/cookies\">how to we use cookies</a>."
+    "title": "Mae angen cwcis i ddefnyddio’r gwasanaeth hwn",
+    "message": "Mae angen cwcis er mwyn ddefnyddio’r gwasanaeth hwn .<br /><br /> Dylech <a href=\"http://www.aboutcookies.org/how-to-control-cookies/\" rel=\"external\">alluogi cwcis</a> and try again. Find out <a href=\"/cookies\">sut rydym yn defnyddio cwcis</a>."
   }
 }
