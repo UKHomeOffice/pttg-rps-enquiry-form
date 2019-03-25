@@ -38,7 +38,7 @@
   },
   "measuring-use": "Mesur defnydd o’r safle",
   "google-analytics": [
-    "Rydym yn defnyddio Google Analytics i gasglu gwybodaeth am sut rydych chi'n defnyddio'r gwasanaeth hwn. Mae hyn yn ein helpu i wirio ei fod yn diwallu eich anghenion ac i wneud gwelliannau.",
+    "Rydym yn defnyddio Google Analytics i gasglu gwybodaeth am sut rydych chi’n defnyddio\nr gwasanaeth hwn. Mae hyn yn ein helpu i wirio ei fod yn diwallu eich anghenion ac i wneud gwelliannau.",
     "Mae Google Analytics yn storio gwybodaeth am:"
   ],
   "google-analytics-list": {
@@ -48,7 +48,7 @@
       "beth rydych yn clicio arno"
     ]
   },
-  "no-identify": "Nid oes unrhyw fanylion personol yn cael eu storio gyda'r wybodaeth hon, felly ni ellir eich adnabod.",
+  "no-identify": "Nid oes unrhyw fanylion personol yn cael eu storio gyda’r wybodaeth hon, felly ni ellir eich adnabod.",
   "analytics-table": {
     "headers": [
       "Enw",
@@ -63,7 +63,7 @@
       ],
       [
         "_gat",
-        "Defnyddir i wasgu'r gyfradd ceisiadau",
+        "Defnyddir i wasgu’r gyfradd ceisiadau",
         "10 munud"
       ]
     ]
@@ -77,7 +77,7 @@
     "link": "eithrio allan o Google Analytics "
   },
   "session-cookies": "Cwcis sesiwn",
-  "session-cookies-content": "Mae cwcis sesiwn yn cael eu lawrlwytho bob tro y byddwch yn ymweld â'r gwasanaeth ac yn cael eu dileu pan fyddwch yn cau eich porwr. Maent yn helpu'r gwasanaeth i weithio'n iawn.",
+  "session-cookies-content": "Mae cwcis sesiwn yn cael eu lawrlwytho bob tro y byddwch yn ymweld â\nr gwasanaeth ac yn cael eu dileu pan fyddwch yn cau eich porwr. Maent yn helpu’r gwasanaeth i weithio’n iawn.",
   "session-cookies-table": {
     "headers": [
       "Enw",
@@ -87,7 +87,7 @@
     "rows": [
       [
         "hmbrp.sid",
-        "Mae’n Storio ID sesiwn a storio data rydych chi'n ei gofnodi dros dro i'ch galluogi i wneud cais",
+        "Mae’n Storio ID sesiwn a storio data rydych chi\nn ei gofnodi dros dro i’ch galluogi i wneud cais",
         "Pan fyddwch yn cau eich porwr"
       ],
       [
