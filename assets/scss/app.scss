@@ -86,3 +86,9 @@ fieldset legend,
 #existing-application-group legend {
   margin: 0;
 }
+
+@media (max-width: 700px) {
+  .button {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1em; } }
