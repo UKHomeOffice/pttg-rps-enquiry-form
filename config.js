@@ -30,5 +30,7 @@ module.exports = {
     gaTagId: process.env.GOOGLE_ANALYTICS_UA || 'UA-84737854-3',
     bearerToken: process.env.NOTIFY_BEARER_TOKEN,
     slackWebhookURL: process.env.SLACK_WEBHOOK_URL,
-    slackChannelName: process.env.SLACK_CHANNEL_NAME
+    slackChannelName: process.env.SLACK_CHANNEL_NAME,
+    getCookies: false,
+    getTerms: false
 };
