@@ -26,7 +26,7 @@ xScenario('An enquiry about an application can be completed end-to-end', (I) => 
         'applicant-email-address': 'test2@example.com',
         'applicant-full-name': 'Janine Butcher',
         'nationality': 'Sweden',
-        'phone-number': '+44-114496 0123',
+        'phone-number': '+441144960123',
         'date-of-birth-day': '01',
         'date-of-birth-month': '01',
         'date-of-birth-year': '1970'

@@ -35,6 +35,7 @@ Scenario('I must not be able to enter an invalid phone number', (I) => {
     I.seeErrors(['#phone-number']);
 });
 
+
 Feature('Organisation question about application (page two)');
 Before((I, startPage, supportingOrgApplicationQuestionPage) => {
     I.clearCookie();

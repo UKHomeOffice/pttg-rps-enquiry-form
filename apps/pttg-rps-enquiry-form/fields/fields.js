@@ -25,9 +25,8 @@ module.exports = {
         options: [{label: ' ', value: ''}].concat(require('hof-util-countries')())
     },
     'phone-number': {
-        formatter: 'removespaces',
         mixin: 'input-phone',
-        validate: 'phonenumber'
+        validate: ['phonenumber']
     },
     'application-number': {
         mixin: 'input-text',
