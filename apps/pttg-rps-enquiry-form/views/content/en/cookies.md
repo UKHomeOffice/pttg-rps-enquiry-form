@@ -47,4 +47,4 @@ Session cookies are downloaded each time you visit the service and deleted when 
 | hmbrp.sid        |  Stores a session ID and temporarily stores data you enter to enable you to make an application | When you close your browser |
 | hof-wizard-sc    |  Tells us when your session starts so we can tell you if it expires                             | When you close your browser |
 | hof-cookie-check |  Tells us you have already allowed cookies so we don’t need to ask you again                    | When you close your browser |
-| lang             |  Used to remember which language we should show your content in                                 | When you close your browser |
+| lang             |  Used to remember your language preference when you continue to the next screen in the form     | When you close your browser |
