@@ -1,0 +1,118 @@
+{
+  "your-question-option": {
+    "legend": "Am beth mae eich cwestiwn",
+    "validation": {
+      "required": "Dewiswch opsiwn"
+    },
+    "options": {
+      "eligibility": {
+        "label": "Beth yw’r Cynllun Preswylio’n Sefydlog i Ddinasyddion yr UE a phwy ddylai wneud cais"
+      },
+      "how-to-apply": {
+        "label": "Sut i wneud cais"
+      },
+      "change-or-withdraw": {
+        "label": "Cais wedi’i anfon ac yn cael ei ddelio â"
+      },
+      "application-result": {
+        "label": "Canlyniad fy nghais"
+      },
+      "supporting-organisation": {
+        "label": "Rwyf o gyflogwr, grwp cymunedol neu sefydliad cefnogol arall"
+      }
+    }
+  },
+  "your-email-address": {
+    "label": "Eich cyfeiriad e-bost",
+    "validation": {
+      "required": "Rhowch eich cyfeiriad e-bost",
+      "email": "Rhowch gyfeiriad e-bost yn y ffurf cywir, fel name@example.com",
+      "maxlength": "Ni all e-bost fod yn fwy na 254 nod"
+    }
+  },
+  "applicant-email-address": {
+    "label": "Cyfeiriad e-bost ymgeisydd",
+    "hint": "Dyma i ble y byddwn yn anfon ein ateb. Gwnewch yn siwr mai dyma’r un e-bost a ddefnyddwyd ar gyfer y cais.",
+    "validation": {
+      "required": "Rhowch y cyfeiriad e-bost a ddefnyddwyd yn y cais rydych yn holi amdano",
+      "email": "Rhowch gyfeiriad e-bost yn y ffurf cywir, fel name@example.com",
+      "maxlength": "Ni all e-bost fod yn fwy na 254 nod"
+    }
+  },
+  "phone-number": {
+    "label": "Rhif ffôn (dewisol)",
+    "hint": "Efallai y byddwn eisiau cysylltu â chi dros y ffôn os byddwn angen mwy o wybodaeth i ateb eich cwestiwn",
+    "validation": {
+      "phonenumber": "Rhowch rif ffôn dilys"
+    }
+  },
+  "nationality": {
+    "label": "Gwlad cenedligrwydd",
+    "validation": {
+      "required": "Rhowch genedligrwydd",
+      "equal": "Dewiswch cenedligrwydd o’r rhestr"
+    }
+  },
+  "application-number": {
+    "label": "Rhif y cais",
+    "hint": "Bydd hwn ar unrhyw e-byst rydych wedi’u derbyn am eich cais",
+    "validation": {
+      "maxlength": "Ni all Rhifau Cyfeirnod Unigryw fod yn fwy na 25 nod",
+      "required": "Rhowch y rhif cyfeirnod sy’n gysylltiedig â’ch cais"
+    }
+  },
+  "question-body": {
+    "label": "Eich cwestiwn",
+    "summary": "Cwestiwn",
+    "hint": "Hyd at 2000 nod",
+    "validation": {
+      "required": "Rhowch gwestiwn",
+      "maxlength": "Ni all y cwestiwn fod yn fwy na 2000 nod"
+    }
+  },
+  "date-of-birth": {
+    "legend": "Dyddiad geni",
+    "hint": "Er enghraifft, 25 03 1957",
+    "validation": {
+      "date": "Rhowch ddyddiad geni gwir",
+      "before": "Mae’n rhaid i ddyddiad geni fod yn y gorffennol",
+      "after": "Mae’n rhaid i ddyddiad geni fod ar ôl 1902"
+    }
+  },
+  "applicant-full-name": {
+    "label": "Enw llawn yr ymgeisydd",
+    "validation": {
+      "required": "Rhowch enw llawn yr ymgeisydd",
+      "maxlength": "Mae’n rhaid i’r enw fod yn llai na 256 nod"
+    }
+  },
+  "your-name": {
+    "label": "Eich enw",
+    "validation": {
+      "required": "Rhowch eich enw",
+      "maxlength": "Mae’n rhaid i’r enw fod yn llai na 256 nod"
+    }
+  },
+  "organisation-name": {
+    "label": "Enw’r sefydliad",
+    "hint": "Os ydych yn gofyn ar ran cyflogwr neu sefydliad arall, rhowch yr enw yma",
+    "validation": {
+      "required": "Rhowch enw eich sefydliad",
+      "maxlength": "Mae’n rhaid i’r enw fod yn llai na 256 nod"
+    }
+  },
+  "existing-application": {
+    "legend": "Ydy eich cwestiwn am gais sydd wedi cael ei anfon yn barod",
+    "options": {
+      "yes": {
+        "label": "Ydy"
+      },
+      "no": {
+        "label": "Na"
+      }
+    },
+    "validation": {
+      "required": "Dewiswch ydy os ydych yn gofyn am gais presennol"
+    }
+  }
+}

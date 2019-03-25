@@ -12,6 +12,12 @@ const app = hof(settings);
 app.use('/notify-messages', notifyMessages);
 
 app.use((req, res, next) => {
+    if (req.query.lang) {
+        req.lang = req.query.lang;
+        res.cookie('lang', req.query.lang, {maxAge: 900000, httpOnly: true});
+    } else if (req.cookies.lang) {
+        req.lang = req.cookies.lang;
+    }
     res.setHeader('Cache-Control', 'private, no-cache, no-store, must-revalidate');
     res.setHeader('Pragma', 'no-cache');
     res.setHeader('Expires', '-1');
