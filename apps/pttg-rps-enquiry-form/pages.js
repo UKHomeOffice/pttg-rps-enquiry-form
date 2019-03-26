@@ -1,5 +1,7 @@
 const StartPage = require('./pages/start-page');
-const PrivacyNotice = require('./pages/privacy-notice');
+const PrivacyNotice = require('./pages/privacy-policy');
+const Cookies = require('./pages/cookies');
+
 const WhatIsYourQuestion = require('./pages/what-is-your-question');
 
 const HasExistingApplication = require('./pages/has-existing-application-fork');
@@ -27,6 +29,7 @@ module.exports = {
     steps: pagesToSteps([
         StartPage,
         PrivacyNotice,
+        Cookies,
         WhatIsYourQuestion,
         HasExistingApplication,
         QuestionPage,
