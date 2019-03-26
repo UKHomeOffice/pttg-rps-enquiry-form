@@ -86,3 +86,49 @@ fieldset legend,
 #existing-application-group legend {
   margin: 0;
 }
+
+.u-fr {
+  float: right;
+}
+
+//@media (min-width: 641px){
+//  .c-language-nav {
+//    font-size: 16px;
+//    line-height: 1.25;
+//  }
+//}
+
+.c-language-nav {
+  font-family: nta,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 20px;
+  line-height: 1.14286;
+  display: table;
+  width: 100%;
+  padding-top: 20px;
+
+}
+
+.c-language-nav__item:first-child {
+  padding-right: 10px;
+  border: 0 solid #bfc1c3;
+  border-right-width: 1px;
+}
+
+.c-language-nav__item {
+  display: table-cell;
+  padding-left: 10px;
+}
+
+.cookies ul {
+  list-style-type: disc;
+  padding-left: 2.0em;
+}
+
+.grid-row {
+  clear: both;
+}
+
+
+
