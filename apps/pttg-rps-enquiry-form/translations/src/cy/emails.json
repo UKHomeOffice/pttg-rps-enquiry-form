@@ -1,0 +1,45 @@
+{
+  "question": {
+    "subject": "New question",
+    "contact-information": {
+      "header": "Manylion cyswllt"
+    },
+    "email": {
+      "label": "E-bost"
+    },
+    "phone-number": {
+      "label": "Rhif ffôn"
+    },
+    "question-information": {
+      "header": "Gwybodaeth o’r Cwestiwn"
+    },
+    "application-number": {
+      "label": "Rhif y Cais"
+    },
+    "question": {
+      "header": "Cwestiwn"
+    }
+  },
+  "user-confirmation": {
+    "subject": "Rydym wedi derbyn eich cwestiwn",
+    "intro": "Rydym wedi derbyn eich cwestiwn gyda’r wybodaeth ganlynol",
+    "contact-information": {
+      "header": "Manylion cyswllt"
+    },
+    "email": {
+      "label": "E-bost"
+    },
+    "phone-number": {
+      "label": "Rhif ffôn"
+    },
+    "question-information": {
+      "header": "Gwybodaeth o’r Cwestiwn"
+    },
+    "application-number": {
+      "label": "Rhif y Cais"
+    },
+    "question": {
+      "header": "Cwestiwn"
+    }
+  }
+}

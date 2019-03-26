@@ -1,0 +1,45 @@
+{
+  "start": {
+    "heading": "Gofyn cwestiwn am wneud cais am statws sefydlog",
+    "caption": "Peilot Cynllun Preswylio’n Sefydlog i Ddinasyddion yr "
+  },
+  "question": {
+    "header": "Eich cwestiwn a manylion cyswllt"
+  },
+  "about-your-organisation": {
+    "header": "Eich manylion"
+  },
+  "supporting-org-question": {
+    "header": "Eich cwestiwn a manylion cyswllt"
+  },
+  "supporting-org-question-about-application": {
+    "header": "Eich cwestiwn a manylion yr ymgeisydd"
+  },
+  "question-about-existing-application": {
+    "header": "Eich cwestiwn a manylion cyswllt"
+  },
+  "confirm": {
+    "sections": {
+      "your-question": {
+        "header": "Eich cwestiwn"
+      },
+      "your-details": {
+        "header": "Eich manylion"
+      },
+      "contact-information": {
+        "header": "Gwybodaeth gyswllt"
+      }
+    },
+    "fields": {
+      "phone-number": {
+        "label": "Rhif ffôn cyswllt"
+      }
+    }
+  },
+  "application-details": {
+    "header": "Manylion y cais"
+  },
+  "confirmation": {
+    "panel": "Mae eich cwestiwn wedi cael ei anfon"
+  }
+}

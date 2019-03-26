@@ -1,5 +1,10 @@
 {
     "start": "Start",
     "go-to-enquiry": "Go to enquiry form",
-    "confirm": "Send question"
+    "confirm": "Send question",
+    "continue": "Continue",
+    "start-again": "Start again",
+    "change": "Welsh: Change",
+    "cancel-and-leave": "Cancel and leave this service",
+    "back": "Back"
 }

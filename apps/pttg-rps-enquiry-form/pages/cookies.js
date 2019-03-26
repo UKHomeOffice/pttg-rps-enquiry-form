@@ -1,5 +1,5 @@
 module.exports = {
-    path: '/privacy-notice',
+    path: '/cookie-information',
     properties: {
         backLink: false
     }
