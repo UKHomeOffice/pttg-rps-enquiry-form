@@ -26,7 +26,6 @@ module.exports = {
     },
     'phone-number': {
         mixin: 'input-phone',
-        formatter: 'removespaces',
         validate: ['phonenumber']
     },
     'application-number': {
