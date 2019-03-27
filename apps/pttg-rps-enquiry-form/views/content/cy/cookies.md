@@ -27,7 +27,7 @@ Mae Google Analytics yn storio gwybodaeth am:
 * tudalennau rydych yn ymweld â hwy a faint o amser rydych yn ei dreulio arnynt
 * beth rydych yn clicio arno
 
-Nid oes unrhyw fanylion personol yn cael eu storio gyda'r wybodaeth hon, felly ni ellir eich adnabod.
+Nid oes unrhyw fanylion personol yn cael eu storio gyda’r wybodaeth hon, felly ni ellir eich adnabod.
 
 |  Enw  |                Pwrpas                 | Dod i ben |
 |:------|:--------------------------------------|:----------|
