@@ -42,8 +42,9 @@ Gallwch [eithrio allan o Google Analytics](https://tools.google.com/dlpage/gaopt
 ## Cwcis sesiwn
 Mae cwcis sesiwn yn cael eu lawrlwytho bob tro y byddwch yn ymweld â’r gwasanaeth ac yn cael eu dileu pan fyddwch yn cau eich porwr. Maent yn helpu’r gwasanaeth i weithio’n iawn.
 
-|       Enw        |                                                Pwrpas                                                   |          Dod i ben          |
-|:-----------------|:--------------------------------------------------------------------------------------------------------|:----------------------------|
-| hmbrp.sid        |  Mae’n Storio ID sesiwn a storio data rydych chi’n ei gofnodi dros dro i’ch galluogi i wneud cais       | When you close your browser |
-| hof-wizard-sc    |  Mae’n dweud wrthym pan mae eich sesiwn yn dechrau fel ein bod yn gallu dweud wrthych os yw’n dod i ben | When you close your browser |
-| hof-cookie-check |  Mae’n dweud wrthym eich bod wedi galluogi cwcis yn barod fel nad oes angen i ni ofyn i chi eto         | When you close your browser |
+|       Enw        |                                                Pwrpas                                                        |          Dod i ben          |
+|:-----------------|:-------------------------------------------------------------------------------------------------------------|:----------------------------|
+| hmbrp.sid        |  Mae’n Storio ID sesiwn a storio data rydych chi’n ei gofnodi dros dro i’ch galluogi i wneud cais            | When you close your browser |
+| hof-wizard-sc    |  Mae’n dweud wrthym pan mae eich sesiwn yn dechrau fel ein bod yn gallu dweud wrthych os yw’n dod i ben      | When you close your browser |
+| hof-cookie-check |  Mae’n dweud wrthym eich bod wedi galluogi cwcis yn barod fel nad oes angen i ni ofyn i chi eto              | When you close your browser |
+| lang             |  Yn cael ei ddefnyddio i gofio eich dewis iaith pan rydych yn symud ymlaen i’r sgrin nesaf o fewn y ffurflen | When you close your browser |
