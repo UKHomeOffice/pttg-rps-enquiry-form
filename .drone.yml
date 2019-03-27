@@ -55,7 +55,7 @@ pipeline:
       - docker tag pttg-rps-enquiry quay.io/ukhomeofficedigital/pttg-rps-enquiry:build-$${DRONE_BUILD_NUMBER}
       - docker push quay.io/ukhomeofficedigital/pttg-rps-enquiry:build-$${DRONE_BUILD_NUMBER}
     when:
-      branch: master
+      branch: [master, EE-12322-phone-number]
       event: push
 
   tag-docker-image-with-git-tag:
@@ -95,7 +95,7 @@ pipeline:
       - cd kube-pttg-rps-enquiry-form
       - ./deploy.sh
     when:
-      branch: master
+      branch: [master, EE-12322-phone-number]
       event: [push, tag]
 
   deployment:
