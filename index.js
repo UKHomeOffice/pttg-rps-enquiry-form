@@ -14,7 +14,7 @@ app.use('/notify-messages', notifyMessages);
 app.use((req, res, next) => {
     if (req.query.lang) {
         req.lang = req.query.lang;
-        res.cookie('lang', req.query.lang, {maxAge: 900000, httpOnly: true});
+        res.cookie('lang', req.query.lang, {httpOnly: true});
     } else if (req.cookies.lang) {
         req.lang = req.cookies.lang;
     }

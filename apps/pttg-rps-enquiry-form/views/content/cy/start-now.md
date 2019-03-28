@@ -14,4 +14,4 @@ Byddwn yn gofyn am eich enw a chyfeiriad e-bost er mwyn i ni allu eich ateb
 
 Os yw eich cwestiwn am gais  presennol, gwnewch yn siwr eich bod yn defnyddio’r un cyfeiriad e-bost a ddefnyddwyd i wneud cais:
 dyma’r cyfeiriad yr anfonwyd eich e-bost o gadarnhad iddo.
-Byddwn hefyd angen rhid cyfeirnod y cais.
+Byddwn hefyd angen rhif cyfeirnod y cais.
