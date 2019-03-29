@@ -1,8 +1,5 @@
 Use this form to ask a question about applying for settled status under the EU Settlement Scheme. We’ll reply within 5 working days.
 
-You can find out more about who is eligible to apply in the public test phase of the scheme at 
-[EU Settlement Scheme public test phase: applicant eligibility](https://www.gov.uk/guidance/eu-settlement-scheme-public-test-phase-applicant-eligibility).
-
 ## Before you start
 
 You may find the answer to your question here
