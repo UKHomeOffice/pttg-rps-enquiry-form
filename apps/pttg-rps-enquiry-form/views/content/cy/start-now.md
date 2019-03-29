@@ -1,8 +1,5 @@
 Defnyddiwch y ffurflen hon i ofyn am wneud cais am statws sefydlog o dan y Cynllun Preswylio’n Sefydlog i Ddinasyddion yr UE. Byddwn yn ymateb o fewn 5 diwrnod gwaith.
 
-Gallwch gael mwy o wybodaeth am bwy sy’n gymwys i wneud cais yn y cam profi i’r cyhoedd yn
-[Cynllun Preswylio’n Sefydlog i Ddinasyddion yr UE y cam profi i’r cyhoedd: hawl ymgeisydd](https://www.gov.uk/guidance/eu-settlement-scheme-public-test-phase-applicant-eligibility).
-
 ## Cyn i chi ddechrau
 
 Efallai y dewch o hyd i’r ateb i’ch cwestiwn yma
