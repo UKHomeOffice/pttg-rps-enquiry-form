@@ -5,11 +5,11 @@ Before((I, startPage) => {
 });
 
 const options = [
-    'What the EU Settlement Scheme is and who should apply',
-    'How to apply',
-    'An application submitted and in progress',
-    'The result of my application',
-    'I’m from an employer, community group or other supporting organisation'
+    'Who can apply to the EU Settlement Scheme?',
+    'How to apply and the application process',
+    'After you have submitted your application',
+    'The result you have received',
+    'Helping someone else to apply'
 ];
 
 options.forEach((option) => {

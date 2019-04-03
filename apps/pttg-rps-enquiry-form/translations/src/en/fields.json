@@ -6,19 +6,19 @@
     },
     "options": {
       "eligibility": {
-        "label": "What the EU Settlement Scheme is and who should apply"
+        "label": "Who can apply to the EU Settlement Scheme?"
       },
       "how-to-apply": {
-        "label": "How to apply"
+        "label": "How to apply and the application process"
       },
       "change-or-withdraw": {
-        "label": "An application submitted and in progress"
+        "label": "After you have submitted your application"
       },
       "application-result": {
-        "label": "The result of my application"
+        "label": "'The result you have received"
       },
       "supporting-organisation": {
-        "label": "I’m from an employer, community group or other supporting organisation"
+        "label": "Helping someone else to apply"
       }
     }
   },
