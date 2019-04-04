@@ -48,6 +48,13 @@ fieldset legend,
    }
 }
 
+.option-hint {
+    display: block;
+    margin-top: 100px;
+    margin-bottom: 30px;
+    padding-left: 50px;
+}
+
 /* More specific selectors override more general ones */
 .form-date .form-group .form-label {
   margin: inherit;
@@ -122,6 +129,3 @@ fieldset legend,
 .grid-row {
   clear: both;
 }
-
-
-

@@ -3,7 +3,27 @@ const dateComponent = require('hof-component-date');
 module.exports = {
     'your-question-option': {
         mixin: 'radio-group',
-        options: ['eligibility', 'how-to-apply', 'change-or-withdraw', 'application-result', 'supporting-organisation'],
+        options: [
+            {
+                value: 'eligibility'
+            },
+            {
+                value: 'how-to-apply',
+                child: 'partials/radio-group-option-explanation'
+            },
+            {
+                value: 'change-or-withdraw',
+                child: 'partials/radio-group-option-explanation',
+            },
+            {
+                value: 'application-result',
+                child: 'partials/radio-group-option-explanation'
+            },
+            {
+                value: 'supporting-organisation',
+                child: 'partials/radio-group-option-explanation'
+            }
+        ],
         validate: 'required'
     },
     'your-email-address': {
@@ -22,7 +42,7 @@ module.exports = {
     },
     'nationality': {
         mixin: 'select',
-        options: [{label: ' ', value: ''}].concat(require('hof-util-countries')())
+        options: [{ label: ' ', value: '' }].concat(require('hof-util-countries')())
     },
     'phone-number': {
         formatter: 'removespaces',
@@ -84,9 +104,9 @@ module.exports = {
     },
     'date-of-birth': dateComponent('date-of-birth', {
         validate: [
-            {type: 'before'},
-            {type: 'after', arguments: '1903-01-01'},
-            {type: 'date'}
+            { type: 'before' },
+            { type: 'after', arguments: '1903-01-01' },
+            { type: 'date' }
         ]
     })
 };
