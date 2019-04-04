@@ -20,7 +20,8 @@ module.exports = {
         './apps/pttg-rps-enquiry-form'
     ],
     'session': {
-        'name': 'pttg-rps-enquiry-form.hof.sid'
+        'name': 'pttg-rps-enquiry-form.hof.sid',
+        'cookie': {secure: process.env.USE_SECURE_COOKIE}
     },
     redis: {
         host: process.env.REDIS_SERVICE_HOST || process.env.REDIS_HOST || 'localhost',

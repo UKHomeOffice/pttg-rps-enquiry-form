@@ -124,6 +124,7 @@ pipeline:
       - KUBE_NAMESPACE=pttg-rps-enquiry-pr
       - ENVIRONMENT=pr
       - KUBE_SERVER=https://kube-api-prod.prod.acp.homeoffice.gov.uk
+      - USE_SECURE_COOKIE=true
     secrets:
       - pttg_rps_pr
       - notify_recipient_prod
