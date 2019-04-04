@@ -13,7 +13,7 @@ module.exports = {
             },
             {
                 value: 'change-or-withdraw',
-                child: 'partials/radio-group-option-explanation',
+                child: 'partials/radio-group-option-explanation'
             },
             {
                 value: 'application-result',
