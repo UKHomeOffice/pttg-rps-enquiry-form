@@ -87,6 +87,10 @@ fieldset legend,
   margin: 0;
 }
 
+@media (max-width: 720px) {
+  .button {
+    margin-bottom: 1em; } }
+
 .u-fr {
   float: right;
 }
@@ -122,6 +126,3 @@ fieldset legend,
 .grid-row {
   clear: both;
 }
-
-
-
