@@ -42,7 +42,7 @@ module.exports = {
     },
     'nationality': {
         mixin: 'select',
-        options: [{ label: ' ', value: '' }].concat(require('hof-util-countries')())
+        options: [{label: ' ', value: ''}].concat(require('hof-util-countries')())
     },
     'phone-number': {
         formatter: 'removespaces',
@@ -104,9 +104,9 @@ module.exports = {
     },
     'date-of-birth': dateComponent('date-of-birth', {
         validate: [
-            { type: 'before' },
-            { type: 'after', arguments: '1903-01-01' },
-            { type: 'date' }
+            {type: 'before'},
+            {type: 'after', arguments: '1903-01-01'},
+            {type: 'date'}
         ]
     })
 };
