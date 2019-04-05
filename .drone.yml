@@ -109,8 +109,7 @@ pipeline:
       - pttg_rps_dev
       - pttg_rps_test
       - basic_auth
-      - notify_recipient_dev
-      - notify_recipient_test
+      - notify_recipient_notprod
     commands:
       - cd kube-pttg-rps-enquiry-form
       - ./deploy.sh
