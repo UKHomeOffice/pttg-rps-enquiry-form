@@ -50,17 +50,12 @@ fieldset legend,
 
 .option-hint {
     display: block;
+    margin-top: 5px;
 
     line-height: 1.31579;
     font-family: "nta", Arial, sans-serif;
     font-weight: normal;
     color: #6f777b
-}
-
-.option-hint:last-of-type {
-    // There's a css-selector in hof-theme-govuk that removes the 10px bottom border from the last '.multiple-choice div'
-    // in a radio-group. This makes the last explanation/option-hint appear closer to itss option so this moves it back down.
-    margin-top: 10px
 }
 
 // govuk style guidelines for radio buttons - https://design-system.service.gov.uk/components/radios/ - have different font-weights for the labels

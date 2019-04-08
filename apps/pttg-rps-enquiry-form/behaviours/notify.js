@@ -3,7 +3,7 @@ const log = require('../../../logger');
 
 const getValue = (req, field) => {
     const value = req.sessionModel.get(field);
-    const key = `fields.${field}.options.${value}.label`;
+    const key = `fields.${field}.options.${value}.label`; // TODO OJR EE-16910 this can't work anymore with HTML in label - needs new field
     return req.translate(key);
 };
 
