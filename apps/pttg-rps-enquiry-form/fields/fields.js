@@ -9,19 +9,15 @@ module.exports = {
             },
             {
                 value: 'how-to-apply',
-                child: 'partials/radio-group-option-explanation'
             },
             {
                 value: 'change-or-withdraw',
-                child: 'partials/radio-group-option-explanation'
             },
             {
                 value: 'application-result',
-                child: 'partials/radio-group-option-explanation'
             },
             {
                 value: 'supporting-organisation',
-                child: 'partials/radio-group-option-explanation'
             }
         ],
         validate: 'required'
