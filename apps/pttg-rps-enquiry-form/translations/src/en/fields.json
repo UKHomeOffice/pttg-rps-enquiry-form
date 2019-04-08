@@ -10,8 +10,8 @@
         "emailSubject": "Who can apply to the EU Settlement Scheme"
       },
       "how-to-apply": {
-        "label": "What you need to apply and help while you are applying<span id=\"your-question-option-how-to-apply-option-hint\" class=\"option-hint\" for=\"your-question-option-how-to-apply\">What you need to apply and help while you are applying</span >",
-        "emailSubject": "What you need to apply and help while you are applying"
+        "label": "How to apply and the application process<span id=\"your-question-option-how-to-apply-option-hint\" class=\"option-hint\" for=\"your-question-option-how-to-apply\">What you need to apply and help while you are applying</span >",
+        "emailSubject": "How to apply and the application process"
       },
       "change-or-withdraw": {
         "label": "After you have submitted your application<span id=\"your-question-option-change-or-withdraw\" class=\"option-hint\" for=\"your-question-option-change-or-withdraw\">Choose this option if you have submitted your application but do not yet have a result</span >",
