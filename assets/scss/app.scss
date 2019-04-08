@@ -63,6 +63,15 @@ fieldset legend,
     margin-top: 10px
 }
 
+// govuk style guidelines for radio buttons - https://design-system.service.gov.uk/components/radios/ - have different font-weights for the labels
+// depending on if there's a hint. We have hints in English what-is-your-question only. The only way to keep both looking correct is to set the
+// question options to 'font-weight: 700' then change it back to 400 for the Welsh ones (which are wrapped in a span with the cy-question class)
+.block-label[for*="your-question"] {
+    font-weight: 700;
+}
+.cy-question {
+    font-weight: 400;
+}
 
 /* More specific selectors override more general ones */
 .form-date .form-group .form-label {
