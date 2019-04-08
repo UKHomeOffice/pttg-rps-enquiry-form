@@ -23,7 +23,7 @@ const ORGANISATION_2 = 'another org';
 
 Scenario('A user can update fields on the question page by clicking the Change button',
     function *(I) {
-        I.checkOption('How to apply');
+        I.checkOption('How to apply and the application process');
         I.submitForm();
         I.checkOption('No');
         I.submitForm();
@@ -62,7 +62,7 @@ Scenario('A user can update fields on the question page by clicking the Change b
 
 Scenario('A user can update fields on the question-about-existing-application page by clicking the Change button',
     function *(I) {
-        I.checkOption('How to apply');
+        I.checkOption('How to apply and the application process');
         I.submitForm();
         I.checkOption('Yes');
         I.submitForm();
@@ -106,7 +106,7 @@ Scenario('A user can update fields on the question-about-existing-application pa
 
 Scenario('A user can update fields on the supporting-org-question page by clicking the Change button',
     function *(I) {
-        I.checkOption('I’m from an employer, community group or other supporting organisation');
+        I.checkOption('Helping someone else to apply');
         I.submitForm();
         I.checkOption('No');
         I.submitForm();

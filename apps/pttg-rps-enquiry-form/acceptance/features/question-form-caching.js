@@ -29,7 +29,7 @@ Before((I, startPage) => {
 
 Scenario('Once the form is submitted, pressing back button stops user getting back to form data',
     function(I) {
-        navigateThroughForm(I, 'What the EU Settlement Scheme is and who should apply', 'No');
+        navigateThroughForm(I, 'Who can apply to the EU Settlement Scheme', 'No');
         fillInTheNewApplicationForm(I);
         I.submitForm();
 

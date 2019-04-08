@@ -5,7 +5,7 @@ Before((I, startPage) => {
     I.clearCookie();
     I.amOnPage(startPage.url);
     I.click('Start');
-    I.checkOption('I’m from an employer, community group or other supporting organisation');
+    I.checkOption('Helping someone else to apply');
     I.submitForm();
     I.checkOption('No');
     I.submitForm();

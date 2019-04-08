@@ -4,8 +4,8 @@ Before((I, startPage) => {
     I.click('Start');
 });
 
-const NON_ORGANISATION_OPTION = 'What the EU Settlement Scheme is and who should apply';
-const ORGANISATION_OPTION = 'I’m from an employer, community group or other supporting organisation';
+const NON_ORGANISATION_OPTION = 'Who can apply to the EU Settlement Scheme';
+const ORGANISATION_OPTION = 'Helping someone else to apply';
 
 
 Scenario('I get to the non-application non-organisation question page', (I, questionPage) => {
