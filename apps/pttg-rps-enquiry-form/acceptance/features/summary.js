@@ -5,7 +5,7 @@ Before((I, startPage) => {
     I.clearCookie();
     I.amOnPage(startPage.url);
     I.click('Start');
-    I.checkOption('How to apply');
+    I.checkOption('How to apply and the application process');
     I.submitForm();
     I.checkOption('No');
     I.submitForm();
