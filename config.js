@@ -21,8 +21,9 @@ module.exports = {
     ],
     'session': {
         'name': 'pttg-rps-enquiry-form.hof.sid',
-        // NODE_ENV is set by drone during deployments. Leave unset for local develompent so that cookie (and therefore session) works over HTTP
-        cookie: { secure: Boolean(process.env.NODE_ENV) }
+        // NODE_ENV is set by drone during deployments. Leave unset or not equal to 'production' for local develompent
+        // so that cookie (and therefore session) works over HTTP
+        cookie: {secure: (process.env.NODE_ENV === 'production')}
     },
     redis: {
         host: process.env.REDIS_SERVICE_HOST || process.env.REDIS_HOST || 'localhost',
