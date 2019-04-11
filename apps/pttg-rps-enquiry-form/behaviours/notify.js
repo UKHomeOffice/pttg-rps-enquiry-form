@@ -3,7 +3,7 @@ const log = require('../../../logger');
 
 const getValue = (req, field) => {
     const value = req.sessionModel.get(field);
-    const key = `fields.${field}.options.${value}.label`;
+    const key = `fields.${field}.options.${value}.emailSubject`;
     return req.translate(key);
 };
 

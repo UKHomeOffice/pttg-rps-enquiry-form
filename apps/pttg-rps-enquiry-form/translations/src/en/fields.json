@@ -6,23 +6,24 @@
     },
     "options": {
       "eligibility": {
-        "label": "Who can apply to the EU Settlement Scheme"
+        "label": "<span class=\"en-question\">Who can apply to the EU Settlement Scheme<span>",
+        "emailSubject": "Who can apply to the EU Settlement Scheme"
       },
       "how-to-apply": {
-        "label": "How to apply and the application process",
-        "hint": "What you need to apply and help while you are applying"
+        "label": "<span class=\"en-question\">How to apply and the application process<span><span id=\"your-question-option-how-to-apply-option-hint\" class=\"option-hint\" for=\"your-question-option-how-to-apply\">What you need to apply and help while you are applying</span >",
+        "emailSubject": "How to apply and the application process"
       },
       "change-or-withdraw": {
-        "label": "After you have submitted your application",
-        "hint": "Choose this option if you have submitted your application but do not yet have a result"
+        "label": "<span class=\"en-question\">After you have submitted your application<span><span id=\"your-question-option-change-or-withdraw\" class=\"option-hint\" for=\"your-question-option-change-or-withdraw\">Choose this option if you have submitted your application but do not yet have a result</span >",
+        "emailSubject": "After you have submitted your application"
       },
       "application-result": {
-        "label": "The result you have received",
-        "hint": "Questions about the result of your application"
+        "label": "<span class=\"en-question\">The result you have received<span><span id=\"your-question-optionapplication-result-option-hint\" class=\"option-hint\" for=\"your-question-option-application-result\">Questions about the result of your application</span >",
+        "emailSubject": "The result you have received"
       },
       "supporting-organisation": {
-        "label": "Helping someone else to apply",
-        "hint": "Choose this option if you represent an employer, community group or supporting organisation. If your question is about your own application, choose a different option"
+        "label": "<span class=\"en-question\">Helping someone else to apply<span><span id=\"your-question-option-supporting-organisation-option-hint\" class=\"option-hint\" for=\"your-question-option-supporting-organisation\">Choose this option if you represent an employer, community group or supporting organisation. If your question is about your own application, choose a different option</span >",
+        "emailSubject": "Helping someone else to apply"
       }
     }
   },
