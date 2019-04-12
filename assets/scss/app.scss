@@ -50,23 +50,22 @@ fieldset legend,
 
 .option-hint {
     display: block;
-    padding-bottom: 20px;
-    padding-left: 75px;
-    float: left;
+    margin-top: 5px;
 
-    font-size: 16px;
     line-height: 1.31579;
     font-family: "nta", Arial, sans-serif;
     font-weight: normal;
     color: #6f777b
 }
 
-.option-hint:last-of-type {
-    // There's a css-selector in hof-theme-govuk that removes the 10px bottom border from the last '.multiple-choice div'
-    // in a radio-group. This makes the last explanation/option-hint appear closer to itss option so this moves it back down.
-    margin-top: 10px
+// govuk style guidelines for radio buttons - https://design-system.service.gov.uk/components/radios/ - have different font-weights for the labels
+// depending on if there's a hint. We have hints in English what-is-your-question only so the text must be thicker than the Welsh text. 
+.en-question {
+    font-weight: 700;
 }
-
+.cy-question {
+    font-weight: 400;
+}
 
 /* More specific selectors override more general ones */
 .form-date .form-group .form-label {

@@ -6,23 +6,24 @@
     },
     "options": {
       "eligibility": {
-        "label": "Beth yw’r Cynllun Preswylio’n Sefydlog i Ddinasyddion yr UE a phwy ddylai wneud cais"
+        "label": "<span class=\"cy-question\">Beth yw’r Cynllun Preswylio’n Sefydlog i Ddinasyddion yr UE a phwy ddylai wneud cais</span>",
+        "emailSubject": "Beth yw’r Cynllun Preswylio’n Sefydlog i Ddinasyddion yr UE a phwy ddylai wneud cai"
       },
       "how-to-apply": {
-        "label": "Sut i wneud cais",
-        "hint": " "
+        "label": "<span class=\"cy-question\">Sut i wneud cais</span>",
+        "emailSubject": "Sut i wneud cais"
       },
       "change-or-withdraw": {
-        "label": "Cais wedi’i anfon ac yn cael ei ddelio â",
-        "hint": " "
+        "label": "<span class=\"cy-question\">Cais wedi’i anfon ac yn cael ei ddelio â</span>",
+        "emailSubject": "Cais wedi’i anfon ac yn cael ei ddelio â"
       },
       "application-result": {
-        "label": "Canlyniad fy nghais",
-        "hint": " "
+        "label": "<span class=\"cy-question\">Canlyniad fy nghais</span>",
+        "emailSubject": "Canlyniad fy nghais"
       },
       "supporting-organisation": {
-        "label": "Rwyf o gyflogwr, grwp cymunedol neu sefydliad cefnogol arall",
-        "hint": " "
+        "label": "<span class=\"cy-question\">Rwyf o gyflogwr, grwp cymunedol neu sefydliad cefnogol arall</span>",
+        "emailSubject": "Rwyf o gyflogwr, grwp cymunedol neu sefydliad cefnogol arall"
       }
     }
   },
