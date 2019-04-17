@@ -15,7 +15,7 @@
       },
       "change-or-withdraw": {
         "label": "<span class=\"en-question\">After you have submitted your application<span><span id=\"your-question-option-change-or-withdraw\" class=\"option-hint\" for=\"your-question-option-change-or-withdraw\">Choose this option if you have submitted your application but do not yet have a result</span >",
-        "emailSubject": "An application submitted and in progress – Application submitted"
+        "emailSubject": "An application submitted and in progress"
       },
       "application-result": {
         "label": "<span class=\"en-question\">The result you have received<span><span id=\"your-question-optionapplication-result-option-hint\" class=\"option-hint\" for=\"your-question-option-application-result\">Questions about the result of your application</span >",
