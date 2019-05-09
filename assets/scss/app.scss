@@ -58,13 +58,11 @@ fieldset legend,
     color: #6f777b
 }
 
-// govuk style guidelines for radio buttons - https://design-system.service.gov.uk/components/radios/ - have different font-weights for the labels
-// depending on if there's a hint. We have hints in English what-is-your-question only so the text must be thicker than the Welsh text. 
 .en-question {
     font-weight: 700;
 }
 .cy-question {
-    font-weight: 400;
+    font-weight: 700;
 }
 
 /* More specific selectors override more general ones */
