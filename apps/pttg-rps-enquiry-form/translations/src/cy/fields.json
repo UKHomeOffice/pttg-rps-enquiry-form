@@ -6,23 +6,23 @@
     },
     "options": {
       "eligibility": {
-        "label": "<span class=\"cy-question\">Pwy all wneud cais i’r Cynllun Preswylio’n Sefydlog yr UE</span>",
+        "label": "<span class=\"question-option\">Pwy all wneud cais i’r Cynllun Preswylio’n Sefydlog yr UE</span>",
         "emailSubject": "Welsh Language"
       },
       "how-to-apply": {
-        "label": "<span class=\"cy-question\">Sut i wneud cais a’r broses gwneud cais</span><span id=\"your-question-option-how-to-apply-option-hint\" class=\"option-hint\" for=\"your-question-option-how-to-apply\">Beth sydd ei angen arnoch i wneud cais a help tra rydych yn ceisio</span>",
+        "label": "<span class=\"question-option\">Sut i wneud cais a’r broses gwneud cais</span><span id=\"your-question-option-how-to-apply-option-hint\" class=\"option-hint\" for=\"your-question-option-how-to-apply\">Beth sydd ei angen arnoch i wneud cais a help tra rydych yn ceisio</span>",
         "emailSubject": "Welsh Language"
       },
       "change-or-withdraw": {
-        "label": "<span class=\"cy-question\">Ar ôl i chi gyflwyno’ch cais</span><span id=\"your-question-option-change-or-withdraw\" class=\"option-hint\" for=\"your-question-option-change-or-withdraw\">Dewiswch yr opsiwn hwn os ydych wedi anfon eich cais ond heb gael canlyniad eto</span>",
+        "label": "<span class=\"question-option\">Ar ôl i chi gyflwyno’ch cais</span><span id=\"your-question-option-change-or-withdraw\" class=\"option-hint\" for=\"your-question-option-change-or-withdraw\">Dewiswch yr opsiwn hwn os ydych wedi anfon eich cais ond heb gael canlyniad eto</span>",
         "emailSubject": "Welsh Language"
       },
       "application-result": {
-        "label": "<span class=\"cy-question\">Y canlyniad rydych wedi ei dderbyn</span><span id=\"your-question-optionapplication-result-option-hint\" class=\"option-hint\" for=\"your-question-option-application-result\">Cwestiynau am ganlyniad eich cais</span>",
+        "label": "<span class=\"question-option\">Y canlyniad rydych wedi ei dderbyn</span><span id=\"your-question-optionapplication-result-option-hint\" class=\"option-hint\" for=\"your-question-option-application-result\">Cwestiynau am ganlyniad eich cais</span>",
         "emailSubject": "Welsh Language"
       },
       "supporting-organisation": {
-        "label": "<span class=\"cy-question\">Helpu rhywun i wneud cais</span><span id=\"your-question-option-supporting-organisation-option-hint\" class=\"option-hint\" for=\"your-question-option-supporting-organisation\">Dewiswch yr opsiwn hwn os ydych yn cynrychioli cyflogwr, grŵp cymunedol neu sefydliad cefnogol. Os yw'ch cwestiwn yn ymwneud â'ch cais eich hun, dewiswch opsiwn gwahanol</span>",
+        "label": "<span class=\"question-option\">Helpu rhywun i wneud cais</span><span id=\"your-question-option-supporting-organisation-option-hint\" class=\"option-hint\" for=\"your-question-option-supporting-organisation\">Dewiswch yr opsiwn hwn os ydych yn cynrychioli cyflogwr, grŵp cymunedol neu sefydliad cefnogol. Os yw'ch cwestiwn yn ymwneud â'ch cais eich hun, dewiswch opsiwn gwahanol</span>",
         "emailSubject": "Welsh Language"
       }
     }
