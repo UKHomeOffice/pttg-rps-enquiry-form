@@ -6,23 +6,23 @@
     },
     "options": {
       "eligibility": {
-        "label": "<span class=\"cy-question\">Beth yw’r Cynllun Preswylio’n Sefydlog i Ddinasyddion yr UE a phwy ddylai wneud cais</span>",
+        "label": "<span class=\"cy-question\">Pwy all wneud cais i’r Cynllun Preswylio’n Sefydlog yr UE</span>",
         "emailSubject": "Welsh Language"
       },
       "how-to-apply": {
-        "label": "<span class=\"cy-question\">Sut i wneud cais</span>",
+        "label": "<span class=\"cy-question\">Sut i wneud cais a’r broses gwneud cais</span>",
         "emailSubject": "Welsh Language"
       },
       "change-or-withdraw": {
-        "label": "<span class=\"cy-question\">Cais wedi’i anfon ac yn cael ei ddelio â</span>",
+        "label": "<span class=\"cy-question\">Ar ôl i chi gyflwyno’ch cais</span>",
         "emailSubject": "Welsh Language"
       },
       "application-result": {
-        "label": "<span class=\"cy-question\">Canlyniad fy nghais</span>",
+        "label": "<span class=\"cy-question\">Y canlyniad rydych wedi ei dderbyn</span>",
         "emailSubject": "Welsh Language"
       },
       "supporting-organisation": {
-        "label": "<span class=\"cy-question\">Rwyf o gyflogwr, grwp cymunedol neu sefydliad cefnogol arall</span>",
+        "label": "<span class=\"cy-question\">Helpu rhywun i wneud cais</span>",
         "emailSubject": "Welsh Language"
       }
     }
