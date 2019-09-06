@@ -31,6 +31,7 @@ module.exports = {
         password: process.env.REDIS_PASSWORD || null
     },
     gaTagId: process.env.GOOGLE_ANALYTICS_UA || 'UA-84737854-3',
+    gaCrossGovId: process.env.GOOGLE_ANALYTICS_SECONDARY_UA || 'UA-145652997-1',
     bearerToken: process.env.NOTIFY_BEARER_TOKEN,
     slackWebhookURL: process.env.SLACK_WEBHOOK_URL,
     slackChannelName: process.env.SLACK_CHANNEL_NAME,

@@ -12,6 +12,13 @@ const app = hof(settings);
 app.use('/notify-messages', notifyMessages);
 
 app.use((req, res, next) => {
+    if (settings.gaCrossGovId) {
+        res.locals.gaCrossGovId = settings.gaCrossGovId;
+    }
+    return next();
+});
+
+app.use((req, res, next) => {
     if (req.query.lang) {
         req.lang = req.query.lang;
         res.cookie('lang', req.query.lang, {httpOnly: true});
