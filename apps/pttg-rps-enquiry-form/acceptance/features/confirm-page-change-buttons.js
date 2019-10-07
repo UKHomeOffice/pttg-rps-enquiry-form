@@ -30,7 +30,7 @@ Scenario('A user can update fields on the question page by clicking the Change b
 
         I.fillField('Your question', QUESTION_1);
         I.fillField('Your email address', EMAIL_1);
-        I.fillField('Your name', NAME_1);
+        I.fillField('Your full name', NAME_1);
         I.fillField('Telephone number', TELEPHONE_1);
         I.submitForm();
 
@@ -49,7 +49,7 @@ Scenario('A user can update fields on the question page by clicking the Change b
 
         I.fillField('Your question', QUESTION_2);
         I.fillField('Your email address', EMAIL_2);
-        I.fillField('Your name', NAME_2);
+        I.fillField('Your full name', NAME_2);
         I.fillField('Telephone number', TELEPHONE_2);
         I.submitForm();
 
@@ -114,7 +114,7 @@ Scenario('A user can update fields on the supporting-org-question page by clicki
         I.fillField('Your question', QUESTION_1);
         I.fillField('Organisation name', ORGANISATION_1);
         I.fillField('Your email address', EMAIL_1);
-        I.fillField('Your name', NAME_1);
+        I.fillField('Your full name', NAME_1);
         I.fillField('Telephone number', TELEPHONE_1);
         I.submitForm();
 
@@ -136,7 +136,7 @@ Scenario('A user can update fields on the supporting-org-question page by clicki
         I.fillField('Your question', QUESTION_2);
         I.fillField('Organisation name', ORGANISATION_2);
         I.fillField('Your email address', EMAIL_2);
-        I.fillField('Your name', NAME_2);
+        I.fillField('Your full name', NAME_2);
         I.fillField('Telephone number', TELEPHONE_2);
         I.submitForm();
 

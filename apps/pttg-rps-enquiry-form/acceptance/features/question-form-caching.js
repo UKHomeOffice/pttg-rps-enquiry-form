@@ -8,7 +8,7 @@ function navigateThroughForm(I, whatQuestionIsAbout, isExistingApplication) {
 function fillInTheNewApplicationForm(I) {
     I.fillField('Your question', 'Test question');
     I.fillField('Your email address', 'test@test.com');
-    I.fillField('Your name', 'Test User');
+    I.fillField('Your full name', 'Test User');
     I.fillField('Telephone number', '111222333');
     I.submitForm();
 }

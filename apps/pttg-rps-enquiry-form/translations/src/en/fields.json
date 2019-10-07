@@ -92,9 +92,9 @@
     }
   },
   "your-name": {
-    "label": "Your name",
+    "label": "Your full name",
     "validation": {
-      "required": "Enter your name",
+      "required": "Enter your full name",
       "maxlength": "Name must be fewer than 256 characters"
     }
   },
