@@ -140,3 +140,11 @@ fieldset legend,
 .grid-row {
   clear: both;
 }
+
+/* The 'application-number' field on the English version has an 'example'. This appears too far away from
+the label if we don't adjust. It is impossible to find a selector that only selects the label so as a workaround,
+we add a negative margin to this element that is the same size.*/
+#application-number-example {
+  margin-top: -0.83333em;
+  margin-bottom: 0.83333em;
+}

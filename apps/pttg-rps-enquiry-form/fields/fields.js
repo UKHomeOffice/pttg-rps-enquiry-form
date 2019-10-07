@@ -38,7 +38,7 @@ module.exports = {
                 arguments: '25'
             }
         ],
-        child: 'e.g. 3434-1234-1234-1234',
+        child: 'partials/application-number-example',
     },
     'question-body': {
         mixin: 'textarea',
