@@ -38,7 +38,7 @@ module.exports = {
                 arguments: '25'
             }
         ],
-        child: 'partials/application-number-example',
+        child: '{{#t}}fields.application-number.example{{/t}}',
     },
     'question-body': {
         mixin: 'textarea',
