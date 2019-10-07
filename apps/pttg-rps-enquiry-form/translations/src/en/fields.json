@@ -22,7 +22,7 @@
         "emailSubject": "The result of my application"
       },
       "supporting-organisation": {
-        "label": "<span class=\"question-option\">Helping someone else to apply<span><span id=\"your-question-option-supporting-organisation-option-hint\" class=\"option-hint\" for=\"your-question-option-supporting-organisation\">Choose this option if you represent an employer, community group or supporting organisation. If your question is about your own application, choose a different option</span>",
+        "label": "<span class=\"question-option\">Helping someone else to apply<span><span id=\"your-question-option-supporting-organisation-option-hint\" class=\"option-hint\" for=\"your-question-option-supporting-organisation\">Choose this option if you are a friend, family member, employer, community group or supporting organisation asking about someone else’s application</span>",
         "emailSubject": "I’m from an employer, community group or other supporting organisation"
       }
     }
