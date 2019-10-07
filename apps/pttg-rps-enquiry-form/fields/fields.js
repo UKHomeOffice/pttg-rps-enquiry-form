@@ -38,7 +38,7 @@ module.exports = {
                 arguments: '25'
             }
         ],
-        child: '{{#t}}fields.application-number.example{{/t}}',
+        child: '{{#t}}fields.application-number.example{{/t}}'
     },
     'question-body': {
         mixin: 'textarea',
