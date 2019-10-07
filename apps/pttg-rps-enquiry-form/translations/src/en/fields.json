@@ -6,7 +6,7 @@
     },
     "options": {
       "eligibility": {
-        "label": "<span class=\"question-option\">Who can apply to the EU Settlement Scheme<span>",
+        "label": "<span class=\"question-option\">Who can apply<span>",
         "emailSubject": "What the EU Settlement Scheme is and who should apply"
       },
       "how-to-apply": {

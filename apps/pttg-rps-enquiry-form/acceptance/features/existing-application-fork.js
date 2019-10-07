@@ -4,7 +4,7 @@ Before((I, startPage) => {
     I.click('Start');
 });
 
-const NON_ORGANISATION_OPTION = 'Who can apply to the EU Settlement Scheme';
+const NON_ORGANISATION_OPTION = 'Who can apply';
 const ORGANISATION_OPTION = 'Helping someone else to apply';
 
 

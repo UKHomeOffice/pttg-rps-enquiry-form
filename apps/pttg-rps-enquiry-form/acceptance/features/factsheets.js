@@ -5,7 +5,7 @@ Before((I, startPage) => {
 });
 
 const options = [
-    'Who can apply to the EU Settlement Scheme',
+    'Who can apply',
     'How to apply and the application process',
     'After you have submitted your application',
     'The result you have received',
