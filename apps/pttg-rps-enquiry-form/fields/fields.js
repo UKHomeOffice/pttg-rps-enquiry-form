@@ -37,7 +37,8 @@ module.exports = {
                 type: 'maxlength',
                 arguments: '25'
             }
-        ]
+        ],
+        child: 'e.g. 3434-1234-1234-1234',
     },
     'question-body': {
         mixin: 'textarea',
