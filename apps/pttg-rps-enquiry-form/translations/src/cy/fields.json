@@ -61,6 +61,7 @@
   "application-number": {
     "label": "Rhif y cais",
     "hint": "Bydd hwn ar unrhyw e-byst rydych wedi’u derbyn am eich cais",
+    "example": " ",
     "validation": {
       "maxlength": "Ni all Rhifau Cyfeirnod Unigryw fod yn fwy na 25 nod",
       "required": "Rhowch y rhif cyfeirnod sy’n gysylltiedig â’ch cais"

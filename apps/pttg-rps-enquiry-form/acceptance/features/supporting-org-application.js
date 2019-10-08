@@ -17,7 +17,7 @@ Scenario('I go to the first supporting organisation application page',
     });
 
 Scenario('I go to the second supporting organisation application page', (I, supportingOrgApplicationQuestionPage) => {
-    I.fillField('Your name', 'Joe Bloggs');
+    I.fillField('Your full name', 'Joe Bloggs');
     I.fillField('Organisation name', 'Contoso');
     I.click('Continue');
     I.seeInCurrentUrl(supportingOrgApplicationQuestionPage.url);
@@ -44,7 +44,7 @@ Before((I, startPage, supportingOrgApplicationQuestionPage) => {
     I.submitForm();
     I.checkOption('Yes');
     I.submitForm();
-    I.fillField('Your name', 'Joe Bloggs');
+    I.fillField('Your full name', 'Joe Bloggs');
     I.fillField('Organisation name', 'Contoso');
     I.click('Continue');
     I.seeInCurrentUrl(supportingOrgApplicationQuestionPage.url);

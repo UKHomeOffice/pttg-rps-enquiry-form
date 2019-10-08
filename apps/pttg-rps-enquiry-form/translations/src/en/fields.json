@@ -6,7 +6,7 @@
     },
     "options": {
       "eligibility": {
-        "label": "<span class=\"question-option\">Who can apply to the EU Settlement Scheme<span>",
+        "label": "<span class=\"question-option\">Who can apply<span>",
         "emailSubject": "What the EU Settlement Scheme is and who should apply"
       },
       "how-to-apply": {
@@ -22,7 +22,7 @@
         "emailSubject": "The result of my application"
       },
       "supporting-organisation": {
-        "label": "<span class=\"question-option\">Helping someone else to apply<span><span id=\"your-question-option-supporting-organisation-option-hint\" class=\"option-hint\" for=\"your-question-option-supporting-organisation\">Choose this option if you represent an employer, community group or supporting organisation. If your question is about your own application, choose a different option</span>",
+        "label": "<span class=\"question-option\">Helping someone else to apply<span><span id=\"your-question-option-supporting-organisation-option-hint\" class=\"option-hint\" for=\"your-question-option-supporting-organisation\">Choose this option if you are a friend, family member, employer, community group or supporting organisation asking about someone else’s application</span>",
         "emailSubject": "I’m from an employer, community group or other supporting organisation"
       }
     }
@@ -61,6 +61,7 @@
   "application-number": {
     "label": "Application number",
     "hint": "This will be on any emails you received about your application.",
+    "example": "<span class=\"form-hint\" id=\"application-number-example\">e.g. 3434-1234-1234-1234</span>",
     "validation": {
       "maxlength": "Unique Reference Numbers cannot exceed 25 characters",
       "required": "Enter the reference number associated with your application"
@@ -92,9 +93,9 @@
     }
   },
   "your-name": {
-    "label": "Your name",
+    "label": "Your full name",
     "validation": {
-      "required": "Enter your name",
+      "required": "Enter your full name",
       "maxlength": "Name must be fewer than 256 characters"
     }
   },
