@@ -72,8 +72,8 @@ pipeline:
         exclude: master
       event: push
 
-    install-docker-image-from-master-branch-build:
-      image: docker:18.03.1-ce
+  install-docker-image-from-master-branch-build:
+    image: docker:18.03.1-ce
       environment:
         - DOCKER_HOST=tcp://172.17.0.1:2375
       secrets:
