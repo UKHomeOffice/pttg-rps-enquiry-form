@@ -18,7 +18,7 @@ Scenario('I go to the supporting organisation general enquiry page', (I, support
 Scenario('I must able to enter data into all fields', (I, supportingOrgQuestionPage) => {
     I.fillField('Your question', lipsum('2000c'));
     I.fillField('Your email address', 'applicant@example.com');
-    I.fillField('Your name', 'Joe Bloggs');
+    I.fillField('Your full name', 'Joe Bloggs');
     I.fillField('Organisation name', 'Northwind Traders');
 
     I.click('Continue');

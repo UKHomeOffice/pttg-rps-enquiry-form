@@ -8,7 +8,7 @@ function navigateThroughForm(I, whatQuestionIsAbout, isExistingApplication) {
 function fillInTheNewApplicationForm(I) {
     I.fillField('Your question', 'Test question');
     I.fillField('Your email address', 'test@test.com');
-    I.fillField('Your name', 'Test User');
+    I.fillField('Your full name', 'Test User');
     I.fillField('Telephone number', '111222333');
     I.submitForm();
 }
@@ -29,7 +29,7 @@ Before((I, startPage) => {
 
 Scenario('Once the form is submitted, pressing back button stops user getting back to form data',
     function(I) {
-        navigateThroughForm(I, 'Who can apply to the EU Settlement Scheme', 'No');
+        navigateThroughForm(I, 'Who can apply', 'No');
         fillInTheNewApplicationForm(I);
         I.submitForm();
 

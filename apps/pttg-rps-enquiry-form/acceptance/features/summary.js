@@ -10,7 +10,7 @@ Before((I, startPage) => {
     I.checkOption('No');
     I.submitForm();
     I.fillField('Your question', 'any question');
-    I.fillField('Your name', 'Any Name');
+    I.fillField('Your full name', 'Any Name');
     I.fillField('Your email address', 'email@email.com');
     I.submitForm();
 });
