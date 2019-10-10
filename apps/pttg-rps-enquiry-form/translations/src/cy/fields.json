@@ -6,7 +6,7 @@
     },
     "options": {
       "eligibility": {
-        "label": "<span class=\"question-option\">Pwy all wneud cais i’r Cynllun Preswylio’n Sefydlog yr UE</span>",
+        "label": "<span class=\"question-option\">Pwy all wneud cais</span>",
         "emailSubject": "Welsh Language"
       },
       "how-to-apply": {
@@ -22,7 +22,7 @@
         "emailSubject": "Welsh Language"
       },
       "supporting-organisation": {
-        "label": "<span class=\"question-option\">Helpu rhywun i wneud cais</span><span id=\"your-question-option-supporting-organisation-option-hint\" class=\"option-hint\" for=\"your-question-option-supporting-organisation\">Dewiswch yr opsiwn hwn os ydych yn cynrychioli cyflogwr, grŵp cymunedol neu sefydliad cefnogol. Os yw’ch cwestiwn yn ymwneud â’ch cais eich hun, dewiswch opsiwn gwahanol</span>",
+        "label": "<span class=\"question-option\">Helpu rhywun i wneud cais</span><span id=\"your-question-option-supporting-organisation-option-hint\" class=\"option-hint\" for=\"your-question-option-supporting-organisation\">Dewiswch yr opsiwn hwn os ydych yn ffrind, aelod o’r teulu, cyflogwr, grŵp cymunedol neu sefydliad ategol sy’n holi ynglŷn â chais rhywun arall</span>",
         "emailSubject": "Welsh Language"
       }
     }
@@ -93,7 +93,7 @@
     }
   },
   "your-name": {
-    "label": "Eich enw",
+    "label": "Eich enw llawn",
     "validation": {
       "required": "Rhowch eich enw",
       "maxlength": "Mae’n rhaid i’r enw fod yn llai na 256 nod"
