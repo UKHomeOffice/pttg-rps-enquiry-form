@@ -41,5 +41,8 @@
   },
   "confirmation": {
     "panel": "Your question has been sent"
+  },
+  "leave": {
+    "header": "Thank you"
   }
 }

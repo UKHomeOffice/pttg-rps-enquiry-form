@@ -41,5 +41,8 @@
   },
   "confirmation": {
     "panel": "Mae eich cwestiwn wedi cael ei anfon"
+  },
+  "leave": {
+    "header": "Diolch yn fawr"
   }
 }
