@@ -1,6 +1,6 @@
 {
   "start": {
-    "heading": "Ask a question about applying for settled status",
+    "header": "Ask a question about applying for settled status",
     "caption": "EU Settlement Scheme pilot"
   },
   "question": {
@@ -41,5 +41,8 @@
   },
   "confirmation": {
     "panel": "Your question has been sent"
+  },
+  "leave": {
+    "header": "Thank you"
   }
 }
