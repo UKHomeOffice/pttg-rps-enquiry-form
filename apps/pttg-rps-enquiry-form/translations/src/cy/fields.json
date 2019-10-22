@@ -101,7 +101,7 @@
   },
   "organisation-name": {
     "label": "Enw’r sefydliad",
-    "hint": "Os ydych yn gofyn ar ran cyflogwr neu sefydliad arall, rhowch yr enw yma",
+    "hint": "Os ydych yn gofyn ar ran cyflogwr neu sefydliad arall, rhowch yr enw yma.",
     "validation": {
       "required": "Rhowch enw eich sefydliad",
       "maxlength": "Mae’n rhaid i’r enw fod yn llai na 256 nod"
