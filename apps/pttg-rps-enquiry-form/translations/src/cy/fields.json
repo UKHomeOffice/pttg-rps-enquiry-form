@@ -1,6 +1,6 @@
 {
   "your-question-option": {
-    "legend": "Am beth mae eich cwestiwn",
+    "legend": "Am beth mae eich cwestiwn?",
     "validation": {
       "required": "Dewiswch opsiwn"
     },
