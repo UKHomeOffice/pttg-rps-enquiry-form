@@ -108,7 +108,7 @@
     }
   },
   "existing-application": {
-    "legend": "Ydy eich cwestiwn am gais sydd wedi cael ei anfon yn barod",
+    "legend": "Ydy eich cwestiwn am gais sydd wedi cael ei anfon yn barod?",
     "options": {
       "yes": {
         "label": "Ydy"
