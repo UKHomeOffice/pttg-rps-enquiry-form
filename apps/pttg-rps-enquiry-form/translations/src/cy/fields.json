@@ -46,7 +46,7 @@
   },
   "phone-number": {
     "label": "Rhif ffôn (dewisol)",
-    "hint": "Efallai y byddwn eisiau cysylltu â chi dros y ffôn os byddwn angen mwy o wybodaeth i ateb eich cwestiwn",
+    "hint": "Efallai y byddwn eisiau cysylltu â chi dros y ffôn os byddwn angen mwy o wybodaeth i ateb eich cwestiwn.",
     "validation": {
       "phonenumber": "Rhowch rif ffôn dilys"
     }
