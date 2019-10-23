@@ -7,7 +7,7 @@ Efallai y dewch o hyd i’r ateb i’ch cwestiwn yma
 
 ## Beth fyddwch ei angen
 
-Byddwn yn gofyn am eich enw a chyfeiriad e-bost er mwyn i ni allu eich ateb
+Byddwn yn gofyn am eich enw a chyfeiriad e-bost er mwyn i ni allu eich ateb.
 
 Os yw eich cwestiwn am gais  presennol, gwnewch yn siwr eich bod yn defnyddio’r un cyfeiriad e-bost a ddefnyddwyd i wneud cais:
 dyma’r cyfeiriad yr anfonwyd eich e-bost o gadarnhad iddo.
