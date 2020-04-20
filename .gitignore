@@ -65,3 +65,4 @@ public
 apps/*/translations/*
 !apps/*/translations/src
 output
+/.idea

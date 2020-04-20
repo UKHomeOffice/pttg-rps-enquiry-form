@@ -1,6 +1,5 @@
 const path = require('path');
 
-// eslint implicit-dependencies/no-implicit: [2, { dev: true }]
 const pagesPath = page => path.resolve(__dirname,
     `./apps/pttg-rps-enquiry-form/acceptance/pages/${page}`);
 
