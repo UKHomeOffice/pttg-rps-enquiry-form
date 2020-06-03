@@ -1,5 +1,7 @@
 # PTTG-RPS-Enquiry-Form
 
+IMPORTANT: Automated tests do not currently run in CI, any changes require manual regression testing. See related Jira tickets for details.
+
 ## Overview
 This is the RPS Enquiry Form. This allows current and potential users of the residency proving service to ask questions about either a future application or a current application.
 
