@@ -16,7 +16,8 @@ module.exports = {
         next: ConfirmationPage.path,
         sections: {
             'your-question': [
-                'question-body'
+                'question-body',
+                'question-body-existing-app'
             ],
             'your-details': [
                 'your-name',
@@ -29,7 +30,8 @@ module.exports = {
             'contact-information': [
                 'your-email-address',
                 'applicant-email-address',
-                'phone-number'
+                'phone-number',
+                'phone-number-existing-app'
             ]
         }
     }

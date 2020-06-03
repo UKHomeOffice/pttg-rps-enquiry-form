@@ -51,6 +51,27 @@
       "phonenumber": "Enter a valid phone number"
     }
   },
+  "phone-number-existing-app": {
+    "label": "Telephone number (optional)",
+    "hint": "We may want to contact you by telephone if we need more information to answer your question.",
+    "validation": {
+      "phonenumber": "Enter a valid phone number"
+    }
+  },
+  "phone-number-supporting-org": {
+    "label": "Telephone number (optional)",
+    "hint": "We may want to contact you by telephone if we need more information to answer your question.",
+    "validation": {
+      "phonenumber": "Enter a valid phone number"
+    }
+  },
+  "phone-number-supporting-org-existing-app": {
+    "label": "Telephone number (optional)",
+    "hint": "We may want to contact you by telephone if we need more information to answer your question.",
+    "validation": {
+      "phonenumber": "Enter a valid phone number"
+    }
+  },
   "nationality": {
     "label": "Country of nationality",
     "validation": {
@@ -68,6 +89,33 @@
     }
   },
   "question-body": {
+    "label": "Your question",
+    "summary": "Question",
+    "hint": "Up to 2000 characters",
+    "validation": {
+      "required": "Enter a question",
+      "maxlength": "Question cannot exceed 2000 characters"
+    }
+  },
+  "question-body-existing-app": {
+    "label": "Your question",
+    "summary": "Question",
+    "hint": "Up to 2000 characters",
+    "validation": {
+      "required": "Enter a question",
+      "maxlength": "Question cannot exceed 2000 characters"
+    }
+  },
+  "question-body-supporting-org": {
+    "label": "Your question",
+    "summary": "Question",
+    "hint": "Up to 2000 characters",
+    "validation": {
+      "required": "Enter a question",
+      "maxlength": "Question cannot exceed 2000 characters"
+    }
+  },
+  "question-body-supporting-org-existing-app": {
     "label": "Your question",
     "summary": "Question",
     "hint": "Up to 2000 characters",

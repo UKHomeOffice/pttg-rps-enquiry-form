@@ -53,6 +53,19 @@ module.exports = {
             value: 8
         }]
     },
+    'question-body-existing-app': {
+        mixin: 'textarea',
+        validate: [
+            'required', {
+                type: 'maxlength',
+                arguments: '2000'
+            }
+        ],
+        attributes: [{
+            attribute: 'rows',
+            value: 8
+        }]
+    },
     'your-name': {
         mixin: 'input-text',
         validate: ['required', {
