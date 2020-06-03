@@ -58,20 +58,6 @@
       "phonenumber": "Enter a valid phone number"
     }
   },
-  "phone-number-supporting-org": {
-    "label": "Telephone number (optional)",
-    "hint": "We may want to contact you by telephone if we need more information to answer your question.",
-    "validation": {
-      "phonenumber": "Enter a valid phone number"
-    }
-  },
-  "phone-number-supporting-org-existing-app": {
-    "label": "Telephone number (optional)",
-    "hint": "We may want to contact you by telephone if we need more information to answer your question.",
-    "validation": {
-      "phonenumber": "Enter a valid phone number"
-    }
-  },
   "nationality": {
     "label": "Country of nationality",
     "validation": {
