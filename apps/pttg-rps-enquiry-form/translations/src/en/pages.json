@@ -37,15 +37,16 @@
       "phone-number-existing-app": {
         "label": "Contact telephone number"
       }
-    },
-    "application-details": {
-      "header": "Application details"
-    },
-    "confirmation": {
-      "panel": "Your question has been sent"
-    },
-    "leave": {
-      "header": "Thank you"
     }
+  },
+  "application-details": {
+    "header": "Application details"
+  },
+  "confirmation": {
+    "panel": "Your question has been sent"
+  },
+  "leave": {
+    "header": "Thank you"
   }
 }
+
