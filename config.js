@@ -10,7 +10,7 @@ module.exports = {
             },
             individual: {
                 general: process.env.NOTIFY_TEMPLATE_IND_GENERAL || '9867fbb4-3c0c-4377-a57c-be2929e2e2f6',
-                application: process.env.NOTIFY_TEMPLATE_IND_APP || '85ea4e91-ecaf-4447-b6dc-1cfd245d8dbc'
+                application: process.env.NOTIFY_TEMPLATE_IND_APP || '1b70cd6d-7f2c-4d3a-9e00-0525603b2876'
             }
         },
         recipient: process.env.NOTIFY_RECIPIENT || 'simulate-delivered@notifications.service.gov.uk'
