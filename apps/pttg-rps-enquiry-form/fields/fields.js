@@ -1,5 +1,3 @@
-const dateComponent = require('hof-component-date');
-
 module.exports = {
     'your-question-option': {
         mixin: 'radio-group',
@@ -189,5 +187,5 @@ module.exports = {
         legend: {
             className: 'visually-hidden' // margin also changed in app.scss
         }
-    },
+    }
 };
