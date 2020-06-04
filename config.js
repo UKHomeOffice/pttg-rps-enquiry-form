@@ -5,8 +5,8 @@ module.exports = {
         apiKey: process.env.NOTIFY_API_KEY || 'configuration_placeholder-6f54eeb5-e901-48aa-b2fb-285af60b8e97-b79aafb9-dbfe-4c62-a7ca-95bd93dc45b3',
         templates: {
             organisation: {
-                general: process.env.NOTIFY_TEMPLATE_ORG_GENERAL || '4fdc0fd3-31f6-447c-9184-ddfcd5042f42',
-                application: process.env.NOTIFY_TEMPLATE_ORG_APP || '6e20e03e-0fff-4202-be11-0478aa502b42'
+                general: process.env.NOTIFY_TEMPLATE_ORG_GENERAL || '1c8afe2c-666a-47d6-a58f-5b9ddda54f68',
+                application: process.env.NOTIFY_TEMPLATE_ORG_APP || 'd1a18175-a095-43f5-a900-553b3db42026'
             },
             individual: {
                 general: process.env.NOTIFY_TEMPLATE_IND_GENERAL || '9867fbb4-3c0c-4377-a57c-be2929e2e2f6',
