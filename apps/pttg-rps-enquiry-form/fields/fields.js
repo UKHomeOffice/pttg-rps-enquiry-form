@@ -13,7 +13,21 @@ module.exports = {
             arguments: '254'
         }]
     },
+    'your-email-address-supporting-org': {
+        mixin: 'input-text',
+        validate: ['required', 'email', {
+            type: 'maxlength',
+            arguments: '254'
+        }]
+    },
     'applicant-email-address': {
+        mixin: 'input-text',
+        validate: ['required', 'email', {
+            type: 'maxlength',
+            arguments: '254'
+        }]
+    },
+    'applicant-email-address-supporting-org': {
         mixin: 'input-text',
         validate: ['required', 'email', {
             type: 'maxlength',
@@ -29,7 +43,33 @@ module.exports = {
         mixin: 'input-phone',
         validate: 'phonenumber'
     },
+    'phone-number-supporting-org': {
+        formatter: 'removespaces',
+        mixin: 'input-phone',
+        validate: 'phonenumber'
+    },
+    'phone-number-supporting-org-existing-app': {
+        formatter: 'removespaces',
+        mixin: 'input-phone',
+        validate: 'phonenumber'
+    },
+    'phone-number-existing-app': {
+        formatter: 'removespaces',
+        mixin: 'input-phone',
+        validate: 'phonenumber'
+    },
     'application-number': {
+        mixin: 'input-text',
+        validate: [
+            'required',
+            {
+                type: 'maxlength',
+                arguments: '25'
+            }
+        ],
+        child: '{{#t}}fields.application-number.example{{/t}}'
+    },
+    'application-number-supporting-org': {
         mixin: 'input-text',
         validate: [
             'required',
@@ -66,7 +106,47 @@ module.exports = {
             value: 8
         }]
     },
+    'question-body-supporting-org': {
+        mixin: 'textarea',
+        validate: [
+            'required', {
+                type: 'maxlength',
+                arguments: '2000'
+            }
+        ],
+        attributes: [{
+            attribute: 'rows',
+            value: 8
+        }]
+    },
+    'question-body-supporting-org-existing-app': {
+        mixin: 'textarea',
+        validate: [
+            'required', {
+                type: 'maxlength',
+                arguments: '2000'
+            }
+        ],
+        attributes: [{
+            attribute: 'rows',
+            value: 8
+        }]
+    },
     'your-name': {
+        mixin: 'input-text',
+        validate: ['required', {
+            type: 'maxlength',
+            arguments: '255'
+        }]
+    },
+    'your-name-supporting-org': {
+        mixin: 'input-text',
+        validate: ['required', {
+            type: 'maxlength',
+            arguments: '255'
+        }]
+    },
+    'your-name-supporting-org-existing-app': {
         mixin: 'input-text',
         validate: ['required', {
             type: 'maxlength',
@@ -80,7 +160,21 @@ module.exports = {
             arguments: '255'
         }]
     },
+    'organisation-name-existing-app': {
+        mixin: 'input-text',
+        validate: ['required', {
+            type: 'maxlength',
+            arguments: '255'
+        }]
+    },
     'applicant-full-name': {
+        mixin: 'input-text',
+        validate: ['required', {
+            type: 'maxlength',
+            arguments: '255'
+        }]
+    },
+    'applicant-full-name-supporting-org': {
         mixin: 'input-text',
         validate: ['required', {
             type: 'maxlength',
@@ -96,11 +190,4 @@ module.exports = {
             className: 'visually-hidden' // margin also changed in app.scss
         }
     },
-    'date-of-birth': dateComponent('date-of-birth', {
-        validate: [
-            {type: 'before'},
-            {type: 'after', arguments: '1903-01-01'},
-            {type: 'date'}
-        ]
-    })
 };

@@ -36,6 +36,12 @@
       },
       "phone-number-existing-app": {
         "label": "Contact telephone number"
+      },
+      "phone-number-supporting-org": {
+        "label": "Contact telephone number"
+      },
+      "phone-number-supporting-org-existing-app": {
+        "label": "Contact telephone number"
       }
     }
   },

@@ -35,7 +35,24 @@
       "maxlength": "Email cannot exceed 254 characters"
     }
   },
+  "your-email-address-supporting-org": {
+    "label": "Your email address",
+    "validation": {
+      "required": "Enter your email address",
+      "email": "Enter an email address in the right format, like name@example.com",
+      "maxlength": "Email cannot exceed 254 characters"
+    }
+  },
   "applicant-email-address": {
+    "label": "Applicant’s email address",
+    "hint": "This is where we’ll send our reply. Make sure this is the same email address used for the application.",
+    "validation": {
+      "required": "Enter the email address used in the application you are asking about",
+      "email": "Enter an email address in the right format, like name@example.com",
+      "maxlength": "Email cannot exceed 254 characters"
+    }
+  },
+  "applicant-email-address-supporting-org": {
     "label": "Applicant’s email address",
     "hint": "This is where we’ll send our reply. Make sure this is the same email address used for the application.",
     "validation": {
@@ -58,6 +75,20 @@
       "phonenumber": "Enter a valid phone number"
     }
   },
+  "phone-number-supporting-org": {
+    "label": "Telephone number (optional)",
+    "hint": "We may want to contact you by telephone if we need more information to answer your question.",
+    "validation": {
+      "phonenumber": "Enter a valid phone number"
+    }
+  },
+  "phone-number-supporting-org-existing-app": {
+    "label": "Telephone number (optional)",
+    "hint": "We may want to contact you by telephone if we need more information to answer your question.",
+    "validation": {
+      "phonenumber": "Enter a valid phone number"
+    }
+  },
   "nationality": {
     "label": "Country of nationality",
     "validation": {
@@ -66,6 +97,15 @@
     }
   },
   "application-number": {
+    "label": "Application number",
+    "hint": "This will be on any emails you received about your application.",
+    "example": "<span class=\"form-hint\" id=\"application-number-example\">e.g. 3434-1234-1234-1234</span>",
+    "validation": {
+      "maxlength": "Unique Reference Numbers cannot exceed 25 characters",
+      "required": "Enter the reference number associated with your application"
+    }
+  },
+  "application-number-supporting-org": {
     "label": "Application number",
     "hint": "This will be on any emails you received about your application.",
     "example": "<span class=\"form-hint\" id=\"application-number-example\">e.g. 3434-1234-1234-1234</span>",
@@ -110,16 +150,14 @@
       "maxlength": "Question cannot exceed 2000 characters"
     }
   },
-  "date-of-birth": {
-    "legend": "Date of birth",
-    "hint": "For example, 25 03 1957",
+  "applicant-full-name": {
+    "label": "Applicant’s full name",
     "validation": {
-      "date": "Enter a real date of birth",
-      "before": "Date of birth must be in the past",
-      "after": "Date of birth must be after 1902"
+      "required": "Enter applicant’s full name",
+      "maxlength": "Name must be fewer than 256 characters"
     }
   },
-  "applicant-full-name": {
+  "applicant-full-name-supporting-org": {
     "label": "Applicant’s full name",
     "validation": {
       "required": "Enter applicant’s full name",
@@ -133,7 +171,29 @@
       "maxlength": "Name must be fewer than 256 characters"
     }
   },
+  "your-name-supporting-org": {
+    "label": "Your full name",
+    "validation": {
+      "required": "Enter your full name",
+      "maxlength": "Name must be fewer than 256 characters"
+    }
+  },
+  "your-name-supporting-org-existing-app": {
+    "label": "Your full name",
+    "validation": {
+      "required": "Enter your full name",
+      "maxlength": "Name must be fewer than 256 characters"
+    }
+  },
   "organisation-name": {
+    "label": "Organisation name",
+    "hint": "If you’re asking on behalf of an employer or other organisation, enter the name here.",
+    "validation": {
+      "required": "Enter your organisation name",
+      "maxlength": "Name must be fewer than 256 characters"
+    }
+  },
+  "organisation-name-existing-app": {
     "label": "Organisation name",
     "hint": "If you’re asking on behalf of an employer or other organisation, enter the name here.",
     "validation": {
