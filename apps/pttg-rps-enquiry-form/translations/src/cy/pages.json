@@ -33,6 +33,15 @@
     "fields": {
       "phone-number": {
         "label": "Rhif ffôn cyswllt"
+      },
+      "phone-number-existing-app": {
+        "label": "Rhif ffôn cyswllt"
+      },
+      "phone-number-supporting-org": {
+        "label": "Rhif ffôn cyswllt"
+      },
+      "phone-number-supporting-org-existing-app": {
+        "label": "Rhif ffôn cyswllt"
       }
     }
   },

@@ -89,13 +89,6 @@
       "phonenumber": "Enter a valid phone number"
     }
   },
-  "nationality": {
-    "label": "Country of nationality",
-    "validation": {
-      "required": "Enter a nationality",
-      "equal": "Select a nationality from the list"
-    }
-  },
   "application-number": {
     "label": "Application number",
     "hint": "This will be on any emails you received about your application.",

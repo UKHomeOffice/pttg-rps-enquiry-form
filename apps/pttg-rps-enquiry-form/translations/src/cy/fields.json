@@ -35,7 +35,24 @@
       "maxlength": "Ni all e-bost fod yn fwy na 254 nod"
     }
   },
+  "your-email-address-supporting-org": {
+    "label": "Eich cyfeiriad e-bost",
+    "validation": {
+      "required": "Rhowch eich cyfeiriad e-bost",
+      "email": "Rhowch gyfeiriad e-bost yn y ffurf cywir, fel name@example.com",
+      "maxlength": "Ni all e-bost fod yn fwy na 254 nod"
+    }
+  },
   "applicant-email-address": {
+    "label": "Cyfeiriad e-bost ymgeisydd",
+    "hint": "Dyma i ble y byddwn yn anfon ein ateb. Gwnewch yn siwr mai dyma’r un e-bost a ddefnyddwyd ar gyfer y cais.",
+    "validation": {
+      "required": "Rhowch y cyfeiriad e-bost a ddefnyddwyd yn y cais rydych yn holi amdano",
+      "email": "Rhowch gyfeiriad e-bost yn y ffurf cywir, fel name@example.com",
+      "maxlength": "Ni all e-bost fod yn fwy na 254 nod"
+    }
+  },
+  "applicant-email-address-supporting-org": {
     "label": "Cyfeiriad e-bost ymgeisydd",
     "hint": "Dyma i ble y byddwn yn anfon ein ateb. Gwnewch yn siwr mai dyma’r un e-bost a ddefnyddwyd ar gyfer y cais.",
     "validation": {
@@ -51,14 +68,37 @@
       "phonenumber": "Rhowch rif ffôn dilys"
     }
   },
-  "nationality": {
-    "label": "Gwlad cenedligrwydd",
+  "phone-number-existing-app": {
+    "label": "Rhif ffôn (dewisol)",
+    "hint": "Efallai y byddwn eisiau cysylltu â chi dros y ffôn os byddwn angen mwy o wybodaeth i ateb eich cwestiwn.",
     "validation": {
-      "required": "Rhowch genedligrwydd",
-      "equal": "Dewiswch cenedligrwydd o’r rhestr"
+      "phonenumber": "Rhowch rif ffôn dilys"
+    }
+  },
+  "phone-number-supporting-org": {
+    "label": "Rhif ffôn (dewisol)",
+    "hint": "Efallai y byddwn eisiau cysylltu â chi dros y ffôn os byddwn angen mwy o wybodaeth i ateb eich cwestiwn.",
+    "validation": {
+      "phonenumber": "Rhowch rif ffôn dilys"
+    }
+  },
+  "phone-number-supporting-org-existing-app": {
+    "label": "Rhif ffôn (dewisol)",
+    "hint": "Efallai y byddwn eisiau cysylltu â chi dros y ffôn os byddwn angen mwy o wybodaeth i ateb eich cwestiwn.",
+    "validation": {
+      "phonenumber": "Rhowch rif ffôn dilys"
     }
   },
   "application-number": {
+    "label": "Rhif y cais",
+    "hint": "Bydd hwn ar unrhyw e-byst rydych wedi’u derbyn am eich cais",
+    "example": "<span class=\"form-hint\" id=\"application-number-example\">e.e. 3434-1234-1234-1234</span>",
+    "validation": {
+      "maxlength": "Ni all Rhifau Cyfeirnod Unigryw fod yn fwy na 25 nod",
+      "required": "Rhowch y rhif cyfeirnod sy’n gysylltiedig â’ch cais"
+    }
+  },
+  "application-number-supporting-org": {
     "label": "Rhif y cais",
     "hint": "Bydd hwn ar unrhyw e-byst rydych wedi’u derbyn am eich cais",
     "example": "<span class=\"form-hint\" id=\"application-number-example\">e.e. 3434-1234-1234-1234</span>",
@@ -76,16 +116,41 @@
       "maxlength": "Ni all y cwestiwn fod yn fwy na 2000 nod"
     }
   },
-  "date-of-birth": {
-    "legend": "Dyddiad geni",
-    "hint": "Er enghraifft, 25 03 1957",
+  "question-body-existing-app": {
+    "label": "Eich cwestiwn",
+    "summary": "Cwestiwn",
+    "hint": "Hyd at 2000 nod",
     "validation": {
-      "date": "Rhowch ddyddiad geni gwir",
-      "before": "Mae’n rhaid i ddyddiad geni fod yn y gorffennol",
-      "after": "Mae’n rhaid i ddyddiad geni fod ar ôl 1902"
+      "required": "Rhowch gwestiwn",
+      "maxlength": "Ni all y cwestiwn fod yn fwy na 2000 nod"
+    }
+  },
+  "question-body-supporting-org": {
+    "label": "Eich cwestiwn",
+    "summary": "Cwestiwn",
+    "hint": "Hyd at 2000 nod",
+    "validation": {
+      "required": "Rhowch gwestiwn",
+      "maxlength": "Ni all y cwestiwn fod yn fwy na 2000 nod"
+    }
+  },
+  "question-body-supporting-org-existing-app": {
+    "label": "Eich cwestiwn",
+    "summary": "Cwestiwn",
+    "hint": "Hyd at 2000 nod",
+    "validation": {
+      "required": "Rhowch gwestiwn",
+      "maxlength": "Ni all y cwestiwn fod yn fwy na 2000 nod"
     }
   },
   "applicant-full-name": {
+    "label": "Enw llawn yr ymgeisydd",
+    "validation": {
+      "required": "Rhowch enw llawn yr ymgeisydd",
+      "maxlength": "Mae’n rhaid i’r enw fod yn llai na 256 nod"
+    }
+  },
+  "applicant-full-name-supporting-org": {
     "label": "Enw llawn yr ymgeisydd",
     "validation": {
       "required": "Rhowch enw llawn yr ymgeisydd",
@@ -99,7 +164,29 @@
       "maxlength": "Mae’n rhaid i’r enw fod yn llai na 256 nod"
     }
   },
+  "your-name-supporting-org": {
+    "label": "Eich enw llawn",
+    "validation": {
+      "required": "Rhowch eich enw",
+      "maxlength": "Mae’n rhaid i’r enw fod yn llai na 256 nod"
+    }
+  },
+  "your-name-supporting-org-existing-app": {
+    "label": "Eich enw llawn",
+    "validation": {
+      "required": "Rhowch eich enw",
+      "maxlength": "Mae’n rhaid i’r enw fod yn llai na 256 nod"
+    }
+  },
   "organisation-name": {
+    "label": "Enw’r sefydliad",
+    "hint": "Os ydych yn gofyn ar ran cyflogwr neu sefydliad arall, rhowch yr enw yma.",
+    "validation": {
+      "required": "Rhowch enw eich sefydliad",
+      "maxlength": "Mae’n rhaid i’r enw fod yn llai na 256 nod"
+    }
+  },
+  "organisation-name-existing-app": {
     "label": "Enw’r sefydliad",
     "hint": "Os ydych yn gofyn ar ran cyflogwr neu sefydliad arall, rhowch yr enw yma.",
     "validation": {
