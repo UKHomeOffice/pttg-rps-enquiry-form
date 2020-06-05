@@ -81,5 +81,5 @@ module.exports = {
     'organisation-name': sharedTextBox,
     'organisation-name-existing-app': sharedTextBox,
     'applicant-full-name': sharedTextBox,
-    'applicant-full-name-supporting-org': sharedTextBox,
+    'applicant-full-name-supporting-org': sharedTextBox
 };
