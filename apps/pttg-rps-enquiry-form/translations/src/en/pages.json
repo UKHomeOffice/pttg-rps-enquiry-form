@@ -33,6 +33,15 @@
     "fields": {
       "phone-number": {
         "label": "Contact telephone number"
+      },
+      "phone-number-existing-app": {
+        "label": "Contact telephone number"
+      },
+      "phone-number-supporting-org": {
+        "label": "Contact telephone number"
+      },
+      "phone-number-supporting-org-existing-app": {
+        "label": "Contact telephone number"
       }
     }
   },
@@ -46,3 +55,4 @@
     "header": "Thank you"
   }
 }
+

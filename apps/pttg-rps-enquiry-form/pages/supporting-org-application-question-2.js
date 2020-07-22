@@ -4,10 +4,10 @@ module.exports = {
     path: '/supporting-org-question-about-application',
     properties: {
         fields: [
-            'question-body',
-            'applicant-email-address',
-            'applicant-full-name',
-            'application-number'
+            'question-body-supporting-org-existing-app',
+            'applicant-email-address-supporting-org',
+            'applicant-full-name-supporting-org',
+            'application-number-supporting-org'
         ],
         next: SummaryPage.path
     }

@@ -83,10 +83,10 @@ Scenario('A user can update fields on the question-about-existing-application pa
         I.click('#applicant-full-name-change');
         I.seeInCurrentUrl('edit');
 
-        assert.equal(yield I.grabValueFrom('#question-body'), QUESTION_1);
+        assert.equal(yield I.grabValueFrom('#question-body-existing-app'), QUESTION_1);
         assert.equal(yield I.grabValueFrom('#applicant-full-name'), NAME_1);
         assert.equal(yield I.grabValueFrom('#applicant-email-address'), EMAIL_1);
-        assert.equal(yield I.grabValueFrom('#phone-number'), TELEPHONE_1);
+        assert.equal(yield I.grabValueFrom('#phone-number-existing-app'), TELEPHONE_1);
         assert.equal(yield I.grabValueFrom('#application-number'), APPLICATION_NUMBER_1);
 
         I.fillField('Your question', QUESTION_2);
