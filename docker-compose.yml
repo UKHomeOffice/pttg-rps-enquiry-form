@@ -7,6 +7,7 @@ services:
       - IGNORE_TLS=true
       - REDIS_HOST=redis
       - REDIS_PORT=6379
+      - REDIS_PASSWORD=SUPER_SECRET
     links:
       - redis
     ports:
@@ -15,6 +16,7 @@ services:
       - "/app/public"
   redis:
     image: redis
+    command: redis-server --requirepass SUPER_SECRET
   mailcatcher:
     image: schickling/mailcatcher
     ports:
