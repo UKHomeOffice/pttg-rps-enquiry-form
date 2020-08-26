@@ -27,7 +27,7 @@ app.use((req, res, next) => {
         req.lang = req.cookies.lang;
         res.locals.htmlLang = req.cookies.lang;
     } else {
-        res.locals.htmlLang = "en"
+        res.locals.htmlLang = 'en';
     }
     res.setHeader('Cache-Control', 'private, no-cache, no-store, must-revalidate');
     res.setHeader('Pragma', 'no-cache');
