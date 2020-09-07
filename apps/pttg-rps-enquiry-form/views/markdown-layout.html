@@ -1,0 +1,49 @@
+{{<govuk-template}}
+{{$head}}
+{{> partials-head}}
+{{/head}}
+{{$pageTitle}}
+{{$header}}{{/header}} &ndash; GOV.UK
+{{/pageTitle}}
+{{$headerClass}}with-proposition{{/headerClass}}
+{{$insideHeader}}{{/insideHeader}}
+{{$main}}
+<main class="main" role="main">
+    <div class="phase-banner">
+        <p>
+            <strong class="phase-tag">{{#t}}journey.phase{{/t}}</strong>
+            <span>{{#t}}layout.this-is-a-new-service{{/t}}<a href="https://www.gov.uk/done/eu-settled-status-enquiries">{{#t}}layout.feedback{{/t}}</a>{{#t}}layout.will-help-us-to-improve-it{{/t}}</span>
+        </p>
+    </div>
+    <span id="step">
+        {{> partials-back}} <span>{{$step}}{{/step}}</span>
+      </span>
+    {{#startPage}}
+    <div class="u-fr">
+        <ul class="c-language-nav">
+            <li class="c-language-nav__item"><a lang="en" hreflang="en" class="language-nav-link" href='/start?lang=en'>English</a></li>
+            <li class="c-language-nav__item"><a lang="cy" hreflang="cy" class="language-nav-link" href='/start?lang=cy'>Cymraeg</a></li>
+        </ul>
+    </div>
+    {{/startPage}}
+    <div class="grid-row" id="content">
+        {{> partials-markdowncontent-left}}
+    </div>
+    {{> partials-gatag}}
+    <script type="text/javascript" src="{{assetPath}}/js/bundle.js"></script>
+</main>
+{{/main}}
+{{$cookieMessage}}
+<p>
+    {{#t}}cookies.banner.message{{/t}}
+    <a href="https://www.gov.uk/help/cookies">{{#t}}cookies.banner.link{{/t}}</a>
+</p>
+{{/cookieMessage}}
+{{$footerSupportLinks}}
+<ul>
+    <li><a href="/cookie-information">{{#t}}layout.cookies{{/t}}</a></li>
+    <li><a href="/privacy-policy">{{#t}}layout.privacy-policy{{/t}}</a></li>
+</ul>
+{{/footerSupportLinks}}
+{{/govuk-template}}
+
