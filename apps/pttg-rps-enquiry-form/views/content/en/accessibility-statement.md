@@ -1,14 +1,12 @@
-# Accessibility statement for Ask a Question about Applying for Settled Status
-
 This accessibility statement applies to the “Ask a question about applying for settled status” service at [https://eu-settled-status-enquiries.service.gov.uk/](https://eu-settled-status-enquiries.service.gov.uk/).
 
 This website is run by the Home Office. We want as many people as possible to be able to use this website. For example, that means you should be able to:
 
 * Change colours, contrast levels and fonts
-* zoom in up to 300% without the text spilling off the screen
-* navigate most of the website using just a keyboard
-* navigate most of the website using speech recognition software
-* listen to most of the website using a screen reader (including the most recent versions of JAWS, NVDA and VoiceOver)
+* Zoom in up to 300% without the text spilling off the screen
+* Navigate most of the website using just a keyboard
+* Navigate most of the website using speech recognition software
+* Listen to most of the website using a screen reader (including the most recent versions of JAWS, NVDA and VoiceOver)
 
 We’ve also made the website text as simple as possible to understand.
 
