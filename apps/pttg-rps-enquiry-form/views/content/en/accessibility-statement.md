@@ -61,4 +61,4 @@ This statement was prepared on 16 September 2020. It was last reviewed on 16 Sep
 
 This website was last tested on 20th August 2020. Testing was carried out internally by the Home Office.
 
-
+We tested the service based on a user’s ability to complete key journeys. All parts of the chosen journeys were tested, including documents. Journeys were chosen on a number of factors including usage statistics, risk assessments and subject matter.
