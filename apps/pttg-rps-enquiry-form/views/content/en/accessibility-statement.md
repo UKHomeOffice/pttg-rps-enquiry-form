@@ -48,6 +48,8 @@ The content listed below is non-accessible for the following reasons.
 There is a problem with the “lang” attribute, so people using a screen reader may find that the information is not pronounced correctly.
 We plan to fix this problem by September 2020.
 
+There is a problem on the "Confirm" and "Confirmation" pages. A heading element is present that contains no text.
+
 ### Disproportionate burden
 
 At this time, we have not made any disproportionate burden claims.
