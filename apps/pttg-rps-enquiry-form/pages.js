@@ -1,6 +1,7 @@
 const StartPage = require('./pages/start-page');
 const PrivacyNotice = require('./pages/privacy-policy');
 const Cookies = require('./pages/cookies');
+const AccessibilityStatement = require('./pages/accessibility-statement');
 
 const WhatIsYourQuestion = require('./pages/what-is-your-question');
 
@@ -30,6 +31,7 @@ module.exports = {
         StartPage,
         PrivacyNotice,
         Cookies,
+        AccessibilityStatement,
         WhatIsYourQuestion,
         HasExistingApplication,
         QuestionPage,
