@@ -59,8 +59,8 @@ At this time, we have not made any disproportionate burden claims.
 At this time, we have not identified any content that is not within scope of the accessibility regulations.
 
 ## Preparation of this accessibility statement
-This statement was prepared on 23 September 2020. It was last reviewed on 23 September 2020.
+This statement was prepared on 23rd September 2020. It was last reviewed on 23rd September 2020.
 
-This website was last tested on 20th August 2020. Testing was carried out internally by the Home Office.
+This website was last tested on 21st September 2020. Testing was carried out internally by the Home Office.
 
 We tested the service based on a user’s ability to complete key journeys. All parts of the chosen journeys were tested, including documents. Journeys were chosen on a number of factors including usage statistics, risk assessments and subject matter.
