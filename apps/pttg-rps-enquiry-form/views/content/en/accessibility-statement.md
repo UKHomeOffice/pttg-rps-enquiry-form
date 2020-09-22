@@ -59,7 +59,7 @@ At this time, we have not made any disproportionate burden claims.
 At this time, we have not identified any content that is not within scope of the accessibility regulations.
 
 ## Preparation of this accessibility statement
-This statement was prepared on 23rd September 2020. It was last reviewed on 23rd September 2020.
+This statement was prepared on 22nd September 2020. It was last reviewed on 22nd September 2020.
 
 This website was last tested on 21st September 2020. Testing was carried out internally by the Home Office.
 
