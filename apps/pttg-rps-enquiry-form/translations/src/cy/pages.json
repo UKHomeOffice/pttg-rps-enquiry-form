@@ -19,6 +19,7 @@
     "header": "Eich cwestiwn a manylion cyswllt"
   },
   "confirm": {
+    "Header": "Gwiriwch y manylion rydych chi wedi'u nodi",
     "sections": {
       "your-question": {
         "header": "Eich cwestiwn"

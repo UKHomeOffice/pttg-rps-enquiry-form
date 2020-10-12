@@ -19,6 +19,7 @@
     "header": "Your question and contact details"
   },
   "confirm": {
+    "header": "Please check the details you have entered",
     "sections": {
       "your-question": {
         "header": "Your question"
