@@ -21,9 +21,13 @@ app.use((req, res, next) => {
 app.use((req, res, next) => {
     if (req.query.lang) {
         req.lang = req.query.lang;
+        res.locals.htmlLang = req.query.lang;
         res.cookie('lang', req.query.lang, {httpOnly: true});
     } else if (req.cookies.lang) {
         req.lang = req.cookies.lang;
+        res.locals.htmlLang = req.cookies.lang;
+    } else {
+        res.locals.htmlLang = 'en';
     }
     res.setHeader('Cache-Control', 'private, no-cache, no-store, must-revalidate');
     res.setHeader('Pragma', 'no-cache');

@@ -45,9 +45,6 @@ The content listed below is non-accessible for the following reasons.
 
 ### Non-compliance with the accessibility regulations
 
-There is a problem with the “lang” attribute, so people using a screen reader may find that the information is not pronounced correctly.
-We plan to fix this problem by September 2020.
-
 There is a problem on the "Confirm" and "Confirmation" pages. A heading element is present that contains no text.
 
 ### Disproportionate burden
@@ -59,7 +56,7 @@ At this time, we have not made any disproportionate burden claims.
 At this time, we have not identified any content that is not within scope of the accessibility regulations.
 
 ## Preparation of this accessibility statement
-This statement was prepared on 22nd September 2020. It was last reviewed on 22nd September 2020.
+This statement was prepared on 22nd September 2020. It was last reviewed on 12th October 2020.
 
 This website was last tested on 21st September 2020. Testing was carried out internally by the Home Office.
 
