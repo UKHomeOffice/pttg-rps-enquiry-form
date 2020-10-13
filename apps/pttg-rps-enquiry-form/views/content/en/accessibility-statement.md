@@ -45,10 +45,9 @@ The content listed below is non-accessible for the following reasons.
 
 ### Non-compliance with the accessibility regulations
 
-There is a problem with the “lang” attribute, so people using a screen reader may find that the information is not pronounced correctly.
-We plan to fix this problem by September 2020.
+We fixed a problem with the “lang” attribute in October 2020, so people using a screen reader will now find that information is pronounced correctly. We also fixed a problem on the Confirm and Confirmation pages where the Heading element contained no text.
 
-There is a problem on the "Confirm" and "Confirmation" pages. A heading element is present that contains no text.
+We are doing further testing to identify additional issues, at which point we will add them to the statement and begin a remediation plan.
 
 ### Disproportionate burden
 
