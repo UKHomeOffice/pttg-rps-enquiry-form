@@ -1,4 +1,4 @@
-{{<layout}}
+{{<markdown-layout}}
 {{$journeyHeader}}
 {{#t}}journey.header{{/t}}
 {{/journeyHeader}}
@@ -11,6 +11,7 @@
 {{> partials-navigation}}
 {{/propositionHeader}}
 
+{{$header}}{{{title}}}{{/header}}
 {{$content}}
 {{<partials-form}}
 {{$form}}
@@ -18,4 +19,4 @@
 {{/form}}
 {{/partials-form}}
 {{/content}}
-{{/layout}}
+{{/markdown-layout}}
