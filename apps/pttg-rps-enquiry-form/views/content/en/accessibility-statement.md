@@ -37,7 +37,7 @@ The Home Office is committed to making its website accessible, in accordance wit
 
 ## Compliance status
 
-This website is partially compliant with the [Web Content Accessibility Guidelines version 2.1](https://www.w3.org/TR/WCAG21/) AA standard, due to the non-compliances, ‘the exemptions’ or ‘the non-compliances and exemptions’] listed below.
+This website is partially compliant with the [Web Content Accessibility Guidelines version 2.1](https://www.w3.org/TR/WCAG21/) AA standard, due to the non-compliances listed below.
 
 ## Non-accessible content
 
