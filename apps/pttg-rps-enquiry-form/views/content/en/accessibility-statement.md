@@ -37,7 +37,7 @@ The Home Office is committed to making its website accessible, in accordance wit
 
 ## Compliance status
 
-This website is partially compliant with the [Web Content Accessibility Guidelines version 2.1](https://www.w3.org/TR/WCAG21/) AA standard, due to the non-compliances, ‘the exemptions’ or ‘the non-compliances and exemptions’] listed below.
+This website is partially compliant with the [Web Content Accessibility Guidelines version 2.1](https://www.w3.org/TR/WCAG21/) AA standard, due to the non-compliances listed below.
 
 ## Non-accessible content
 
@@ -45,10 +45,9 @@ The content listed below is non-accessible for the following reasons.
 
 ### Non-compliance with the accessibility regulations
 
-There is a problem with the “lang” attribute, so people using a screen reader may find that the information is not pronounced correctly.
-We plan to fix this problem by September 2020.
+We fixed a problem with the “lang” attribute in October 2020, so people using a screen reader will now find that information is pronounced correctly. We also fixed a problem on the Confirm and Confirmation pages where the Heading element contained no text.
 
-There is a problem on the "Confirm" and "Confirmation" pages. A heading element is present that contains no text.
+We are doing further testing to identify additional issues, at which point we will add them to the statement and begin a remediation plan.
 
 ### Disproportionate burden
 
@@ -59,8 +58,8 @@ At this time, we have not made any disproportionate burden claims.
 At this time, we have not identified any content that is not within scope of the accessibility regulations.
 
 ## Preparation of this accessibility statement
-This statement was prepared on 22nd September 2020. It was last reviewed on 22nd September 2020.
+This statement was prepared on 22nd September 2020. It was last reviewed on 20th October 2020.
 
-This website was last tested on 21st September 2020. Testing was carried out internally by the Home Office.
+This website was last tested on 20th October 2020. Testing was carried out internally by the Home Office.
 
 We tested the service based on a user’s ability to complete key journeys. All parts of the chosen journeys were tested, including documents. Journeys were chosen on a number of factors including usage statistics, risk assessments and subject matter.
