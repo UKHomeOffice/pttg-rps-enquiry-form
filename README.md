@@ -39,5 +39,17 @@ The application contains a docker-compose file and can be alternatively run thro
 
 ```docker-compose up```
 
+The built images are stored at https://quay.io/repository/ukhomeofficedigital/pttg-rps-enquiry?tab=tags
+
 ## Whitelist
 The application is behind a whitelist in both the test and dev environments. Detailed in the drone.yml
+
+## Deployment
+https://drone.acp.homeoffice.gov.uk/UKHomeOffice/pttg-rps-enquiry-form
+
+### Maintenance mode
+Run a deployment with `-p USE_MAINTENANCE_INGRESS=true` for example:
+
+```drone deploy ukhomeoffice/pttg-rps-enquiry-form 1819 prod -p IMAGE_VERSION=9a3be460 -p USE_MAINTENANCE_INGRESS=true```
+
+*Note:* This deploys a different ingress and it is likely you will have to manually delete the other ingress to make it work. This needs fixing as there should only be one ingress deployed at a time.
