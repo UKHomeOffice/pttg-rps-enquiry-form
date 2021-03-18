@@ -50,6 +50,6 @@ https://drone.acp.homeoffice.gov.uk/UKHomeOffice/pttg-rps-enquiry-form
 ### Maintenance mode
 Run a deployment with `-p USE_MAINTENANCE_INGRESS=true` for example:
 
-```drone deploy ukhomeoffice/pttg-rps-enquiry-form 1819 prod -p IMAGE_VERSION=9a3be460 -p USE_MAINTENANCE_INGRESS=true```
+```drone deploy ukhomeoffice/pttg-rps-enquiry-form 1819 pr -p IMAGE_VERSION=9a3be460 -p USE_MAINTENANCE_INGRESS=true```
 
 *Note:* This deploys a different ingress and it is likely you will have to manually delete the other ingress to make it work. This needs fixing as there should only be one ingress deployed at a time.
