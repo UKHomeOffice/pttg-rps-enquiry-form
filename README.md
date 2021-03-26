@@ -48,8 +48,12 @@ The application is behind a whitelist in both the test and dev environments. Det
 https://drone.acp.homeoffice.gov.uk/UKHomeOffice/pttg-rps-enquiry-form
 
 ### Maintenance mode
-Run a deployment with `-p USE_MAINTENANCE_INGRESS=true` for example:
+Run a the latest prod deployment (see drone for build number) with `-p USE_MAINTENANCE_INGRESS=true` for example:
 
-```drone deploy ukhomeoffice/pttg-rps-enquiry-form 1819 pr -p IMAGE_VERSION=9a3be460 -p USE_MAINTENANCE_INGRESS=true```
+```drone deploy ukhomeoffice/pttg-rps-enquiry-form 1819 pr -p USE_MAINTENANCE_INGRESS=true```
 
-*Note:* This deploys a different ingress and it is likely you will have to manually delete the other ingress to make it work. This needs fixing as there should only be one ingress deployed at a time.
+*Note:* This deploys a different ingress (`pttg-rps-enquiry-maintenance-ingress-external`) and it is likely you will have to manually delete the other ingress to make it work. This needs fixing as there should only be one ingress deployed at a time.
+
+Prerequisite: ACP prod VPN and kube context.
+
+```k delete ingress pttg-rps-enquiry-ingress-external```
