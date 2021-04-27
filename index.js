@@ -19,6 +19,12 @@ app.use((req, res, next) => {
 });
 
 app.use((req, res, next) => {
+    // Redirect to root path if a double slash is present.
+    // This fixes an issue whereby sometimes https://formurl.gov.uk//google.co.uk would redirect to google.
+    if(req.url.includes("//")) {
+        req.url = "/";
+    }
+
     if (req.query.lang) {
         req.lang = req.query.lang;
         res.locals.htmlLang = req.query.lang;
