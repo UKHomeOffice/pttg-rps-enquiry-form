@@ -1,4 +1,4 @@
-FROM quay.io/ukhomeofficedigital/nodejs-base:v8
+FROM node:10.24.1-alpine
 
 WORKDIR /test
 
