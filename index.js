@@ -32,6 +32,7 @@ app.use((req, res, next) => {
     res.setHeader('Cache-Control', 'private, no-cache, no-store, must-revalidate');
     res.setHeader('Pragma', 'no-cache');
     res.setHeader('Expires', '-1');
+    res.setHeader('Content-Security-Policy', "default-src 'none'; style-src 'self'; img-src 'self' www.google-analytics.com; font-src 'self' data:; script-src 'self' 'unsafe-inline' www.google-analytics.com ssl.google-analytics.com; frame-ancestors 'none'; connect-src www.google-analytics.com")
     return next();
 });
 
