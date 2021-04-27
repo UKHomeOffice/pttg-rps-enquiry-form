@@ -26,7 +26,6 @@
     "hof-template-partials": "^5.3.5",
     "hof-theme-govuk": "^5.2.1",
     "hof-util-countries": "^1.0.0",
-    "jquery": "^3.6.0",
     "lodash": "^4.17.21",
     "notifications-node-client": "^4.6.0",
     "slack-node": "^0.1.8",
