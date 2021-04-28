@@ -123,13 +123,14 @@ steps:
       from_secret: pttg_rps_test
     NOTIFY_RECIPIENT_NOTPROD:
       from_secret: notify_recipient_notprod
+    BASIC_AUTH:
+      from_secret: basic_auth
   when:
     event:
     - promote
     target:
     - dev
     - test
-    - preprod
 
 - name: deploy-to-prod
   pull: if-not-exists
