@@ -4,9 +4,7 @@
     "start": "node app.js",
     "start:dev": "hof-build watch --conf ./hof-build-conf.js",
     "test:mocha": "mocha test/*",
-    "test": "npm run test:mocha && npm run test:acceptance",
-    "test:acceptance": "so-acceptance --steps",
-    "test:acceptance:local": "funkie --driver chromedriver npm run test:acceptance",
+    "test": "npm run test:mocha",
     "test:lint": "npm run test:lint:eslint && npm run test:lint:quotes",
     "test:lint:eslint": "eslint .",
     "test:lint:quotes": "! grep -r \"'\" apps/*/{views/content,translations/src}",
@@ -41,7 +39,6 @@
     "mocha": "^7.1.1",
     "mock-require": "^3.0.3",
     "simple-mock": "^0.8.0",
-    "so-acceptance": "^6.0.0",
     "supertest": "^3.4.2"
   },
   "name": "pttg-rps-enquiry-form",

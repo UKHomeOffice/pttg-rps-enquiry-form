@@ -57,3 +57,6 @@ Run a the latest prod deployment (see drone for build number) with `-p USE_MAINT
 Prerequisite: ACP prod VPN and kube context.
 
 ```k delete ingress pttg-rps-enquiry-ingress-external```
+
+## Testing
+The automated acceptance tests were using a library that is no longer maintained and full of vulnerabilities https://www.npmjs.com/package/so-acceptance. The tests were also failing in CI so this library has been removed and due to the low churn and simplicity of this app manual regression testing is a reasonable option going forward. Test files left in place for reference.
