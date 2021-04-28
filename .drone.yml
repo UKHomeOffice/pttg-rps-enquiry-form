@@ -13,7 +13,7 @@ steps:
   commands:
     # wait for docker service to be up before running docker build
     - n=0; while [ "$n" -lt 60 ] && [ ! docker stats --no-stream ]; do n=$(( n + 1 )); sleep 1; done
-    - docker build -t pttg-rps-enquiry .
+    - docker build -t pttg-rps-enquiry:$${DRONE_COMMIT_SHA} . --no-cache
 
     # Regression test manually
 
@@ -21,26 +21,28 @@ steps:
   image: 340268328991.dkr.ecr.eu-west-2.amazonaws.com/acp/anchore-submission:latest
   pull: always
   environment:
-    IMAGE_NAME: pttg-rps-enquiry
+    IMAGE_NAME: pttg-rps-enquiry:${DRONE_COMMIT_SHA}
     FAIL_ON_DETECTION: false
 
 - name: install-docker-image-with-githash-tag
-  image: plugins/docker
-  settings:
-    registry: quay.io
-    repo: quay.io/ukhomeofficedigital/pttg-rps-enquiry
-    tags: ${DRONE_COMMIT_SHA}
+  pull: if-not-exists
+  image: 340268328991.dkr.ecr.eu-west-2.amazonaws.com/acp/dind
+  commands:
+    - docker login -u=$${DOCKER_USERNAME} -p=$${DOCKER_PASSWORD} quay.io
+    - docker tag pttg-rps-enquiry:$${DRONE_COMMIT_SHA} quay.io/ukhomeofficedigital/pttg-rps-enquiry:$${DRONE_COMMIT_SHA}
+    - docker push quay.io/ukhomeofficedigital/pttg-rps-enquiry:$${DRONE_COMMIT_SHA}
   environment:
     DOCKER_USERNAME: ukhomeofficedigital+pttg
     DOCKER_PASSWORD:
-      from_secret: docker_password 
+      from_secret: docker_password
 
 - name: install-docker-image-from-feature-branch-build
-  image: plugins/docker
-  settings:
-    registry: quay.io
-    repo: quay.io/ukhomeofficedigital/pttg-rps-enquiry
-    tags: ${DRONE_BRANCH}
+  pull: if-not-exists
+  image: 340268328991.dkr.ecr.eu-west-2.amazonaws.com/acp/dind
+  commands:
+    - docker login -u=$${DOCKER_USERNAME} -p=$${DOCKER_PASSWORD} quay.io
+    - docker tag pttg-rps-enquiry:$${DRONE_COMMIT_SHA} quay.io/ukhomeofficedigital/pttg-rps-enquiry:$${DRONE_BRANCH}
+    - docker push quay.io/ukhomeofficedigital/pttg-rps-enquiry:$${DRONE_BRANCH}
   environment:
     DOCKER_USERNAME: ukhomeofficedigital+pttg
     DOCKER_PASSWORD:
@@ -55,9 +57,9 @@ steps:
   image: 340268328991.dkr.ecr.eu-west-2.amazonaws.com/acp/dind
   commands:
     - docker login -u=$${DOCKER_USERNAME} -p=$${DOCKER_PASSWORD} quay.io
-    - docker tag pttg-rps-enquiry quay.io/ukhomeofficedigital/pttg-rps-enquiry:latest
+    - docker tag pttg-rps-enquiry:$${DRONE_COMMIT_SHA} quay.io/ukhomeofficedigital/pttg-rps-enquiry:latest
     - docker push quay.io/ukhomeofficedigital/pttg-rps-enquiry:latest
-    - docker tag pttg-rps-enquiry quay.io/ukhomeofficedigital/pttg-rps-enquiry:build-$${DRONE_BUILD_NUMBER}
+    - docker tag pttg-rps-enquiry:$${DRONE_COMMIT_SHA} quay.io/ukhomeofficedigital/pttg-rps-enquiry:build-$${DRONE_BUILD_NUMBER}
     - docker push quay.io/ukhomeofficedigital/pttg-rps-enquiry:build-$${DRONE_BUILD_NUMBER}
   environment:
     DOCKER_USERNAME: ukhomeofficedigital+pttg
@@ -72,7 +74,7 @@ steps:
   image: 340268328991.dkr.ecr.eu-west-2.amazonaws.com/acp/dind
   commands:
     - docker login -u=$${DOCKER_USERNAME} -p=$${DOCKER_PASSWORD} quay.io
-    - docker tag pttg-rps-enquiry quay.io/ukhomeofficedigital/pttg-rps-enquiry:$${DRONE_TAG}
+    - docker tag pttg-rps-enquiry:$${DRONE_COMMIT_SHA} quay.io/ukhomeofficedigital/pttg-rps-enquiry:$${DRONE_TAG}
     - docker push quay.io/ukhomeofficedigital/pttg-rps-enquiry:$${DRONE_TAG}
   environment:
     DOCKER_USERNAME: ukhomeofficedigital+pttg
