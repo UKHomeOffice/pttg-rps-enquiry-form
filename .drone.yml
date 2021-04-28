@@ -22,6 +22,7 @@ steps:
   pull: always
   environment:
     IMAGE_NAME: pttg-rps-enquiry
+    FAIL_ON_DETECTION: false
 
 - name: install-docker-image-with-githash-tag
   image: plugins/docker
