@@ -1,30 +1,30 @@
-FROM quay.io/ukhomeofficedigital/nodejs-base:v8.11.1
+FROM node:10.24.1-alpine
 
-ENV USER pttg
-ENV USER_ID 1000
-ENV GROUP pttg
+ENV USER user-pttg
+ENV GROUP group-pttg
 ENV NAME pttg-rps-enquiry
 
 ARG VERSION
 
-RUN groupadd -r ${GROUP} && \
-    useradd -u ${USER_ID} -g ${GROUP} ${USER} -d /public && \
+RUN addgroup ${GROUP} && \
+    adduser -D ${USER} -g ${GROUP} && \
     mkdir -p /public && \
     chown -R ${USER}:${GROUP} /public
-
-WORKDIR /app
 
 RUN mkdir -p /app && \
     chown -R ${USER}:${GROUP} /app
 
 COPY . /app
+
+WORKDIR /app
+
 RUN npm rebuild node-sass
 RUN npm --loglevel warn install --only=prod
 RUN npm --loglevel warn run postinstall
 
 RUN chmod a+x /app/run.sh
 
-USER ${USER_ID}
+USER ${USER}
 
 EXPOSE 8000
 

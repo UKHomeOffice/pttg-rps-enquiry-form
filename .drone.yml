@@ -1,184 +1,148 @@
-pipeline:
+---
+kind: pipeline
+type: kubernetes
+name: default
 
-  npm-audit:
-    image: node:12
-    commands:
-      - npm audit --production --audit-level=moderate || echo Skipping because hof has issues that we can\'t change.
-    when:
-      event: push
+platform:
+  os: linux
+  arch: amd64
 
-  build-docker-image:
-    group: build
-    image: docker:18.03.1-ce
-    environment:
-      - DOCKER_HOST=tcp://172.17.0.1:2375
-    commands:
-      - docker build -t pttg-rps-enquiry .
-    when:
-      event: push
+steps:
+- name: build-image
+  image: 340268328991.dkr.ecr.eu-west-2.amazonaws.com/acp/dind
+  commands:
+    # wait for docker service to be up before running docker build
+    - n=0; while [ "$n" -lt 60 ] && [ ! docker stats --no-stream ]; do n=$(( n + 1 )); sleep 1; done
+    - docker build -t pttg-rps-enquiry:$${DRONE_COMMIT_SHA} . --no-cache
 
-  scan:
-    image: quay.io/ukhomeofficedigital/anchore-submission:latest
-    dockerfile: Dockerfile
-    image_name: pttg-rps-enquiry
-    local_image: true
-    tolerate: low
-    show_all_vulnerabilities: true
-    fail_on_detection: false # TODO EE-29635 Remove this when current vulnerabilities are resolved
-    when:
-      event: push
+    # Regression test manually
 
-  lint:
-    group: build
-    image: quay.io/ukhomeofficedigital/nodejs-base:v8.11.1
-    commands:
-      - npm install eslint
-      - npm run test:lint
-    when:
-      event: push
+- name: scan-image
+  image: 340268328991.dkr.ecr.eu-west-2.amazonaws.com/acp/anchore-submission:latest
+  pull: always
+  environment:
+    IMAGE_NAME: pttg-rps-enquiry:${DRONE_COMMIT_SHA}
+    FAIL_ON_DETECTION: false
 
-  build-test:
-    group: build
-    image: docker:18.03.1-ce
-    environment:
-      - DOCKER_HOST=tcp://172.17.0.1:2375
-    commands:
-      - echo "SKIPPED - Automated test issues, manual regression testing is required!"
-      # - docker build -f Dockerfile_test -t test-$${DRONE_COMMIT_SHA} .
-    when:
-      event: push
+- name: install-docker-image-with-githash-tag
+  pull: if-not-exists
+  image: 340268328991.dkr.ecr.eu-west-2.amazonaws.com/acp/dind
+  commands:
+    - docker login -u=$${DOCKER_USERNAME} -p=$${DOCKER_PASSWORD} quay.io
+    - docker tag pttg-rps-enquiry:$${DRONE_COMMIT_SHA} quay.io/ukhomeofficedigital/pttg-rps-enquiry:$${DRONE_COMMIT_SHA}
+    - docker push quay.io/ukhomeofficedigital/pttg-rps-enquiry:$${DRONE_COMMIT_SHA}
+  environment:
+    DOCKER_USERNAME: ukhomeofficedigital+pttg
+    DOCKER_PASSWORD:
+      from_secret: docker_password
 
-  test:
-    group: test
-    image: docker:18.03.1-ce
-    environment:
-      - DOCKER_HOST=tcp://172.17.0.1:2375
-    commands:
-      - echo "SKIPPED - Automated test issues, manual regression testing is required!"
-      # - docker run -d --name=redis-$${DRONE_COMMIT_SHA} redis
-      # - docker run -d -e NODE_ENV=ci --name=app-$${DRONE_COMMIT_SHA} --net=container:redis-$${DRONE_COMMIT_SHA} pttg-rps-enquiry
-      # - docker run -d --net=container:app-$${DRONE_COMMIT_SHA} --name=selenium-$${DRONE_COMMIT_SHA} selenium/standalone-chrome
-      # - docker run --rm --net=container:selenium-$${DRONE_COMMIT_SHA} -e SELENIUM_TCP=tcp://localhost:4444 martin/wait
-      # - docker run --rm --net=container:app-$${DRONE_COMMIT_SHA} test-$${DRONE_COMMIT_SHA}
-      # - docker rm -vf "app-$${DRONE_COMMIT_SHA}" "redis-$${DRONE_COMMIT_SHA}"
-    when:
-      event: push
+- name: install-docker-image-from-feature-branch-build
+  pull: if-not-exists
+  image: 340268328991.dkr.ecr.eu-west-2.amazonaws.com/acp/dind
+  commands:
+    - docker login -u=$${DOCKER_USERNAME} -p=$${DOCKER_PASSWORD} quay.io
+    - docker tag pttg-rps-enquiry:$${DRONE_COMMIT_SHA} quay.io/ukhomeofficedigital/pttg-rps-enquiry:$${DRONE_BRANCH}
+    - docker push quay.io/ukhomeofficedigital/pttg-rps-enquiry:$${DRONE_BRANCH}
+  environment:
+    DOCKER_USERNAME: ukhomeofficedigital+pttg
+    DOCKER_PASSWORD:
+      from_secret: docker_password
+  when:
+    branch:
+      exclude:
+        - master
 
-  install-docker-image-with-githash-tag:
-    image: docker:18.03.1-ce
-    environment:
-      - DOCKER_HOST=tcp://172.17.0.1:2375
-    secrets:
-      - docker_password
-    commands:
-      - docker login -u="ukhomeofficedigital+pttg" -p=$${DOCKER_PASSWORD} quay.io
-      - docker tag pttg-rps-enquiry quay.io/ukhomeofficedigital/pttg-rps-enquiry:${DRONE_COMMIT_SHA:0:8}
-      - docker push quay.io/ukhomeofficedigital/pttg-rps-enquiry:${DRONE_COMMIT_SHA:0:8}
-    when:
-      event: push
+- name: install-docker-image-from-master-branch-build
+  pull: if-not-exists
+  image: 340268328991.dkr.ecr.eu-west-2.amazonaws.com/acp/dind
+  commands:
+    - docker login -u=$${DOCKER_USERNAME} -p=$${DOCKER_PASSWORD} quay.io
+    - docker tag pttg-rps-enquiry:$${DRONE_COMMIT_SHA} quay.io/ukhomeofficedigital/pttg-rps-enquiry:latest
+    - docker push quay.io/ukhomeofficedigital/pttg-rps-enquiry:latest
+    - docker tag pttg-rps-enquiry:$${DRONE_COMMIT_SHA} quay.io/ukhomeofficedigital/pttg-rps-enquiry:build-$${DRONE_BUILD_NUMBER}
+    - docker push quay.io/ukhomeofficedigital/pttg-rps-enquiry:build-$${DRONE_BUILD_NUMBER}
+  environment:
+    DOCKER_USERNAME: ukhomeofficedigital+pttg
+    DOCKER_PASSWORD:
+      from_secret: docker_password
+  when:
+    branch:
+      - master
 
-  install-docker-image-from-feature-branch-build:
-    image: docker:18.03.1-ce
-    environment:
-      - DOCKER_HOST=tcp://172.17.0.1:2375
-    secrets:
-      - docker_password
-    commands:
-      - docker login -u="ukhomeofficedigital+pttg" -p=$${DOCKER_PASSWORD} quay.io
-      - docker tag pttg-rps-enquiry quay.io/ukhomeofficedigital/pttg-rps-enquiry:${DRONE_BRANCH}
-      - docker push quay.io/ukhomeofficedigital/pttg-rps-enquiry:${DRONE_BRANCH}
-    when:
-      branch:
-        exclude: master
-      event: push
+- name: tag-docker-image-with-git-tag
+  pull: if-not-exists
+  image: 340268328991.dkr.ecr.eu-west-2.amazonaws.com/acp/dind
+  commands:
+    - docker login -u=$${DOCKER_USERNAME} -p=$${DOCKER_PASSWORD} quay.io
+    - docker tag pttg-rps-enquiry:$${DRONE_COMMIT_SHA} quay.io/ukhomeofficedigital/pttg-rps-enquiry:$${DRONE_TAG}
+    - docker push quay.io/ukhomeofficedigital/pttg-rps-enquiry:$${DRONE_TAG}
+  environment:
+    DOCKER_USERNAME: ukhomeofficedigital+pttg
+    DOCKER_PASSWORD:
+      from_secret: docker_password
+  when:
+    event: [tag]
 
-  install-docker-image-from-master-branch-build:
-    image: docker:18.03.1-ce
-    environment:
-      - DOCKER_HOST=tcp://172.17.0.1:2375
-    secrets:
-      - docker_password
-    commands:
-      - docker login -u="ukhomeofficedigital+pttg" -p=$${DOCKER_PASSWORD} quay.io
-      - docker tag pttg-rps-enquiry quay.io/ukhomeofficedigital/pttg-rps-enquiry:latest
-      - docker push quay.io/ukhomeofficedigital/pttg-rps-enquiry:latest
-      - docker tag pttg-rps-enquiry quay.io/ukhomeofficedigital/pttg-rps-enquiry:build-$${DRONE_BUILD_NUMBER}
-      - docker push quay.io/ukhomeofficedigital/pttg-rps-enquiry:build-$${DRONE_BUILD_NUMBER}
-    when:
-      branch: master
-      event: push
+- name: clone-kube-project
+  image: plugins/git
+  commands:
+    - git clone https://github.com/UKHomeOffice/kube-pttg-rps-enquiry-form.git
+    - cd kube-pttg-rps-enquiry-form
+    - git checkout $${KUBE_BRANCH:=master}
+  when:
+    event: [push, deployment, tag]
 
-  tag-docker-image-with-git-tag:
-    image: docker:18.03.1-ce
-    environment:
-      - DOCKER_HOST=tcp://172.17.0.1:2375
-    secrets:
-      - docker_password
-    commands:
-      - docker login -u="ukhomeofficedigital+pttg" -p=$${DOCKER_PASSWORD} quay.io
-      - docker tag pttg-rps-enquiry quay.io/ukhomeofficedigital/pttg-rps-enquiry:$${DRONE_TAG}
-      - docker push quay.io/ukhomeofficedigital/pttg-rps-enquiry:$${DRONE_TAG}
-    when:
-      event: tag
+- name: deployment-to-not-prod
+  pull: if-not-exists
+  image: quay.io/ukhomeofficedigital/kd:v1.17.0
+  commands:
+    - cd kube-pttg-rps-enquiry-form
+    - ./deploy.sh
+  environment:
+    ENVIRONMENT: ${DRONE_DEPLOY_TO}
+    KUBE_NAMESPACE: pttg-rps-enquiry-${DRONE_DEPLOY_TO}
+    KUBE_SERVER: https://kube-api-notprod.notprod.acp.homeoffice.gov.uk
+    WHITELIST: 62.25.109.196/32,52.48.127.150/32,52.48.127.151/32,52.48.127.152/32,52.48.127.153/32,52.209.62.128/25,52.56.62.128/25,185.22.224.96,185.22.224.96/32,185.22.226.96/32,213.251.23.180/30,213.251.23.184/30,213.251.23.188/30,148.253.134.213/32,167.98.162.0/25,167.98.158.128/25,86.4.103.138/25
+    PTTG_RPS_DEV:
+      from_secret: pttg_rps_dev
+    PTTG_RPS_TEST:
+      from_secret: pttg_rps_test
+    NOTIFY_RECIPIENT_NOTPROD:
+      from_secret: notify_recipient_notprod
+  when:
+    event:
+    - promote
+    target:
+    - dev
+    - test
+    - preprod
 
-  clone-kube-project:
-    image: plugins/git
-    commands:
-      - git clone https://github.com/UKHomeOffice/kube-pttg-rps-enquiry-form.git
-      - cd kube-pttg-rps-enquiry-form
-      - git checkout $${KUBE_BRANCH:=master}
-    when:
-      event: [push, deployment, tag]
+- name: deploy-to-prod
+  pull: if-not-exists
+  image: quay.io/ukhomeofficedigital/kd:v1.17.0
+  commands:
+    - cd kube-pttg-rps-enquiry-form
+    - ./deploy.sh
+  environment:
+    ENVIRONMENT: ${DRONE_DEPLOY_TO}
+    KUBE_NAMESPACE: pttg-rps-enquiry-${DRONE_DEPLOY_TO}
+    KUBE_SERVER: https://kube-api-prod.prod.acp.homeoffice.gov.uk
+    PTTG_RPS_PR:
+      from_secret: pttg_rps_pr
+    NOTIFY_RECIPIENT_PROD:
+      from_secret: notify_recipient_prod
+  when:
+    event:
+    - promote
+    target:
+    - pr
 
-  deploy-to-dev-from-build-number:
-    image: quay.io/ukhomeofficedigital/kd:latest
-    environment:
-      - KUBE_NAMESPACE=pttg-rps-enquiry-dev
-      - ENVIRONMENT=dev
-      - VERSION=build-${DRONE_BUILD_NUMBER}
-      - KUBE_SERVER=https://kube-api-notprod.notprod.acp.homeoffice.gov.uk
-      - WHITELIST=62.25.109.196/32,52.48.127.150/32,52.48.127.151/32,52.48.127.152/32,52.48.127.153/32,52.209.62.128/25,52.56.62.128/25,185.22.224.96,185.22.224.96/32,185.22.226.96/32,213.251.23.180/30,213.251.23.184/30,213.251.23.188/30,148.253.134.213/32,167.98.162.0/25,167.98.158.128/25
-    secrets:
-      - pttg_rps_dev
-      - basic_auth
-    commands:
-      - cd kube-pttg-rps-enquiry-form
-      - ./deploy.sh
-    when:
-      branch: master
-      event: [push, tag]
+services:
+- name: docker-in-docker
+  image: 340268328991.dkr.ecr.eu-west-2.amazonaws.com/acp/dind
 
-  deployment:
-    image: quay.io/ukhomeofficedigital/kd:latest
-    environment:
-      - KUBE_NAMESPACE=pttg-rps-enquiry-${DRONE_DEPLOY_TO}
-      - ENVIRONMENT=${DRONE_DEPLOY_TO}
-      - KUBE_SERVER=https://kube-api-notprod.notprod.acp.homeoffice.gov.uk
-      - WHITELIST=62.25.109.196/32,52.48.127.150/32,52.48.127.151/32,52.48.127.152/32,52.48.127.153/32,52.209.62.128/25,52.56.62.128/25,185.22.224.96,185.22.224.96/32,185.22.226.96/32,213.251.23.180/30,213.251.23.184/30,213.251.23.188/30,148.253.134.213/32,167.98.162.0/25,167.98.158.128/25
-    secrets:
-      - pttg_rps_dev
-      - pttg_rps_test
-      - basic_auth
-      - notify_recipient_notprod
-    commands:
-      - cd kube-pttg-rps-enquiry-form
-      - ./deploy.sh
-    when:
-      event: deployment
-      environment: [dev, test]
-
-  deploy-to-prod:
-    image: quay.io/ukhomeofficedigital/kd:latest
-    environment:
-      - KUBE_NAMESPACE=pttg-rps-enquiry-pr
-      - ENVIRONMENT=pr
-      - KUBE_SERVER=https://kube-api-prod.prod.acp.homeoffice.gov.uk
-    secrets:
-      - pttg_rps_pr
-      - notify_recipient_prod
-    commands:
-      - cd kube-pttg-rps-enquiry-form
-      - ./deploy.sh
-    when:
-      event: deployment
-      environment: pr
+- name: anchore-submission-server
+  image: 340268328991.dkr.ecr.eu-west-2.amazonaws.com/acp/anchore-submission:latest
+  pull: always
+  commands:
+    - /run.sh server
