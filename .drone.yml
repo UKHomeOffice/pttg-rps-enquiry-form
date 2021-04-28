@@ -14,6 +14,9 @@ steps:
     # wait for docker service to be up before running docker build
     - n=0; while [ "$n" -lt 60 ] && [ ! docker stats --no-stream ]; do n=$(( n + 1 )); sleep 1; done
     - docker build -t pttg-rps-enquiry:$${DRONE_COMMIT_SHA} . --no-cache
+  when:
+    event:
+    - push
 
     # Regression test manually
 
@@ -23,6 +26,9 @@ steps:
   environment:
     IMAGE_NAME: pttg-rps-enquiry:${DRONE_COMMIT_SHA}
     FAIL_ON_DETECTION: false
+  when:
+    event:
+    - push
 
 - name: install-docker-image-with-githash-tag
   pull: if-not-exists
@@ -35,6 +41,9 @@ steps:
     DOCKER_USERNAME: ukhomeofficedigital+pttg
     DOCKER_PASSWORD:
       from_secret: docker_password
+  when:
+    event:
+    - push
 
 - name: install-docker-image-from-feature-branch-build
   pull: if-not-exists
@@ -48,9 +57,12 @@ steps:
     DOCKER_PASSWORD:
       from_secret: docker_password
   when:
+    event:
+      - push
     branch:
       exclude:
         - master
+        
 
 - name: install-docker-image-from-master-branch-build
   pull: if-not-exists
@@ -66,6 +78,8 @@ steps:
     DOCKER_PASSWORD:
       from_secret: docker_password
   when:
+    event:
+      - push
     branch:
       - master
 
@@ -90,8 +104,6 @@ steps:
     - git clone https://github.com/UKHomeOffice/kube-pttg-rps-enquiry-form.git
   when:
     event:
-      - push
-      - tag
       - promote
 
 - name: deployment-to-not-prod
