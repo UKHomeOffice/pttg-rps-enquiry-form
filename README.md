@@ -45,7 +45,7 @@ The built images are stored at https://quay.io/repository/ukhomeofficedigital/pt
 The application is behind a whitelist in both the test and dev environments. Detailed in the drone.yml
 
 ## Deployment
-https://drone.acp.homeoffice.gov.uk/UKHomeOffice/pttg-rps-enquiry-form
+https://drone-gh.acp.homeoffice.gov.uk/UKHomeOffice/pttg-rps-enquiry-form
 
 ### Maintenance mode
 Run a the latest prod deployment (see drone for build number) with `-p USE_MAINTENANCE_INGRESS=true` for example:
