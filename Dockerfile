@@ -1,13 +1,14 @@
 FROM node:10.24.1-alpine
 
 ENV USER user-pttg
+ENV USER_ID 1002
 ENV GROUP group-pttg
 ENV NAME pttg-rps-enquiry
 
 ARG VERSION
 
 RUN addgroup ${GROUP} && \
-    adduser -D ${USER} -g ${GROUP} && \
+    adduser -D ${USER} -u ${USER_ID} -g ${GROUP} && \
     mkdir -p /public && \
     chown -R ${USER}:${GROUP} /public
 
@@ -24,7 +25,7 @@ RUN npm --loglevel warn run postinstall
 
 RUN chmod a+x /app/run.sh
 
-USER ${USER}
+USER ${USER_ID}
 
 EXPOSE 8000
 
