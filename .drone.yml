@@ -84,13 +84,15 @@ steps:
     event: [tag]
 
 - name: clone-kube-project
+  pull: if-not-exists
   image: plugins/git
   commands:
     - git clone https://github.com/UKHomeOffice/kube-pttg-rps-enquiry-form.git
-    - cd kube-pttg-rps-enquiry-form
-    - git checkout $${KUBE_BRANCH:=master}
   when:
-    event: [push, deployment, tag]
+    event:
+      - push
+      - tag
+      - promote
 
 - name: deployment-to-not-prod
   pull: if-not-exists
