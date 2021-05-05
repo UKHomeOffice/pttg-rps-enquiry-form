@@ -8,6 +8,13 @@ settings.start = false;
 
 const app = hof(settings);
 
+app.use(function(req, res, next) {
+    const isPotentialDodgyRedirect = req.path.startsWith('//');
+    isPotentialDodgyRedirect ?
+        res.redirect("/") :
+        next();
+});
+
 //Endpoint for Notify delivery receipts
 app.use('/notify-messages', notifyMessages);
 
