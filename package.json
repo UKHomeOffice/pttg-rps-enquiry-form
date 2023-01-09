@@ -24,7 +24,7 @@
     "hof-template-partials": "^5.3.5",
     "hof-theme-govuk": "^5.2.1",
     "hof-util-countries": "^1.0.0",
-    "notifications-node-client": "^5.1.1",
+    "notifications-node-client": "^6.0.0",
     "slack-node": "^0.1.8",
     "snyk": "^1.567.0",
     "winston": "^3.2.1"
