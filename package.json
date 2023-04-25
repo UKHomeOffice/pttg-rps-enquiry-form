@@ -26,7 +26,7 @@
     "hof-util-countries": "^1.0.0",
     "notifications-node-client": "^5.1.1",
     "slack-node": "^0.1.8",
-    "snyk": "^1.567.0",
+    "snyk": "^1.1064.0",
     "winston": "^3.2.1"
   },
   "devDependencies": {
